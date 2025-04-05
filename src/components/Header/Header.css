@@ -1,0 +1,32 @@
+header {
+  height: 50px;
+  color: white;
+  background-color: var(--secondary-color);
+}
+header .container,
+header .container .holder,
+header .container .holder .language {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container {
+  height: 100%;
+}
+header .container .customize {
+  text-transform: uppercase;
+}
+header .container .holder,
+header .container .holder .language {
+  gap: 0.6vw;
+}
+header .container .holder .language {
+  margin-left: 5.5vw;
+}
+header .container .holder .language .globe-icon {
+  font-size: 24px;
+  font-size: 1.7vw;
+}
+header .container .holder .language .arrow-icon {
+  cursor: pointer;
+}
