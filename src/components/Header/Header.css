@@ -5,7 +5,7 @@ header {
 }
 header .container,
 header .container .holder,
-header .container .holder .language {
+.language {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,16 +17,22 @@ header .container .customize {
   text-transform: uppercase;
 }
 header .container .holder,
-header .container .holder .language {
+.language {
   gap: 0.6vw;
 }
 header .container .holder .language {
   margin-left: 5.5vw;
 }
-header .container .holder .language .globe-icon {
+.language .globe-icon {
   font-size: 24px;
-  font-size: 1.7vw;
 }
-header .container .holder .language .arrow-icon {
+.language .arrow-icon {
   cursor: pointer;
+}
+@media (max-width: 550px) {
+  header .container .customize {
+    font-size: 12px;
+    flex: 1;
+    text-align: center;
+  }
 }

@@ -1,34 +1,61 @@
-.home-hero .container .features {
-    padding: 38px 0px;
-    /* position: absolute; */
-    /* bottom: 14%; */
-    bottom: -10%;
-    left: 100px;
-    /* width: calc(100% - 200px); */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* display: grid; */
-    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
-    background-color: var(--primary-color);
+.features-holder {
+  /* transform: translateY(-25%); */
 }
-.home-hero .container .features .card {
-    /* padding: 0px 95px; */
-    padding: 0px 6vw;
-    text-align: center;
-    color: white;
-    /* width: 112px;
+.features-holder .features {
+  padding: 38px 0px;
+  bottom: -10%;
+  left: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  /* grid-template-columns: repeat(4, minmax(300px, 1fr)); */
+  /* row-gap: 40px; */
+  background-color: var(--primary-color);
+}
+.features-holder .features .card {
+  /* padding: 0px 95px; */
+  padding: 0px 6vw;
+  text-align: center;
+  color: white;
+  /* width: 112px;
       height: 105px; */
 }
-.home-hero .container .features .card:not(:last-child) {
+.features-holder .features .card:not(:last-child) {
+  border-right: 1px solid white;
+}
+.features-holder .features .card p.num {
+  font-size: 40px;
+  font-size: 2.8vw;
+  font-weight: 600;
+  /* line-height: 48px; */
+}
+.features-holder .features .card p.text {
+  font-size: 20px;
+  font-size: 1.4vw;
+  font-weight: 400;
+}
+@media (max-width: 991px) {
+  .home-hero .container {
+    width: 100%;
+  }
+  .features-holder .features {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 40px;
+  }
+  .features-holder .features .card p.num {
+    font-size: 24px;
+  }
+  .features-holder .features .card p.text {
+    font-size: 16px;
+  }
+  .features-holder .features .card:not(:last-child) {
+    border: none;
+  }
+  .features-holder .features .card:nth-child(odd) {
     border-right: 1px solid white;
-}
-.home-hero .container .features .card p.num {
-    font-size: 40px;
-    font-weight: 600;
-    /* line-height: 48px; */
-}
-.home-hero .container .features .card p.text {
-    font-size: 20px;
-    font-weight: 400;
+  }
 }
