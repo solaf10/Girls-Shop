@@ -1,0 +1,34 @@
+.home-hero .container .features {
+    padding: 38px 0px;
+    /* position: absolute; */
+    /* bottom: 14%; */
+    bottom: -10%;
+    left: 100px;
+    /* width: calc(100% - 200px); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    background-color: var(--primary-color);
+}
+.home-hero .container .features .card {
+    /* padding: 0px 95px; */
+    padding: 0px 6vw;
+    text-align: center;
+    color: white;
+    /* width: 112px;
+      height: 105px; */
+}
+.home-hero .container .features .card:not(:last-child) {
+    border-right: 1px solid white;
+}
+.home-hero .container .features .card p.num {
+    font-size: 40px;
+    font-weight: 600;
+    /* line-height: 48px; */
+}
+.home-hero .container .features .card p.text {
+    font-size: 20px;
+    font-weight: 400;
+}

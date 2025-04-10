@@ -45,6 +45,11 @@
   line-height: 30px;
   text-align: center;
   color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.home-hero .container .btns .btn:hover {
+  transform: scale(0.9);
 }
 .home-hero .container .btns .shop-btn {
   background-color: #e2e2e266;
@@ -53,36 +58,4 @@
 .home-hero .container .btns .customize-btn {
   border: 1px solid white;
   background-color: transparent;
-}
-/* Features */
-.home-hero .container .features {
-  padding: 38px 0px;
-  position: absolute;
-  /* bottom: 14%; */
-  bottom: -25%;
-  left: 100px;
-  width: calc(100% - 200px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--primary-color);
-}
-.home-hero .container .features .card {
-  padding: 0px 95px;
-  text-align: center;
-  color: white;
-  /* width: 112px;
-    height: 105px; */
-}
-.home-hero .container .features .card:not(:last-child) {
-  border-right: 1px solid white;
-}
-.home-hero .container .features .card p.num {
-  font-size: 40px;
-  font-weight: 600;
-  /* line-height: 48px; */
-}
-.home-hero .container .features .card p.text {
-  font-size: 20px;
-  font-weight: 400;
 }
