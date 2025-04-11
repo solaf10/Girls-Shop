@@ -1,7 +1,7 @@
-.features-holder {
+.experts-holder {
   /* transform: translateY(-25%); */
 }
-.features-holder .features {
+.experts-holder .experts {
   padding: 38px 0px;
   bottom: -10%;
   left: 100px;
@@ -14,7 +14,7 @@
   /* row-gap: 40px; */
   background-color: var(--primary-color);
 }
-.features-holder .features .card {
+.experts-holder .experts .card {
   /* padding: 0px 95px; */
   padding: 0px 6vw;
   text-align: center;
@@ -22,16 +22,16 @@
   /* width: 112px;
       height: 105px; */
 }
-.features-holder .features .card:not(:last-child) {
+.experts-holder .experts .card:not(:last-child) {
   border-right: 1px solid white;
 }
-.features-holder .features .card p.num {
+.experts-holder .experts .card p.num {
   font-size: 40px;
   font-size: 2.8vw;
   font-weight: 600;
   /* line-height: 48px; */
 }
-.features-holder .features .card p.text {
+.experts-holder .experts .card p.text {
   font-size: 20px;
   font-size: 1.4vw;
   font-weight: 400;
@@ -40,22 +40,22 @@
   .home-hero .container {
     width: 100%;
   }
-  .features-holder .features {
+  .experts-holder .experts {
     display: grid;
     /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
     grid-template-columns: repeat(2, 50%);
     row-gap: 40px;
   }
-  .features-holder .features .card p.num {
+  .experts-holder .experts .card p.num {
     font-size: 24px;
   }
-  .features-holder .features .card p.text {
+  .experts-holder .experts .card p.text {
     font-size: 16px;
   }
-  .features-holder .features .card:not(:last-child) {
+  .experts-holder .experts .card:not(:last-child) {
     border: none;
   }
-  .features-holder .features .card:nth-child(odd) {
+  .experts-holder .experts .card:nth-child(odd) {
     border-right: 1px solid white;
   }
 }

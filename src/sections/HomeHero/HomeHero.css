@@ -49,16 +49,24 @@
   cursor: pointer;
   transition: 0.5s;
 }
-.home-hero .container .btns .btn:hover {
+/* .home-hero .container .btns .btn:hover {
   transform: scale(0.9);
-}
+} */
 .home-hero .container .btns .shop-btn {
   background-color: #e2e2e266;
   backdrop-filter: blur(30px);
 }
+.home-hero .container .btns .shop-btn:hover {
+  color: var(--primary-color);
+  background-color: white;
+}
 .home-hero .container .btns .customize-btn {
   border: 1px solid white;
   background-color: transparent;
+}
+.home-hero .container .btns .customize-btn:hover {
+  color: white;
+  background-color: var(--primary-color);
 }
 @media (max-width: 991px) {
   /* .home-hero .container h1 {

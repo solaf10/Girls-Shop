@@ -1,9 +1,9 @@
-import "./Features.css";
+import "./Experts.css";
 
-const Features = () => {
+const Experts = () => {
   return (
-    <div className="features-holder container">
-      <div className="features">
+    <div className="experts-holder container">
+      <div className="experts">
         <div className="card">
           <p className="num">15</p>
           <p className="text">Year Experience</p>
@@ -25,4 +25,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default Experts;

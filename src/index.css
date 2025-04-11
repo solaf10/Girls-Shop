@@ -39,6 +39,10 @@ button {
   backdrop-filter: blur(16px);
   z-index: -1;
 }
+section {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
 @media (max-width: 768px) {
   .container {
     padding-left: 50px;
@@ -50,4 +54,8 @@ button {
     padding-left: 25px;
     padding-right: 25px;
   }
+  /* section {
+    padding-top: 24px;
+    padding-bottom: 24px; for features
+  } */
 }
