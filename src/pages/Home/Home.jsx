@@ -1,8 +1,9 @@
 import Experts from "../../components/Experts/Experts";
-import Choice from "../../sections/HeroSections/Choice/Choice";
-import Features from "../../sections/HeroSections/Features/Features";
-import HomeHero from "../../sections/HeroSections/HomeHero/HomeHero";
-import MainCategories from "../../sections/HeroSections/MainCategories/MainCategories";
+import Choice from "../../sections/HomeSections/Choice/Choice";
+import Features from "../../sections/HomeSections/Features/Features";
+import HomeHero from "../../sections/HomeSections/HomeHero/HomeHero";
+import MainCategories from "../../sections/HomeSections/MainCategories/MainCategories";
+import NewProducts from "../../sections/HomeSections/NewProducts/NewProducts";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Features />
       <MainCategories />
       <Choice />
+      <NewProducts />
     </div>
   );
 };

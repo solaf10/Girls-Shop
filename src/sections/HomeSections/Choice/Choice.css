@@ -15,6 +15,9 @@
 .choice .container > div {
   width: 50%;
 }
+.choice .container .text {
+  padding-top: 41px;
+}
 .choice .container .image img {
   width: 100%;
   height: 100%;
@@ -39,6 +42,11 @@
   }
   .choice .container .text {
     order: 2;
+  }
+}
+@media (max-width: 1250px) {
+  .choice .container .text {
+    padding-top: 0px;
   }
 }
 @media (max-width: 500px) {

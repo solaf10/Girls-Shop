@@ -76,6 +76,13 @@ section {
     padding-left: 25px;
     padding-right: 25px;
   }
+  .home-main-title h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .home-main-title p {
+    font-size: 14px;
+  }
   /* section {
     padding-top: 24px;
     padding-bottom: 24px; for features
