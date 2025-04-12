@@ -25,6 +25,7 @@ a {
 button {
   border: none;
 }
+/* home page*/
 /* custom */
 .blurry {
   position: relative;
@@ -42,6 +43,27 @@ button {
 section {
   padding-top: 75px;
   padding-bottom: 75px;
+}
+.home-main-title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-main-title h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.home-main-title p {
+  width: 50%;
+  margin-top: 16px;
+  font-weight: 400;
+  color: #23262f;
+}
+@media (max-width: 991px) {
+  .home-main-title p {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   .container {

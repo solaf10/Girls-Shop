@@ -1,6 +1,8 @@
 import Experts from "../../components/Experts/Experts";
-import Features from "../../sections/Features/Features";
-import HomeHero from "../../sections/HomeHero/HomeHero";
+import Choice from "../../sections/HeroSections/Choice/Choice";
+import Features from "../../sections/HeroSections/Features/Features";
+import HomeHero from "../../sections/HeroSections/HomeHero/HomeHero";
+import MainCategories from "../../sections/HeroSections/MainCategories/MainCategories";
 
 const Home = () => {
   return (
@@ -8,6 +10,8 @@ const Home = () => {
       <HomeHero />
       <Experts />
       <Features />
+      <MainCategories />
+      <Choice />
     </div>
   );
 };
