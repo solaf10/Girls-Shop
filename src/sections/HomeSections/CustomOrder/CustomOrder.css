@@ -1,0 +1,128 @@
+.custom-order {
+  overflow: hidden;
+}
+.custom-order .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+.custom-order .container > div {
+  width: 50%;
+}
+.custom-order .container .image {
+  position: relative;
+}
+.custom-order .container .dotted-bg.right {
+  position: absolute;
+  top: -9%;
+  right: -8%;
+  z-index: -1;
+}
+.custom-order .container .dotted-bg.left {
+  position: absolute;
+  bottom: -9%;
+  left: -8%;
+  z-index: -1;
+}
+.custom-order .container .image img:not(.dotted-bg) {
+  width: 100%;
+  height: 100%;
+}
+.custom-order .container .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+.custom-order .container .text .sub-title {
+}
+.custom-order .container .text .sub-title h2 {
+  font-weight: 600;
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+.custom-order .container .text .sub-title p {
+  font-weight: 400;
+  font-size: 20px;
+}
+.custom-order .container .text .holder .box {
+  display: flex;
+  gap: 16px;
+}
+.custom-order .container .text .holder .box:not(:last-child) {
+  margin-bottom: 24px;
+}
+.custom-order .container .text .holder .box .icon-holder {
+  padding-top: 5px;
+}
+.custom-order .container .text .holder .box .icon {
+  /* padding-top: 5px; */
+  font-size: 25px;
+}
+.custom-order .container .text .holder .box h3 {
+  font-size: 20px;
+}
+.custom-order .container .text .holder .box p {
+  margin-top: 8px;
+  color: #23262f;
+}
+.custom-order .container .text button {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-color);
+  transition: 0.5s;
+  background-color: transparent;
+  cursor: pointer;
+}
+.custom-order .container .text button .arrow-icon {
+  font-size: 22px;
+  transition: 0.5s;
+}
+.custom-order .container .text button:hover {
+  color: #c0c0c0;
+}
+.custom-order .container .text button:hover .arrow-icon {
+  transform: rotate(45deg);
+}
+@media (max-width: 991px) {
+  .custom-order .container {
+    flex-wrap: wrap;
+  }
+  .custom-order .container > div {
+    width: 100%;
+  }
+  .custom-order .container .image img:not(.dotted-bg) {
+    max-height: 485px;
+  }
+}
+@media (max-width: 500px) {
+  .custom-order {
+    margin-top: 32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .custom-order .dotted-bg {
+    display: none;
+  }
+  .custom-order .container {
+    gap: 24px;
+  }
+  .custom-order .container .text .sub-title h2 {
+    font-size: 20px;
+  }
+  .custom-order .container .text .sub-title p {
+    font-size: 16px;
+  }
+  .custom-order .container .text .holder .box .icon {
+    font-size: 16px;
+  }
+  .custom-order .container .text .holder .box h3 {
+    font-size: 18px;
+  }
+  .custom-order .container .text .holder .box p {
+    font-size: 14px;
+  }
+}

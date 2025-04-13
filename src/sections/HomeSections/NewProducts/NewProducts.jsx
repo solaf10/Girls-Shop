@@ -21,7 +21,7 @@ const NewProducts = () => {
     { id: 4, image: "/assets/Images/slider-childroom.jpg", text: "Childroom" },
     {
       id: 5,
-      image: "/assets/Images/slider-streetLighting.jpg",
+      image: "/assets/Images/slider-streetLighting1.jpg",
       text: "Street lighting",
     },
     {
@@ -46,7 +46,7 @@ const NewProducts = () => {
               more—all now with special promo prices!
             </p>
           </div>
-          <Link>
+          <Link to="/shop">
             <span>Check All</span>
             <MdArrowOutward className="arrow-icon" />
           </Link>

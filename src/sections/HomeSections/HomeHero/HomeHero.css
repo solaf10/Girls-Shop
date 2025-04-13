@@ -41,6 +41,9 @@
 .home-hero .container .btns .btn {
   width: 257px;
   height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
   font-size: 20px;
   letter-spacing: 0.2px;
