@@ -6,21 +6,21 @@ const RecentBlogs = () => {
   const posts = [
     {
       id: 1,
-      image: "/public/assets/Images/post-1.png",
+      image: "/assets/Images/post-1.png",
       title: "First Time Home Owner Ideas",
       publisher: "john",
       date: "Feb 8th, 2025",
     },
     {
       id: 2,
-      image: "/public/assets/Images/post-1.png",
+      image: "/assets/Images/post-1.png",
       title: "First Time Home Owner Ideas",
       publisher: "john",
       date: "Feb 8th, 2025",
     },
     {
       id: 3,
-      image: "/public/assets/Images/post-1.png",
+      image: "/assets/Images/post-1.png",
       title: "First Time Home Owner Ideas",
       publisher: "john",
       date: "Feb 8th, 2025",
