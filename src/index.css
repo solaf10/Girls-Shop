@@ -9,6 +9,7 @@ body {
 :root {
   --primary-color: #1d322f;
   --secondary-color: #1d322fb2;
+  --third-color: #385854;
   --text-color: #000e0c;
 }
 .container {
@@ -59,6 +60,9 @@ section {
   margin-top: 16px;
   font-weight: 400;
   color: #23262f;
+}
+Link{
+  text-decoration: none;
 }
 @media (max-width: 991px) {
   .home-main-title p {
