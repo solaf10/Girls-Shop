@@ -1,7 +1,13 @@
+import ContactForm from "../../components/ContactForm/ContactForm";
+import TopGreenBar from "../../components/TopGreenBar/TopGreenBar";
+
 const Contact = () => {
   return (
     <div className="contact">
-      <div className="container"></div>
+      <TopGreenBar/>
+      <div className="container">
+       <ContactForm/>
+      </div>
     </div>
   );
 };
