@@ -7,7 +7,7 @@ const Header = () => {
     <header>
       <div className="container">
         <div className="customize">
-          need to customize your own desige ?+963-994240911
+          need to customize your own desige ?+963-993811280
         </div>
         <div className="holder">
           <p>Showrooms</p>

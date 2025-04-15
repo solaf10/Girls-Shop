@@ -7,6 +7,7 @@ import Contact from "./pages/Contact/Contact";
 import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -21,7 +22,9 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/updatePassword" element={<Contact />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

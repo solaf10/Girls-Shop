@@ -17,35 +17,41 @@
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.5s;
+  color: white;
+}
+.main-categories .holder .card:hover {
+  /* transform: scale(0.9); */
+  /* border: 3.43px solid #1d322f; */
 }
 .main-categories .holder .card.scenes {
-  background-image: url("/assets/Images/scenes.png");
+  background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+    url("/assets/Images/3d-scenes.jpg");
 }
 .main-categories .holder .card.scenes:hover {
-  background-image: url("/assets/Images/scenes-2.png");
+  background-image: url("/assets/Images/3d-scenes.jpg");
 }
-.main-categories .holder .card.texture {
-  background-image: url("/assets/Images/textures.png");
+.main-categories .holder .card.interior {
+  background-image: url("/assets/Images/InteriorDesign.png");
+  background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+    url("/assets/Images/InteriorDesign.png");
 }
-.main-categories .holder .card.texture:hover {
-  background-image: url("/assets/Images/textures-2.png");
+.main-categories .holder .card.interior:hover {
+  background-image: url("/assets/Images/InteriorDesign.png");
 }
-.main-categories .holder .card.model {
-  background-image: url("/assets/Images/3d-models.png");
+.main-categories .holder .card.exterior {
+  background-image: url("/assets/Images/ExteriorDesign.jpg");
+  background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+    url("/assets/Images/ExteriorDesign.jpg");
 }
-.main-categories .holder .card.model:hover {
-  background-image: url("/assets/Images/3d-models-2.png");
+.main-categories .holder .card.exterior:hover {
+  background-image: url("/assets/Images/ExteriorDesign.jpg");
 }
-/* .main-categories .holder .card img {
-  width: 100%;
-} */
 .main-categories .holder .card p {
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 28px;
-  color: white;
   text-align: center;
 }
 @media (max-width: 500px) {

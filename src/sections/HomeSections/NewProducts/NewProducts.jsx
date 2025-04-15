@@ -21,7 +21,7 @@ const NewProducts = () => {
     { id: 4, image: "/assets/Images/slider-childroom.jpg", text: "Childroom" },
     {
       id: 5,
-      image: "/assets/Images/slider-streetLighting1.jpg",
+      image: "/assets/Images/slider-streetLighting2.jpg",
       text: "Street lighting",
     },
     {

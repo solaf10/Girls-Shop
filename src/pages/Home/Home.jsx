@@ -1,5 +1,5 @@
 import Experts from "../../components/Experts/Experts";
-import HomeContact from "../../sections/HomeContact/HomeContact";
+import HomeContact from "../../sections/ReviewForm/ReviewForm";
 import Choice from "../../sections/HomeSections/Choice/Choice";
 import CustomOrder from "../../sections/HomeSections/CustomOrder/CustomOrder";
 import Features from "../../sections/HomeSections/Features/Features";
@@ -8,6 +8,7 @@ import MainCategories from "../../sections/HomeSections/MainCategories/MainCateg
 import NewProducts from "../../sections/HomeSections/NewProducts/NewProducts";
 import RecentBlogs from "../../sections/HomeSections/RecentBlogs/RecentBlogs";
 import Reviews from "../../sections/HomeSections/Reviews/Reviews";
+import ReviewForm from "../../sections/ReviewForm/ReviewForm";
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
       <CustomOrder />
       <RecentBlogs />
       <Reviews />
-      <HomeContact />
+      <ReviewForm />
     </div>
   );
 };

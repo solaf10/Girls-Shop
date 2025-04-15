@@ -12,17 +12,17 @@ const MainCategories = () => {
           </p>
         </div>
         <div className="holder">
+          <div className="card interior">
+            {/* <img src="/assets/Images/textures.png" alt="" /> */}
+            <p>Interior Design</p>
+          </div>
           <div className="card scenes">
             {/* <img src="/assets/Images/scenes.png" alt="" /> */}
             <p>Scenes</p>
           </div>
-          <div className="card texture">
-            {/* <img src="/assets/Images/textures.png" alt="" /> */}
-            <p>texture</p>
-          </div>
-          <div className="card model">
+          <div className="card exterior">
             {/* <img src="/assets/Images/3d-models.png" alt="" /> */}
-            <p>3D Model</p>
+            <p>Exterior Design</p>
           </div>
         </div>
       </div>

@@ -7,6 +7,8 @@ import { IoMenu, IoClose } from "react-icons/io5";
 import { useState } from "react";
 import { MdLanguage } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
+import { FaUser } from "react-icons/fa6";
+import { IoMdLogOut } from "react-icons/io";
 
 const NavBar = () => {
   const [isShow, setIsShow] = useState(false);
@@ -32,18 +34,28 @@ const NavBar = () => {
           </li>
         </ul>
         <div className="icons">
-          <RiUserLine className="user-icon icon" />
-          <BsCart3 className="cart-icon icon" />
+          <RiUserLine className="icon" />
+          <BsCart3 className="icon" />
           <FiSearch className="search-icon icon" />
         </div>
         <div className="sidebar-holder">
           <IoMenu className="menu-icon" onClick={() => setIsShow(true)} />
           <div
+            className="overlay"
+            onClick={() => setIsShow(false)}
+            style={isShow ? { right: "0px" } : { right: "-100%" }}
+          ></div>
+          <div
             className="menu"
             style={isShow ? { right: "0px" } : { right: "-100%" }}
           >
-            <div className="close-icon">
-              <IoClose className="icon" onClick={() => setIsShow(false)} />
+            <div className="user-info">
+              <div className="cart">
+                <BsCart3 className="cart-icon" />
+              </div>
+              <div className="image">
+                <FaUser className="user-icon" />
+              </div>
             </div>
             <ul>
               <li>
@@ -69,6 +81,10 @@ const NavBar = () => {
               </div>
               <IoIosArrowDown className="arrow-icon" />
             </div>
+            <button className="log-out">
+              <IoMdLogOut />
+              <span>Log Out</span>
+            </button>
           </div>
         </div>
       </div>

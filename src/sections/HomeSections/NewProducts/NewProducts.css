@@ -52,8 +52,9 @@
   transform: translateX(-50%);
   color: white;
   font-size: 28px;
-  font-weight: 600;
+  /* font-weight: 600; */
   text-align: center;
+  cursor: pointer;
 }
 @media (max-width: 991px) {
 }
