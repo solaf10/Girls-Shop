@@ -25,10 +25,10 @@
 }
 .main-categories .holder .card.scenes {
   background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
-    url("/assets/Images/3d-scenes.jpg");
+    url("/assets/Images/3d-scenes1.jpg");
 }
 .main-categories .holder .card.scenes:hover {
-  background-image: url("/assets/Images/3d-scenes.jpg");
+  background-image: url("/assets/Images/3d-scenes1.jpg");
 }
 .main-categories .holder .card.interior {
   background-image: url("/assets/Images/InteriorDesign.png");
