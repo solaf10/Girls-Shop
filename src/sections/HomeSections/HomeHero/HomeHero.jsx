@@ -1,7 +1,18 @@
 import { Link } from "react-router";
 import "./HomeHero.css";
+import { useState } from "react";
+import CustomizeOrder from "../../../components/CustomizeOrder/CustomizeOrder";
 
 const HomeHero = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const openPopup = () => {
+    setIsPopupOpen(true); 
+  };
+  
+  const closePopup = () => {
+    setIsPopupOpen(false); 
+  };
   return (
     <div className="home-hero">
       <div className="container">
@@ -15,7 +26,8 @@ const HomeHero = () => {
           <Link to="/shop" className="shop-btn btn blurry">
             Shop Now
           </Link>
-          <button className="customize-btn btn">Customize order</button>
+          <button className="customize-btn btn"  onClick={openPopup}>Customize order</button>
+          {isPopupOpen && <CustomizeOrder closePopup={closePopup} />}
         </div>
       </div>
     </div>

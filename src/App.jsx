@@ -15,6 +15,9 @@ import OTPSend from "./components/UpdatePasswordCard/OTPSend";
 import ChangePassword from "./components/UpdatePasswordCard/ChangePassword";
 import ChangedPassword from "./components/UpdatePasswordCard/ChangedPassword";
 
+
+
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -29,6 +32,9 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/updatePassword" element={<Contact />} />        
+           
+
         <Route path="/updatePassword" element={<UpdatePassword />}>
           <Route
             index

@@ -1,8 +1,5 @@
 import "./ContactForm.css";
-import { CiLocationOn } from "react-icons/ci";
-import { PiCalendarDotsBold } from "react-icons/pi";
-import { FiPhone } from "react-icons/fi";
-import { LiaEnvelopeOpenTextSolid } from "react-icons/lia";
+
 const ContactForm = () => {
   return (
     <div className="contact-more-info-about-us">
@@ -27,14 +24,14 @@ const ContactForm = () => {
               <div className="all-details-info">
                 <h2>Address</h2>
                 <div className="more-details">
-                  <CiLocationOn className="contact-icon" />
+                  <img src="/assets/Images/locationIcon.svg"/>
                   <p>Syria , Homs , AlHamra Street , 12 </p>
                 </div>
               </div>
               <div className="all-details-info">
                 <h2>Business Hours</h2>
                 <div className="more-details">
-                  <PiCalendarDotsBold className="contact-icon" />
+                <img src="/assets/Images/calendarIcon.svg"/>
                   <p>su - sat : 8am - 5pm</p>
                 </div>
               </div>
@@ -43,14 +40,14 @@ const ContactForm = () => {
               <div className="all-details-info">
                 <h2>Phone-Number</h2>
                 <div className="more-details">
-                  <FiPhone className="contact-icon" />
+                <img src="/assets/Images/callIcon.svg"/>
                   <p>+963988136449</p>
                 </div>
               </div>
               <div className="all-details-info">
                 <h2>E-Mail</h2>
                 <div className="more-details">
-                  <LiaEnvelopeOpenTextSolid className="contact-icon" />
+                <img src="/assets/Images/msgIcon.svg"/>
                   <p>girlshop@gmail.com</p>
                 </div>
               </div>
