@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Shop from "./pages/Shop/Shop";
 import About from "./pages/About/About";
@@ -8,6 +8,12 @@ import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
+import UpdatePassword from "./pages/UpdatePassword/UpdatePassword";
+import UpdatePasswordCard from "./components/UpdatePasswordCard/UpdatePasswordCard";
+import ForgetPassword from "./components/UpdatePasswordCard/ForgetPassword";
+import OTPSend from "./components/UpdatePasswordCard/OTPSend";
+import ChangePassword from "./components/UpdatePasswordCard/ChangePassword";
+import ChangedPassword from "./components/UpdatePasswordCard/ChangedPassword";
 
 
 
@@ -21,6 +27,7 @@ const App = () => {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
@@ -28,6 +35,60 @@ const App = () => {
         <Route path="/updatePassword" element={<Contact />} />        
            
 
+        <Route path="/updatePassword" element={<UpdatePassword />}>
+          <Route
+            index
+            element={
+              <UpdatePasswordCard
+                title="Forget Password"
+                desc="Please enter your email to resend code on it"
+              >
+                <ForgetPassword />
+              </UpdatePasswordCard>
+            }
+          />
+          <Route
+            path="sendOTP"
+            element={
+              <UpdatePasswordCard
+                title="OTP Sent"
+                desc={
+                  <>
+                    <span>
+                      Please enter OTP that send to your email address
+                      johnDoe@gmail.com
+                    </span>
+                    <Link to="/updatePassword"> change?</Link>
+                  </>
+                }
+              >
+                <OTPSend />
+              </UpdatePasswordCard>
+            }
+          />
+          <Route
+            path="change"
+            element={
+              <UpdatePasswordCard
+                title="Change Password"
+                desc="Please enter new password"
+              >
+                <ChangePassword />
+              </UpdatePasswordCard>
+            }
+          />
+          <Route
+            path="changed"
+            element={
+              <UpdatePasswordCard
+                title="Great!!!"
+                desc="Password Changed Successfully"
+              >
+                <ChangedPassword />
+              </UpdatePasswordCard>
+            }
+          />
+        </Route>
       </Routes>
       <Footer />
     </BrowserRouter>

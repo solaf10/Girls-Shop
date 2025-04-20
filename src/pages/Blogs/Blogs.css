@@ -1,0 +1,35 @@
+
+.holder-blogs {
+    margin-top: 90px;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 70px;
+    border-bottom: 1px solid #C0C0C0;
+   padding-bottom:80px ;
+  }
+  .slider-blogs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 100px;
+  }
+  .slider-blogs .first-num{
+    
+    border-bottom: 1px solid #000E0C;
+  }
+  .slider-blogs .second-num{
+    color: #C0C0C0;
+  }
+  .next-blogs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .slider-blogs .next-blogs-icon{
+    fill: #000E0C;
+    
+  }
