@@ -1,0 +1,9 @@
+.application .container{
+    background-color: #E2E2E2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.application .container .text{
+    
+}
