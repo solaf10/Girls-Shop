@@ -1,8 +1,8 @@
 import "./BlogCard.css";
 
-const BlogCard = ({ image, title, publisher, date }) => {
+const BlogCard = ({ image, title, publisher, date, onClick }) => {
   return (
-      <div className="blog-card">
+      <div className="blog-card" onClick={onClick}>
         <div className="image">
           <img src={image} alt={title} />
         </div>

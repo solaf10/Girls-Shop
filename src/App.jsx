@@ -14,6 +14,7 @@ import ForgetPassword from "./components/UpdatePasswordCard/ForgetPassword";
 import OTPSend from "./components/UpdatePasswordCard/OTPSend";
 import ChangePassword from "./components/UpdatePasswordCard/ChangePassword";
 import ChangedPassword from "./components/UpdatePasswordCard/ChangedPassword";
+import BlogsDetails from "./pages/BlogsDetails/BlogsDetails";
 
 
 
@@ -33,7 +34,7 @@ const App = () => {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/updatePassword" element={<Contact />} />        
-           
+        <Route path="/details/:id" element={<BlogsDetails />} />
 
         <Route path="/updatePassword" element={<UpdatePassword />}>
           <Route
@@ -89,6 +90,7 @@ const App = () => {
             }
           />
         </Route>
+       
       </Routes>
       <Footer />
     </BrowserRouter>

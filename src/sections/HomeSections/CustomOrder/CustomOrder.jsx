@@ -1,8 +1,19 @@
+import { useState } from "react";
 import "./CustomOrder.css";
 import { FaCheckCircle } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
+import CustomizeOrder from "../../../components/CustomizeOrder/CustomizeOrder";
 
 const CustomOrder = ({}) => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  
+    const openPopup = () => {
+      setIsPopupOpen(true); 
+    };
+    
+    const closePopup = () => {
+      setIsPopupOpen(false); 
+    };
   return (
     <section className="custom-order">
       <div className="container">
@@ -53,10 +64,11 @@ const CustomOrder = ({}) => {
               </div>
             </div>
           </div>
-          <button>
+          <button  onClick={openPopup}>
             <span>Make Your Own Design</span>
             <MdArrowOutward className="arrow-icon" />
           </button>
+          {isPopupOpen && <CustomizeOrder closePopup={closePopup} />}
         </div>
       </div>
     </section>
