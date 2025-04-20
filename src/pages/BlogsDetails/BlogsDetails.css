@@ -1,0 +1,202 @@
+.blogs-detais-container{
+    display: flex;
+    margin-top: 62px;
+    gap: 40px;
+}
+.blogs-detais-container .article-detailes{
+    width: 55vw;
+    img.blog-img{
+        width: 55vw;
+        height: 65vh;
+    }
+    .date-publisher{
+        margin-top: 30px;
+        margin-bottom: 8px;
+        display: flex;
+        gap: 30px;
+        font-weight: 300;
+        font-size: 16px;
+    }
+    .article-body{
+        h1{
+            font-weight: 600;
+        font-size: 37px;
+        margin-bottom: 48px;
+        }
+        p{
+            margin-bottom: 52px;
+            font-weight: 300;
+            font-size: 16px;
+        }
+    }
+    .share-post{
+        display: flex;
+        gap: 16px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #525966;
+        padding-bottom: 64px;
+        border-bottom: 0.5px solid #C0C0C0
+       
+    }
+    .posts-slider{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 0.5px solid #C0C0C0
+       
+    }
+    .posts-slider  .previous , .posts-slider .next{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 64px 0;
+       
+    }
+    .posts-slider  .previous .previous-icon , .posts-slider .next .next-icon {
+        width:20px ;
+        height:20px ;
+
+    }
+    
+}
+.comment-bar{
+    padding: 64px 0;
+    border-bottom: 0.5px solid #C0C0C0;
+       
+    h1{
+        font-weight: 600;
+        font-size: 28px;
+        span{
+            color: var(--third-color);
+        } 
+    }
+    .name-and-comment{
+        padding-top: 64px;
+        .name-and-time{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            .name{
+                font-weight: 600;
+                font-size: 21px;
+            }
+            .time{
+                font-weight:300;
+                font-size:16px;
+            }
+        }
+        .comment{
+            font-weight:300;
+            font-size:16px;
+            padding-top: 16px;
+        }
+    }
+}
+.write-comment-sec{
+    padding: 67px 0 159px;
+    h1{
+        font-weight:600;
+        font-size:37px;
+        color:var(--third-color) ;
+    }
+    .write-comment-form{
+        
+        .phone-email-info{
+            display: flex;
+            justify-content:space-between ;
+            align-items: center;
+            padding-top: 48px;
+            input{
+                width: 48%;
+                border: none;
+                border-bottom: 1px solid #000E0C;
+                padding-bottom: 16px;
+                font-weight:400;
+                font-size:16px;
+          
+            }
+        }
+        .textarea-to-write-comment{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding-top: 48px;
+            textarea{
+                height: 25vh;
+                resize: none;
+                border: 1px solid #000E0C ;
+            }
+            label{
+                font-weight:400;
+                font-size:16px;
+                color: #666666;
+                
+            }
+            
+        }
+        .agree-yo-save-your-info{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-top: 24px;
+            input.check{
+                width: 20px;
+                height: 20px;
+                border: 1px solid #385854;
+                accent-color:  var(--primary-color)
+            }
+        }
+        .send-comment{
+            width: 117px;
+            height: 52px;
+            background-color: var(--primary-color);
+            outline: none;
+            border: none;
+            margin-top: 42px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 18px;
+        }
+    }
+}
+/* second-part */
+.recent-posts-info{
+    h3{
+        font-weight: 600;
+        font-size: 21px; 
+        color: var(--third-color);
+    
+        margin-bottom: 16px;
+    }
+    .search-container{
+        position: relative;
+        input{
+            width: 25vw;
+            height: 48px;
+            padding-left: 44px;
+            
+            border: 1px solid #DEDEDE;
+            border-radius: 7px;
+        
+        }
+      
+        .search-icon{
+            width: 40px;
+            height: 40px;
+           
+        position: absolute;
+        left: 0;
+            color: #C8C8C8;
+          
+        }
+    }
+  
+}
+.recent-posts-info .recent-posts{
+    padding-top: 40px;
+    h2{
+        font-weight: 600;
+        font-size: 21px; 
+        color: var(--third-color);
+    }
+}
