@@ -1,0 +1,69 @@
+.inspiredliving {
+    position: relative;
+}
+.inspiredliving .container{
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.inspiredliving .main-title{
+    text-align: center;
+h2{
+    font-size: 34px;
+    font-weight: 600px;
+    padding-bottom: 16px;
+}
+p{
+    font-size: 20px;
+    font-weight: 400px;  
+}
+}
+.inspiredliving .info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 46px;
+}
+.inspiredliving .image img{
+    
+        width: 100%;
+        height: 100%;
+    
+}
+.inspiredliving .text{
+    width: 50%;
+}
+.inspiredliving .text .holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:24px;
+}
+.inspiredliving .text .holder .box{
+    display: flex;
+    flex-direction: row;
+    gap:16px
+}
+.inspiredliving .holder-icon .icon{
+    width: 32px;
+    height: 32px;
+}
+.inspiredliving .content{
+display: flex;
+flex-direction: column;
+gap: 8px;
+h3{
+    font-size: 20px;
+    font-weight: 600px;  
+}
+p{
+    font-size: 16px;
+    font-weight: 400;
+}
+}
+.inspiredliving .dotted-bg{
+    position: absolute;
+    top: 135px;
+    left: 44px;
+    z-index: -1;
+}
