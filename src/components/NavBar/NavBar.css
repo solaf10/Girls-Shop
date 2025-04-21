@@ -165,7 +165,7 @@ nav .container .menu .log-out svg {
   position: fixed;
   right: 16%;
   width: 220px;
-  height: 275px;
+  /* height: 275px; */
   border-width: 1px;
   padding: 32px;
   background-color: white;

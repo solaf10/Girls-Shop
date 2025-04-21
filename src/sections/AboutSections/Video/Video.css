@@ -1,9 +1,13 @@
-.video{
-    padding-top: 7px;
-    padding-bottom:5px;
+.video {
+  padding-top: 7px;
+  padding-bottom: 5px;
 }
-.video .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.video .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video .container .video-img,
+.video .container .video-img img {
+  width: 100%;
 }
