@@ -5,6 +5,7 @@ import MoreThan from "../../sections/AboutSections/MoreThan/MoreThan";
 import Video from "../../sections/AboutSections/Video/Video";
 import InspiredLiving from "../../sections/AboutSections/InspiredLiving/InspiredLiving";
 import Application from "../../sections/AboutSections/Application/Application";
+import FollowUs from "../../sections/AboutSections/FollowUs/FollowUs";
 
 const About = () => {
   return (
@@ -15,6 +16,7 @@ const About = () => {
       <Video/>
       <InspiredLiving/>
       <Application/>
+      <FollowUs/>
       </div>
   );
 };
