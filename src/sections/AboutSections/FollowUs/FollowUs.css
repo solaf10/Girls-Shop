@@ -1,0 +1,12 @@
+.followus .title{
+    padding-bottom: 20px;
+    h2{
+        font-size: 50px;
+        font-weight: 700px;
+    }
+}
+.followus .slider{
+    display: flex;
+    justify-content: space-between;
+
+}
