@@ -1,0 +1,60 @@
+.holder {
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 70px;
+}
+.holder .card {
+  position: relative;
+  cursor: pointer;
+  /* width: 100%; */
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  color: white;
+}
+
+/* .holder .card.scenes {
+  background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+    url("../../../../public/assets/Images/shop/image/1.png");
+}
+.holder .card.scenes:hover {
+  background-image: url("../../../../public/assets/Images/shop/image/1.png");
+} */
+.holder .card.interior {
+  background-image: url("../../../../public/assets/Images/shop/image/1.png");
+  background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+    url("../../../../public/assets/Images/shop/image/1.png");
+}
+.holder .card.interior:hover {
+  background-image: url("../../../../public/assets/Images/shop/image/1.png");
+}
+.holder .card.exterior {
+  background-image: url("../../../../public/assets/Images/shop/image/2.png");
+  background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+    url("../../../../public/assets/Images/shop/image/2.png");
+}
+.holder .card.exterior:hover {
+  background-image: url("../../../../public/assets/Images/shop/image/2.png");
+}
+.holder .card p {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .main-categories {
+    padding: 70px 0px;
+  }
+  .main-categories .holder {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
