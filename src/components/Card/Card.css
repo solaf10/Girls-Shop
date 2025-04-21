@@ -1,0 +1,15 @@
+.card {
+  margin: 30px 0;
+  width: 380px;
+  height: 290px;
+}
+.card img {
+  width: 300px;
+  height: 290px;
+
+  border: 1px solid #eee;
+}
+.card p {
+}
+.card .price {
+}
