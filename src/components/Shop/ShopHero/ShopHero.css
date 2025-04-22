@@ -1,10 +1,10 @@
-.holder {
+.shop .container .holder {
   margin-top: 200px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 70px;
 }
-.holder .card {
+.shop .container .holder .card {
   position: relative;
   cursor: pointer;
   /* width: 100%; */
@@ -16,30 +16,23 @@
   color: white;
 }
 
-/* .holder .card.scenes {
+.shop .container .holder .card.interior {
+  background-image: url("../../../../public/assets/Images/InteriorDesign-2.png");
   background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
-    url("../../../../public/assets/Images/shop/image/1.png");
+    url("../../../../public/assets/Images/InteriorDesign-2.png");
 }
-.holder .card.scenes:hover {
-  background-image: url("../../../../public/assets/Images/shop/image/1.png");
-} */
-.holder .card.interior {
-  background-image: url("../../../../public/assets/Images/shop/image/1.png");
+.shop .container .holder .card.interior:hover {
+  background-image: url("../../../../public/assets/Images/InteriorDesign-2.png");
+}
+.shop .container .holder .card.exterior {
+  background-image: url("../../../../public/assets/Images/ExteriorDesign.jpg");
   background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
-    url("../../../../public/assets/Images/shop/image/1.png");
+    url("../../../../public/assets/Images/ExteriorDesign.jpg");
 }
-.holder .card.interior:hover {
-  background-image: url("../../../../public/assets/Images/shop/image/1.png");
+.shop .container .holder .card.exterior:hover {
+  background-image: url("../../../../public/assets/Images/ExteriorDesign.jpg");
 }
-.holder .card.exterior {
-  background-image: url("../../../../public/assets/Images/shop/image/2.png");
-  background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
-    url("../../../../public/assets/Images/shop/image/2.png");
-}
-.holder .card.exterior:hover {
-  background-image: url("../../../../public/assets/Images/shop/image/2.png");
-}
-.holder .card p {
+.shop .container .holder .card p {
   position: absolute;
   bottom: 20px;
   left: 50%;

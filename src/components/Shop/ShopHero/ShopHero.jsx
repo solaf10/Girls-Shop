@@ -1,4 +1,3 @@
-// import { Button, Flex, Text } from "@mantine/core";
 import React from "react";
 import "./ShopHero.css";
 export default function ShopHero() {
@@ -15,7 +14,6 @@ export default function ShopHero() {
               <p>Exterior Design</p>
             </div>
           </div>
-          <div className=""></div>
         </div>
       </div>
     </div>

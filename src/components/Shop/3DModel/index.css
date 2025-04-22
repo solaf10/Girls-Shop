@@ -5,28 +5,32 @@
   padding: 70px 0;
   font-size: 20px;
 }
-.topBar {
+.models .topBar {
   display: grid;
   grid-template-columns: repeat(2, 300px) minmax(300px, 600px);
   justify-content: flex-start;
 }
-.topBar .search {
+.models .topBar .search {
+  position: relative;
   padding-top: 15px;
   width: 200px;
   border-bottom: 1px #23262f solid;
   padding-bottom: 15px;
 }
-
-.topBar .search input {
+.models .topBar .search input {
   font-size: 15px;
   border: none;
   position: absolute;
   color: #23262f;
 }
-.topBar .results {
+.models .topBar .search img {
+  right: 0;
+  position: absolute;
+}
+.models .topBar .results {
   padding: 10px;
 }
-.topBar .sorting {
+.models .topBar .sorting {
   margin-left: 200px;
   background-color: #eee;
   border: #23262f;
@@ -35,21 +39,25 @@
   padding: 10px;
   /* justify-content: center; */
 }
-.search::before {
+.models .topBar .search::before {
   contain: "./search.svg";
   position: relative;
   width: 50px;
   height: 50px;
   color: #23262f;
 }
-.filters {
-  width: 250px;
+.models .products {
+  display: flex;
+  justify-content: space-between;
 }
-.cards {
+.models .products .filters {
+  width: 20%;
+}
+.models .products .cards {
   display: grid;
   justify-content: space-between;
   grid-template-columns: repeat(3, 1fr);
-  /* gap: 20px; */
-  width: 900px;
+  gap: 20px;
+  width: 70%;
   margin: 100px;
 }

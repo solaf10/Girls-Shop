@@ -1,6 +1,7 @@
 import "./index.css";
-import image from "./llight.png";
+import image from "./product.png";
 import Card from "../../Card/Card";
+import search from "../../../../public/assets/Images/search.svg";
 import AccordionFilter from "./AccordionFilter";
 export default function Models() {
   return (
@@ -9,12 +10,12 @@ export default function Models() {
       <div className="topBar">
         <div className="search">
           <input placeholder="Search products..."></input>
-          <img src="./search.svg" />
+          <img src={search} />
         </div>
         <div className="results">Showing 1-12 of 18 results</div>
         <div className="sorting"> Default sorting</div>
       </div>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div className="products">
         <div className="filters">
           <AccordionFilter />
         </div>

@@ -1,15 +1,11 @@
-.card {
-  margin: 30px 0;
-  width: 380px;
-  height: 290px;
+.models .products .cards .card {
 }
-.card img {
+.models .products .cards .card img {
   width: 300px;
   height: 290px;
-
   border: 1px solid #eee;
 }
-.card p {
+.models .products .cards .card p {
 }
-.card .price {
+.models .products .cards .card .price {
 }
