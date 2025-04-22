@@ -1,5 +1,6 @@
-.recent-blogs {
-}
+/* .recent-blogs {
+  padding-top: 0px;
+} */
 .recent-blogs .home-main-title {
 }
 .recent-blogs .holder {
@@ -32,6 +33,11 @@
 @media (max-width: 991px) {
   .blog-card img {
     max-height: 350px;
+  }
+}
+@media (max-width: 768px) {
+  .recent-blogs .holder {
+    margin-top: 48px;
   }
 }
 @media (max-width: 500px) {

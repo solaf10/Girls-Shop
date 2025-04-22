@@ -76,6 +76,10 @@ Link {
   .home-main-title p {
     width: 100%;
   }
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 @media (max-width: 768px) {
   .container {

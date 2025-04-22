@@ -6,9 +6,9 @@ const Video = () => {
     <section className="video">
       <div className="container">
         <div className="video-img">
-          <video loop="" autoplay="" muted="">
+          <video loop autoPlay muted>
             <source
-              src="/public/assets/Modern Interior Design For Apartment(720P_60FPS).mp4"
+              src="/assets/Modern Interior Design For Apartment(720P_60FPS).mp4"
               type="video/mp4"
             />
           </video>

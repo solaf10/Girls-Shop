@@ -8,6 +8,8 @@
   align-items: center;
 }
 .video .container .video-img,
-.video .container .video-img img {
+.video .container .video-img video {
   width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
