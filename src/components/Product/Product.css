@@ -1,0 +1,207 @@
+.product {
+  /* letter-spacing: 1px; */
+  margin-top: 150px;
+  .product-content {
+    display: flex;
+    gap: 20px;
+    .product-imgs {
+      width: 60vw;
+      .product-img {
+        /* width: 60vw; */
+        height: 530px;
+        max-width: 100%;
+      }
+      .more-photos {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+        img {
+          width: 122px;
+          height: 122px;
+        }
+      }
+    }
+    .product-details {
+      .top-product {
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        .rating {
+          display: flex;
+          justify-content: center;
+          .rev {
+            color: #5f6c72;
+            padding: 5px 10px;
+          }
+        }
+        .share {
+          display: flex;
+          justify-content: center;
+
+          color: #5f6c72;
+          .icon {
+            color: #5f6c72;
+            padding: 15px;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      h2 {
+        margin: 15px 0;
+        font-size: 25px;
+      }
+      p {
+        margin: 15px 0;
+      }
+      .price-box {
+        margin: 15px 0;
+        span.price {
+          font-weight: bold;
+          font-size: 25px;
+        }
+        span.real-price {
+          color: #c0c0c0;
+          font-size: 20px;
+          padding: 0 20px;
+          text-decoration: line-through;
+        }
+        .sale {
+          padding: 10px;
+          font-weight: 500;
+          background-color: #efd33d;
+        }
+      }
+      .cart {
+        outline: none;
+        border: none;
+        font-weight: normal;
+        margin-top: 42px;
+        font-weight: 600;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        a {
+          padding: 15px 100px;
+          color: white;
+          width: 350px;
+          text-align: center;
+          background-color: var(--primary-color);
+          height: 50px;
+          letter-spacing: 1px;
+          display: flex;
+          justify-content: space-around;
+          .arrow-icon {
+            font-size: 22px;
+            transition: 0.5s;
+          }
+        }
+
+        a:hover {
+          background-color: var(--third-color);
+          .arrow-icon {
+            transform: rotate(45deg);
+          }
+        }
+
+        .product-number {
+          width: 130px;
+          text-align: center;
+          padding: 0 30px;
+          display: flex;
+          border: 1px solid #1d322f;
+
+          button {
+            background-color: white;
+            width: 20px;
+            height: 25px;
+            font-size: 20px;
+            top: 11px;
+            position: relative;
+          }
+        }
+      }
+      hr {
+        margin: 30px 0;
+      }
+      .architecture {
+        p {
+          margin: 32px 0;
+          font-size: 18px;
+        }
+        .download-button {
+          background-color: var(--primary-color);
+          color: white;
+          padding: 20px;
+          display: flex;
+          gap: 40px;
+          justify-content: space-between;
+          width: 325px;
+          button {
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            gap: 20px;
+            display: flex;
+          }
+          button.file-type::before {
+            content: "";
+            position: relative;
+            width: 555px;
+            height: 2px;
+            background-color: white;
+          }
+          button.file-type {
+          }
+        }
+      }
+    }
+  }
+  hr {
+    width: 100%;
+    margin: 50px 0;
+  }
+  .description {
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .info {
+      display: flex;
+      gap: 40px;
+      margin: 40px 0;
+      .title {
+        color: var(--text-color);
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .desc {
+        font-size: 18px;
+        color: var(--text-color);
+      }
+    }
+  }
+}
+
+/* nav .container .menu .log-out {
+  width: 100%;
+  padding: 15px;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--primary-color);
+  background-color: transparent;
+  border-top: 1px solid #61706e;
+}
+nav .container .menu .log-out svg {
+  font-size: 24px;
+} */

@@ -1,10 +1,9 @@
-import BlogCard from '../../components/BlogCard/BlogCard';
-import TopGreenBar from '../../components/TopGreenBar/TopGreenBar';
+import BlogCard from "../../components/BlogCard/BlogCard";
+import TopGreenBar from "../../components/TopGreenBar/TopGreenBar";
 import { GrNext } from "react-icons/gr";
-import './Blogs.css'
-import { useNavigate } from 'react-router-dom';
+import "./Blogs.css";
+import { useNavigate } from "react-router-dom";
 const Blogs = () => {
-
   const posts = [
     {
       id: 1,
@@ -119,27 +118,27 @@ const Blogs = () => {
   };
   return (
     <div className="blogs">
-       <TopGreenBar secondLink="../../pages/Blogs" secondPageName="Blogs" />
+      <TopGreenBar secondLink="../../pages/Blogs" secondPageName="Blogs" />
       <div className="container">
         <div className="holder-blogs">
-
           {posts.map((post) => (
             <BlogCard
-            onClick={() => handleClick(post.id)}
+              onClick={() => handleClick(post.id)}
               key={post.id}
               image={post.image}
               title={post.title}
               publisher={post.publisher}
               date={post.date}
-
             />
           ))}
         </div>
-      <div className="slider-blogs">
-        <p className='first-num'>1</p>
-        <p className='second-num'>2</p>
-        <p className='next-blogs'>Next <GrNext  className='next-blogs-icon' /></p>
-      </div>
+        <div className="slider-blogs">
+          <p className="first-num">1</p>
+          <p className="second-num">2</p>
+          <p className="next-blogs">
+            Next <GrNext className="next-blogs-icon" />
+          </p>
+        </div>
       </div>
     </div>
   );

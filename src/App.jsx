@@ -15,6 +15,9 @@ import OTPSend from "./components/UpdatePasswordCard/OTPSend";
 import ChangePassword from "./components/UpdatePasswordCard/ChangePassword";
 import ChangedPassword from "./components/UpdatePasswordCard/ChangedPassword";
 import BlogsDetails from "./pages/BlogsDetails/BlogsDetails";
+import LogIn from "./components/LogIn/LogIn";
+import Product from "./components/Product/Product";
+import SignUp from "./components/SignUp/SignUp";
 
 const App = () => {
   return (
@@ -25,13 +28,16 @@ const App = () => {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Home />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/product/:id" element={<Product />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/updatePassword" element={<Contact />} />
         <Route path="/details/:id" element={<BlogsDetails />} />
+
         <Route path="/updatePassword" element={<UpdatePassword />}>
           <Route
             index

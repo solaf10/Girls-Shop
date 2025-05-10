@@ -1,11 +1,84 @@
 .models .products .cards .card {
+  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: all 0.2s ease-in-out;
+  height: fit-content;
+  width: 250px;
+  overflow: hidden;
+  position: relative;
+}
+.models .products .cards .card div {
+  display: flex;
+  position: relative;
+  width: fit-content;
 }
 .models .products .cards .card img {
-  width: 300px;
-  height: 290px;
   border: 1px solid #eee;
+  border-radius: 15px;
+
+  width: 250px;
+  height: 300px;
+}
+.models .products .cards .card .icons {
+  display: none;
+  right: 30%;
+  transition: 1s;
+}
+.models .products .cards .card:hover .icons {
+  display: flex;
+  right: 0;
+  transition-duration: display 0.4s ease;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  gap: 30px;
+}
+.models .products .cards .card .icons .icon {
+  width: 40px;
+  height: 40px;
+  background-color: #e2e2e2;
+  color: #1d322f;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 10px;
+  transition: all 0.4s ease;
+  gap: 5px;
+}
+.models .products .cards .card .icons .icon p {
+  display: none;
+}
+.models .products .cards .card:hover > div .icons .icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* transition-duration: 0.5s; */
+}
+.models .products .cards .card .icons .icon:hover {
+  width: auto;
+  background-color: #1d322f;
+  color: #e2e2e2;
+  border-radius: 20px;
+  padding: 0 15px;
+}
+
+.models .products .cards .card div .icons .icon:hover > p {
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+  display: block;
+  font-size: 13px;
+  padding: 0 12px;
 }
 .models .products .cards .card p {
+  padding: 10px;
 }
 .models .products .cards .card .price {
+  padding: 10px;
 }
