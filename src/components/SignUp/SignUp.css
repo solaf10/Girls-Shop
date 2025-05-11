@@ -123,11 +123,13 @@
           margin: 6px 0;
           padding: 12px;
           margin-bottom: 10px;
-          border: 1px solid #e2e2e2;
+          border: 1px solid var(--nutral-color);
           border-radius: 4px;
           /* box-shadow: 0 0 8px #e2e2e2; */
         }
-
+        input:focus-visible {
+          border: 1px solid var(--nutral-color);
+        }
         .input-error {
           border-color: var(--error-color);
           color: var(--error-color);
@@ -153,7 +155,12 @@
             position: relative;
           }
         }
-
+        .toggle-password:first-of-type {
+          top: 13%;
+        }
+        .toggle-password:last-of-type {
+          top: 63%;
+        }
         .forgot-password {
           text-align: right;
           margin-bottom: 10px;
@@ -161,6 +168,35 @@
             color: var(--text-color);
             text-decoration: underline;
             font-size: 13px;
+          }
+        }
+        .phone {
+          display: flex;
+          /* gap: 10px; */
+          width: 100%;
+          height: 45px;
+          margin: 6px 0;
+          padding: 0 10px;
+          margin-bottom: 10px;
+          border: 1px solid #e2e2e2;
+          border-radius: 4px;
+          img {
+            margin: auto 5px;
+            width: 36px;
+            height: 26px;
+            max-width: 100%;
+          }
+          .syrian-flag {
+          }
+          span {
+            margin: auto;
+          }
+          input {
+            border: none;
+            margin: auto auto auto 10px;
+          }
+          input:focus-visible {
+            border: none;
           }
         }
 

@@ -13,7 +13,7 @@ import { AiOutlineDown } from "react-icons/ai";
 
 import { FiDownload } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function Product() {
   const productsDetails = [
@@ -56,39 +56,17 @@ export default function Product() {
     setCount((c) => c + step);
   };
 
+  const navigate = useNavigate();
+  const handleClickToCart = () => {
+    navigate(`/cart`);
+  };
   const { id } = useParams();
 
   const product = productsDetails.find((b) => b.id === parseInt(id));
 
-  const [downloadBlocks, setDownloadBlocks] = useState(false);
+  const [downloadBlocksIsOpen, setDownloadBlocksIsOpen] = useState(false);
   const handleClick = () => {
-    <div className="popups-holder">
-      <div className="user-popup-holder">
-        <div
-          className="overlay user-overlay"
-          onClick={() => setIsUserShow(false)}
-          style={isUserShow ? { top: "0px" } : { top: "-100%" }}
-        ></div>
-        <div
-          className="user-popup"
-          style={isUserShow ? { top: "147px" } : { top: "-100%" }}
-        >
-          <p className="user-name">User Name</p>
-          <ul>
-            <li>
-              <Link to="/">User profile</Link>
-            </li>
-            <li>
-              <Link to="/">Setting</Link>
-            </li>
-          </ul>
-          <p className="log-out">
-            <span>Log Out</span>
-            <IoIosArrowForward />
-          </p>
-        </div>
-      </div>
-    </div>;
+    setDownloadBlocksIsOpen((prev) => !prev);
   };
   return (
     <div
@@ -142,7 +120,7 @@ export default function Product() {
           </div>
           <div className="cart">
             <a>
-              <span>Add to Cart</span>
+              <span onClick={handleClickToCart}>Add to Cart</span>
               <MdArrowOutward className="arrow-icon" />{" "}
             </a>
             <div className="product-number">
@@ -164,13 +142,44 @@ export default function Product() {
                 <FiDownload />
                 Download Blocks
               </button>
-              <button>
+              <button onClick={handleClick}>
                 <AiOutlineDown
                   className="file-type"
                   onClick={() => setDownloadBlocks(true)}
                 />
               </button>
             </div>
+            {downloadBlocksIsOpen && (
+              <div className="popup">
+                <div className="title">File Type</div>
+                <ul>
+                  <li>
+                    <a>
+                      <span className="suffix">.Dwg</span>
+                      <span className="size">1.75MB</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span className="suffix">.Max</span>
+                      <span className="size">1.75MB</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span className="suffix">.Psd</span>
+                      <span className="size">1.75MB</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span className="suffix">Download Zip</span>
+                      <span className="size">1.75MB</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            )}
             <p>Daily Credits - 3/3 </p>
           </div>
         </div>

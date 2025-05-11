@@ -157,6 +157,41 @@
           button.file-type {
           }
         }
+        .popup {
+          width: 264px;
+          background-color: white;
+          box-shadow: 3px 3px 10px var(--nutral-color);
+          right: 40px;
+          position: absolute;
+          .title {
+            color: var(--nutral-color);
+            font-size: 20px;
+            font-weight: 500;
+            padding: 7px 13px;
+          }
+          ul {
+            font-size: 18px;
+            li {
+              padding: 10px;
+              margin: 8px 0;
+              padding: 10px 4px;
+              a {
+                display: flex;
+                justify-content: space-between;
+                .suffix {
+                  font-weight: 500;
+                }
+                .size {
+                  font-weight: 400;
+                }
+              }
+            }
+            li:hover {
+              background-color: var(--nutral-color);
+              cursor: pointer;
+            }
+          }
+        }
       }
     }
   }

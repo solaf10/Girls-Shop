@@ -4,6 +4,9 @@ import SyrianFlag from "../../../public/assets/Images/SyrianFlag.svg";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { GoTriangleDown } from "react-icons/go";
+import triangle from "../../../public/assets/Images/triangle.svg";
+
 import { Link } from "react-router-dom";
 function SignUp() {
   const [email, setEmail] = useState("");
@@ -63,15 +66,17 @@ function SignUp() {
               className={error ? "input-error" : ""}
             />
             <p>Phone Number</p>
-            <div>
+            <div className="phone">
               <img src={SyrianFlag} />
+              <img src={triangle} className="syrian-flag" />
+              <span>+963</span>
+              <input
+                type="phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className={error ? "input-error" : ""}
+              />
             </div>
-            <input
-              type="phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className={error ? "input-error" : ""}
-            />
             <div className="password-field">
               <p>Password</p>
               <input
@@ -80,6 +85,23 @@ function SignUp() {
                 onChange={(e) => setPassword(e.target.value)}
                 className={error ? "input-error" : ""}
               />
+              <span
+                className="toggle-password"
+                onClick={() => setShowPassword((prev) => !prev)}
+              >
+                {showPassword ? (
+                  <>
+                    {" "}
+                    <span>Hide</span> <BsEyeSlash />
+                  </>
+                ) : (
+                  <>
+                    {" "}
+                    <span>Show</span>
+                    <BsEye />
+                  </>
+                )}
+              </span>
               <p> Confirm Password</p>
               <input
                 type={showPassword ? "text" : "password"}
@@ -111,7 +133,7 @@ function SignUp() {
             </div>
 
             <button className="sign-up-btn" type="submit">
-              SignIn
+              Sign Up
             </button>
           </form>
 
