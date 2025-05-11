@@ -15,7 +15,10 @@ const NavBar = () => {
   return (
     <nav className="blurry">
       <div className="container">
-        <div className="logo">Girls’Shop</div>
+        <div className="logo">
+          <img src="/assets/Images/Webicon.png" alt="" />
+          <span>Verdant</span>
+        </div>
         <ul className="links">
           <li>
             <NavLink to="/">Home</NavLink>

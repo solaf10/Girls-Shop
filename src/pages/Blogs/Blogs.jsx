@@ -114,7 +114,7 @@ const Blogs = () => {
   const navigate = useNavigate();
 
   const handleClick = (id) => {
-    navigate(`/details/${id}`);
+    navigate(`/blogs/${id}`);
   };
   return (
     <div className="blogs">
