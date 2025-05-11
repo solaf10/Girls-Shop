@@ -1,5 +1,4 @@
 .experts-holder {
-  /* transform: translateY(-25%); */
 }
 .experts-holder .experts {
   padding: 38px 0px;
@@ -8,19 +7,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
-  /* grid-template-columns: repeat(4, minmax(300px, 1fr)); */
-  /* row-gap: 40px; */
   background-color: var(--primary-color);
 }
 .experts-holder .experts .card {
-  /* padding: 0px 95px; */
   padding: 0px 6vw;
   text-align: center;
   color: white;
-  /* width: 112px;
-      height: 105px; */
 }
 .experts-holder .experts .card:not(:last-child) {
   border-right: 1px solid white;
@@ -29,7 +21,6 @@
   font-size: 40px;
   font-size: 2.8vw;
   font-weight: 600;
-  /* line-height: 48px; */
 }
 .experts-holder .experts .card p.text {
   font-size: 20px;
@@ -42,7 +33,6 @@
   }
   .experts-holder .experts {
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
     grid-template-columns: repeat(2, 50%);
     row-gap: 40px;
   }

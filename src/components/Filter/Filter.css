@@ -1,0 +1,153 @@
+.filter {
+  width: 200px;
+}
+.filter .title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 30px 0;
+}
+
+.item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 5px 15px;
+  cursor: pointer;
+  border-top: 2px solid #fff;
+  border-bottom: 4px solid #fff;
+  align-items: center;
+}
+
+.number {
+  font-size: 24px;
+  font-weight: 500;
+  color: #ced4da;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.content-box {
+  grid-column: 2 / -1;
+  padding-bottom: 16px;
+  line-height: 1.6;
+}
+
+.content-box ul {
+  color: #868e96;
+  margin-left: 16px;
+  margin-top: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.content-box ul li:hover {
+  color: #23262f;
+}
+
+.filter-container {
+  font-family: Arial, sans-serif;
+}
+.filter hr {
+  margin: 30px 0 0 0;
+  width: 200px;
+}
+.filter-section {
+  gap: 40px;
+}
+
+.filter-section h4 {
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.range-slider {
+  position: relative;
+  display: flex;
+}
+
+.range-slider input[type="range"] {
+  width: 100%;
+  appearance: none;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.range-slider input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #152d2b;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.price-text {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #333;
+}
+
+.color-options {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.color-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filter-container {
+    padding: 10px;
+  }
+  .color-circle {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.style,
+.material {
+  h3 {
+  }
+  .checkbox {
+    cursor: pointer;
+    font-size: 18px;
+    div {
+      padding: 10px 0;
+      letter-spacing: 1px;
+      display: flex;
+      gap: 15px;
+      .icon {
+        width: 16px;
+        height: 16px;
+      }
+      span {
+        color: var(--text-color);
+        padding: 0 15px;
+        position: relative;
+        top: -5px;
+      }
+    }
+  }
+}
+
+.reset {
+  font-size: 18px;
+  text-decoration: underline;
+  padding: 20px 0 0 0;
+}
