@@ -64,7 +64,7 @@ const CustomOrder = ({}) => {
               </div>
             </div>
           </div>
-          <button  onClick={openPopup}>
+          <button   className="make-your-own-design-btn" onClick={openPopup}>
             <span>Make Your Own Design</span>
             <MdArrowOutward className="arrow-icon" />
           </button>
