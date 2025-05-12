@@ -8,8 +8,8 @@
     }
     .popupOverlay .pop-central{
         width: 100vw;
-        height: 100vh;
-        margin-top:60px;
+        height: 90vh;
+        margin-top:80px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -19,7 +19,7 @@
     
     position: fixed;
     width:65vw;
-    height:70vh;
+    height:60vh;
     margin:0 auto;
     background-color:white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -44,6 +44,7 @@
 }
 .popupOverlay .pop-up-costomize-order-page .bring-idea-container{
     display: flex;
+    
     gap: 40px;
     .Bring-idea-tolife-sec{
         width: 50%;
@@ -77,21 +78,23 @@ display: flex;
 flex-direction: column;
 gap: 20px;
 width: 50%;
-
-input{
-    border: 1px solid #66666659;
-    padding-left: 7px;
-
+.location-box ,.chose-product-img , .dimenision-label{
+    input{
+        border: 1px solid #66666659;
+        padding-left: 7px;
+    
+    }
+    input :focus{
+        outline: 2px solid var(--third-color);
+    }
+    label{
+    
+        color: #666666;
+        padding-bottom: 7px;
+    
+    }
 }
-input :focus{
-    outline: 2px solid var(--third-color);
-}
-label{
 
-    color: #666666;
-    padding-bottom: 7px;
-
-}
 
 } 
 .popupOverlay .pop-up-costomize-order-page .bring-idea-container .customize-form .dimenision-inputs{
@@ -111,31 +114,31 @@ label{
     width: 100%;
     height: 40px;
     label{
-            background-color:var(--third-color) ;           
+        border: 1px solid #66666659;
+        padding-left: 7px;
             position: absolute;
             width: 100%;
             height: 100%;
             top: 0;
             left: 0;
-            text-align: center;
-            z-index: 1000;
-            color: #fff!important;
-            font-weight: 600;
-            font-size: 16px;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           
-          
+            z-index: 1000; 
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            font-size: 14px;
+    color: #666666;
+
     }
     input {
         position: absolute;
         top: 0;
-            left: 0;
+        left: 0;
         opacity: 0;
         width: 100%;
          height: 100%;
         cursor: pointer;
+        font-weight: 200;
+        font-size: 16px;
      
       }
     
@@ -143,9 +146,11 @@ label{
 .choose-color {
     .label-choose-color{
         padding-right: 10px;
+      
     }
     input{
         width: 50px;
+        padding-left: 0;
     }
     
 
@@ -156,7 +161,7 @@ label{
     input{
         width:100%;
         height: 40px;
-        padding: 7px;
+     
     }
    
 }
@@ -197,4 +202,30 @@ label{
     color: #fff;
     font-weight: 600;
     font-size: 16px;
+   border: none;
 }
+@media (max-width:992px) {
+    .popupOverlay .pop-up-costomize-order-page .bring-idea-container{
+        flex-direction: column;
+        .Bring-idea-tolife-sec{
+            width: 100%;
+        }
+    }
+    .popupOverlay .pop-up-costomize-order-page .bring-idea-container .customize-form{
+        width: 100%;
+    }
+  }
+  @media (max-width:650px){
+    .popupOverlay .pop-up-costomize-order-page{
+        height: 70vh;
+    }
+  }
+  @media (max-width:400px){
+    .popupOverlay .pop-up-costomize-order-page{
+        height: 90vh;
+    }
+    .color-counter-box{
+        flex-direction: column;
+        grid-area: 10px;
+    }
+  }
