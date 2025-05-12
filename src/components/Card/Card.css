@@ -3,82 +3,75 @@
   border-radius: 15px;
   transition: all 0.2s ease-in-out;
   height: fit-content;
-  width: 250px;
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
 .models .products .cards .card div {
-  display: flex;
   position: relative;
-  width: fit-content;
 }
 .models .products .cards .card img {
   border: 1px solid #eee;
-  border-radius: 15px;
-
-  width: 250px;
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
   height: 300px;
 }
 .models .products .cards .card .icons {
-  display: none;
-  right: 30%;
   transition: 1s;
+  position: absolute;
+  top: 25px;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
 }
 .models .products .cards .card:hover .icons {
-  display: flex;
-  right: 0;
-  transition-duration: display 0.4s ease;
-  flex-direction: column;
-  justify-content: space-evenly;
-  position: absolute;
-  top: 100px;
-  right: 10px;
-  gap: 30px;
+  right: 20px;
 }
 .models .products .cards .card .icons .icon {
   width: 40px;
   height: 40px;
-  background-color: #e2e2e2;
-  color: #1d322f;
   border-radius: 50%;
-  font-size: 20px;
+  background-color: #e2e2e2;
+  color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   overflow: hidden;
-  white-space: nowrap;
-  padding: 0 10px;
-  transition: all 0.4s ease;
-  gap: 5px;
+  transition: width 0.7s ease;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+}
+.models .products .cards .card .icons .icon svg {
+  font-size: 16px;
+  transition: all 0.5s ease;
 }
 .models .products .cards .card .icons .icon p {
-  display: none;
-}
-.models .products .cards .card:hover > div .icons .icon {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  /* transition-duration: 0.5s; */
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  transition: all 0.5s ease;
+  margin-right: 10px;
+  white-space: nowrap;
 }
 .models .products .cards .card .icons .icon:hover {
-  width: auto;
-  background-color: #1d322f;
+  width: 100%;
+  border-radius: 40px;
+  background-color: var(--primary-color);
   color: #e2e2e2;
-  border-radius: 20px;
-  padding: 0 15px;
 }
 
 .models .products .cards .card div .icons .icon:hover > p {
-  transition-duration: 0.5s;
-  transition-delay: 0.5s;
-  display: block;
-  font-size: 13px;
-  padding: 0 12px;
+  opacity: 1;
+  width: auto;
+  position: relative;
 }
 .models .products .cards .card p {
-  padding: 10px;
 }
 .models .products .cards .card .price {
-  padding: 10px;
+}
+.models .products .cards .card .info {
+  padding: 0px 10px 10px;
 }

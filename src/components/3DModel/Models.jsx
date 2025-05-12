@@ -4,6 +4,7 @@ import Card from "../Card/Card";
 import search from "../../../public/assets/Images/search.svg";
 import Filter from "../Filter/Filter";
 import { Link, useNavigate } from "react-router-dom";
+import { FaAngleDown } from "react-icons/fa6";
 export default function Models() {
   const navigate = useNavigate();
 
@@ -92,8 +93,15 @@ export default function Models() {
           <input placeholder="Search products..."></input>
           <img src={search} />
         </div>
-        <div className="results">Showing 1-12 of 18 results</div>
-        <div className="sorting"> Default sorting</div>
+        <div className="sorting-holder">
+          <div className="results">Showing 1-12 of 18 results</div>
+          <div className="sorting">
+            <span>Default sorting</span>
+            <span>
+              <FaAngleDown />
+            </span>
+          </div>
+        </div>
       </div>
       <div className="products">
         <div className="filters">

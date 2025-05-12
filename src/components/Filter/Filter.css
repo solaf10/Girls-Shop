@@ -14,7 +14,14 @@
   cursor: pointer;
   border-top: 2px solid #fff;
   border-bottom: 4px solid #fff;
+}
+.item .category-holder {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+.item svg {
+  margin-top: 5px;
 }
 
 .number {

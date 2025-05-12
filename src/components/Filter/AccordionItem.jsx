@@ -1,3 +1,4 @@
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 export default function AccordionItem({
   category,
   num,
@@ -10,9 +11,13 @@ export default function AccordionItem({
     onOpen(isOpen ? null : num);
   }
   return (
-    <div className={`item ${isOpen ? "open" : ""}`} onClick={onToggle}>
-      <p className="category">{category}</p>
-      {/* <p className="icon">{isOpen ? "-" : "+"}</p> */}
+    <div className={`item ${isOpen ? "open" : ""}`}>
+      <div className="category-holder">
+        <p className="category">{category}</p>
+        <p className="icon" onClick={onToggle}>
+          {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+        </p>
+      </div>
       {isOpen && <div className="content-box">{children}</div>}
     </div>
   );

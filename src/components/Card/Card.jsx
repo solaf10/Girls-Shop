@@ -23,8 +23,10 @@ export default function Card({ id, image, name, price, realPrice, onClick }) {
           </div>
         </div>
       </div>
-      <p>{name}</p>
-      <div className="price">{price} </div>
+      <div className="info">
+        <p>{name}</p>
+        <div className="price">{price} </div>
+      </div>
     </div>
   );
 }
