@@ -2,11 +2,12 @@ import ReviewShop from "../../components/ReviewShop/ReviewShop";
 import Models from "../../components/Shop/3DModel/Models";
 import ShopHero from "../../components/Shop/ShopHero/ShopHero";
 import TopGreenBar from "../../components/TopGreenBar/TopGreenBar";
+import Cart from "../Cart/Cart";
 
 const Shop = () => {
   return (
     <div className="shop">
-      {/* <TopGreenBar /> */}
+      <TopGreenBar />
       <div className="container">
         <ShopHero />
         <div
