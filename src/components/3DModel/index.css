@@ -1,14 +1,13 @@
 .models {
-  margin-top: 100px;
+  margin-top: 12px;
 }
 .models h3 {
-  padding: 70px 0;
-  font-size: 20px;
+  padding: 50px 0;
+  font-size: 25px;
 }
 .models .topBar {
-  display: grid;
-  grid-template-columns: repeat(2, 300px) minmax(300px, 600px);
-  justify-content: flex-start;
+  display: flex;
+  gap: 50px;
 }
 .models .topBar .search {
   position: relative;
@@ -27,17 +26,28 @@
   right: 0;
   position: absolute;
 }
+.models .topBar .sorting-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
 .models .topBar .results {
   padding: 10px;
+  font-size: 17px;
 }
 .models .topBar .sorting {
-  margin-left: 200px;
   background-color: #eee;
   border: #23262f;
   display: flex;
   align-items: center;
   padding: 10px;
-  /* justify-content: center; */
+  width: 200px;
+  justify-content: space-between;
+}
+.models .topBar .sorting svg {
+  margin-top: 7px;
+  color: #23262f;
 }
 .models .topBar .search::before {
   contain: "./search.svg";
@@ -49,15 +59,20 @@
 .models .products {
   display: flex;
   justify-content: space-between;
+  gap: 65px;
 }
 .models .products .filters {
-  width: 20%;
+  /* width: 40vw; */
 }
 .models .products .cards {
   display: grid;
-  justify-content: space-between;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: 70%;
-  margin: 100px;
+  height: fit-content;
+  /* justify-content: space-between; */
+  grid-template-columns: repeat(3, auto);
+  flex: 1;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 50px;
+  margin: 35px 0px;
+  border-bottom: 1px solid #c0c0c0;
+  padding-bottom: 50px;
 }

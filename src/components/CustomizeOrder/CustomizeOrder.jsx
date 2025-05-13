@@ -55,19 +55,7 @@ const CustomizeOrder = ({ closePopup }) => {
             <input type='text' placeholder='Syria, Homs, Al-Hamra'/>
             
           </div>
-        
-    <div className='color-counter-box'>
-    <div className='count'>
-     <div className='plus-minuce-box'><button onClick={decrement} className='decrement' >-</button></div> 
-      <div className='count-number'>{count}</div>
-     <div className='plus-minuce-box'><button onClick={increment} className='increment'>+</button></div> 
-    </div>
-    <div className='choose-color'>
-    <label className='label-choose-color'> Wrapping Color:</label>
-    <input type='color'  value="#385854"/>
-    </div>
-    </div>
-           <div className='chose-product-img'>
+          <div className='chose-product-img'>
       <label >
         Upload Image
         <input
@@ -81,6 +69,18 @@ const CustomizeOrder = ({ closePopup }) => {
      
     </div> 
 
+    <div className='color-counter-box'>
+    <div className='count'>
+     <div className='plus-minuce-box'><button onClick={decrement} className='decrement' >-</button></div> 
+      <div className='count-number'>{count}</div>
+     <div className='plus-minuce-box'><button onClick={increment} className='increment'>+</button></div> 
+    </div>
+    <div className='choose-color'>
+    <label className='label-choose-color'> Wrapping Color:</label>
+    <input type='color'  value="#385854"/>
+    </div>
+    </div>
+ 
     <input type='submit' value="Send" className='submit-send'/>
 
        

@@ -9,7 +9,6 @@ export default function ShopHero() {
             <div className="card interior">
               <p>Interior Design</p>
             </div>
-
             <div className="card exterior">
               <p>Exterior Design</p>
             </div>
