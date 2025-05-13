@@ -45,6 +45,9 @@
     .about-hero .container .text {
     order: 2;
     }
+    .about-hero .dotted-bg{
+        display: none;
+    }
 }
 @media (max-width: 1250px) {
     .about-hero .container .text {

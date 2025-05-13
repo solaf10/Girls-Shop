@@ -1,0 +1,131 @@
+.fullcart .container{
+padding: 68px  99px 48px 100px;
+}
+.fullcart .container .info{
+    display: flex;
+    gap: 23px;
+}
+.fullcart .info .pro , .fullcart .info .price ,hr , .fullcart .pro .table .count{
+    border: solid 1px #E4E7E9;
+}
+.fullcart .info .pro{
+    width: 75%;
+    .title{
+        padding: 20px 24px;
+        font-weight: 500;
+        font-size: 18px;
+        color:#191C1F;
+    }
+    .table{
+        width: 100%;
+    }
+}
+.fullcart .info .pro .table .header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 24px;
+    background-color: #E4E7E9;
+    color: #475156;
+    gap: 24px;
+    .td{
+        width: 27%;
+    }
+}
+.fullcart .table .body{
+    
+}
+.fullcart .body .row-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 24px;
+/* display: flex; */
+/* justify-content: space-between; */
+/* gap: 200px; */
+}
+.fullcart .body .row-info  , .fullcart .body .row-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fullcart .body .row-info {
+    gap: 16px;
+    .img-pro{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+}
+.fullcart .body .row-info {
+    gap: 46px;
+    /* width: 45%; */
+}
+.fullcart .pro .ret{
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    button{
+        padding: 16px 24px;
+        border: 1px solid #23262F;
+        color: #23262F;
+        background-color: white;
+        p{
+        font-weight: 600;
+        font-size: 14px;
+        }
+    }
+}
+.fullcart .pro button:hover{
+    background-color: #1D322F;
+    color: white;}
+.fullcart .price {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 40%;
+    padding: 24px 20px;
+}
+.fullcart .price .title{
+    p{
+        font-weight: 500;
+        font-size: 18px;
+        padding: 20px 10px;
+    }
+}
+.fullcart .price .desc{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+    gap: 16px;
+}
+.fullcart .price .desc .box , .fullcart .price  .desc .total{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+.fullcart .price .desc .box{
+    gap: 12px;
+    p{
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+.fullcart .price  .desc .total p{
+    font-weight: 600;
+    font-size: 16px;
+}
+.fullcart .price button{
+    padding: 16px 24px;
+    background-color: #1D322F;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1%;
+}
+.fullcart .price button:hover{
+    color: white;
+    background-color: var(--secondary-color);
+}
