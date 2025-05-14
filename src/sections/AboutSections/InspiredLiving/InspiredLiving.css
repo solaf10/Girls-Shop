@@ -67,3 +67,22 @@ p{
     left: 44px;
     z-index: -1;
 }
+@media (max-width: 991px) {
+    .inspiredliving .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 46px;
+    }
+    .inspiredliving .info .text {
+        width: 100%;
+    }
+}
+@media (max-width: 1250px) {
+    
+}
+@media (max-width: 500px) {
+    .inspiredliving .dotted-bg{
+        display: none;
+    }
+}

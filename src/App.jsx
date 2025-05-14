@@ -15,6 +15,8 @@ import OTPSend from "./components/UpdatePasswordCard/OTPSend";
 import ChangePassword from "./components/UpdatePasswordCard/ChangePassword";
 import ChangedPassword from "./components/UpdatePasswordCard/ChangedPassword";
 import BlogsDetails from "./pages/BlogsDetails/BlogsDetails";
+import Cart from "./pages/Cart/Cart";
+import ComplateCart from "./sections/ComplateCart/ComplateCart";
 import LogIn from "./components/LogIn/LogIn";
 import Product from "./components/Product/Product";
 import SignUp from "./components/SignUp/SignUp";
@@ -36,6 +38,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart/complate-cart" element={<ComplateCart />} />
         <Route path="/updatePassword" element={<Contact />} />
         <Route path="/blogs/:id" element={<BlogsDetails />} />
         <Route path="/updatePassword" element={<UpdatePassword />}/>
