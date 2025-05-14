@@ -6,8 +6,7 @@
   width: 100%;
 }
 .new-products .container {
-  display: flex;
-  align-items: center;
+ن  align-items: center;
   gap: 20px;
 }
 .new-products .container .text {

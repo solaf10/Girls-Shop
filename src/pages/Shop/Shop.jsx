@@ -1,6 +1,7 @@
+import Product from "../../components/Product/Product";
 import ReviewShop from "../../components/ReviewShop/ReviewShop";
-import Models from "../../components/Shop/3DModel/Models";
-import ShopHero from "../../components/Shop/ShopHero/ShopHero";
+import Models from "../../components/3DModel/Models";
+import ShopHero from "../../components/ShopHero/ShopHero";
 import TopGreenBar from "../../components/TopGreenBar/TopGreenBar";
 
 const Shop = () => {

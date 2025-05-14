@@ -1,0 +1,38 @@
+.designers{
+    margin: 150px 0 40px;
+}
+.designers .designer-header{
+    h1{
+        font-weight: 600;
+        font-size: 28px;
+        padding-bottom: 29px;
+
+    }
+}
+.designers .designer-header .search-filter-designer{
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.designers .designer-header .search-filter-designer .search-designer{
+    border-bottom: 1px solid #C0C0C0;
+     padding-bottom: 10px;
+    input{
+        border: none;
+        outline: none;
+         font-weight: 400;
+        font-size: 16px;
+        color: #23262F;
+    }
+    img{
+        width: 20px;
+        height: 20px;
+    }
+}
+.designers .designer-header .search-filter-designer .filter-designer{
+   display:flex ;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}

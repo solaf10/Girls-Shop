@@ -1,11 +1,77 @@
 .models .products .cards .card {
+  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: all 0.2s ease-in-out;
+  height: fit-content;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.models .products .cards .card div {
+  position: relative;
 }
 .models .products .cards .card img {
-  width: 300px;
-  height: 290px;
   border: 1px solid #eee;
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
+  height: 300px;
+}
+.models .products .cards .card .icons {
+  transition: 1s;
+  position: absolute;
+  top: 25px;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+}
+.models .products .cards .card:hover .icons {
+  right: 20px;
+}
+.models .products .cards .card .icons .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e2e2e2;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: width 0.7s ease;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+}
+.models .products .cards .card .icons .icon svg {
+  font-size: 16px;
+  transition: all 0.5s ease;
+}
+.models .products .cards .card .icons .icon p {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  transition: all 0.5s ease;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+.models .products .cards .card .icons .icon:hover {
+  width: 100%;
+  border-radius: 40px;
+  background-color: var(--primary-color);
+  color: #e2e2e2;
+}
+
+.models .products .cards .card div .icons .icon:hover > p {
+  opacity: 1;
+  width: auto;
+  position: relative;
 }
 .models .products .cards .card p {
 }
 .models .products .cards .card .price {
+}
+.models .products .cards .card .info {
+  padding: 0px 10px 10px;
 }

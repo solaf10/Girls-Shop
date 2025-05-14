@@ -1,13 +1,14 @@
 .shop .container .holder {
   margin-top: 200px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
   gap: 70px;
 }
 .shop .container .holder .card {
   position: relative;
   cursor: pointer;
   /* width: 100%; */
+  width: 50%;
   height: 300px;
   background-size: cover;
   background-position: center;
