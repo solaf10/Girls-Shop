@@ -35,6 +35,9 @@ const NavBar = () => {
           <li>
             <NavLink to="/contact">contact us</NavLink>
           </li>
+          <li>
+            <NavLink to="/designer">Designers</NavLink>
+          </li>
         </ul>
         <div className="icons">
           <RiUserLine className="icon" onClick={() => setIsUserShow(true)} />

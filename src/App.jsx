@@ -20,6 +20,7 @@ import ComplateCart from "./sections/ComplateCart/ComplateCart";
 import LogIn from "./components/LogIn/LogIn";
 import Product from "./components/Product/Product";
 import SignUp from "./components/SignUp/SignUp";
+import Designer from "./pages/Designer/Designer";
 
 const App = () => {
   return (
@@ -41,7 +42,9 @@ const App = () => {
         <Route path="/cart/complate-cart" element={<ComplateCart />} />
         <Route path="/updatePassword" element={<Contact />} />
         <Route path="/blogs/:id" element={<BlogsDetails />} />
-        <Route path="/updatePassword" element={<UpdatePassword />}>
+        <Route path="/updatePassword" element={<UpdatePassword />}/>
+        <Route path="/designer" element={<Designer/>}>
+
           <Route
             index
             element={
