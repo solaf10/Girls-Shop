@@ -27,6 +27,7 @@ nav .container ul.links {
   justify-content: center;
   align-items: center;
   gap: 3.3vw;
+  font-size: 1vw;
 }
 nav .container ul.links li {
 }
