@@ -1,0 +1,18 @@
+.recent-one-blog{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+ .recent-one-blog .blog-name{
+    font-weight: 600;
+    font-size: 20px;
+    color: #0E1A2B;
+}
+.recent-one-blog .publisher-name-and-date{
+    display: flex;
+    gap: 32px;
+    p{
+         font-weight: 300;
+    font-size: 14px;
+    }
+}

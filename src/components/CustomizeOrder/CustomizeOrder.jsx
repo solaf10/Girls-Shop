@@ -18,14 +18,17 @@ const CustomizeOrder = ({ closePopup }) => {
       <div className='popupOverlay '>
         <div className='pop-central' >
         <div className='pop-up-costomize-order-page'>
+         
       <button
       className='close-btn'
           onClick={closePopup} 
         >
+          
           <div className='circle-close-icon'>  
           <IoMdClose className='close-icon'/>
           </div>
         </button>
+       
         <div className='bring-idea-container'>
         <div className='Bring-idea-tolife-sec'>
           <img src='/assets/Images/design-thinking 1.png'/>
@@ -88,12 +91,13 @@ const CustomizeOrder = ({ closePopup }) => {
         
         </div>
         </div>
+        </div>
        
       </div>
         </div>
         
       
-    </div>
+
   )
 }
 

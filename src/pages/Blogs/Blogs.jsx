@@ -112,7 +112,6 @@ const Blogs = () => {
     },
   ];
   const navigate = useNavigate();
-
   const handleClick = (id) => {
     navigate(`/blogs/${id}`);
   };

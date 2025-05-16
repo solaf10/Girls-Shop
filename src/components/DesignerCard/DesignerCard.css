@@ -1,0 +1,50 @@
+.designer-card{
+    padding: 16px 24px;
+    border: 1px solid #C0C0C0;
+    margin-top: 40px;
+ 
+}
+.designer-card .designer-info{
+display: flex;
+align-items: center;
+gap: 16px;
+}
+.designer-card .designer-info .more-info-designer{
+    display: flex;
+flex-direction: column;
+gap: 18px;
+
+}
+.designer-card .designer-info .more-info-designer .designer-name{
+    font-weight: 600;
+    font-size: 20px;
+}
+.designer-card .designer-info .more-info-designer .designer-location, .designer-card .designer-info .more-info-designer .designer-num{
+    display: flex;
+    gap: 8px;
+     font-weight: 200;
+    font-size: 16px;
+}
+
+.designer-card .designer-work-swipper{
+    padding: 16px 0;
+    img{
+        width: 162px;
+        height: 148px;
+    }
+}
+
+.designer-card .designer-work-swipper img:hover{
+    transform: scale(1.4);
+ 
+}
+
+@media  (max-width:992px) {
+    .designer-card .designer-work-swipper{
+   
+    img{
+        width: 75px;
+        height:75px;
+    }
+}
+}
