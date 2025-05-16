@@ -95,6 +95,9 @@ const Designer = () => {
         },
 
     ]
+const Designer = () => {
+     const countriesOptions = ['Syria','Saudi','Palestine'];
+     const creativeOptions = ['Syria','Saudi','Palestine'];
   return (
     <div  className='designers container'>
         <div className='designer-header'> 
@@ -121,7 +124,6 @@ const Designer = () => {
               designerWork={designer.designerWork}
             />
           ))}
-   
     </div>
   )
 }
