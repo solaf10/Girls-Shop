@@ -189,14 +189,37 @@
             color: #C8C8C8;
           
         }
+
     }
   
 }
 .recent-posts-info .recent-posts{
     padding-top: 40px;
-    h2{
+   width: 100%;
+    .recent-blogs{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+.recent-posts-info .recent-posts  .recent-blogs-text{
         font-weight: 600;
         font-size: 21px; 
         color: var(--third-color);
+        padding-bottom: 20px;
+    }
+@media  (max-width:992px)  {
+    .blogs-detais-container{
+        flex-direction: column;
+    }
+    .blogs-detais-container .article-detailes{
+        width: 100%;
+            img.blog-img{
+                width: 100%;
+                height: 40vh;
+            }
+    }
+    .write-comment-sec{
+ padding: 67px 0;
     }
 }

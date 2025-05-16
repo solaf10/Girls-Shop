@@ -4,6 +4,7 @@ import { GrFormNextLink } from "react-icons/gr";
 import { useParams } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import TopGreenBar from "../../components/TopGreenBar/TopGreenBar";
+import RecentBlog from "../../components/RecentBlog/RecentBlog";
 const BlogsDetails = () => {
   const postsDetails = [
     {
@@ -187,6 +188,35 @@ const BlogsDetails = () => {
       date: "Feb 8th, 2025",
     },
   ];
+  const resentBlogs=[
+    {
+      id:1,
+      blogTitle:"The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
+      publisherDate:" 5 Sep 2024",
+      publisherName:"Auther name"
+    }
+    ,
+    {
+       id:2,
+      blogTitle:"The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
+      publisherDate:" 5 Sep 2024",
+      publisherName:"Auther name"
+    }
+    ,
+    {
+       id:3,
+      blogTitle:"The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
+      publisherDate:" 5 Sep 2024",
+      publisherName:"Auther name"
+    }
+    ,
+    {
+       id:4,
+      blogTitle:"The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
+      publisherDate:" 5 Sep 2024",
+      publisherName:"Auther name"
+    }
+  ]
   const { id } = useParams();
 
   const blog = postsDetails.find((b) => b.id === parseInt(id));
@@ -212,19 +242,19 @@ const BlogsDetails = () => {
               <p>Share Post:</p>
               <a>
                 {" "}
-                <img src="/public/assets/Images/whatsapp.png" />
+                <img src="/assets/Images/whatsapp.png" />
               </a>
               <a>
-                <img src="/public/assets/Images/facebook.png" />
+                <img src="/assets/Images/facebook.png" />
               </a>
               <a>
-                <img src="/public/assets/Images/linkedin.png" />
+                <img src="/assets/Images/linkedin.png" />
               </a>
               <a>
-                <img src="/public/assets/Images/link.png" />
+                <img src="/assets/Images/link.png" />
               </a>
               <a>
-                <img src="/public/assets/Images/email.png" />
+                <img src="/assets/Images/email.png" />
               </a>
             </div>
             <div className="posts-slider">
@@ -283,7 +313,20 @@ const BlogsDetails = () => {
             </div>
 
             <div className="recent-posts">
-              <h2>Recent Posts</h2>
+              <h2 className="recent-blogs-text">Recent Posts</h2>
+              <div className="recent-blogs">
+                  {
+                resentBlogs.map((recent)=>(
+                  <RecentBlog 
+                  key ={recent.id} 
+                  blogTitle ={recent.blogTitle}
+                  publisherDate={recent.publisherDate}
+                  publisherName={recent.publisherName}
+                  />
+                ))
+              }
+              </div>
+            
             </div>
           </div>
         </div>

@@ -36,3 +36,16 @@
     justify-content: center;
     gap: 24px;
 }
+@media  (max-width:992px) {
+  .designers .designer-header .search-filter-designer {
+    flex-direction: column;
+  }
+}
+@media  (max-width:500px){
+    .designers .designer-header .search-filter-designer .filter-designer{
+            flex-direction: column;
+    }
+    .designers .designer-header .search-filter-designer .search-designer{
+        padding-bottom: 24px;
+    }
+}
