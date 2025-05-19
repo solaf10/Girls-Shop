@@ -1,9 +1,32 @@
 .review {
+  max-width: 100vw;
   margin: 100px 0;
-  /* padding: 70px 100px; */
-  /* margin-top: 500px; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  gap: 20px;
 }
-
+.review .comp {
+  display: flex;
+  justify-content: space-between;
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 25px;
+  }
+}
 .review h4 {
   font-weight: 500;
+}
+@media (max-width: 767px) {
+  .review {
+    flex-direction: column;
+    .comp {
+      flex-direction: column;
+      text-align: center;
+      .icon {
+        margin: 10px auto;
+      }
+    }
+  }
 }

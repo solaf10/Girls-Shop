@@ -1,6 +1,5 @@
 .signup-page {
   display: flex;
-  /* height: 100vh; */
   height: fit-content;
   flex-wrap: wrap;
   margin: 95px 0 20px 0;
@@ -248,15 +247,18 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .left-section {
-    display: none;
-  }
-
-  .right-section {
-    width: 100%;
-  }
-
-  .signup-form {
-    width: 90%;
+  .signup-page {
+    flex-direction: column-reverse;
+    .right-section {
+      width: 100%;
+      .signup-form {
+        width: 100%;
+        padding: 0 10px;
+      }
+    }
+    .left-section {
+      display: none;
+      width: 100%;
+    }
   }
 }

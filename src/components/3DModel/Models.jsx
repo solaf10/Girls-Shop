@@ -91,16 +91,14 @@ export default function Models() {
       <div className="topBar">
         <div className="search">
           <input placeholder="Search products..."></input>
-          <img src={search} />
+          <img src={search} />I
         </div>
-        <div className="sorting-holder">
-          <div className="results">Showing 1-12 of 18 results</div>
-          <div className="sorting">
-            <span>Default sorting</span>
-            <span>
-              <FaAngleDown />
-            </span>
-          </div>
+        <div className="results">Showing 1-12 of 18 results</div>
+        <div className="sorting">
+          <span>Default sorting</span>
+          <span>
+            <FaAngleDown />
+          </span>
         </div>
       </div>
       <div className="products">

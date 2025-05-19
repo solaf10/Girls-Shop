@@ -17,7 +17,7 @@ const Shop = () => {
             height: " 1px",
             backgroundColor: " #c0c0c0",
             position: " relative",
-            top: " 100px",
+            top: " 40px",
           }}
         ></div>
         <Models />
