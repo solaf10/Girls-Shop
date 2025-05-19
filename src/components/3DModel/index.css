@@ -13,7 +13,6 @@
   position: relative;
   padding-top: 15px;
   width: 200px;
-  border-bottom: 1px #23262f solid;
   padding-bottom: 15px;
 }
 .models .topBar .search input {
@@ -21,16 +20,13 @@
   border: none;
   position: absolute;
   color: #23262f;
+  margin: auto;
+  border-bottom: 1px solid var(--text-color);
+  padding: 0 0 10px 0;
 }
 .models .topBar .search img {
-  right: 0;
+  right: 14px;
   position: absolute;
-}
-.models .topBar .sorting-holder {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex: 1;
 }
 .models .topBar .results {
   padding: 10px;
@@ -38,6 +34,7 @@
 }
 .models .topBar .sorting {
   background-color: #eee;
+  /* flex-grow: 2; */
   border: #23262f;
   display: flex;
   align-items: center;
@@ -75,4 +72,24 @@
   margin: 35px 0px;
   border-bottom: 1px solid #c0c0c0;
   padding-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+  .models {
+    h3 {
+      text-align: center;
+    }
+    .topBar {
+      flex-direction: column;
+      justify-content: center;
+
+      align-items: center;
+      img {
+        margin: auto;
+      }
+    }
+    .filters {
+      display: none;
+    }
+  }
 }

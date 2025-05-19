@@ -65,21 +65,29 @@ export default function Product() {
   const product = productsDetails.find((b) => b.id === parseInt(id));
 
   const [downloadBlocksIsOpen, setDownloadBlocksIsOpen] = useState(false);
-  const handleClick = () => {
+  const handleClickDownloadBlocks = () => {
     setDownloadBlocksIsOpen((prev) => !prev);
   };
+  const [addToCart, setAddToCart] = useState(false);
+  const handleClickAddToCart = () => {
+    setAddToCart((prev) => !prev);
+  };
+
   return (
-    <div
-      className="product"
-      style={{ marginLeft: "60px", marginRight: "60px" }}
-    >
+    <div className="product">
+      {addToCart && (
+        <div className="view-cart">
+          <p>“Ceiling Light” has been added to your cart</p>
+          <a onClick={handleClickToCart}>View Cart</a>
+        </div>
+      )}
       <div className="product-content">
         <div className="product-imgs">
           <div className="product-img">
             <img src={productImg} />
           </div>
           <div className="more-photos">
-            <img src={productImg} className="product-img" />
+            <img src={productImg} className="pduct-img" />
             <img src={productImg} className="product-img" />
             <img src={productImg} className="product-img" />
             <img src={productImg} className="product-img" />
@@ -119,8 +127,8 @@ export default function Product() {
             <span className="sale">20% sale</span>
           </div>
           <div className="cart">
-            <a>
-              <span onClick={handleClickToCart}>Add to Cart</span>
+            <a onClick={handleClickAddToCart}>
+              <span>Add to Cart</span>
               <MdArrowOutward className="arrow-icon" />{" "}
             </a>
             <div className="product-number">
@@ -142,7 +150,7 @@ export default function Product() {
                 <FiDownload />
                 Download Blocks
               </button>
-              <button onClick={handleClick}>
+              <button onClick={handleClickDownloadBlocks}>
                 <AiOutlineDown
                   className="file-type"
                   onClick={() => setDownloadBlocks(true)}

@@ -6,16 +6,9 @@ import icon4 from "./4.svg";
 import "./ReviewShop.css";
 export default function ReviewShop() {
   return (
-    <div
-      className="review"
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        marginTop: "100px",
-      }}
-    >
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <div style={{ width: "50px", height: "50px", marginRight: "25px" }}>
+    <div className="review">
+      <div className="comp">
+        <div className="icon">
           <img src={icon1} />
         </div>
         <div>
@@ -23,8 +16,8 @@ export default function ReviewShop() {
           <p>crafted from top materials</p>
         </div>
       </div>
-      <div style={{ display: "flex" }}>
-        <div style={{ width: "50px", height: "50px", marginRight: "25px" }}>
+      <div className="comp">
+        <div className="icon">
           <img src={icon2} />
         </div>
         <div>
@@ -32,8 +25,8 @@ export default function ReviewShop() {
           <p>Over 2 years</p>
         </div>
       </div>
-      <div style={{ display: "flex" }}>
-        <div style={{ width: "50px", height: "50px", marginRight: "25px" }}>
+      <div className="comp">
+        <div className="icon">
           <img src={icon3} />
         </div>
         <div>
@@ -41,8 +34,8 @@ export default function ReviewShop() {
           <p>Order over 150 $</p>
         </div>
       </div>
-      <div style={{ display: "flex" }}>
-        <div style={{ width: "50px", height: "50px", marginRight: "25px" }}>
+      <div className="comp">
+        <div className="icon">
           <img src={icon4} />
         </div>
         <div>
