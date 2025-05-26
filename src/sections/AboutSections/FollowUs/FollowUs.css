@@ -6,7 +6,22 @@
     }
 }
 .followus .slider{
-    display: flex;
-    justify-content: space-between;
-
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 5px;
+}
+@media (max-width: 991px) {
+    
+}
+@media (max-width: 1250px) {
+    
+}
+@media (max-width: 500px) {
+    .followus .slider{
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+}
+.followus .title h2{
+            font-size: 40px;
+}
 }

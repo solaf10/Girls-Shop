@@ -19,7 +19,7 @@ const Home = () => {
       <MainCategories />
       <Choice />
       <NewProducts />
-     <CustomOrder />
+      <CustomOrder />
       <RecentBlogs />
       <Reviews />
       <ReviewForm />

@@ -70,3 +70,38 @@
         z-index: 1;
     }
 }
+@media (max-width: 991px) {
+    .application .container {
+        background-color: #E2E2E2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 0px;
+        text-align: center;}
+    .application .phone-img {
+        display: none;
+    }
+  
+    .application .container .text{
+        width: 100%;
+
+    }
+    .application .container .image .qrcode{
+        padding-top: 10px;
+    }}
+
+@media (max-width: 1250px) {
+    .application .phone-img .two{
+        top:72px;
+    }
+    .application .phone-img .one{
+        left: 250px;
+        top: 72px;
+    }
+    .application .container .text{
+        
+    }
+    .application .container .image .qrcode{
+        padding-top: 10px;
+    }
+}

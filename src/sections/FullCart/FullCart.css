@@ -129,3 +129,25 @@ padding: 68px  99px 48px 100px;
     color: white;
     background-color: var(--secondary-color);
 }
+
+@media (max-width: 367px) {
+    .fullcart .container {
+        padding: 100px 0 0 0;
+    }
+    .fullcart .container .info {
+        flex-direction: column;
+    }
+    .fullcart .info .pro{
+        width: fit-content;
+        flex-direction: row;
+        display: flex;
+    }
+    .fullcart .info .pro .table .header,
+    .fullcart .body .row-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .fullcart .price{
+        width: fit-content;
+    }
+}
