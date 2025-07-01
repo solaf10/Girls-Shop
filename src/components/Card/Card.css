@@ -20,7 +20,7 @@
 .models .products .cards .card .icons {
   transition: 1s;
   position: absolute;
-  top: 100px;
+  top: 40px;
   right: -100%;
   display: flex;
   flex-direction: column;
