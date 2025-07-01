@@ -30,10 +30,11 @@ const RecentBlogs = () => {
     <section className="recent-blogs">
       <div className="container">
         <div className="home-main-title">
-          <h2>Brows As</h2>
+          <h2>Recent Blog</h2>
           <p>
-            The products we provide only for you as our service are selected
-            from the best products with number 1 quality in the world
+            Explore fresh insights from the world of interior and exterior
+            design. Our recent blogs bring you expert advice, décor trends, and
+            scene styling inspiration — all in one place.
           </p>
         </div>
         <div className="holder">

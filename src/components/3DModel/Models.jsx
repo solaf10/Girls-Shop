@@ -1,7 +1,6 @@
 import "./index.css";
 import img from "../../../public/assets/Images/3d-models-2.png";
 import Card from "../Card/Card";
-import search from "../../../public/assets/Images/search.svg";
 import Filter from "../Filter/Filter";
 import { Link, useNavigate } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa6";
@@ -88,19 +87,19 @@ export default function Models() {
   return (
     <div className="models">
       <h3>3D Scenesv</h3>
-      <div className="topBar">
+      {/* <div className="topBar">
         <div className="search">
           <input placeholder="Search products..."></input>
           <img src={search} />I
         </div>
-        <div className="results">Showing 1-12 of 18 results</div>
+         <div className="results">Showing 1-12 of 18 results</div>
         <div className="sorting">
           <span>Default sorting</span>
           <span>
             <FaAngleDown />
           </span>
         </div>
-      </div>
+      </div> */}
       <div className="products">
         <div className="filters">
           <Filter />
