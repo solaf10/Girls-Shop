@@ -158,6 +158,9 @@ nav .container .menu .log-out svg {
   font-size: 24px;
 }
 /* Pop Ups */
+nav .popups-holder {
+  position: absolute;
+}
 .user-popup-holder {
   position: relative;
 }
