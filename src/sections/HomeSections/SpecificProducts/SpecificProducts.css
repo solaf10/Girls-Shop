@@ -1,5 +1,8 @@
 .specific-products {
 }
+.specific-products .loader-holder {
+  margin-top: 60px;
+}
 .specific-products .cards {
   margin-top: 90px;
   display: grid;

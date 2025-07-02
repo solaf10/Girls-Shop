@@ -40,9 +40,9 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/cart/complate-cart" element={<ComplateCart />} />
-        <Route path="/updatePassword" element={<UpdatePassword />} />
         <Route path="/blogs/:id" element={<BlogsDetails />} />
-        <Route path="/designer" element={<Designer />}>
+        <Route path="/designer" element={<Designer />} />
+        <Route path="/updatePassword" element={<UpdatePassword />}>
           <Route
             index
             element={
