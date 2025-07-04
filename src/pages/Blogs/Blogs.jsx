@@ -117,7 +117,7 @@ const Blogs = () => {
   };
   return (
     <div className="blogs">
-      <TopGreenBar secondLink="../../pages/Blogs" secondPageName="Blogs" />
+      <TopGreenBar />
       <div className="container">
         <div className="holder-blogs">
           {posts.map((post) => (
