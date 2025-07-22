@@ -1,15 +1,13 @@
 .shop .container .holder {
-  margin-top: 200px;
+  margin-top: 70px;
   display: flex;
-  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
   gap: 70px;
 }
 .shop .container .holder .card {
   position: relative;
   cursor: pointer;
-  /* width: 100%; */
   width: 50%;
-  height: 300px;
+  height: 330px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,6 +38,14 @@
   transform: translateX(-50%);
   font-size: 24px;
   text-align: center;
+}
+@media (max-width: 748px) {
+  .shop .container .holder {
+    flex-direction: column;
+    .card {
+      width: 100%;
+    }
+  }
 }
 @media (max-width: 500px) {
   .main-categories {

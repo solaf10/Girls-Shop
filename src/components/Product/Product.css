@@ -1,14 +1,42 @@
 .product {
   /* letter-spacing: 1px; */
-  margin-top: 150px;
+  /* margin: 150px 60px 0 60px; */
+  margin: 50px 60px 0 60px;
+  .view-cart {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e2e2e2;
+    padding: 20px 25px;
+    margin: 30px 0;
+    p {
+      font-size: 20px;
+      font-weight: 400;
+    }
+    /* a::before {
+      content: "";
+      background-color: var(--text-color);
+      position: absolute;
+      height: 56px;
+      width: 1px;
+      left: -16%;
+      top: -35%;
+    } */
+    a {
+      position: relative;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 400;
+      border-left: 1px solid var(--text-color);
+      padding: 0 10px;
+    }
+  }
   .product-content {
     display: flex;
     gap: 20px;
     .product-imgs {
-      width: 60vw;
+      position: relative;
+      width: 60%;
       .product-img {
-        /* width: 60vw; */
-        height: 530px;
         max-width: 100%;
       }
       .more-photos {
@@ -16,12 +44,14 @@
         gap: 10px;
         margin-top: 15px;
         img {
-          width: 122px;
-          height: 122px;
+          width: 19%;
+          height: 19%;
         }
       }
     }
     .product-details {
+      position: relative;
+
       .top-product {
         margin: 15px 0;
         display: flex;
@@ -57,6 +87,8 @@
       }
       .price-box {
         margin: 15px 0;
+        display: flex;
+        justify-content: flex-start;
         span.price {
           font-weight: bold;
           font-size: 25px;
@@ -136,7 +168,6 @@
           color: white;
           padding: 20px;
           display: flex;
-          gap: 40px;
           justify-content: space-between;
           width: 325px;
           button {
@@ -147,6 +178,7 @@
             gap: 20px;
             display: flex;
           }
+
           button.file-type::before {
             content: "";
             position: relative;
@@ -221,22 +253,99 @@
   }
 }
 
-/* nav .container .menu .log-out {
-  width: 100%;
-  padding: 15px;
-  position: absolute;
-  bottom: 0px;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  color: var(--primary-color);
-  background-color: transparent;
-  border-top: 1px solid #61706e;
+@media (max-width: 767px) {
+  .product {
+    max-width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+
+    .product-content {
+      flex-direction: column;
+      .product-imgs {
+        width: 100%;
+        .product-img {
+          img {
+            max-width: 100vw;
+          }
+        }
+        .more-photos {
+          gap: 0;
+          margin-top: 0px;
+          img {
+            width: 20%;
+            height: 20%;
+            padding: 1px;
+          }
+        }
+      }
+      .product-details {
+        padding: 0 20px;
+        width: 100%;
+        .top-product {
+          padding: 5px 0;
+          flex-direction: column-reverse;
+          justify-content: center;
+          align-items: center;
+          .rating {
+            justify-content: flex-start;
+          }
+          .share {
+            justify-content: flex-start;
+          }
+        }
+
+        h2 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+        }
+        .price-box {
+          span.price,
+          span.real-price {
+            font-size: 18px;
+            margin: auto;
+          }
+        }
+        .sale {
+          padding: 3px 10px;
+        }
+        .cart {
+          justify-content: space-around;
+          a {
+            padding: 5px;
+            width: 50%;
+            height: 40px;
+          }
+
+          .product-number {
+            button {
+              top: 6px;
+            }
+          }
+        }
+        hr {
+          margin: 15px 0;
+        }
+        .architecture {
+          p {
+            margin: 32px 0;
+            font-size: 18px;
+          }
+          .download-button {
+            width: 100%;
+            max-width: 325px;
+            margin: auto;
+            padding: 10px;
+          }
+        }
+      }
+    }
+    .description {
+      padding: 0 20px;
+      .title {
+        font-style: 21px;
+      }
+    }
+  }
 }
-nav .container .menu .log-out svg {
-  font-size: 24px;
-} */

@@ -28,6 +28,9 @@ a {
 button {
   border: none;
 }
+input {
+  outline: none;
+}
 .overlay {
   position: fixed;
   width: 100%;

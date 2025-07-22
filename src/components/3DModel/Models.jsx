@@ -1,17 +1,21 @@
 import "./index.css";
 import img from "../../../public/assets/Images/3d-models-2.png";
 import Card from "../Card/Card";
-import search from "../../../public/assets/Images/search.svg";
 import Filter from "../Filter/Filter";
 import { Link, useNavigate } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Loader from "../Loader/Loader";
 export default function Models() {
   const navigate = useNavigate();
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = (id) => {
     navigate(`/product/${id}`);
   };
-  const products = [
+  /* const products = [
     {
       id: 1,
       image: img,
@@ -84,43 +88,58 @@ export default function Models() {
       realPrice: "$600.00",
       color: "#eee",
     },
-  ];
+  ]; */
+  useEffect(() => {
+    setIsLoading(true);
+    axios
+      .get("http://localhost:8000/products")
+      .then((res) => {
+        setProducts(res.data);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        console.log(err);
+      });
+  }, []);
   return (
     <div className="models">
       <h3>3D Scenesv</h3>
-      <div className="topBar">
+      {/* <div className="topBar">
         <div className="search">
           <input placeholder="Search products..."></input>
-          <img src={search} />
+          <img src={search} />I
         </div>
-        <div className="sorting-holder">
-          <div className="results">Showing 1-12 of 18 results</div>
-          <div className="sorting">
-            <span>Default sorting</span>
-            <span>
-              <FaAngleDown />
-            </span>
-          </div>
+         <div className="results">Showing 1-12 of 18 results</div>
+        <div className="sorting">
+          <span>Default sorting</span>
+          <span>
+            <FaAngleDown />
+          </span>
         </div>
-      </div>
+      </div> */}
       <div className="products">
         <div className="filters">
           <Filter />
         </div>
-        <div className="cards">
-          {products.map((product) => (
-            <Card
-              onClick={() => {
-                handleClick(product.id);
-              }}
-              key={product.id}
-              image={product.image}
-              name={product.name}
-              price={product.price}
-              realPrice={product.realPrice}
-            />
-          ))}
-        </div>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <div className="cards">
+            {products.map((product) => (
+              <Card
+                onClick={() => {
+                  handleClick(product.id);
+                }}
+                key={product.id}
+                image={product.image}
+                name={product.name}
+                price={product.price}
+                realPrice={product.realPrice}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -7,11 +7,11 @@ const HomeHero = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const openPopup = () => {
-    setIsPopupOpen(true); 
+    setIsPopupOpen(true);
   };
-  
+
   const closePopup = () => {
-    setIsPopupOpen(false); 
+    setIsPopupOpen(false);
   };
   return (
     <div className="home-hero">
@@ -26,7 +26,9 @@ const HomeHero = () => {
           <Link to="/shop" className="shop-btn btn blurry">
             Shop Now
           </Link>
-          <button className="customize-btn btn"  onClick={openPopup}>Customize order</button>
+          <button className="customize-btn btn" onClick={openPopup}>
+            Customize order
+          </button>
           {isPopupOpen && <CustomizeOrder closePopup={closePopup} />}
         </div>
       </div>

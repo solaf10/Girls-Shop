@@ -8,6 +8,7 @@ import { useState } from "react";
 import { MdLanguage } from "react-icons/md";
 import { IoIosArrowDown, IoMdLogOut, IoIosArrowForward } from "react-icons/io";
 import { FaUser } from "react-icons/fa6";
+import { TbCube } from "react-icons/tb";
 
 const NavBar = () => {
   const [isMenuShow, setIsMenuShow] = useState(false);
@@ -16,8 +17,8 @@ const NavBar = () => {
     <nav className="blurry">
       <div className="container">
         <div className="logo">
-          <img src="/assets/Images/Webicon.png" alt="" />
-          <span>Verdant</span>
+          <TbCube />
+          <span>ArchiLink</span>
         </div>
         <ul className="links">
           <li>

@@ -1,0 +1,142 @@
+{
+  "topsellers": [
+    {
+      "id": 73930385,
+      "image": "/assets/Images/top-sellers1.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 343434,
+      "image": "/assets/Images/top-sellers2.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 454545,
+      "image": "/assets/Images/top-sellers3.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 98443197,
+      "image": "/assets/Images/top-sellers4.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 908067,
+      "image": "/assets/Images/top-sellers5.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 632841,
+      "image": "/assets/Images/top-sellers6.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 710986,
+      "image": "/assets/Images/top-sellers7.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 845371,
+      "image": "/assets/Images/top-sellers8.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    }
+  ],
+  "products": [
+    {
+      "id": 73930385,
+      "image": "/assets/Images/top-sellers1.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 343434,
+      "image": "/assets/Images/top-sellers2.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 454545,
+      "image": "/assets/Images/top-sellers3.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 98443197,
+      "image": "/assets/Images/top-sellers4.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 908067,
+      "image": "/assets/Images/top-sellers5.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 632841,
+      "image": "/assets/Images/top-sellers6.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 710986,
+      "image": "/assets/Images/top-sellers7.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 845371,
+      "image": "/assets/Images/top-sellers8.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    },
+    {
+      "id": 173642,
+      "image": "/assets/Images/top-sellers9.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "realPrice": "$600.00",
+      "color": "#eee"
+    }
+  ]
+}

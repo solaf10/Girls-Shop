@@ -1,7 +1,7 @@
 .login-page {
   display: flex;
-  height: 100vh;
-  flex-wrap: wrap;
+  /* height: 100vh; */
+  /* flex-wrap: wrap; */
   margin: 110px 0 65px 0;
   /* Left Section */
   .left-section {
@@ -9,7 +9,6 @@
     background: url("../../../public//assets//Images/loginImg.png") no-repeat
       center center/cover;
     position: relative;
-
     .welcome-text {
       position: absolute;
       top: 50%;
@@ -33,6 +32,7 @@
   }
   /* Right Section */
   .right-section {
+    position: relative;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -197,18 +197,19 @@
   box-shadow: 5px 6px 12px #e2e2e2;
   margin: 35px 0 5px 0;
 }
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .left-section {
-    display: none;
-  }
-
-  .right-section {
-    width: 100%;
-  }
-
-  .login-form {
-    width: 90%;
+  .login-page {
+    flex-direction: column-reverse;
+    .right-section {
+      width: 100%;
+      .login-form {
+        width: 100%;
+        padding: 0 10px;
+      }
+    }
+    .left-section {
+      width: 100%;
+    }
   }
 }

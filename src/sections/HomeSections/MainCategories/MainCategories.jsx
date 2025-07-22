@@ -7,8 +7,9 @@ const MainCategories = () => {
         <div className="home-main-title">
           <h2>Brows As</h2>
           <p>
-            The products we provide only for you as our service are selected
-            from the best products with number 1 quality in the world
+            From elegant interiors to inspiring exteriors and artistic scenes —
+            browse our categories and find the perfect touch for every corner of
+            your home.
           </p>
         </div>
         <div className="holder">
