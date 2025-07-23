@@ -1,12 +1,12 @@
-import React, { useState } from "react";
 import "./Product.css";
-import productImg from "../../../public/assets/Images/product-5.png";
-import StarRating from "../StarRating/StarRating";
+import { useEffect, useState } from "react";
 import {
   FaCopy,
   FaFacebook,
   FaFileDownload,
   FaInstagram,
+  FaRegStar,
+  FaStar,
   FaTwitter,
 } from "react-icons/fa";
 import { AiOutlineDown } from "react-icons/ai";
@@ -15,9 +15,10 @@ import { FiDownload } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
 import { useNavigate, useParams } from "react-router-dom";
 import TopGreenBar from "../TopGreenBar/TopGreenBar";
+import axios from "axios";
 
 export default function Product() {
-  const productsDetails = [
+  /* const productsDetails = [
     {
       id: 1,
       image: "../../../public/assets/Images/product.png",
@@ -46,11 +47,27 @@ export default function Product() {
       price: "$233.00",
       salePrice: "$200.00",
     },
-  ];
+  ]; */
+  const [productsDetails, setProductsDetails] = useState([]);
+  const [currentImage, setCurrentImage] = useState(0);
+  const [currentColor, setCurrentColor] = useState(0);
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(0);
 
+  // price
+  const rawPrice = productsDetails?.price || "$0";
+  const rawSale = productsDetails?.sale || "0%";
+
+  const price = parseFloat(rawPrice.replace("$", ""));
+  const sale = parseFloat(rawSale.replace("%", "")) / 100;
+
+  const salesPrice = price * (1 - sale);
+
+  // reviewsPrecentage
+  const percentage = Math.round((productsDetails?.rate / 5) * 100);
+
   const handleCount1 = () => {
+    if (count == 0) return;
     setCount((c) => c - step);
   };
   const handleCount2 = () => {
@@ -61,9 +78,9 @@ export default function Product() {
   const handleClickToCart = () => {
     navigate(`/cart`);
   };
-  const { id } = useParams();
+  const params = useParams();
 
-  const product = productsDetails.find((b) => b.id === parseInt(id));
+  // const product = productsDetails.find((b) => b.id === parseInt(id));
 
   const [downloadBlocksIsOpen, setDownloadBlocksIsOpen] = useState(false);
   const handleClickDownloadBlocks = () => {
@@ -73,11 +90,21 @@ export default function Product() {
   const handleClickAddToCart = () => {
     setAddToCart((prev) => !prev);
   };
+  useEffect(() => {
+    console.log("http://localhost:8000/products/" + params.id);
+    axios
+      .get("http://localhost:8000/products/" + params.id)
+      .then((res) => {
+        console.log(res.data);
+        setProductsDetails(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <>
       <TopGreenBar dynamicLink="Modern Desk" />
-      <div className="product">
+      <div className="product container">
         {addToCart && (
           <div className="view-cart">
             <p>“Ceiling Light” has been added to your cart</p>
@@ -87,21 +114,32 @@ export default function Product() {
         <div className="product-content">
           <div className="product-imgs">
             <div className="product-img">
-              <img src={productImg} />
+              <img src={productsDetails?.images?.[currentImage]} />
             </div>
             <div className="more-photos">
-              <img src={productImg} className="pduct-img" />
-              <img src={productImg} className="product-img" />
-              <img src={productImg} className="product-img" />
-              <img src={productImg} className="product-img" />
-              <img src={productImg} className="product-img" />
+              {productsDetails?.images?.map((img, i) => (
+                <img
+                  className={
+                    i == currentImage ? "active pduct-img" : "pduct-img"
+                  }
+                  src={img}
+                  key={i}
+                  onClick={() => setCurrentImage(i)}
+                />
+              ))}
             </div>
           </div>
           <div className="product-details">
             <div className="top-product">
               <div className="rating">
-                <StarRating />
-                <p className="rev">(reviews 30%)</p>
+                {[...new Array(5)].map((el, i) =>
+                  i + 1 <= productsDetails?.rate ? (
+                    <FaStar className="icon" />
+                  ) : (
+                    <FaRegStar className="icon" />
+                  )
+                )}
+                <p className="rev">(reviews {percentage}%)</p>
               </div>
               <div className="share">
                 <p>share : </p>
@@ -119,23 +157,40 @@ export default function Product() {
                 </a>
               </div>
             </div>
-            <h2>Modern Desk</h2>
-            <p>
-              Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling
-              LightCeiling LightCeiling{" "}
-            </p>
+            <h2>{productsDetails?.name}</h2>
+            <p>{productsDetails?.desc}</p>
             <div className="price-box">
-              <span className="price">$255.00</span>{" "}
-              <span className="real-price">$270.00</span>
-              <span className="sale">20% sale</span>
+              <span className="price">${salesPrice}</span>
+              <span className="real-price">{productsDetails?.price}</span>
+              <span className="sale">{productsDetails?.sale} sale</span>
+            </div>
+            <div className="colors-holder">
+              <p>Colors</p>
+              <div className="colors">
+                {productsDetails?.colors?.map((color, i) => (
+                  <span
+                    className={i == currentColor ? "active" : ""}
+                    key={i}
+                    style={{ backgroundColor: color }}
+                    onClick={() => setCurrentColor(i)}
+                  ></span>
+                ))}
+              </div>
             </div>
             <div className="cart">
               <a onClick={handleClickAddToCart}>
                 <span>Add to Cart</span>
-                <MdArrowOutward className="arrow-icon" />{" "}
+                <MdArrowOutward className="arrow-icon" />
               </a>
               <div className="product-number">
-                <button onClick={handleCount1}>-</button>
+                <button
+                  style={{
+                    color: count == 0 ? "#ccc" : "var(--primary-color)",
+                  }}
+                  onClick={handleCount1}
+                >
+                  -
+                </button>
                 <input
                   style={{ border: "none", width: "20px", textAlign: "center" }}
                   type="text"
@@ -200,19 +255,27 @@ export default function Product() {
           <div className="title"> Description & Other Information</div>
           <div className="info">
             <p className="title">Category</p>
-            <p className="desc">Category</p>
+            <p className="desc">{productsDetails?.category}</p>
           </div>
           <div className="info">
             <p className="title">Material</p>
-            <p className="desc">Material</p>
+            <p className="desc">{productsDetails?.material}</p>
           </div>
           <div className="info">
-            <p className="title">Dimensions</p>
-            <p className="desc"></p>
+            <p className="title">Style</p>
+            <p className="desc">{productsDetails?.style}</p>
           </div>
           <div className="info">
-            <p className="title">Prand</p>
-            <p className="desc"></p>
+            <p className="title">Width</p>
+            <p className="desc">{productsDetails?.width}</p>
+          </div>
+          <div className="info">
+            <p className="title">Height</p>
+            <p className="desc">{productsDetails?.height}</p>
+          </div>
+          <div className="info">
+            <p className="title">Length</p>
+            <p className="desc">{productsDetails?.lengthInfo}</p>
           </div>
         </div>
         <hr />

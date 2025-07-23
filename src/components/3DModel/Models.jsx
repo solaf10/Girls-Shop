@@ -13,7 +13,7 @@ export default function Models() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = (id) => {
-    navigate(`/product/${id}`);
+    navigate(`/shop/${id}`);
   };
   /* const products = [
     {
