@@ -2,7 +2,8 @@
   display: flex;
   /* height: 100vh; */
   /* flex-wrap: wrap; */
-  margin: 110px 0 65px 0;
+  min-height: calc(100vh - 122px);
+  margin: 122px 0px 0px;
   /* Left Section */
   .left-section {
     width: 50%;

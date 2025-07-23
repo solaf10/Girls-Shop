@@ -2,7 +2,7 @@ import "./NavBar.css";
 import { RiUserLine } from "react-icons/ri";
 import { BsCart3 } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { useState } from "react";
 import { MdLanguage } from "react-icons/md";
@@ -13,6 +13,16 @@ import { TbCube } from "react-icons/tb";
 const NavBar = () => {
   const [isMenuShow, setIsMenuShow] = useState(false);
   const [isUserShow, setIsUserShow] = useState(false);
+  const navigate = useNavigate();
+  const isToken = localStorage.getItem("token") != null;
+  const handleUserIconClick = () => {
+    if (isToken) {
+      setIsUserShow(true);
+    } else {
+      navigate("/login");
+    }
+  };
+
   return (
     <nav className="blurry">
       <div className="container">
@@ -41,8 +51,8 @@ const NavBar = () => {
           </li>
         </ul>
         <div className="icons">
-          <RiUserLine className="icon" onClick={() => setIsUserShow(true)} />
-          <BsCart3 className="icon" />
+          <RiUserLine className="icon" onClick={handleUserIconClick} />
+          <BsCart3 className="icon" onClick={() => navigate("/cart")} />
           <FiSearch className="search-icon icon" />
         </div>
         <div className="popups-holder">

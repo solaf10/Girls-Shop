@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Shop from "./pages/Shop/Shop";
 import About from "./pages/About/About";
@@ -23,8 +23,11 @@ import SignUp from "./components/SignUp/SignUp";
 import Designer from "./pages/Designer/Designer";
 
 const App = () => {
+  const location = useLocation();
+  const authPaths = ["login", "signup", "updatePassword"];
+  const isAuthPage = authPaths.some((path) => location.pathname.includes(path));
   return (
-    <BrowserRouter>
+    <>
       <div className="header-holder">
         <Header />
         <NavBar />
@@ -97,8 +100,8 @@ const App = () => {
           />
         </Route>
       </Routes>
-      <Footer />
-    </BrowserRouter>
+      {!isAuthPage && <Footer />}
+    </>
   );
 };
 
