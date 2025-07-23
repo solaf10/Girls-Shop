@@ -58,7 +58,6 @@
     }
     .product-details {
       position: relative;
-
       .top-product {
         margin: 15px 0;
         display: flex;
@@ -280,7 +279,9 @@
     }
   }
 }
-
+.single-product .loader-holder {
+  height: 100vh;
+}
 @media (max-width: 767px) {
   .product {
     max-width: 100vw;
