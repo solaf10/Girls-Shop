@@ -18,8 +18,8 @@
 }
 @media (max-width: 500px) {
     .followus .slider{
-      display: grid;
-      grid-template-columns: repeat(2, auto);
+    display: grid;
+    grid-template-columns: repeat(2, auto);
 }
 .followus .title h2{
             font-size: 40px;

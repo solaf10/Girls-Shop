@@ -11,76 +11,34 @@ return (
     <div className='fullcart'>
     <div className="container">
         <div className="info">
-            <div className="pro">
-                <div className="title">
-                    <h2> Cart </h2>
-                </div>
-                <div className="table">
-                    <div className="header">
-                        <div className='td'>
-                            <p>Product</p>
-                        </div>
-                        <div>
-                            <p>Price</p>
-                        </div>
-                        <div>
-                            <p>Amount</p>
-                        </div>
-                        <div>
-                            <p>Total Price</p>
-                        </div>
-                    </div>
-                    <div className="body">
-                        <div className="row-info">
-                            {/* <div className="pro-info1"> */}
-                            
-                                {/* <div className="icon-close">
-                                </div> */}
-                                <div className="img-pro">
-                                    <IoIosCloseCircleOutline  className='close'/>
-                                    <img src="/assets/Images/Image.png" alt="" />
-                                    <p className='pro-name'>Modern Desk</p>
-                                </div>
-                            {/* </div> */}
-                            {/* <div className="pro-info2"> */}
-                                <div><p>price</p></div>
-                                <div className="count"><p><span>+</span> number <span>-</span></p></div>
-                                <div><p>number</p></div>
-                            {/* </div> */}
-                            
-                        </div>
-                    </div>
-                    {/* <table>
-                        <thead>
-                            <tr>
-                                <td>Product</td>
-                                <td>Price</td>
-                                <td>Amount</td>
-                                <td>Total Price</td>
+            <div className="product-table">
+                <table>
+                    <caption> Cart </caption>
+                    <thead>
+                        <tr>
+                            <td> PRODUCT</td>
+                            <td> PRICE</td>
+                            <td> AMOUNT</td>
+                            <td> TOTAL PRAICE</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {/* {products.map((product) => (
+                            <tr key={product.id}>
+                                <td>{product.id}</td>
+                                <td>{product.name}</td>
+                                <td>{product.price} $</td>
                             </tr>
-                        </thead>
-                        <tbody>
-                                <div className="icon-false"></div>
-                            <tr>
-                                <td>
-                                    <div className="pro-info">
-                                        <img src="" alt="" />
-                                        <p className='pro-name'></p>
-                                    </div>
-                                </td>
-                                <td> price</td>
-                                <td><div className="count">
-                                    <p><span>+</span> number <span>-</span></p>
-                                    </div></td>
-                                <td>number</td>
-                            </tr>
-                        </tbody>
-                    </table> */}
-                </div>
-                <div className='ret'>
-                <button>Return Shopping</button>
-                </div>
-                
+                        ))} */}
+                        <tr>
+                            <td className='first-td'> <span className='icon'><IoIosCloseCircleOutline /></span> <img src="/public/assets/Images/Image.png" alt="" /> <p>sofa</p></td>
+                            <td> 150$ </td>
+                            <td className='third-td'> <p><span>+</span>3 <span>-</span></p></td>
+                            <td> 750$</td>
+                        </tr>
+                    </tbody>
+                </table>
+                    <button> Return Shopping </button>
             </div>
             <div className="price">
                 <div className="title">
