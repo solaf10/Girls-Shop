@@ -1,6 +1,7 @@
 import "./Designer.css";
 import DropDownDesigner from "../../components/DropDownDesigner/DropDownDesigner";
 import DesignerCard from "../../components/DesignerCard/DesignerCard";
+import TopGreenBar from "../../components/TopGreenBar/TopGreenBar";
 const designers = [
   {
     image: "/assets/Images/designer-image.png",
@@ -100,37 +101,40 @@ const Designer = () => {
   const countriesOptions = ["Syria", "Saudi", "Palestine"];
   const creativeOptions = ["Syria", "Saudi", "Palestine"];
   return (
-    <div className="designers container">
-      <div className="designer-header">
-        <h1>Designer</h1>
-        <div className="search-filter-designer">
-          <div className="search-designer">
-            <input placeholder="Search Designer ..." type="text" />
-            <img src="/assets/Images/search.png" />
-          </div>
-          <div className="filter-designer">
-            <DropDownDesigner
-              options={countriesOptions}
-              placeholder="Countries"
-            />
-            <DropDownDesigner
-              options={creativeOptions}
-              placeholder="Creative"
-            />
+    <>
+      <TopGreenBar />
+      <div className="designers container">
+        <div className="designer-header">
+          <h1>Designer</h1>
+          <div className="search-filter-designer">
+            <div className="search-designer">
+              <input placeholder="Search Designer ..." type="text" />
+              <img src="/assets/Images/search.png" />
+            </div>
+            <div className="filter-designer">
+              <DropDownDesigner
+                options={countriesOptions}
+                placeholder="Countries"
+              />
+              <DropDownDesigner
+                options={creativeOptions}
+                placeholder="Creative"
+              />
+            </div>
           </div>
         </div>
+        {designers.map((designer) => (
+          <DesignerCard
+            key={designer.id}
+            designerName={designer.designerName}
+            designerImage={designer.image}
+            designerLocation={designer.designerCity}
+            designerNumber={designer.designerPhone}
+            designerWork={designer.designerWork}
+          />
+        ))}
       </div>
-      {designers.map((designer) => (
-        <DesignerCard
-          key={designer.id}
-          designerName={designer.designerName}
-          designerImage={designer.image}
-          designerLocation={designer.designerCity}
-          designerNumber={designer.designerPhone}
-          designerWork={designer.designerWork}
-        />
-      ))}
-    </div>
+    </>
   );
 };
 

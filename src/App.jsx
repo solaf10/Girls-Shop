@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Shop from "./pages/Shop/Shop";
 import About from "./pages/About/About";
@@ -25,8 +25,11 @@ import EmptyCart from "./sections/EmptyCart/EmptyCart";
 import FullCart from "./sections/FullCart/FullCart";
 
 const App = () => {
+  const location = useLocation();
+  const authPaths = ["login", "signup", "updatePassword"];
+  const isAuthPage = authPaths.some((path) => location.pathname.includes(path));
   return (
-    <BrowserRouter>
+    <>
       <div className="header-holder">
         <Header />
         <NavBar />
@@ -36,19 +39,15 @@ const App = () => {
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/product/:id" element={<Product />} />
+        <Route path="/shop/:id" element={<Product />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/cart/complate-cart" element={<ComplateCart />} />
-        <Route path="/cart/empty-cart" element={<EmptyCart />} />
-        <Route path="/cart/full-cart" element={<FullCart />} />
-        <Route path="/updatePassword" element={<Contact />} />
         <Route path="/blogs/:id" element={<BlogsDetails />} />
-        <Route path="/updatePassword" element={<UpdatePassword />}/>
-        <Route path="/designer" element={<Designer/>}>
-
+        <Route path="/designer" element={<Designer />} />
+        <Route path="/updatePassword" element={<UpdatePassword />}>
           <Route
             index
             element={
@@ -103,8 +102,8 @@ const App = () => {
           />
         </Route>
       </Routes>
-      <Footer />
-    </BrowserRouter>
+      {!isAuthPage && <Footer />}
+    </>
   );
 };
 

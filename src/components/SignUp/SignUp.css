@@ -2,7 +2,9 @@
   display: flex;
   height: fit-content;
   flex-wrap: wrap;
-  margin: 95px 0 20px 0;
+  /* margin: 95px 0 20px 0; */
+  margin: 122px 0px 0px;
+  min-height: calc(100vh - 122px);
   /* Left Section */
   .left-section {
     width: 50%;

@@ -9,6 +9,7 @@ import NewProducts from "../../sections/HomeSections/NewProducts/NewProducts";
 import RecentBlogs from "../../sections/HomeSections/RecentBlogs/RecentBlogs";
 import Reviews from "../../sections/HomeSections/Reviews/Reviews";
 import ReviewForm from "../../sections/ReviewForm/ReviewForm";
+import SpecificProducts from "../../sections/HomeSections/SpecificProducts/SpecificProducts";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Features />
       <MainCategories />
       <Choice />
+      <SpecificProducts />
       <NewProducts />
       <CustomOrder />
       <RecentBlogs />

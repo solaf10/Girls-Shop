@@ -4,6 +4,7 @@ import PriceColorFilter from "./PriceColorFilter";
 import AccordionItem from "./AccordionItem";
 import MaterialStyle from "./MaterialStyle";
 import ResetFilters from "./ResetFilters";
+import search from "../../../public/assets/Images/search.svg";
 
 const faqs = [
   {
@@ -43,6 +44,10 @@ export default function Accordion() {
 
   return (
     <div className="filter">
+      <div className="search">
+        <input placeholder="Search products..."></input>
+        <img src={search} />I
+      </div>
       <div className="accordion">
         <p className="title">categories</p>
         {faqs.map((el, i) => (

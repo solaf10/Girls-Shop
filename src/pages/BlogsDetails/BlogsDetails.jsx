@@ -188,42 +188,43 @@ const BlogsDetails = () => {
       date: "Feb 8th, 2025",
     },
   ];
-  const resentBlogs=[
+  const resentBlogs = [
     {
-      id:1,
-      blogTitle:"The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      publisherDate:" 5 Sep 2024",
-      publisherName:"Auther name"
-    }
-    ,
+      id: 1,
+      blogTitle:
+        "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
+      publisherDate: " 5 Sep 2024",
+      publisherName: "Auther name",
+    },
     {
-       id:2,
-      blogTitle:"The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      publisherDate:" 5 Sep 2024",
-      publisherName:"Auther name"
-    }
-    ,
+      id: 2,
+      blogTitle:
+        "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
+      publisherDate: " 5 Sep 2024",
+      publisherName: "Auther name",
+    },
     {
-       id:3,
-      blogTitle:"The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      publisherDate:" 5 Sep 2024",
-      publisherName:"Auther name"
-    }
-    ,
+      id: 3,
+      blogTitle:
+        "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
+      publisherDate: " 5 Sep 2024",
+      publisherName: "Auther name",
+    },
     {
-       id:4,
-      blogTitle:"The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      publisherDate:" 5 Sep 2024",
-      publisherName:"Auther name"
-    }
-  ]
+      id: 4,
+      blogTitle:
+        "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
+      publisherDate: " 5 Sep 2024",
+      publisherName: "Auther name",
+    },
+  ];
   const { id } = useParams();
 
   const blog = postsDetails.find((b) => b.id === parseInt(id));
 
   return (
     <div className="blogs">
-      <TopGreenBar secondLink="../../pages/Blogs" secondPageName="Blogs" />
+      <TopGreenBar dynamicLink={blog.bigTitle} />
       <div className="container">
         <div className="blogs-detais-container">
           <div className="article-detailes">
@@ -315,18 +316,15 @@ const BlogsDetails = () => {
             <div className="recent-posts">
               <h2 className="recent-blogs-text">Recent Posts</h2>
               <div className="recent-blogs">
-                  {
-                resentBlogs.map((recent)=>(
-                  <RecentBlog 
-                  key ={recent.id} 
-                  blogTitle ={recent.blogTitle}
-                  publisherDate={recent.publisherDate}
-                  publisherName={recent.publisherName}
+                {resentBlogs.map((recent) => (
+                  <RecentBlog
+                    key={recent.id}
+                    blogTitle={recent.blogTitle}
+                    publisherDate={recent.publisherDate}
+                    publisherName={recent.publisherName}
                   />
-                ))
-              }
+                ))}
               </div>
-            
             </div>
           </div>
         </div>

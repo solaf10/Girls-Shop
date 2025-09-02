@@ -2,22 +2,33 @@ import "./NavBar.css";
 import { RiUserLine } from "react-icons/ri";
 import { BsCart3 } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { useState } from "react";
 import { MdLanguage } from "react-icons/md";
 import { IoIosArrowDown, IoMdLogOut, IoIosArrowForward } from "react-icons/io";
 import { FaUser } from "react-icons/fa6";
+import { TbCube } from "react-icons/tb";
 
 const NavBar = () => {
   const [isMenuShow, setIsMenuShow] = useState(false);
   const [isUserShow, setIsUserShow] = useState(false);
+  const navigate = useNavigate();
+  const isToken = localStorage.getItem("token") != null;
+  const handleUserIconClick = () => {
+    if (isToken) {
+      setIsUserShow(true);
+    } else {
+      navigate("/login");
+    }
+  };
+
   return (
     <nav className="blurry">
       <div className="container">
         <div className="logo">
-          <img src="/assets/Images/Webicon.png" alt="" />
-          <span>Verdant</span>
+          <TbCube />
+          <span>ArchiLink</span>
         </div>
         <ul className="links">
           <li>
@@ -40,8 +51,8 @@ const NavBar = () => {
           </li>
         </ul>
         <div className="icons">
-          <RiUserLine className="icon" onClick={() => setIsUserShow(true)} />
-          <BsCart3 className="icon" />
+          <RiUserLine className="icon" onClick={handleUserIconClick} />
+          <BsCart3 className="icon" onClick={() => navigate("/cart")} />
           <FiSearch className="search-icon icon" />
         </div>
         <div className="popups-holder">
@@ -101,7 +112,7 @@ const NavBar = () => {
                 <NavLink to="/about">About</NavLink>
               </li>
               <li>
-                <NavLink to="/designers">Designers</NavLink>
+                <NavLink to="/designer">Designers</NavLink>
               </li>
               <li>
                 <NavLink to="/contact">contact us</NavLink>

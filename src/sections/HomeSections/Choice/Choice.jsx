@@ -9,11 +9,11 @@ const Choice = () => {
           <div className="sub-title">
             <h2>The Best Furniture Manufacturer of your choice</h2>
             <p>
-              At Girl’shop, we craft high-quality, stylish, and durable
+              At ArchiLink, we craft high-quality, stylish, and durable
               furniture designed to elevate any space. With expert craftsmanship
               and premium materials, we bring comfort, elegance, and
               functionality to your home or business. Choose excellence. Choose
-              Girl’shop.
+              ArchiLink.
             </p>
           </div>
         </div>
