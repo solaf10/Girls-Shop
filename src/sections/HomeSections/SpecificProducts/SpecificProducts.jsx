@@ -91,7 +91,7 @@ const SpecificProducts = () => {
   const productCards = products.map((card) => (
     <Card
       onClick={() => {
-        navigate(`/product/${card.id}`);
+        navigate(`/shop/${card.id}`);
       }}
       key={card.id}
       image={card.image}

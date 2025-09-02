@@ -1,142 +1,242 @@
 {
-  "topsellers": [
-    {
-      "id": 73930385,
-      "image": "/assets/Images/top-sellers1.png",
-      "name": "XORA corner desk",
-      "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
-    },
-    {
-      "id": 343434,
-      "image": "/assets/Images/top-sellers2.png",
-      "name": "XORA corner desk",
-      "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
-    },
-    {
-      "id": 454545,
-      "image": "/assets/Images/top-sellers3.png",
-      "name": "XORA corner desk",
-      "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
-    },
-    {
-      "id": 98443197,
-      "image": "/assets/Images/top-sellers4.png",
-      "name": "XORA corner desk",
-      "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
-    },
-    {
-      "id": 908067,
-      "image": "/assets/Images/top-sellers5.png",
-      "name": "XORA corner desk",
-      "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
-    },
-    {
-      "id": 632841,
-      "image": "/assets/Images/top-sellers6.png",
-      "name": "XORA corner desk",
-      "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
-    },
-    {
-      "id": 710986,
-      "image": "/assets/Images/top-sellers7.png",
-      "name": "XORA corner desk",
-      "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
-    },
-    {
-      "id": 845371,
-      "image": "/assets/Images/top-sellers8.png",
-      "name": "XORA corner desk",
-      "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
-    }
-  ],
   "products": [
     {
-      "id": 73930385,
+      "id": 73,
       "image": "/assets/Images/top-sellers1.png",
       "name": "XORA corner desk",
       "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
+      "sale": "%20",
+      "images": [
+        "/assets/Images/top-sellers1.png",
+        "/assets/Images/top-sellers1.png",
+        "/assets/Images/top-sellers1.png",
+        "/assets/Images/top-sellers1.png"
+      ],
+      "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
+      "rate": 4,
+      "category": "chairs",
+      "style": "modern",
+      "material": "wood",
+      "colors": ["#eee", "#888"],
+      "width": "127cm",
+      "height": "75cm",
+      "lengthInfo": "140cm"
     },
     {
-      "id": 343434,
+      "id": 34,
       "image": "/assets/Images/top-sellers2.png",
       "name": "XORA corner desk",
       "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
+      "sale": "%20",
+      "images": [
+        "/assets/Images/top-sellers2.png",
+        "/assets/Images/top-sellers3.png",
+        "/assets/Images/top-sellers1.png"
+      ],
+      "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
+      "rate": 4,
+      "category": "chairs",
+      "style": "modern",
+      "material": "wood",
+      "colors": ["#eee", "#888"],
+      "width": "127cm",
+      "height": "75cm",
+      "lengthInfo": "140cm"
     },
     {
-      "id": 454545,
+      "id": 45,
       "image": "/assets/Images/top-sellers3.png",
       "name": "XORA corner desk",
       "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
+      "sale": "%20",
+      "images": [
+        "/assets/Images/top-sellers3.png",
+        "/assets/Images/top-sellers3.png",
+        "/assets/Images/top-sellers3.png"
+      ],
+      "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
+      "rate": 5,
+      "category": "chairs",
+      "style": "modern",
+      "material": "wood",
+      "colors": ["#eee", "#888"],
+      "width": "127cm",
+      "height": "75cm",
+      "lengthInfo": "140cm"
     },
     {
-      "id": 98443197,
+      "id": 98,
       "image": "/assets/Images/top-sellers4.png",
       "name": "XORA corner desk",
       "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
+      "sale": "%20",
+      "images": [
+        "/assets/Images/top-sellers4.png",
+        "/assets/Images/top-sellers4.png"
+      ],
+      "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
+      "rate": 3,
+      "category": "chairs",
+      "style": "modern",
+      "material": "wood",
+      "colors": ["#eee", "#888"],
+      "width": "127cm",
+      "height": "75cm",
+      "lengthInfo": "140cm"
     },
     {
-      "id": 908067,
+      "id": 90,
       "image": "/assets/Images/top-sellers5.png",
       "name": "XORA corner desk",
       "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
+      "sale": "%20",
+      "images": [
+        "/assets/Images/top-sellers5.png",
+        "/assets/Images/top-sellers5.png"
+      ],
+      "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
+      "rate": 2,
+      "category": "chairs",
+      "style": "modern",
+      "material": "wood",
+      "colors": ["#eee", "#888"],
+      "width": "127cm",
+      "height": "75cm",
+      "lengthInfo": "140cm"
     },
     {
-      "id": 632841,
+      "id": 63,
       "image": "/assets/Images/top-sellers6.png",
       "name": "XORA corner desk",
       "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
+      "sale": "%20",
+      "images": ["/assets/Images/top-sellers6.png"],
+      "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
+      "rate": 4,
+      "category": "chairs",
+      "style": "modern",
+      "material": "wood",
+      "colors": ["#eee", "#888"],
+      "width": "127cm",
+      "height": "75cm",
+      "lengthInfo": "140cm"
     },
     {
-      "id": 710986,
+      "id": 71,
       "image": "/assets/Images/top-sellers7.png",
       "name": "XORA corner desk",
       "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
+      "sale": "%20",
+      "images": [
+        "/assets/Images/top-sellers7.png",
+        "/assets/Images/top-sellers7.png"
+      ],
+      "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
+      "rate": 5,
+      "category": "chairs",
+      "style": "modern",
+      "material": "wood",
+      "colors": ["#eee", "#888"],
+      "width": "127cm",
+      "height": "75cm",
+      "lengthInfo": "140cm"
     },
     {
-      "id": 845371,
+      "id": 84,
       "image": "/assets/Images/top-sellers8.png",
       "name": "XORA corner desk",
       "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
+      "sale": "%20",
+      "images": [
+        "/assets/Images/top-sellers8.png",
+        "/assets/Images/top-sellers8.png",
+        "/assets/Images/top-sellers8.png",
+        "/assets/Images/top-sellers8.png"
+      ],
+      "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
+      "rate": 3,
+      "category": "chairs",
+      "style": "modern",
+      "material": "wood",
+      "colors": ["#eee", "#888"],
+      "width": "127cm",
+      "height": "75cm",
+      "lengthInfo": "140cm"
     },
     {
-      "id": 173642,
+      "id": 17,
       "image": "/assets/Images/top-sellers9.png",
       "name": "XORA corner desk",
       "price": "$560.00",
-      "realPrice": "$600.00",
-      "color": "#eee"
+      "sale": "%20",
+      "images": [],
+      "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
+      "rate": 1,
+      "category": "chairs",
+      "style": "modern",
+      "material": "wood",
+      "colors": ["#eee", "#888"],
+      "width": "127cm",
+      "height": "75cm",
+      "lengthInfo": "140cm"
+    }
+  ],
+  "topsellers": [
+    {
+      "id": 73,
+      "image": "/assets/Images/top-sellers1.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "sale": "%20"
+    },
+    {
+      "id": 34,
+      "image": "/assets/Images/top-sellers2.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "sale": "%20"
+    },
+    {
+      "id": 45,
+      "image": "/assets/Images/top-sellers3.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "sale": "%20"
+    },
+    {
+      "id": 98,
+      "image": "/assets/Images/top-sellers4.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "sale": "%20"
+    },
+    {
+      "id": 90,
+      "image": "/assets/Images/top-sellers5.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "sale": "%20"
+    },
+    {
+      "id": 63,
+      "image": "/assets/Images/top-sellers6.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "sale": "%20"
+    },
+    {
+      "id": 71,
+      "image": "/assets/Images/top-sellers7.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "sale": "%20"
+    },
+    {
+      "id": 84,
+      "image": "/assets/Images/top-sellers8.png",
+      "name": "XORA corner desk",
+      "price": "$560.00",
+      "sale": "%20"
     }
   ]
 }

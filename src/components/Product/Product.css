@@ -1,7 +1,7 @@
 .product {
   /* letter-spacing: 1px; */
   /* margin: 150px 60px 0 60px; */
-  margin: 50px 60px 0 60px;
+  margin: 50px 0px;
   .view-cart {
     display: flex;
     justify-content: space-between;
@@ -32,12 +32,16 @@
   }
   .product-content {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 32px;
     .product-imgs {
       position: relative;
-      width: 60%;
+      width: 50%;
       .product-img {
         max-width: 100%;
+        img {
+          width: 100%;
+        }
       }
       .more-photos {
         display: flex;
@@ -47,11 +51,13 @@
           width: 19%;
           height: 19%;
         }
+        img.active {
+          border: 2px solid var(--primary-color);
+        }
       }
     }
     .product-details {
       position: relative;
-
       .top-product {
         margin: 15px 0;
         display: flex;
@@ -59,6 +65,11 @@
         .rating {
           display: flex;
           justify-content: center;
+          align-items: center;
+          .icon {
+            color: #fa8232;
+          }
+          gap: 3px;
           .rev {
             color: #5f6c72;
             padding: 5px 10px;
@@ -85,10 +96,24 @@
       p {
         margin: 15px 0;
       }
+      .colors {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        span {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+        }
+        span.active {
+          border: 2px solid var(--primary-color);
+        }
+      }
       .price-box {
         margin: 15px 0;
         display: flex;
         justify-content: flex-start;
+        align-items: center;
         span.price {
           font-weight: bold;
           font-size: 25px;
@@ -121,10 +146,12 @@
           width: 350px;
           text-align: center;
           background-color: var(--primary-color);
-          height: 50px;
+          /* height: 50px; */
           letter-spacing: 1px;
           display: flex;
+          align-items: center;
           justify-content: space-around;
+          cursor: pointer;
           .arrow-icon {
             font-size: 22px;
             transition: 0.5s;
@@ -143,15 +170,14 @@
           text-align: center;
           padding: 0 30px;
           display: flex;
+          justify-content: space-between;
+          align-items: center;
           border: 1px solid #1d322f;
 
           button {
             background-color: white;
-            width: 20px;
-            height: 25px;
             font-size: 20px;
             top: 11px;
-            position: relative;
           }
         }
       }
@@ -168,6 +194,7 @@
           color: white;
           padding: 20px;
           display: flex;
+          align-items: center;
           justify-content: space-between;
           width: 325px;
           button {
@@ -252,7 +279,9 @@
     }
   }
 }
-
+.single-product .loader-holder {
+  height: 100vh;
+}
 @media (max-width: 767px) {
   .product {
     max-width: 100vw;
