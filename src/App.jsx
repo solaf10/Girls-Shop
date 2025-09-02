@@ -21,6 +21,8 @@ import LogIn from "./components/LogIn/LogIn";
 import Product from "./components/Product/Product";
 import SignUp from "./components/SignUp/SignUp";
 import Designer from "./pages/Designer/Designer";
+import EmptyCart from "./sections/EmptyCart/EmptyCart";
+import FullCart from "./sections/FullCart/FullCart";
 
 const App = () => {
   const location = useLocation();

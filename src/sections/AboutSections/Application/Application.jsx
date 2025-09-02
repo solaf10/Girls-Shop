@@ -9,6 +9,7 @@ const Application = () => {
 return (
     <section className='application'>
         <div className="container">
+
             <div className="text">
                 <div className="title">
                     <h2>Download PROJECT APP</h2>
@@ -31,11 +32,12 @@ return (
                     </div>
                 </div>
             </div>
+            <div className="phone-img">
         </div>
-        <div className="phone-img">
-            <img src={phon1} alt="" className='one'/>
-            <img src={phon2} alt="" className='two'/>
+        <img src={phon1} alt="" className='one'/>
+        <img src={phon2} alt="" className='two'/>
         </div>
+
     </section>
 )
 }
