@@ -16,6 +16,7 @@ return (
         <img src="/assets/Images/Img2.png" alt="" />
         <img src="/assets/Images/Img3.png" alt="" />
         <img src="/assets/Images/Img4.png" alt="" />
+        <img src="/assets/Images/Img4.png" alt="" />
     </div>
     </div>
 </section>

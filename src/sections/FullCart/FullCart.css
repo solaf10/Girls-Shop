@@ -5,82 +5,63 @@ padding: 68px  99px 48px 100px;
     display: flex;
     gap: 23px;
 }
-.fullcart .info .pro , .fullcart .info .price ,hr , .fullcart .pro .table .count{
+.fullcart .info .product-table , .fullcart .info .price ,hr , .fullcart .pro .table .count{
     border: solid 1px #E4E7E9;
 }
-.fullcart .info .pro{
-    width: 75%;
-    .title{
-        padding: 20px 24px;
-        font-weight: 500;
-        font-size: 18px;
-        color:#191C1F;
-    }
-    .table{
+.fullcart .product-table {
+    width: 60%;
+    table{
         width: 100%;
     }
 }
-.fullcart .info .pro .table .header{
+.fullcart .info .product-table table caption{
+    text-align: start;
+    padding: 20px 24px;
+    font-weight: 400;
+}
+.fullcart .info .product-table table thead tr{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 24px;
+    padding: 10px;
+    width: 100%;
     background-color: #E4E7E9;
     color: #475156;
     gap: 24px;
-    .td{
-        width: 27%;
-    }
 }
-.fullcart .table .body{
-    
-}
-.fullcart .body .row-info{
+.fullcart .info .product-table table tbody tr{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
-    padding: 10px 24px;
-/* display: flex; */
-/* justify-content: space-between; */
-/* gap: 200px; */
-}
-.fullcart .body .row-info  , .fullcart .body .row-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.fullcart .body .row-info {
-    gap: 16px;
-    .img-pro{
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-}
-.fullcart .body .row-info {
-    gap: 46px;
-    /* width: 45%; */
-}
-.fullcart .pro .ret{
+    padding: 10px;
     width: 100%;
-    padding: 24px;
-    display: flex;
-    align-items: center;
-    button{
+}
+.fullcart tbody tr .first-td{
+display: flex;
+align-items: center;
+gap: 5px;
+}
+.fullcart tbody tr .third-td{
+display: flex;
+align-items: center;
+border: solid 1px #E4E7E9;
+span{
+    padding: 0px 15px;
+}
+}
+.fullcart .product-table button{
         padding: 16px 24px;
         border: 1px solid #23262F;
-        color: #23262F;
+        /* color: #23262F; */
         background-color: white;
-        p{
         font-weight: 600;
         font-size: 14px;
-        }
-    }
+        margin: 10px;
 }
-.fullcart .pro button:hover{
+.fullcart .product-table  button:hover{
     background-color: #1D322F;
-    color: white;}
+    color: white;
+}
 .fullcart .price {
     display: flex;
     flex-direction: column;
@@ -128,4 +109,17 @@ padding: 68px  99px 48px 100px;
 .fullcart .price button:hover{
     color: white;
     background-color: var(--secondary-color);
+}
+@media (max-width: 768px) {
+.fullcart .info .product-table{
+        overflow-x: auto;
+    }
+.fullcart .info .price{
+    width: fit-content;
+}
+}
+@media (max-width: 500px) {
+    .fullcart .container .info {
+        flex-direction: column;
+    }
 }
