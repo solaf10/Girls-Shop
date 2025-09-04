@@ -239,27 +239,34 @@
       "sale": "%20"
     }
   ],
-  "blogs": [
+  "recentblogs": [
     {
       "id": 1,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "March 10th, 2025"
     },
     {
       "id": 2,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia2",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 28th, 2025"
     },
     {
       "id": 3,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia3",
       "publisher": "john",
       "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 4,
+      "image": "/assets/Images/post-1.png",
+      "title": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia4",
+      "date": " 5 Sep 2024",
+      "publisher": "Auther name"
     }
   ]
 }

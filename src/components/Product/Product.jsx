@@ -12,10 +12,12 @@ import {
 import { AiOutlineDown } from "react-icons/ai";
 import { FiDownload } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import TopGreenBar from "../TopGreenBar/TopGreenBar";
 import axios from "axios";
 import Loader from "../Loader/Loader";
+import config from "../../Constants/enviroment";
+import { toast } from "react-toastify";
 
 export default function Product() {
   /* const productsDetails = [
@@ -51,7 +53,7 @@ export default function Product() {
   const [productsDetails, setProductsDetails] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
-  const [currentColor, setCurrentColor] = useState(0);
+  const [chosencolor, setchosencolor] = useState("");
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(0);
 
@@ -112,9 +114,8 @@ export default function Product() {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("http://localhost:8000/products/" + params.id)
+      .get(config.baseUrl + "/" + config.products + "/" + params.id)
       .then((res) => {
-        console.log(res.data);
         setIsLoading(false);
         setProductsDetails(res.data);
       })
@@ -125,12 +126,21 @@ export default function Product() {
   }, []);
 
   const colorsEls = colors?.map((color, i) => (
-    <span
-      className={i == currentColor ? "active" : ""}
-      key={i}
-      style={{ backgroundColor: color }}
-      onClick={() => setCurrentColor(i)}
-    ></span>
+    <div key={i} className="holder">
+      <label
+        className={
+          color == chosencolor ? "active choose-color" : "choose-color"
+        }
+        style={{ backgroundColor: color }}
+        htmlFor={`color-${i + 1}`}
+      ></label>
+      <input
+        type="radio"
+        name="color"
+        id={`color-${i + 1}`}
+        onChange={() => setchosencolor(color)}
+      />
+    </div>
   ));
   // rating
   const stars = [...new Array(5)].map((el, i) =>
@@ -149,6 +159,20 @@ export default function Product() {
       onClick={() => setCurrentImage(i)}
     />
   ));
+  const location = useLocation();
+  const currentUrl = window.location.origin + location.pathname;
+  const handleCopyURL = (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(currentUrl);
+    toast.success("URL copied successfully!!");
+  };
+  const handleShare = (url) => {
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+      //to convert url to URL-safe.
+      currentUrl
+    )}`;
+    window.open(url, "_blank", "width=600,height=400");
+  };
   return (
     <div className="single-product">
       {isLoading ? (
@@ -180,18 +204,36 @@ export default function Product() {
                   </div>
                   <div className="share">
                     <p>share : </p>
-                    <a href="" className="icon">
+                    <button onClick={handleCopyURL} className="icon">
                       <FaCopy />
-                    </a>
-                    <a href="" className="icon">
+                    </button>
+                    <button className="icon">
                       <FaInstagram />
-                    </a>
-                    <a href="" className="icon">
+                    </button>
+                    <button
+                      onClick={() =>
+                        handleShare(
+                          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                            currentUrl
+                          )}`
+                        )
+                      }
+                      className="icon"
+                    >
                       <FaFacebook />
-                    </a>
-                    <a href="" className="icon">
+                    </button>
+                    <button
+                      onClick={() =>
+                        handleShare(
+                          `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+                            currentUrl
+                          )}&text=${encodeURIComponent("Check this out!")}`
+                        )
+                      }
+                      className="icon"
+                    >
                       <FaTwitter />
-                    </a>
+                    </button>
                   </div>
                 </div>
                 <h2>{name}</h2>
@@ -201,37 +243,46 @@ export default function Product() {
                   <span className="real-price">{price}</span>
                   <span className="sale">{sale} sale</span>
                 </div>
-                <div className="colors-holder">
-                  <p>Colors</p>
-                  <div className="colors">{colorsEls}</div>
-                </div>
-                <div className="cart">
-                  <a onClick={handleClickAddToCart}>
-                    <span>Add to Cart</span>
-                    <MdArrowOutward className="arrow-icon" />
-                  </a>
-                  <div className="product-number">
-                    <button
-                      style={{
-                        color: count == 0 ? "#ccc" : "var(--primary-color)",
-                      }}
-                      onClick={handleCount1}
-                    >
-                      -
-                    </button>
-                    <input
-                      style={{
-                        border: "none",
-                        width: "20px",
-                        textAlign: "center",
-                      }}
-                      type="text"
-                      value={count}
-                      onChange={(e) => setCount(Number(e.target.value))}
-                    />
-                    <button onClick={handleCount2}>+</button>
+                <form>
+                  <div className="colors-holder">
+                    <p>Colors</p>
+                    <div className="colors">{colorsEls}</div>
                   </div>
-                </div>
+                  <div className="cart">
+                    <div className="product-number">
+                      <button
+                        type="button"
+                        style={{
+                          color: count == 0 ? "#ccc" : "var(--primary-color)",
+                        }}
+                        onClick={handleCount1}
+                      >
+                        -
+                      </button>
+                      <input
+                        style={{
+                          border: "none",
+                          width: "20px",
+                          textAlign: "center",
+                        }}
+                        type="text"
+                        value={count}
+                        onChange={(e) => setCount(Number(e.target.value))}
+                      />
+                      <button type="button" onClick={handleCount2}>
+                        +
+                      </button>
+                    </div>
+                    <button
+                      className="cart-btn"
+                      type="submit"
+                      onClick={handleClickAddToCart}
+                    >
+                      <span>Add to Cart</span>
+                      <MdArrowOutward className="arrow-icon" />
+                    </button>
+                  </div>
+                </form>
                 <hr />
                 <div className="architecture">
                   <p> For Architecture Download</p>

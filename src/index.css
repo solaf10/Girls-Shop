@@ -52,7 +52,7 @@ input {
   backdrop-filter: blur(16px);
   z-index: -1;
 }
-section {
+section:not(.Toastify) {
   padding-top: 75px;
   padding-bottom: 75px;
 }

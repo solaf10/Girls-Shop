@@ -5,6 +5,9 @@ import { useParams } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import TopGreenBar from "../../components/TopGreenBar/TopGreenBar";
 import RecentBlog from "../../components/RecentBlog/RecentBlog";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import config from "../../Constants/enviroment";
 const BlogsDetails = () => {
   const postsDetails = [
     {
@@ -188,7 +191,7 @@ const BlogsDetails = () => {
       date: "Feb 8th, 2025",
     },
   ];
-  const resentBlogs = [
+  /* const recentBlogs = [
     {
       id: 1,
       blogTitle:
@@ -217,10 +220,26 @@ const BlogsDetails = () => {
       publisherDate: " 5 Sep 2024",
       publisherName: "Auther name",
     },
-  ];
-  const { id } = useParams();
+  ]; */
 
+  const [searchedKey, setSearchedKey] = useState("");
+  const [recentBlogs, setRecentBlogs] = useState([]);
+  const [filteredBlogs, setFilteredBlogs] = useState(recentBlogs);
+  const { id } = useParams();
   const blog = postsDetails.find((b) => b.id === parseInt(id));
+  useEffect(() => {
+    axios
+      .get(config.baseUrl + "/" + config.recentblogs)
+      .then((res) => {
+        setRecentBlogs(res.data);
+        setFilteredBlogs(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+  useEffect(() => {
+    const res = recentBlogs.filter((blog) => blog.title.includes(searchedKey));
+    setFilteredBlogs(res);
+  }, [searchedKey]);
 
   return (
     <div className="blogs">
@@ -238,11 +257,9 @@ const BlogsDetails = () => {
               <h1>{blog.bigTitle}</h1>
               <p>{blog.articleText}</p>
             </div>
-
             <div className="share-post">
               <p>Share Post:</p>
               <a>
-                {" "}
                 <img src="/assets/Images/whatsapp.png" />
               </a>
               <a>
@@ -309,19 +326,23 @@ const BlogsDetails = () => {
           <div className="recent-posts-info">
             <h3>Search</h3>
             <div className="search-container">
-              <input type="text" />
+              <input
+                type="text"
+                value={searchedKey}
+                onChange={(e) => setSearchedKey(e.target.value)}
+              />
               <CiSearch className="search-icon" />
             </div>
-
             <div className="recent-posts">
               <h2 className="recent-blogs-text">Recent Posts</h2>
               <div className="recent-blogs">
-                {resentBlogs.map((recent) => (
+                {filteredBlogs.map((recent) => (
                   <RecentBlog
                     key={recent.id}
-                    blogTitle={recent.blogTitle}
-                    publisherDate={recent.publisherDate}
-                    publisherName={recent.publisherName}
+                    id={recent.id}
+                    title={recent.title}
+                    date={recent.date}
+                    publisher={recent?.publisher}
                   />
                 ))}
               </div>
