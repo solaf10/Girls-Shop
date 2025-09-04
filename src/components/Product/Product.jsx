@@ -71,6 +71,7 @@ export default function Product() {
     width,
     height,
     lengthInfo,
+    file
   } = productsDetails;
 
   // price
@@ -236,9 +237,12 @@ export default function Product() {
                 <div className="architecture">
                   <p> For Architecture Download</p>
                   <div className="download-button">
-                    <button>
+                    <button >
                       <FiDownload />
-                      Download Blocks
+                     
+                        Download Blocks
+                     
+                    
                     </button>
                     <button onClick={handleClickDownloadBlocks}>
                       <AiOutlineDown
@@ -252,25 +256,26 @@ export default function Product() {
                       <div className="title">File Type</div>
                       <ul>
                         <li>
-                          <a>
+                          <a href={file} download={file}
+                          >
                             <span className="suffix">.Dwg</span>
                             <span className="size">1.75MB</span>
                           </a>
                         </li>
                         <li>
-                          <a>
+                          <a href={file} download={file}>
                             <span className="suffix">.Max</span>
                             <span className="size">1.75MB</span>
                           </a>
                         </li>
                         <li>
-                          <a>
+                          <a href={file} download={file}>
                             <span className="suffix">.Psd</span>
                             <span className="size">1.75MB</span>
                           </a>
                         </li>
                         <li>
-                          <a>
+                          <a href={file} download={file}>
                             <span className="suffix">Download Zip</span>
                             <span className="size">1.75MB</span>
                           </a>

@@ -20,7 +20,8 @@
       "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
-      "lengthInfo": "140cm"
+      "lengthInfo": "140cm",
+      "file":"/assets/3D_Blocks"
     },
     {
       "id": 34,
@@ -41,7 +42,8 @@
       "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
-      "lengthInfo": "140cm"
+      "lengthInfo": "140cm",
+      "file":"/assets/3D_Blocks"
     },
     {
       "id": 45,
@@ -62,7 +64,8 @@
       "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
-      "lengthInfo": "140cm"
+      "lengthInfo": "140cm",
+      "file":"/assets/3D_Blocks"
     },
     {
       "id": 98,
@@ -82,7 +85,8 @@
       "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
-      "lengthInfo": "140cm"
+      "lengthInfo": "140cm",
+      "file":"/assets/3D_Blocks"
     },
     {
       "id": 90,
@@ -102,7 +106,8 @@
       "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
-      "lengthInfo": "140cm"
+      "lengthInfo": "140cm",
+      "file":"/assets/3D_Blocks"
     },
     {
       "id": 63,
@@ -119,7 +124,8 @@
       "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
-      "lengthInfo": "140cm"
+      "lengthInfo": "140cm",
+      "file":"/assets/3D_Blocks"
     },
     {
       "id": 71,
@@ -139,7 +145,8 @@
       "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
-      "lengthInfo": "140cm"
+      "lengthInfo": "140cm",
+      "file":"/assets/3D_Blocks"
     },
     {
       "id": 84,
@@ -161,7 +168,8 @@
       "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
-      "lengthInfo": "140cm"
+      "lengthInfo": "140cm",
+      "file":"/assets/3D_Blocks"
     },
     {
       "id": 17,
@@ -178,7 +186,8 @@
       "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
-      "lengthInfo": "140cm"
+      "lengthInfo": "140cm",
+      "file":"/assets/3D_Blocks"
     }
   ],
   "topsellers": [
