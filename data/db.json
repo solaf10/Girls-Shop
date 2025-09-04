@@ -245,64 +245,58 @@
       "image": "/assets/Images/avatar.png",
       "publisher": "John Doe",
       "title": "Architecture",
-      "content":
-        "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
     },
     {
       "id": 2,
       "image": "/assets/Images/avatar.png",
       "publisher": "John Doe",
       "title": "Architecture",
-      "content":
-        "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
     },
     {
       "id": 3,
       "image": "/assets/Images/avatar.png",
       "publisher": "John Doe",
       "title": "Architecture",
-      "content":
-        "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
     },
     {
       "id": 4,
       "image": "/assets/Images/avatar.png",
       "publisher": "John Doe",
       "title": "Architecture",
-      "content":
-        "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
     },
     {
       "id": 5,
       "image": "/assets/Images/avatar.png",
       "publisher": "John Doe",
       "title": "Architecture",
-      "content":
-        "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
     },
     {
       "id": 6,
       "image": "/assets/Images/avatar.png",
       "publisher": "John Doe",
       "title": "Architecture",
-      "content":
-        "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
     },
     {
       "id": 7,
       "image": "/assets/Images/avatar.png",
       "publisher": "John Doe",
       "title": "Architecture",
-      "content":
-        "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
     },
     {
       "id": 8,
       "image": "/assets/Images/avatar.png",
       "publisher": "John Doe",
       "title": "Architecture",
-      "content":
-        "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"}]
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+    }
+  ],
   "recentblogs": [
     {
       "id": 1,
@@ -331,7 +325,6 @@
       "title": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia4",
       "date": " 5 Sep 2024",
       "publisher": "Auther name"
-
     }
   ]
 }
