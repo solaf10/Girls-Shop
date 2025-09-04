@@ -4,6 +4,7 @@ import "./SpecificProducts.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Loader from "../../../components/Loader/Loader";
+import config from "../../../Constants/enviroment";
 
 const SpecificProducts = () => {
   /* const products = [
@@ -78,7 +79,7 @@ const SpecificProducts = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("http://localhost:8000/topsellers")
+      .get(config.baseUrl + "/" + config.topsellers)
       .then((res) => {
         setProducts(res.data);
         setIsLoading(false);
