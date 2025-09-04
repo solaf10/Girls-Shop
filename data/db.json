@@ -43,6 +43,7 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
+      "file":"/assets/3D_Blocks"
       "file": "/assets/3dBlocks/block.3d.rar"
     },
     {
@@ -248,6 +249,200 @@
       "sale": "%20"
     }
   ],
+
+ "designers" :
+  [
+  {
+    "image": "/assets/Images/designer-image.png",
+    "designerName": "Arch.Layla abdulHadi",
+    "designerCity": "Syria",
+    "designerPhone": "+123 123 123 1234",
+    "id": 1,
+    "designerWork": [
+      "/assets/Images/3d-models-2.png",
+      "/assets/Images/3d-models.png",
+      "/assets/Images/3d-scenes.jpg",
+      "/assets/Images/3d-scenes1.jpg",
+      "/assets/Images/3d-scenes2.jpg",
+      "/assets/Images/Img2.png",
+      "/assets/Images/Img4.png",
+      "/assets/Images/Img3.png",
+      "/assets/Images/Img3.png",
+      "/assets/Images/Img3.png",
+      "/assets/Images/Img3.png",
+      "/assets/Images/Img3.png",
+      "/assets/Images/Img3.png",
+      "/assets/Images/Img3.png",
+      "/assets/Images/Img3.png"
+    ]
+  },
+  {
+    "image": "/assets/Images/designer-image.png",
+    "designerName": "John",
+    "designerCity": "Syria",
+    "designerPhone": "+123 123 123 1234",
+    "id": 2,
+    "designerWork": [
+      "/assets/Images/3d-models-2.png",
+      "/assets/Images/3d-models.png",
+      "/assets/Images/3d-scenes.jpg",
+      "/assets/Images/3d-scenes1.jpg",
+      "/assets/Images/3d-scenes2.jpg",
+      "/assets/Images/Img2.png",
+      "/assets/Images/Img4.png",
+      "/assets/Images/Img3.png"
+    ]
+  },
+  {
+    "image": "/assets/Images/designer-image.png",
+    "designerName": "John",
+    "designerCity": "Syria",
+    "designerPhone": "+123 123 123 1234",
+    "id": 3,
+    "designerWork": [
+      "/assets/Images/3d-models-2.png",
+      "/assets/Images/3d-models.png",
+      "/assets/Images/3d-scenes.jpg",
+      "/assets/Images/3d-scenes1.jpg",
+      "/assets/Images/3d-scenes2.jpg",
+      "/assets/Images/Img2.png",
+      "/assets/Images/Img4.png",
+      "/assets/Images/Img3.png"
+    ]
+  },
+  {
+    "image": "/assets/Images/designer-image.png",
+    "designerName": "John",
+    "designerCity": "Syria",
+    "designerPhone": "+123 123 123 1234",
+    "id": 4,
+    "designerWork": [
+      "/assets/Images/3d-models-2.png",
+      "/assets/Images/3d-models.png",
+      "/assets/Images/3d-scenes.jpg",
+      "/assets/Images/3d-scenes1.jpg",
+      "/assets/Images/3d-scenes2.jpg",
+      "/assets/Images/Img2.png",
+      "/assets/Images/Img4.png",
+      "/assets/Images/Img3.png"
+    ]
+  },
+  {
+    "image": "/assets/Images/designer-image.png",
+    "designerName": "John",
+    "designerCity": "Syria",
+    "designerPhone": "+123 123 123 1234",
+    "id": 5,
+    "designerWork": [
+      "/assets/Images/3d-models-2.png",
+      "/assets/Images/3d-models.png",
+      "/assets/Images/3d-scenes.jpg",
+      "/assets/Images/3d-scenes1.jpg",
+      "/assets/Images/3d-scenes2.jpg",
+      "/assets/Images/Img2.png",
+      "/assets/Images/Img4.png",
+      "/assets/Images/Img3.png"
+    ]
+  }
+] ,
+"blogs" :
+[
+  {
+      "id": 1,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 2,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 3,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 4,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 5,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 6,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 7,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 8,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 9,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 10,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 11,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 12,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 13,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 14,
+      "image": "/assets/Images/post-1.png",
+      "title": "First Time Home Owner Ideas",
+=======
   "reviews": [
     {
       "id": 1,
@@ -335,5 +530,5 @@
       "date": " 5 Sep 2024",
       "publisher": "Auther name"
     }
-  ]
+]
 }

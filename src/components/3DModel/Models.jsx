@@ -7,8 +7,12 @@ import { FaAngleDown } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Loader from "../Loader/Loader";
+<<<<<<< batoul
+export default function  Models() {
+=======
 import config from "../../Constants/enviroment";
 export default function Models() {
+>>>>>>> master
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);

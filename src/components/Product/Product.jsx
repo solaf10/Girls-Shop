@@ -18,7 +18,6 @@ import axios from "axios";
 import Loader from "../Loader/Loader";
 import config from "../../Constants/enviroment";
 import { toast } from "react-toastify";
-
 export default function Product() {
   /* const productsDetails = [
     {
@@ -284,9 +283,12 @@ export default function Product() {
                 <div className="architecture">
                   <p> For Architecture Download</p>
                   <div className="download-button">
-                    <button>
+                    <button >
                       <FiDownload />
-                      Download Blocks
+                     
+                        Download Blocks
+                     
+                    
                     </button>
                     <button onClick={handleClickDownloadBlocks}>
                       <AiOutlineDown
