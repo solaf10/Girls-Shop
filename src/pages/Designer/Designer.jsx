@@ -1,140 +1,83 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "./Designer.css";
 import DropDownDesigner from "../../components/DropDownDesigner/DropDownDesigner";
 import DesignerCard from "../../components/DesignerCard/DesignerCard";
 import TopGreenBar from "../../components/TopGreenBar/TopGreenBar";
-const designers = [
-  {
-    image: "/assets/Images/designer-image.png",
-    designerName: "Arch.Layla abdulHadi",
-    designerCity: "Syria",
-    designerPhone: "+123 123 123 1234",
-    id: 1,
-    designerWork: [
-      "/assets/Images/3d-models-2.png",
-      "/assets/Images/3d-models.png",
-      "/assets/Images/3d-scenes.jpg",
-      "/assets/Images/3d-scenes1.jpg",
-      "/assets/Images/3d-scenes2.jpg",
-      "/assets/Images/Img2.png",
-      "/assets/Images/Img4.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-    ],
-  },
-  {
-    image: "/assets/Images/designer-image.png",
-    designerName: "John",
-    designerCity: "Syria",
-    designerPhone: "+123 123 123 1234",
-    id: 2,
-    designerWork: [
-      "/assets/Images/3d-models-2.png",
-      "/assets/Images/3d-models.png",
-      "/assets/Images/3d-scenes.jpg",
-      "/assets/Images/3d-scenes1.jpg",
-      "/assets/Images/3d-scenes2.jpg",
-      "/assets/Images/Img2.png",
-      "/assets/Images/Img4.png",
-      "/assets/Images/Img3.png",
-    ],
-  },
-  {
-    image: "/assets/Images/designer-image.png",
-    designerName: "John",
-    designerCity: "Syria",
-    designerPhone: "+123 123 123 1234",
-    id: 3,
-    designerWork: [
-      "/assets/Images/3d-models-2.png",
-      "/assets/Images/3d-models.png",
-      "/assets/Images/3d-scenes.jpg",
-      "/assets/Images/3d-scenes1.jpg",
-      "/assets/Images/3d-scenes2.jpg",
-      "/assets/Images/Img2.png",
-      "/assets/Images/Img4.png",
-      "/assets/Images/Img3.png",
-    ],
-  },
-  {
-    image: "/assets/Images/designer-image.png",
-    designerName: "John",
-    designerCity: "Syria",
-    designerPhone: "+123 123 123 1234",
-    id: 4,
-    designerWork: [
-      "/assets/Images/3d-models-2.png",
-      "/assets/Images/3d-models.png",
-      "/assets/Images/3d-scenes.jpg",
-      "/assets/Images/3d-scenes1.jpg",
-      "/assets/Images/3d-scenes2.jpg",
-      "/assets/Images/Img2.png",
-      "/assets/Images/Img4.png",
-      "/assets/Images/Img3.png",
-    ],
-  },
-  {
-    image: "/assets/Images/designer-image.png",
-    designerName: "John",
-    designerCity: "Syria",
-    designerPhone: "+123 123 123 1234",
-    id: 5,
-    designerWork: [
-      "/assets/Images/3d-models-2.png",
-      "/assets/Images/3d-models.png",
-      "/assets/Images/3d-scenes.jpg",
-      "/assets/Images/3d-scenes1.jpg",
-      "/assets/Images/3d-scenes2.jpg",
-      "/assets/Images/Img2.png",
-      "/assets/Images/Img4.png",
-      "/assets/Images/Img3.png",
-    ],
-  },
-];
+import Loader from "../../components/Loader/Loader";
 
 const Designer = () => {
   const countriesOptions = ["Syria", "Saudi", "Palestine"];
   const creativeOptions = ["Syria", "Saudi", "Palestine"];
+
+  const [designers, setDesigners] = useState([]); 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get("http://localhost:8000/designers")
+      .then((res) => {
+        setDesigners(res.data); 
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
+  }, []);
+
   return (
-    <>
-      <TopGreenBar />
-      <div className="designers container">
-        <div className="designer-header">
-          <h1>Designer</h1>
-          <div className="search-filter-designer">
-            <div className="search-designer">
-              <input placeholder="Search Designer ..." type="text" />
-              <img src="/assets/Images/search.png" />
+    <div className="single-product">
+      {loading ? (
+        <div className="loader-holder">
+          <Loader />
+        </div>
+      ) : (
+        <>
+          <TopGreenBar />
+          <div className="designers container">
+            <div className="designer-header">
+              <h1>Designers</h1>
+              <div className="search-filter-designer">
+                <div className="search-designer">
+                  <input placeholder="Search Designer ..." type="text" />
+                  <img src="/assets/Images/search.png" alt="search" />
+                </div>
+                <div className="filter-designer">
+                  <DropDownDesigner
+                    options={countriesOptions}
+                    placeholder="Countries"
+                  />
+                  <DropDownDesigner
+                    options={creativeOptions}
+                    placeholder="Creative"
+                  />
+                </div>
+              </div>
             </div>
-            <div className="filter-designer">
-              <DropDownDesigner
-                options={countriesOptions}
-                placeholder="Countries"
-              />
-              <DropDownDesigner
-                options={creativeOptions}
-                placeholder="Creative"
-              />
+
+            <div className="designer-list">
+              {designers.length > 0 ? (
+                designers.map((designer) => (
+                  <DesignerCard
+                    key={designer.id}
+                    designerName={designer.designerName}
+                    designerImage={designer.image}
+                    designerLocation={designer.designerCity}
+                    designerNumber={designer.designerPhone}
+                    designerWork={designer.designerWork}
+                  />
+                ))
+              ) : (
+                <p></p>
+              )
+              }
             </div>
           </div>
-        </div>
-        {designers.map((designer) => (
-          <DesignerCard
-            key={designer.id}
-            designerName={designer.designerName}
-            designerImage={designer.image}
-            designerLocation={designer.designerCity}
-            designerNumber={designer.designerPhone}
-            designerWork={designer.designerWork}
-          />
-        ))}
-      </div>
-    </>
+        </>
+      )}
+    </div>
   );
 };
 
