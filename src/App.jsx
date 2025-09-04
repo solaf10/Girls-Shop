@@ -21,18 +21,18 @@ import LogIn from "./components/LogIn/LogIn";
 import Product from "./components/Product/Product";
 import SignUp from "./components/SignUp/SignUp";
 import Designer from "./pages/Designer/Designer";
-import EmptyCart from "./sections/EmptyCart/EmptyCart";
-import FullCart from "./sections/FullCart/FullCart";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   const location = useLocation();
   const authPaths = ["login", "signup", "updatePassword"];
-  const isAuthPage = authPaths.some((path) => location.pathname.includes(path));
+  const isAuthPage = authPaths.includes(location.pathname.split("/")[1]);
   return (
     <>
       <div className="header-holder">
         <Header />
         <NavBar />
+        <ToastContainer position="top-right" />
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
