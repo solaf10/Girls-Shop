@@ -5,7 +5,6 @@ import { PiGreaterThanBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
 const TopGreenBar = ({ dynamicLink }) => {
   const [links] = useState(window.location.pathname.slice(1).split("/"));
-  console.log(window.location.pathname.slice(1).split("/"));
   return (
     <div className="top-green-bar">
       <GoHome className="go-home-icon" />
