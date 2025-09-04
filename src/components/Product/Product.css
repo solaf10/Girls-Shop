@@ -255,6 +255,7 @@
               a {
                 display: flex;
                 justify-content: space-between;
+                color: black;
                 .suffix {
                   font-weight: 500;
                 }

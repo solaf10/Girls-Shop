@@ -73,6 +73,7 @@ export default function Product() {
     width,
     height,
     lengthInfo,
+    file,
   } = productsDetails;
 
   // price
@@ -167,10 +168,6 @@ export default function Product() {
     toast.success("URL copied successfully!!");
   };
   const handleShare = (url) => {
-    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-      //to convert url to URL-safe.
-      currentUrl
-    )}`;
     window.open(url, "_blank", "width=600,height=400");
   };
   return (
@@ -303,25 +300,25 @@ export default function Product() {
                       <div className="title">File Type</div>
                       <ul>
                         <li>
-                          <a>
+                          <a href={file} download={file}>
                             <span className="suffix">.Dwg</span>
                             <span className="size">1.75MB</span>
                           </a>
                         </li>
                         <li>
-                          <a>
+                          <a href={file} download={file}>
                             <span className="suffix">.Max</span>
                             <span className="size">1.75MB</span>
                           </a>
                         </li>
                         <li>
-                          <a>
+                          <a href={file} download={file}>
                             <span className="suffix">.Psd</span>
                             <span className="size">1.75MB</span>
                           </a>
                         </li>
                         <li>
-                          <a>
+                          <a href={file} download={file}>
                             <span className="suffix">Download Zip</span>
                             <span className="size">1.75MB</span>
                           </a>
