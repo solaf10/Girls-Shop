@@ -6,14 +6,14 @@ import CustomizeOrder from "../../../components/CustomizeOrder/CustomizeOrder";
 
 const CustomOrder = ({}) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  
-    const openPopup = () => {
-      setIsPopupOpen(true); 
-    };
-    
-    const closePopup = () => {
-      setIsPopupOpen(false); 
-    };
+
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
   return (
     <section className="custom-order">
       <div className="container">
@@ -64,7 +64,7 @@ const CustomOrder = ({}) => {
               </div>
             </div>
           </div>
-          <button   className="make-your-own-design-btn" onClick={openPopup}>
+          <button className="make-your-own-design-btn" onClick={openPopup}>
             <span>Make Your Own Design</span>
             <MdArrowOutward className="arrow-icon" />
           </button>
