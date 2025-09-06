@@ -237,7 +237,9 @@ const BlogsDetails = () => {
       .catch((err) => console.log(err));
   }, []);
   useEffect(() => {
-    const res = recentBlogs.filter((blog) => blog.title.includes(searchedKey));
+    const res = recentBlogs.filter((blog) =>
+      blog.title.toLowerCase().includes(searchedKey.toLowerCase())
+    );
     setFilteredBlogs(res);
   }, [searchedKey]);
 
@@ -294,7 +296,6 @@ const BlogsDetails = () => {
                   <p className="name">Batoul abdulHadi </p>
                   <p className="time"> 5 days ago</p>
                 </div>
-
                 <p className="comment">
                   "Such a well-written piece! Insightful and inspiring — keep up
                   the amazing work!"
