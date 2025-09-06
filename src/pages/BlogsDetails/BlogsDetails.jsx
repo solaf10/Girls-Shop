@@ -6,6 +6,7 @@ import { CiSearch } from "react-icons/ci";
 import TopGreenBar from "../../components/TopGreenBar/TopGreenBar";
 import RecentBlog from "../../components/RecentBlog/RecentBlog";
 const BlogsDetails = () => {
+<<<<<<< Updated upstream
   const postsDetails = [
     {
       id: 1,
@@ -220,9 +221,60 @@ const BlogsDetails = () => {
   const { id } = useParams();
 
   const blog = postsDetails.find((b) => b.id === parseInt(id));
+=======
+  const [postsDetails, setPostsDetails] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [searchedKey, setSearchedKey] = useState("");
+  const [recentBlogs, setRecentBlogs] = useState([]);
+  const [filteredBlogs, setFilteredBlogs] = useState(recentBlogs);
 
+  const {
+    id,
+    image,
+    PublishDate,
+    title,
+    bigTitle,
+    articleText,
+    publisher,
+    date,
+  } = postsDetails;
+  const params = useParams();
+  // const blog = postsDetails.find((b) => b.id === parseInt(id));
+  useEffect(() => {
+    axios
+      .get(config.baseUrl + "/" + config.recentblogs)
+      .then((res) => {
+        setRecentBlogs(res.data);
+        setFilteredBlogs(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  useEffect(() => {
+    const res = recentBlogs.filter((blog) => blog.title.includes(searchedKey));
+    setFilteredBlogs(res);
+  }, [searchedKey]);
+>>>>>>> Stashed changes
+
+  useEffect(() => {
+    setIsLoading(true);
+    axios
+      //   .get(config.baseUrl + "/" + config.blogs + "/" + params.id)
+      .get(`${config.baseUrl}/${config.blogs}/${params.id}`)
+      .then((res) => {
+        setIsLoading(false);
+        setPostsDetails(res.data);
+        console.log(res.data);
+        console.log(postsDetails[id]);
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsLoading(false);
+      });
+  }, [params.id]);
   return (
     <div className="blogs">
+<<<<<<< Updated upstream
       <TopGreenBar secondLink="../../pages/Blogs" secondPageName="Blogs" />
       <div className="container">
         <div className="blogs-detais-container">
@@ -261,49 +313,91 @@ const BlogsDetails = () => {
               <div className="previous">
                 <GrFormPreviousLink className="previous-icon" />
                 <p>Previous Post</p>
+=======
+      <TopGreenBar dynamicLink={bigTitle} />
+      <div className="container">
+        <div className="blogs-detais-container">
+          <div className="article-detailes">
+            {/* {image && ( */}
+            <>
+              <img className="blog-img" src={image} />
+              <div className="date-publisher">
+                <p>{PublishDate}</p>
+                <p>-</p>
+                <p>{publisher}</p>
+>>>>>>> Stashed changes
               </div>
-              <div className="next">
-                <p>Next Post</p>
-                <GrFormNextLink className="next-icon" />
+              <div className="article-body">
+                <h1>{bigTitle}</h1>
+                <p>{articleText}</p>
               </div>
-            </div>
-            <div className="comment-bar">
-              <h1>
-                Comment: <span>1</span>
-              </h1>
-              <div className="name-and-comment">
-                <div className="name-and-time">
-                  <p className="name">Batoul abdulHadi </p>
-                  <p className="time"> 5 days ago</p>
+              <div className="share-post">
+                <p>Share Post:</p>
+                <a>
+                  <img src="/assets/Images/whatsapp.png" />
+                </a>
+                <a>
+                  <img src="/assets/Images/facebook.png" />
+                </a>
+                <a>
+                  <img src="/assets/Images/linkedin.png" />
+                </a>
+                <a>
+                  <img src="/assets/Images/link.png" />
+                </a>
+                <a>
+                  <img src="/assets/Images/email.png" />
+                </a>
+              </div>
+              <div className="posts-slider">
+                <div className="previous">
+                  <GrFormPreviousLink className="previous-icon" />
+                  <p>Previous Post</p>
                 </div>
+                <div className="next">
+                  <p>Next Post</p>
+                  <GrFormNextLink className="next-icon" />
+                </div>
+              </div>
+              <div className="comment-bar">
+                <h1>
+                  Comment: <span>1</span>
+                </h1>
+                <div className="name-and-comment">
+                  <div className="name-and-time">
+                    <p className="name"> abdulHadi </p>
+                    <p className="time"> 5 days ago</p>
+                  </div>
 
-                <p className="comment">
-                  "Such a well-written piece! Insightful and inspiring — keep up
-                  the amazing work!"
-                </p>
+                  <p className="comment">
+                    "Such a well-written piece! Insightful and inspiring — keep
+                    up the amazing work!"
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="write-comment-sec">
-              <h1>Post a comment</h1>
-              <div className="write-comment-form">
-                <div className="phone-email-info">
-                  <input type="text" placeholder="Phone"></input>
-                  <input type="text" placeholder="E-mail"></input>
+              <div className="write-comment-sec">
+                <h1>Post a comment</h1>
+                <div className="write-comment-form">
+                  <div className="phone-email-info">
+                    <input type="text" placeholder="Phone"></input>
+                    <input type="text" placeholder="E-mail"></input>
+                  </div>
+                  <div className="textarea-to-write-comment">
+                    <label>Your Message</label>
+                    <textarea />
+                  </div>
+                  <div className="agree-yo-save-your-info">
+                    <input className="check" type="checkbox" />
+                    <label>
+                      Save my name, email, and website in this browser for the
+                      next time I comment.
+                    </label>
+                  </div>
+                  <button className="send-comment">Send</button>
                 </div>
-                <div className="textarea-to-write-comment">
-                  <label>Your Message</label>
-                  <textarea />
-                </div>
-                <div className="agree-yo-save-your-info">
-                  <input className="check" type="checkbox" />
-                  <label>
-                    Save my name, email, and website in this browser for the
-                    next time I comment.
-                  </label>
-                </div>
-                <button className="send-comment">Send</button>
               </div>
-            </div>
+            </>
+            {/* )} */}
           </div>
           <div className="recent-posts-info">
             <h3>Search</h3>
