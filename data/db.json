@@ -21,7 +21,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+       "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 34,
@@ -43,7 +48,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+        "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 45,
@@ -65,7 +75,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+       "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 98,
@@ -86,7 +101,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+       "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 90,
@@ -107,7 +127,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+     "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 63,
@@ -125,7 +150,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+        "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 71,
@@ -146,7 +176,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+      "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 84,
@@ -171,8 +206,8 @@
       "lengthInfo": "140cm",
       "file": 
       [{"3d":"/assets/3dBlocks/block.3d.rar"},
-      [{"2d":"/assets/3dBlocks/block.3d.ra"},
-      [{"skp":"/assets/3dBlocks/block.3d.rar"}
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
 
       ]
     },
@@ -192,7 +227,13 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+        "file": 
+      [
+      {"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     }
   ],
   "topsellers": [
