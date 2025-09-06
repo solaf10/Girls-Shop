@@ -6,9 +6,8 @@ import config from "../../Constants/enviroment";
 import Cart from "../../pages/Cart/Cart";
 import CartProductRow from "../../components/CartProductRow/CartProductRow";
 import usePrivateRoute from "../../custom hooks/usePrivateRoute";
-const FullCart = () => {
+const FullCart = ({ cartProduct, setCartProduct }) => {
   const navigate = useNavigate();
-  const [cartProduct, setCartProduct] = useState([]);
   // const totalPrice = cartProduct.reduce((sum, item) => sum + item.price * count,0);
   useEffect(() => {
     axios

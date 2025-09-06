@@ -5,9 +5,8 @@ import FullCart from "../../sections/FullCart/FullCart";
 import ComplateCart from "../../sections/ComplateCart/ComplateCart";
 
 const Cart = () => {
-  
-  const cartProducts = [{ name: "" }]; //لازم هون تكون البيانات الجاي من الباك وبتمرريها لل FullCart
-  // const [cartProduct , setCartProduct] = useState([]); 
+  const [cartProduct, setCartProduct] = useState([]); //لازم هون تكون البيانات الجاي من الباك وبتمرريها لل FullCart
+  // const [cartProduct , setCartProduct] = useState([]);
   //   useEffect( () => {
   //       axios
   //       .get(config.baseUrl + "/" + config.cartProducts)
@@ -17,7 +16,11 @@ const Cart = () => {
   return (
     <div className="cart">
       <TopGreenBar />
-      {cartProducts.length == 0 ? <EmptyCart /> : <FullCart />}
+      {cartProduct.length == 0 ? (
+        <EmptyCart />
+      ) : (
+        <FullCart cartProduct={cartProduct} setCartProduct={setCartProduct} />
+      )}
     </div>
   );
 };
