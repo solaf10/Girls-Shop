@@ -1,61 +1,70 @@
-import React from "react";
-import "./FullCart.css";
+
+import React, { useEffect, useState } from 'react'
+import './FullCart.css'
 import { IoIosCloseCircleOutline } from "react-icons/io";
-import { Link, useNavigate } from "react-router-dom";
-import usePrivateRoute from "../../custom hooks/usePrivateRoute";
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
+import config from '../../Constants/enviroment';
+import Cart from '../../pages/Cart/Cart';
+import CartProductRow from '../../components/CartProductRow/CartProductRow';
 const FullCart = () => {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/cart/complate-cart");
-  };
-  const privateRouteHandler = usePrivateRoute(handleClick);
-  return (
-    <div className="fullcart">
-      <div className="container">
+    const navigate = useNavigate()
+    const handleClick = () => {
+        navigate('/cart/complate-cart');
+    };
+    const handleClick2 = () => {
+        navigate('/shop')
+    }
+        const [cartProduct , setCartProduct] = useState([]); 
+        // const totalPrice = cartProduct.reduce((sum, item) => sum + item.price * count,0); 
+        useEffect( () => {
+            axios
+            .get(config.baseUrl + "/" + config.cartProducts)
+            .then( (res) => {console.log(res.data);setCartProduct(res.data)})
+            .catch( (err) => console.log(err))
+        },[]);
+return (
+    <div className='fullcart'>
+    <div className="container">
         <div className="info">
-          <div className="product-table">
-            <table>
-              <caption> Cart </caption>
-              <thead>
-                <tr>
-                  <td> PRODUCT</td>
-                  <td> PRICE</td>
-                  <td> AMOUNT</td>
-                  <td> TOTAL PRAICE</td>
-                </tr>
-              </thead>
-              <tbody>
-                {/* {products.map((product) => (
-                            <tr key={product.id}>
-                                <td>{product.id}</td>
-                                <td>{product.name}</td>
-                                <td>{product.price} $</td>
-                            </tr>
-                        ))} */}
-                <tr>
-                  <td className="first-td">
-                    {" "}
-                    <span className="icon">
-                      <IoIosCloseCircleOutline />
-                    </span>{" "}
-                    <img src="/public/assets/Images/Image.png" alt="" />{" "}
-                    <p>sofa</p>
-                  </td>
-                  <td> 150$ </td>
-                  <td className="third-td">
-                    <p>
-                      <span>+</span>3 <span>-</span>
-                    </p>
-                  </td>
-                  <td> 750$</td>
-                </tr>
-              </tbody>
-            </table>
-            <Link to="/shop"> Return Shopping </Link>
-          </div>
-          <div className="price">
-            <div className="title">
-              <p>Over All</p>
+            <div className="pro">
+                <div className="title">
+                    <h2> Cart </h2>
+                </div>
+                <div className="table">
+                    <div className="header">
+                        <div className='td'>
+                            <p>Product</p>
+                        </div>
+                        <div>
+                            <p>Price</p>
+                        </div>
+                        <div>
+                            <p>color</p>
+                        </div>
+                        <div>
+                            <p>Amount</p>
+                        </div>
+                        <div>
+                            <p>Total Price</p>
+                        </div>
+                    </div>
+                    <div className="body">
+                        {cartProduct.map( (pro) =>( <CartProductRow 
+                        key={pro.id}
+                        image={pro.image}
+                        color={pro.color}
+                        price={pro.price} 
+                        name={pro.name}
+                        amount={pro.amount}
+                        />) ) }
+                        
+                    </div>
+                    
+                </div>
+                <div className='ret'>
+                <button onClick={handleClick2}>Return Shopping</button>
+                </div>
             </div>
             <div className="desc">
               <div className="box">

@@ -96,9 +96,6 @@ export default function Product() {
   };
 
   const navigate = useNavigate();
-  const handleClickToCart = () => {
-    navigate(`/cart`);
-  };
   const params = useParams();
 
   // const product = productsDetails.find((b) => b.id === parseInt(id));
@@ -110,6 +107,18 @@ export default function Product() {
   const [addToCart, setAddToCart] = useState(false);
   const handleClickAddToCart = () => {
     setAddToCart((prev) => !prev);
+    axios
+    .post("http://localhost:8000/cartProducts" , {
+      id:id,
+      name:name,
+      image: image,
+      price: price,
+      color:chosencolor,
+      amount:count,
+    })
+    .then( (res) => setAddToCart(res.data))
+    .catch( (err) => console.log(err))
+    navigate(`/cart`);
   };
   useEffect(() => {
     setIsLoading(true);
@@ -124,6 +133,9 @@ export default function Product() {
         setIsLoading(false);
       });
   }, []);
+  useEffect(()=>{
+    console.log(chosencolor)
+  },[chosencolor])
 
   const colorsEls = colors?.map((color, i) => (
     <div key={i} className="holder">
@@ -182,7 +194,8 @@ export default function Product() {
             {addToCart && (
               <div className="view-cart">
                 <p>“Ceiling Light” has been added to your cart</p>
-                <a onClick={handleClickToCart}>View Cart</a>
+                {/* <a onClick={handleClickToCart}>View Cart</a> */}
+                <a>View Cart</a>
               </div>
             )}
             <div className="product-content">
