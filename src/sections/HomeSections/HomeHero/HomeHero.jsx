@@ -2,8 +2,19 @@ import { Link } from "react-router";
 import "./HomeHero.css";
 import { useState } from "react";
 import CustomizeOrder from "../../../components/CustomizeOrder/CustomizeOrder";
+import { useTranslation } from "react-i18next";
 
 const HomeHero = () => {
+  const { t, i18n } = useTranslation();
+  const formatDate = (dateString) => {
+    if (!dateString) return "";
+    const d = new Date(dateString);
+    return d.toLocaleDateString(i18n.language, {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+  };
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const openPopup = () => {
@@ -18,12 +29,12 @@ const HomeHero = () => {
       <div className="container">
         <h1>Style Meets Comfort Furniture Made for You</h1>
         <p className="desc">
-          From cozy sofas to elegant dining sets, discover furniture that turns
-          your house into a home." Let me know if you’d like a different tone or
-          style!
+          {t(
+            ` From cozy sofas to elegant dining sets, discover furniture that turns your house into a home. Let me know if you d like a different tone or style!`
+          )}
         </p>
         <div className="btns">
-          <Link to="/shop" className="shop-btn btn blurry">
+          <Link to="/shop" className="shop-btn btn">
             Shop Now
           </Link>
           <button className="customize-btn btn" onClick={openPopup}>

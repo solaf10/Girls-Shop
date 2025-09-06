@@ -35,7 +35,9 @@ function LogIn() {
       <div className="right-section">
         <div className="login-form">
           {error && (
-            <div className="error-message">Invalid password or email</div>
+            <div className="error-message">
+              <p>Invalid password or email</p>
+            </div>
           )}
           <h2>Log in</h2>
 

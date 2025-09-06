@@ -288,7 +288,6 @@ export default function Product() {
                      
                         Download Blocks
                      
-                    
                     </button>
                     <button onClick={handleClickDownloadBlocks}>
                       <AiOutlineDown
@@ -318,7 +317,6 @@ export default function Product() {
                           );
                         })}
                       </ul>
-
                     </div>
                   )}
                   <p>Daily Credits - 3/3 </p>
@@ -328,32 +326,75 @@ export default function Product() {
             <hr />
             <div className="description">
               <div className="title"> Description & Other Information</div>
-              <div className="info">
-                <p className="title">Category</p>
-                <p className="desc">{category}</p>
-              </div>
-              <div className="info">
-                <p className="title">Material</p>
-                <p className="desc">{material}</p>
-              </div>
-              <div className="info">
-                <p className="title">Style</p>
-                <p className="desc">{style}</p>
-              </div>
-              <div className="info">
-                <p className="title">Width</p>
-                <p className="desc">{width}</p>
-              </div>
-              <div className="info">
-                <p className="title">Height</p>
-                <p className="desc">{height}</p>
-              </div>
-              <div className="info">
-                <p className="title">Length</p>
-                <p className="desc">{lengthInfo}</p>
+              <div className="des">
+                <div className="info">
+                  <p className="title">Category</p>
+                  <p className="desc">{category}</p>
+                </div>
+                <div className="info">
+                  <p className="title">Material</p>
+                  <p className="desc">{material}</p>
+                </div>
+                <div className="info">
+                  <p className="title">Style</p>
+                  <p className="desc">{style}</p>
+                </div>
+                <div className="info">
+                  <p className="title">Length</p>
+                  <p className="desc">{lengthInfo}</p>
+                </div>
+                <div className="info">
+                  <p className="title">Width</p>
+                  <p className="desc">{width}</p>
+                </div>
+                <div className="info">
+                  <p className="title">Height</p>
+                  <p className="desc">{height}</p>
+                </div>
               </div>
             </div>
             <hr />
+            <div className="comment-bar">
+              <h1>
+                Comment: <span>1</span>
+              </h1>
+              <div className="name-and-comment">
+                <div className="name-and-time">
+                  <p className="name"> shahed aldroubi </p>
+                  <div className="rating">
+                    {stars}
+                    {/* <p className="rev">(reviews {percentage}%)</p> */}
+                  </div>
+                  <p className="time"> 5/9/2025</p>
+                </div>
+
+                <p className="comment">
+                  "Such a well-written piece! Insightful and inspiring — keep up
+                  the amazing work!"
+                </p>
+              </div>
+            </div>
+            <div className="write-comment-sec">
+              <h1>Post a comment</h1>
+              <div className="write-comment-form">
+                <div className="phone-email-info">
+                  <input type="text" placeholder="Phone"></input>
+                  <input type="text" placeholder="E-mail"></input>
+                </div>
+                <div className="textarea-to-write-comment">
+                  <label>Your Message</label>
+                  <textarea />
+                </div>
+                <div className="agree-yo-save-your-info">
+                  <input className="check" type="checkbox" />
+                  <label>
+                    Save my name, email, and website in this browser for the
+                    next time I comment.
+                  </label>
+                </div>
+                <button className="send-comment">Send</button>
+              </div>
+            </div>
           </div>
         </>
       )}

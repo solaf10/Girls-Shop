@@ -294,6 +294,95 @@
       "sale": "%20"
     }
   ],
+  "reviews": [
+    {
+      "id": 1,
+      "image": "/assets/Images/avatar.png",
+      "publisher": "John Doe",
+      "title": "Architecture",
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+    },
+    {
+      "id": 2,
+      "image": "/assets/Images/avatar.png",
+      "publisher": "John Doe",
+      "title": "Architecture",
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+    },
+    {
+      "id": 3,
+      "image": "/assets/Images/avatar.png",
+      "publisher": "John Doe",
+      "title": "Architecture",
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+    },
+    {
+      "id": 4,
+      "image": "/assets/Images/avatar.png",
+      "publisher": "John Doe",
+      "title": "Architecture",
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+    },
+    {
+      "id": 5,
+      "image": "/assets/Images/avatar.png",
+      "publisher": "John Doe",
+      "title": "Architecture",
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+    },
+    {
+      "id": 6,
+      "image": "/assets/Images/avatar.png",
+      "publisher": "John Doe",
+      "title": "Architecture",
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+    },
+    {
+      "id": 7,
+      "image": "/assets/Images/avatar.png",
+      "publisher": "John Doe",
+      "title": "Architecture",
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+    },
+    {
+      "id": 8,
+      "image": "/assets/Images/avatar.png",
+      "publisher": "John Doe",
+      "title": "Architecture",
+      "content": "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”"
+    }
+  ],
+  "recentblogs": [
+    {
+      "id": 1,
+      "image": "/assets/Images/post-1.png",
+      "title": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
+      "publisher": "john",
+      "date": "March 10th, 2025"
+    },
+    {
+      "id": 2,
+      "image": "/assets/Images/post-1.png",
+      "title": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia2",
+      "publisher": "john",
+      "date": "Feb 28th, 2025"
+    },
+    {
+      "id": 3,
+      "image": "/assets/Images/post-1.png",
+      "title": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia3",
+      "publisher": "john",
+      "date": "Feb 8th, 2025"
+    },
+    {
+      "id": 4,
+      "image": "/assets/Images/post-1.png",
+      "title": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia4",
+      "date": " 5 Sep 2024",
+      "publisher": "Auther name"
+    }
+  ],
+  
 
   "designers": [
     {
@@ -394,83 +483,83 @@
       "id": 1,
       "image": "/assets/Images/post-1.png",
       "title": "First Time Home Owner Ideas",
-      "publisher": "Emma Wilson",
+      "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 2,
       "image": "/assets/Images/post-1.png",
-      "title": "Furniture & Home Decor",
+      "title": "First Time Home Owner Ideas",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 3,
       "image": "/assets/Images/post-1.png",
-      "title": "10 Timeless Furniture Pieces That Transform Any Home",
+      "title": "First Time Home Owner Ideas",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 4,
       "image": "/assets/Images/post-1.png",
-      "title": "Modern vs. Classic: Finding Your Furniture Style",
+      "title": "First Time Home Owner Ideas",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 5,
       "image": "/assets/Images/post-1.png",
-      "title": "Small Space, Big Style: Furniture Ideas for Compact Homes",
+      "title": "First Time Home Owner Ideas",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 6,
       "image": "/assets/Images/post-1.png",
-      "title": "Sustainable Furniture Trends You Should Know About",
+      "title": "First Time Home Owner Ideas",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 7,
       "image": "/assets/Images/post-1.png",
-      "title": "How to Mix and Match Furniture Like a Pro",
+      "title": "First Time Home Owner Ideas",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 8,
       "image": "/assets/Images/post-1.png",
-      "title": "Interior Design Hacks to Elevate Your Living Space",
+      "title": "First Time Home Owner Ideas",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 9,
       "image": "/assets/Images/post-1.png",
-      "title": "The Psychology of Colors in Interior Design",
+      "title": "First Time Home Owner Ideas",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 10,
       "image": "/assets/Images/post-1.png",
-      "title": "How 3D Blocks Are Revolutionizing Interior Design",
+      "title": "First Time Home Owner Ideas",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 11,
       "image": "/assets/Images/post-1.png",
-      "title": "Tips for Organizing and Managing Your 3D Blocks Library",
+      "title": "First Time Home Owner Ideas",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 12,
       "image": "/assets/Images/post-1.png",
-      "title": "From Sketch to Reality: Using 3D Models in Interior Projects",
+      "title": "First Time Home Owner Ideas",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
