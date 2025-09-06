@@ -1,23 +1,11 @@
-import React, { useEffect, useState } from "react";
 import "./FullCart.css";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
-import config from "../../Constants/enviroment";
-import Cart from "../../pages/Cart/Cart";
+import { Link, useNavigate } from "react-router-dom";
 import CartProductRow from "../../components/CartProductRow/CartProductRow";
 import usePrivateRoute from "../../custom hooks/usePrivateRoute";
-const FullCart = ({ cartProduct, setCartProduct }) => {
+const FullCart = ({ cartProduct }) => {
   const navigate = useNavigate();
   // const totalPrice = cartProduct.reduce((sum, item) => sum + item.price * count,0);
-  useEffect(() => {
-    axios
-      .get(config.baseUrl + "/" + config.cartProducts)
-      .then((res) => {
-        console.log(res.data);
-        setCartProduct(res.data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+
   const handleSendData = () => {
     navigate("/cart/complate-cart");
   };

@@ -19,36 +19,6 @@ import Loader from "../Loader/Loader";
 import config from "../../Constants/enviroment";
 import { toast } from "react-toastify";
 export default function Product() {
-  /* const productsDetails = [
-    {
-      id: 1,
-      image: "../../../public/assets/Images/product.png",
-      title: "First Time Home Owner Ideas",
-      price: "$233.00",
-      salePrice: "$200.00",
-    },
-    {
-      id: 2,
-      image: "../../../public/assets/Images/product.png",
-      title: "First Time Home Owner Ideas",
-      price: "$233.00",
-      salePrice: "$200.00",
-    },
-    {
-      id: 3,
-      image: "../../../public/assets/Images/product.png",
-      title: "First Time Home Owner Ideas",
-      price: "$233.00",
-      salePrice: "$200.00",
-    },
-    {
-      id: 4,
-      image: "../../../public/assets/Images/product.png",
-      title: "First Time Home Owner Ideas",
-      price: "$233.00",
-      salePrice: "$200.00",
-    },
-  ]; */
   const [productsDetails, setProductsDetails] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
@@ -108,16 +78,16 @@ export default function Product() {
   const handleClickAddToCart = () => {
     setAddToCart((prev) => !prev);
     axios
-    .post("http://localhost:8000/cartProducts" , {
-      id:id,
-      name:name,
-      image: image,
-      price: price,
-      color:chosencolor,
-      amount:count,
-    })
-    .then( (res) => setAddToCart(res.data))
-    .catch( (err) => console.log(err))
+      .post("http://localhost:8000/cartProducts", {
+        id: id,
+        name: name,
+        image: image,
+        price: price,
+        color: chosencolor,
+        amount: count,
+      })
+      .then((res) => setAddToCart(res.data))
+      .catch((err) => console.log(err));
     navigate(`/cart`);
   };
   useEffect(() => {
@@ -133,9 +103,9 @@ export default function Product() {
         setIsLoading(false);
       });
   }, []);
-  useEffect(()=>{
-    console.log(chosencolor)
-  },[chosencolor])
+  useEffect(() => {
+    console.log(chosencolor);
+  }, [chosencolor]);
 
   const colorsEls = colors?.map((color, i) => (
     <div key={i} className="holder">
@@ -249,8 +219,12 @@ export default function Product() {
                 <p>{desc}</p>
                 <div className="price-box">
                   <span className="price">${salesPrice}</span>
-                  <span className="real-price">{price}</span>
-                  <span className="sale">{sale} sale</span>
+                  {numSale != 0 && (
+                    <>
+                      <span className="real-price">{price}</span>
+                      <span className="sale">{sale} sale</span>
+                    </>
+                  )}
                 </div>
                 <form>
                   <div className="colors-holder">
@@ -296,11 +270,9 @@ export default function Product() {
                 <div className="architecture">
                   <p> For Architecture Download</p>
                   <div className="download-button">
-                    <button >
+                    <button>
                       <FiDownload />
-                     
-                        Download Blocks
-                     
+                      Download Blocks
                     </button>
                     <button onClick={handleClickDownloadBlocks}>
                       <AiOutlineDown
@@ -312,7 +284,7 @@ export default function Product() {
                   {downloadBlocksIsOpen && (
                     <div className="popup">
                       <div className="title">File Type</div>
-                                          <ul>
+                      <ul>
                         {file?.map((f, index) => {
                           const [key, value] = Object.entries(f)[0];
                           let suffix = "";
