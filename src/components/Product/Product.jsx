@@ -303,25 +303,19 @@ export default function Product() {
                       <ul>
                         <li>
                           <a href={file} download={file}>
-                            <span className="suffix">.Dwg</span>
+                            <span className="suffix">.2D</span>
                             <span className="size">1.75MB</span>
                           </a>
                         </li>
                         <li>
                           <a href={file} download={file}>
-                            <span className="suffix">.Max</span>
+                            <span className="suffix">.3D</span>
                             <span className="size">1.75MB</span>
                           </a>
                         </li>
                         <li>
                           <a href={file} download={file}>
-                            <span className="suffix">.Psd</span>
-                            <span className="size">1.75MB</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href={file} download={file}>
-                            <span className="suffix">Download Zip</span>
+                            <span className="suffix">.SketchUp</span>
                             <span className="size">1.75MB</span>
                           </a>
                         </li>
