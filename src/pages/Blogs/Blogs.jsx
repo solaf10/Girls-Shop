@@ -10,6 +10,7 @@ import Loader from "../../components/Loader/Loader";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);   
   const [loading, setLoading] = useState(true); 
+  const [searchTerm, setSearchTerm] = useState(""); 
 
   const navigate = useNavigate();
 
@@ -31,6 +32,11 @@ const Blogs = () => {
       });
   }, []);
 
+
+  const filteredBlogs = blogs.filter((blog) =>
+    blog.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="blogs">
       <TopGreenBar />
@@ -43,17 +49,34 @@ const Blogs = () => {
           <p className="no-blogs">There Are No Blogs Right Now !</p>
         ) : (
           <>
+            <div className="search-holder-blog">
+                <div className="search-blog">
+              <input
+                id="search"
+                placeholder="Search Blogs"
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <img src="/assets/Images/search.png" alt="search" />
+            </div>
+            </div>
+
             <div className="holder-blogs">
-              {blogs.map((blog) => (
-                <BlogCard
-                  onClick={() => handleClick(blog.id)}
-                  key={blog.id}
-                  image={blog.image}
-                  title={blog.title}
-                  publisher={blog.publisher}
-                  date={blog.date}
-                />
-              ))}
+              {filteredBlogs.length > 0 ? (
+                filteredBlogs.map((blog) => (
+                  <BlogCard
+                    onClick={() => handleClick(blog.id)}
+                    key={blog.id}
+                    image={blog.image}
+                    title={blog.title}
+                    publisher={blog.publisher}
+                    date={blog.date}
+                  />
+                ))
+              ) : (
+                <p className="no-blogs">No blog found matching your input.</p>
+              )}
             </div>
 
             <div className="slider-blogs">

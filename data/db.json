@@ -21,7 +21,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+       "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 34,
@@ -43,7 +48,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+        "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 45,
@@ -65,7 +75,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+       "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 98,
@@ -86,7 +101,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+       "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 90,
@@ -107,7 +127,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+     "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 63,
@@ -125,7 +150,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+        "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 71,
@@ -146,7 +176,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+      "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 84,
@@ -169,7 +204,12 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+      "file": 
+      [{"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     },
     {
       "id": 17,
@@ -187,7 +227,13 @@
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
-      "file": "/assets/3dBlocks/block.3d.rar"
+        "file": 
+      [
+      {"3d":"/assets/3dBlocks/block.3d.rar"},
+      {"2d":"/assets/3dBlocks/block.2d.rar"},
+      {"skp":"/assets/3dBlocks/block.skp.rar"}
+
+      ]
     }
   ],
   "topsellers": [
@@ -293,7 +339,7 @@
     },
     {
       "image": "/assets/Images/designer-image.png",
-      "designerName": "John",
+      "designerName": "Alice Johnson",
       "designerCity": "Syria",
       "designerPhone": "+123 123 123 1234",
       "id": 3,
@@ -310,7 +356,7 @@
     },
     {
       "image": "/assets/Images/designer-image.png",
-      "designerName": "John",
+      "designerName": "Michael Smith",
       "designerCity": "Syria",
       "designerPhone": "+123 123 123 1234",
       "id": 4,
@@ -327,7 +373,7 @@
     },
     {
       "image": "/assets/Images/designer-image.png",
-      "designerName": "John",
+      "designerName": "David Martinez",
       "designerCity": "Syria",
       "designerPhone": "+123 123 123 1234",
       "id": 5,
@@ -348,83 +394,83 @@
       "id": 1,
       "image": "/assets/Images/post-1.png",
       "title": "First Time Home Owner Ideas",
-      "publisher": "john",
+      "publisher": "Emma Wilson",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 2,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "Furniture & Home Decor",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 3,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "10 Timeless Furniture Pieces That Transform Any Home",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 4,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "Modern vs. Classic: Finding Your Furniture Style",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 5,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "Small Space, Big Style: Furniture Ideas for Compact Homes",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 6,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "Sustainable Furniture Trends You Should Know About",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 7,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "How to Mix and Match Furniture Like a Pro",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 8,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "Interior Design Hacks to Elevate Your Living Space",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 9,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "The Psychology of Colors in Interior Design",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 10,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "How 3D Blocks Are Revolutionizing Interior Design",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 11,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "Tips for Organizing and Managing Your 3D Blocks Library",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },
     {
       "id": 12,
       "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
+      "title": "From Sketch to Reality: Using 3D Models in Interior Projects",
       "publisher": "john",
       "date": "Feb 8th, 2025"
     },

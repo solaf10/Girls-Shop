@@ -300,32 +300,25 @@ export default function Product() {
                   {downloadBlocksIsOpen && (
                     <div className="popup">
                       <div className="title">File Type</div>
-                      <ul>
-                        <li>
-                          <a href={file} download={file}>
-                            <span className="suffix">.Dwg</span>
-                            <span className="size">1.75MB</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href={file} download={file}>
-                            <span className="suffix">.Max</span>
-                            <span className="size">1.75MB</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href={file} download={file}>
-                            <span className="suffix">.Psd</span>
-                            <span className="size">1.75MB</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href={file} download={file}>
-                            <span className="suffix">Download Zip</span>
-                            <span className="size">1.75MB</span>
-                          </a>
-                        </li>
+                                          <ul>
+                        {file?.map((f, index) => {
+                          const [key, value] = Object.entries(f)[0];
+                          let suffix = "";
+                          if (key === "2d") suffix = ".2D";
+                          if (key === "3d") suffix = ".3D";
+                          if (key === "skp") suffix = ".SketchUp";
+
+                          return (
+                            <li key={index}>
+                              <a href={value} download>
+                                <span className="suffix">{suffix}</span>
+                                <span className="size">1.75MB</span>
+                              </a>
+                            </li>
+                          );
+                        })}
                       </ul>
+
                     </div>
                   )}
                   <p>Daily Credits - 3/3 </p>

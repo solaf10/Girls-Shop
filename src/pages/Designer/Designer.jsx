@@ -12,6 +12,8 @@ const Designer = () => {
 
   const [designers, setDesigners] = useState([]); 
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState(""); 
+  const [filteredDesigners, setFilteredDesigners] = useState([]); 
 
   useEffect(() => {
     setLoading(true);
@@ -19,6 +21,7 @@ const Designer = () => {
       .get("http://localhost:8000/designers")
       .then((res) => {
         setDesigners(res.data); 
+        setFilteredDesigners(res.data);
         setLoading(false);
       })
       .catch((err) => {
@@ -26,6 +29,14 @@ const Designer = () => {
         setLoading(false);
       });
   }, []);
+
+  
+  const handleKeyDown = () => {
+    const arr = designers.filter((designer) =>
+      designer.designerName.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredDesigners(arr);
+  };
 
   return (
     <div className="single-product">
@@ -41,7 +52,14 @@ const Designer = () => {
               <h1>Designers</h1>
               <div className="search-filter-designer">
                 <div className="search-designer">
-                  <input placeholder="Search Designer ..." type="text" />
+                  <input
+                    id="search"
+                    placeholder="Search Designer ..."
+                    type="text"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyDown={handleKeyDown} 
+                  />
                   <img src="/assets/Images/search.png" alt="search" />
                 </div>
                 <div className="filter-designer">
@@ -58,8 +76,8 @@ const Designer = () => {
             </div>
 
             <div className="designer-list">
-              {designers.length > 0 ? (
-                designers.map((designer) => (
+              {filteredDesigners.length > 0 ? (
+                filteredDesigners.map((designer) => (
                   <DesignerCard
                     key={designer.id}
                     designerName={designer.designerName}
@@ -70,9 +88,8 @@ const Designer = () => {
                   />
                 ))
               ) : (
-                <p></p>
-              )
-              }
+                <p className="no-designer-matches">We couldn't find a designer matching your search!</p>
+              )}
             </div>
           </div>
         </>
