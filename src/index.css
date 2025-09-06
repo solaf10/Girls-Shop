@@ -6,6 +6,12 @@
 body {
   font-family: "Saira", sans-serif;
 }
+body.rtl {
+  direction: rtl;
+}
+body.ltr {
+  direction: ltr;
+}
 :root {
   --primary-color: #1d322f;
   --secondary-color: #1d322fb2;
@@ -50,6 +56,8 @@ input {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(16px);
+  /* background-color: var(--nutral-color); */
+  background-color: white;
   z-index: -1;
 }
 section:not(.Toastify) {

@@ -10,6 +10,7 @@ import axios from "axios";
 import config from "../../../Constants/enviroment";
 
 const Reviews = () => {
+  const [reviews, setReviews] = useState([]);
   // const reviews = [
   //   {
   //     id: 1,

@@ -37,3 +37,11 @@ align-items: center;
 color: white;
     background-color: var(--secondary-color);
 }
+@media (max-width: 767px) {
+    .complatecart .box h3{
+    text-align: center;
+}
+.complatecart .box p{
+    width: 100%;
+}
+}

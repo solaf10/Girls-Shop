@@ -44,7 +44,7 @@ function PriceColorFilter() {
       <div className="filter-section">
         <p className="title">Price</p>
 
-        <div className="range-slider">
+        <form className="range-slider">
           <input
             type="range"
             min="0"
@@ -59,7 +59,7 @@ function PriceColorFilter() {
             value={price[1]}
             onChange={handleMaxChange}
           />
-        </div>
+        </form>
         <p className="price-text">
           Price: ${price[0]} - ${price[1]}
         </p>

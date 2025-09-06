@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react'
 import './FullCart.css'
 import { IoIosCloseCircleOutline } from "react-icons/io";
@@ -65,35 +66,33 @@ return (
                 <button onClick={handleClick2}>Return Shopping</button>
                 </div>
             </div>
-            <div className="price">
-                <div className="title">
-                    <p>Over All</p>
-                </div>
-                <div className="desc">
-                    <div className="box">
-                        <p>Sub Total</p>
-                        <span>300$</span>
-                    </div>
-                    <div className="box">
-                        <p>Shipping</p>
-                        <span>Next step</span>
-                    </div>
-                    <div className="box">
-                        <p>Discount</p>
-                        <span>10$</span>
-                    </div>
-                    <hr />
-                    <div className="total">
-                        <p>Total</p>
-                        <p>476 AED</p>
-                    </div>
-                </div>
-                <button className='check-out' onClick={handleClick}>Continue to check out</button>
+            <div className="desc">
+              <div className="box">
+                <p>Sub Total</p>
+                <span>300$</span>
+              </div>
+              <div className="box">
+                <p>Shipping</p>
+                <span>Next step</span>
+              </div>
+              <div className="box">
+                <p>Discount</p>
+                <span>10$</span>
+              </div>
+              <hr />
+              <div className="total">
+                <p>Total</p>
+                <p>476 AED</p>
+              </div>
             </div>
+            <button className="check-out" onClick={privateRouteHandler}>
+              Continue to check out
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
-)
-}
+  );
+};
 
-export default FullCart
+export default FullCart;
