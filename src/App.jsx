@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Shop from "./pages/Shop/Shop";
 import About from "./pages/About/About";
@@ -21,30 +21,33 @@ import LogIn from "./components/LogIn/LogIn";
 import Product from "./components/Product/Product";
 import SignUp from "./components/SignUp/SignUp";
 import Designer from "./pages/Designer/Designer";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
+  const location = useLocation();
+  const authPaths = ["login", "signup", "updatePassword"];
+  const isAuthPage = authPaths.includes(location.pathname.split("/")[1]);
   return (
-    <BrowserRouter>
+    <>
       <div className="header-holder">
         <Header />
         <NavBar />
+        <ToastContainer position="top-right" />
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/product/:id" element={<Product />} />
+        <Route path="/shop/:id" element={<Product />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/cart/complate-cart" element={<ComplateCart />} />
-        <Route path="/updatePassword" element={<Contact />} />
         <Route path="/blogs/:id" element={<BlogsDetails />} />
-        <Route path="/updatePassword" element={<UpdatePassword />}/>
-        <Route path="/designer" element={<Designer/>}>
-
+        <Route path="/designer" element={<Designer />} />
+        <Route path="/updatePassword" element={<UpdatePassword />}>
           <Route
             index
             element={
@@ -99,8 +102,8 @@ const App = () => {
           />
         </Route>
       </Routes>
-      <Footer />
-    </BrowserRouter>
+      {!isAuthPage && <Footer />}
+    </>
   );
 };
 

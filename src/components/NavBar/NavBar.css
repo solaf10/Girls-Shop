@@ -34,6 +34,11 @@ nav .container ul.links li {
 nav .container ul.links li a {
   padding: 10px;
   color: var(--primary-color);
+  transition: 0.5s;
+}
+nav .container ul.links li a:hover {
+  /* color: var(--primary-color); */
+  font-weight: 500;
 }
 nav .container ul.links li a.active {
   font-weight: 600;
@@ -158,6 +163,9 @@ nav .container .menu .log-out svg {
   font-size: 24px;
 }
 /* Pop Ups */
+nav .popups-holder {
+  position: absolute;
+}
 .user-popup-holder {
   position: relative;
 }

@@ -1,135 +1,99 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "./Designer.css";
 import DropDownDesigner from "../../components/DropDownDesigner/DropDownDesigner";
 import DesignerCard from "../../components/DesignerCard/DesignerCard";
-const designers = [
-  {
-    image: "/assets/Images/designer-image.png",
-    designerName: "Arch.Layla abdulHadi",
-    designerCity: "Syria",
-    designerPhone: "+123 123 123 1234",
-    id: 1,
-    designerWork: [
-      "/assets/Images/3d-models-2.png",
-      "/assets/Images/3d-models.png",
-      "/assets/Images/3d-scenes.jpg",
-      "/assets/Images/3d-scenes1.jpg",
-      "/assets/Images/3d-scenes2.jpg",
-      "/assets/Images/Img2.png",
-      "/assets/Images/Img4.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-      "/assets/Images/Img3.png",
-    ],
-  },
-  {
-    image: "/assets/Images/designer-image.png",
-    designerName: "John",
-    designerCity: "Syria",
-    designerPhone: "+123 123 123 1234",
-    id: 2,
-    designerWork: [
-      "/assets/Images/3d-models-2.png",
-      "/assets/Images/3d-models.png",
-      "/assets/Images/3d-scenes.jpg",
-      "/assets/Images/3d-scenes1.jpg",
-      "/assets/Images/3d-scenes2.jpg",
-      "/assets/Images/Img2.png",
-      "/assets/Images/Img4.png",
-      "/assets/Images/Img3.png",
-    ],
-  },
-  {
-    image: "/assets/Images/designer-image.png",
-    designerName: "John",
-    designerCity: "Syria",
-    designerPhone: "+123 123 123 1234",
-    id: 3,
-    designerWork: [
-      "/assets/Images/3d-models-2.png",
-      "/assets/Images/3d-models.png",
-      "/assets/Images/3d-scenes.jpg",
-      "/assets/Images/3d-scenes1.jpg",
-      "/assets/Images/3d-scenes2.jpg",
-      "/assets/Images/Img2.png",
-      "/assets/Images/Img4.png",
-      "/assets/Images/Img3.png",
-    ],
-  },
-  {
-    image: "/assets/Images/designer-image.png",
-    designerName: "John",
-    designerCity: "Syria",
-    designerPhone: "+123 123 123 1234",
-    id: 4,
-    designerWork: [
-      "/assets/Images/3d-models-2.png",
-      "/assets/Images/3d-models.png",
-      "/assets/Images/3d-scenes.jpg",
-      "/assets/Images/3d-scenes1.jpg",
-      "/assets/Images/3d-scenes2.jpg",
-      "/assets/Images/Img2.png",
-      "/assets/Images/Img4.png",
-      "/assets/Images/Img3.png",
-    ],
-  },
-  {
-    image: "/assets/Images/designer-image.png",
-    designerName: "John",
-    designerCity: "Syria",
-    designerPhone: "+123 123 123 1234",
-    id: 5,
-    designerWork: [
-      "/assets/Images/3d-models-2.png",
-      "/assets/Images/3d-models.png",
-      "/assets/Images/3d-scenes.jpg",
-      "/assets/Images/3d-scenes1.jpg",
-      "/assets/Images/3d-scenes2.jpg",
-      "/assets/Images/Img2.png",
-      "/assets/Images/Img4.png",
-      "/assets/Images/Img3.png",
-    ],
-  },
-];
+import TopGreenBar from "../../components/TopGreenBar/TopGreenBar";
+import Loader from "../../components/Loader/Loader";
 
 const Designer = () => {
   const countriesOptions = ["Syria", "Saudi", "Palestine"];
   const creativeOptions = ["Syria", "Saudi", "Palestine"];
+
+  const [designers, setDesigners] = useState([]); 
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState(""); 
+  const [filteredDesigners, setFilteredDesigners] = useState([]); 
+
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get("http://localhost:8000/designers")
+      .then((res) => {
+        setDesigners(res.data); 
+        setFilteredDesigners(res.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
+  }, []);
+
+  
+  const handleKeyDown = () => {
+    const arr = designers.filter((designer) =>
+      designer.designerName.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredDesigners(arr);
+  };
+
   return (
-    <div className="designers container">
-      <div className="designer-header">
-        <h1>Designer</h1>
-        <div className="search-filter-designer">
-          <div className="search-designer">
-            <input placeholder="Search Designer ..." type="text" />
-            <img src="/assets/Images/search.png" />
-          </div>
-          <div className="filter-designer">
-            <DropDownDesigner
-              options={countriesOptions}
-              placeholder="Countries"
-            />
-            <DropDownDesigner
-              options={creativeOptions}
-              placeholder="Creative"
-            />
-          </div>
+    <div className="single-product">
+      {loading ? (
+        <div className="loader-holder">
+          <Loader />
         </div>
-      </div>
-      {designers.map((designer) => (
-        <DesignerCard
-          key={designer.id}
-          designerName={designer.designerName}
-          designerImage={designer.image}
-          designerLocation={designer.designerCity}
-          designerNumber={designer.designerPhone}
-          designerWork={designer.designerWork}
-        />
-      ))}
+      ) : (
+        <>
+          <TopGreenBar />
+          <div className="designers container">
+            <div className="designer-header">
+              <h1>Designers</h1>
+              <div className="search-filter-designer">
+                <div className="search-designer">
+                  <input
+                    id="search"
+                    placeholder="Search Designer ..."
+                    type="text"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyDown={handleKeyDown} 
+                  />
+                  <img src="/assets/Images/search.png" alt="search" />
+                </div>
+                <div className="filter-designer">
+                  <DropDownDesigner
+                    options={countriesOptions}
+                    placeholder="Countries"
+                  />
+                  <DropDownDesigner
+                    options={creativeOptions}
+                    placeholder="Creative"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="designer-list">
+              {filteredDesigners.length > 0 ? (
+                filteredDesigners.map((designer) => (
+                  <DesignerCard
+                    key={designer.id}
+                    designerName={designer.designerName}
+                    designerImage={designer.image}
+                    designerLocation={designer.designerCity}
+                    designerNumber={designer.designerPhone}
+                    designerWork={designer.designerWork}
+                  />
+                ))
+              ) : (
+                <p className="no-designer-matches">We couldn't find a designer matching your search!</p>
+              )}
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

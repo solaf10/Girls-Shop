@@ -60,7 +60,7 @@ input {
   background-color: white;
   z-index: -1;
 }
-section {
+section:not(.Toastify) {
   padding-top: 75px;
   padding-bottom: 75px;
 }
