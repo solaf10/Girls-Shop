@@ -6,7 +6,9 @@ import "swiper/css/pagination";
 import "./Reviews.css";
 import ReviewCard from "../../../components/ReviewCard/ReviewCard";
 import { useEffect, useState } from "react";
-const [reviews, setReviews] = useState([]);
+import axios from "axios";
+import config from "../../../Constants/enviroment";
+
 const Reviews = () => {
   // const reviews = [
   //   {
@@ -74,11 +76,13 @@ const Reviews = () => {
   //       "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”",
   //   },
   // ];
+  const [reviews, setReviews] = useState([]);
   useEffect( ()=> {
-    axios.get("http://localhost:8000/reviews")
+    axios
+    .get(config.baseUrl + "/" + config.reviews)
     .then( (res) => setReviews(res.data))
-    .catch( (err) => console.log(err))
-  },[])
+    .catch( (err) => console.log(err));
+  },[]);
   return (
     <section className="reviews">
       <div className="container">

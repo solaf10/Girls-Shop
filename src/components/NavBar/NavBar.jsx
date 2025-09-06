@@ -22,7 +22,7 @@ const NavBar = () => {
       navigate("/login");
     }
   };
-
+// const [searchedKey , setSearchedKey] = useState("");
   return (
     <nav className="blurry">
       <div className="container">
@@ -53,7 +53,7 @@ const NavBar = () => {
         <div className="icons">
           <RiUserLine className="icon" onClick={handleUserIconClick} />
           <BsCart3 className="icon" onClick={() => navigate("/cart")} />
-          <FiSearch className="search-icon icon" />
+          <FiSearch className="search-icon icon" onClick={() => navigate("/Shop")}/>
         </div>
         <div className="popups-holder">
           <div className="user-popup-holder">

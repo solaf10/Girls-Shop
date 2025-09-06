@@ -5,7 +5,7 @@ padding: 68px  99px 48px 100px;
     display: flex;
     gap: 23px;
 }
-.fullcart .info .pro , .fullcart .info .price ,hr , .fullcart .pro .table .count{
+.fullcart .info .pro , .fullcart .info .price ,hr , .fullcart .pro .table .product-number{
     border: solid 1px #E4E7E9;
 }
 .fullcart .info .pro{
@@ -30,38 +30,34 @@ padding: 68px  99px 48px 100px;
     gap: 24px;
     .td{
         width: 27%;
+        text-align: center;
     }
 }
-.fullcart .table .body{
-    
-}
-.fullcart .body .row-info{
+.fullcart .body .row-pro{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    gap: 30px;
     padding: 10px 24px;
-/* display: flex; */
-/* justify-content: space-between; */
-/* gap: 200px; */
+    gap: 30;
 }
-.fullcart .body .row-info  , .fullcart .body .row-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.fullcart .body .row-info {
-    gap: 16px;
-    .img-pro{
+.fullcart .body .img-pro {
         display: flex;
         align-items: center;
-        gap: 12px;
-    }
+        justify-content: space-between;
+        /* width: 27%; */
+        img{
+            width: 50px;
+            height: 50px;
+        }
 }
-.fullcart .body .row-info {
-    gap: 46px;
-    /* width: 45%; */
+.fullcart .body .product-number {
+    width: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
 }
+
 .fullcart .pro .ret{
     width: 100%;
     padding: 24px;

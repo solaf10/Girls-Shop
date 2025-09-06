@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './FullCart.css'
 import { IoIosCloseCircleOutline } from "react-icons/io";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
+import config from '../../Constants/enviroment';
+import Cart from '../../pages/Cart/Cart';
+import CartProductRow from '../../components/CartProductRow/CartProductRow';
 const FullCart = () => {
     const navigate = useNavigate()
     const handleClick = () => {
         navigate('/cart/complate-cart');
     };
+    const handleClick2 = () => {
+        navigate('/shop')
+    }
+        const [cartProduct , setCartProduct] = useState([]); 
+        // const totalPrice = cartProduct.reduce((sum, item) => sum + item.price * count,0); 
+        useEffect( () => {
+            axios
+            .get(config.baseUrl + "/" + config.cartProducts)
+            .then( (res) => {console.log(res.data);setCartProduct(res.data)})
+            .catch( (err) => console.log(err))
+        },[]);
 return (
     <div className='fullcart'>
     <div className="container">
@@ -24,6 +39,9 @@ return (
                             <p>Price</p>
                         </div>
                         <div>
+                            <p>color</p>
+                        </div>
+                        <div>
                             <p>Amount</p>
                         </div>
                         <div>
@@ -31,56 +49,21 @@ return (
                         </div>
                     </div>
                     <div className="body">
-                        <div className="row-info">
-                            {/* <div className="pro-info1"> */}
-                            
-                                {/* <div className="icon-close">
-                                </div> */}
-                                <div className="img-pro">
-                                    <IoIosCloseCircleOutline  className='close'/>
-                                    <img src="/assets/Images/Image.png" alt="" />
-                                    <p className='pro-name'>Modern Desk</p>
-                                </div>
-                            {/* </div> */}
-                            {/* <div className="pro-info2"> */}
-                                <div><p>price</p></div>
-                                <div className="count"><p><span>+</span> number <span>-</span></p></div>
-                                <div><p>number</p></div>
-                            {/* </div> */}
-                            
-                        </div>
+                        {cartProduct.map( (pro) =>( <CartProductRow 
+                        key={pro.id}
+                        image={pro.image}
+                        color={pro.color}
+                        price={pro.price} 
+                        name={pro.name}
+                        amount={pro.amount}
+                        />) ) }
+                        
                     </div>
-                    {/* <table>
-                        <thead>
-                            <tr>
-                                <td>Product</td>
-                                <td>Price</td>
-                                <td>Amount</td>
-                                <td>Total Price</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                                <div className="icon-false"></div>
-                            <tr>
-                                <td>
-                                    <div className="pro-info">
-                                        <img src="" alt="" />
-                                        <p className='pro-name'></p>
-                                    </div>
-                                </td>
-                                <td> price</td>
-                                <td><div className="count">
-                                    <p><span>+</span> number <span>-</span></p>
-                                    </div></td>
-                                <td>number</td>
-                            </tr>
-                        </tbody>
-                    </table> */}
+                    
                 </div>
                 <div className='ret'>
-                <button>Return Shopping</button>
+                <button onClick={handleClick2}>Return Shopping</button>
                 </div>
-                
             </div>
             <div className="price">
                 <div className="title">
