@@ -1,70 +1,74 @@
-
-import React, { useEffect, useState } from 'react'
-import './FullCart.css'
-import { IoIosCloseCircleOutline } from "react-icons/io";
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import axios from 'axios';
-import config from '../../Constants/enviroment';
-import Cart from '../../pages/Cart/Cart';
-import CartProductRow from '../../components/CartProductRow/CartProductRow';
+import React, { useEffect, useState } from "react";
+import "./FullCart.css";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
+import config from "../../Constants/enviroment";
+import Cart from "../../pages/Cart/Cart";
+import CartProductRow from "../../components/CartProductRow/CartProductRow";
+import usePrivateRoute from "../../custom hooks/usePrivateRoute";
 const FullCart = () => {
-    const navigate = useNavigate()
-    const handleClick = () => {
-        navigate('/cart/complate-cart');
-    };
-    const handleClick2 = () => {
-        navigate('/shop')
-    }
-        const [cartProduct , setCartProduct] = useState([]); 
-        // const totalPrice = cartProduct.reduce((sum, item) => sum + item.price * count,0); 
-        useEffect( () => {
-            axios
-            .get(config.baseUrl + "/" + config.cartProducts)
-            .then( (res) => {console.log(res.data);setCartProduct(res.data)})
-            .catch( (err) => console.log(err))
-        },[]);
-return (
-    <div className='fullcart'>
-    <div className="container">
+  const navigate = useNavigate();
+  const [cartProduct, setCartProduct] = useState([]);
+  // const totalPrice = cartProduct.reduce((sum, item) => sum + item.price * count,0);
+  useEffect(() => {
+    axios
+      .get(config.baseUrl + "/" + config.cartProducts)
+      .then((res) => {
+        console.log(res.data);
+        setCartProduct(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+  const handleSendData = () => {
+    navigate("/cart/complate-cart");
+  };
+  const privateRouteHandler = usePrivateRoute(handleSendData);
+  return (
+    <div className="fullcart">
+      <div className="container">
         <div className="info">
-            <div className="pro">
-                <div className="title">
-                    <h2> Cart </h2>
+          <div className="pro">
+            <div className="title">
+              <h2> Cart </h2>
+            </div>
+            <div className="table">
+              <div className="header">
+                <div className="td">
+                  <p>Product</p>
                 </div>
-                <div className="table">
-                    <div className="header">
-                        <div className='td'>
-                            <p>Product</p>
-                        </div>
-                        <div>
-                            <p>Price</p>
-                        </div>
-                        <div>
-                            <p>color</p>
-                        </div>
-                        <div>
-                            <p>Amount</p>
-                        </div>
-                        <div>
-                            <p>Total Price</p>
-                        </div>
-                    </div>
-                    <div className="body">
-                        {cartProduct.map( (pro) =>( <CartProductRow 
-                        key={pro.id}
-                        image={pro.image}
-                        color={pro.color}
-                        price={pro.price} 
-                        name={pro.name}
-                        amount={pro.amount}
-                        />) ) }
-                        
-                    </div>
-                    
+                <div>
+                  <p>Price</p>
                 </div>
-                <div className='ret'>
-                <button onClick={handleClick2}>Return Shopping</button>
+                <div>
+                  <p>color</p>
                 </div>
+                <div>
+                  <p>Amount</p>
+                </div>
+                <div>
+                  <p>Total Price</p>
+                </div>
+              </div>
+              <div className="body">
+                {cartProduct.map((pro) => (
+                  <CartProductRow
+                    key={pro.id}
+                    image={pro.image}
+                    color={pro.color}
+                    price={pro.price}
+                    name={pro.name}
+                    amount={pro.amount}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="ret">
+              <Link to="/shop">Return Shopping</Link>
+            </div>
+          </div>
+          <div className="price">
+            <div className="title">
+              <p>Over All</p>
             </div>
             <div className="desc">
               <div className="box">

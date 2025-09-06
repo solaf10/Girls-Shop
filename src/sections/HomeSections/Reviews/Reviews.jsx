@@ -77,13 +77,12 @@ const Reviews = () => {
   //       "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”",
   //   },
   // ];
-  const [reviews, setReviews] = useState([]);
-  useEffect( ()=> {
+  useEffect(() => {
     axios
-    .get(config.baseUrl + "/" + config.reviews)
-    .then( (res) => setReviews(res.data))
-    .catch( (err) => console.log(err));
-  },[]);
+      .get(config.baseUrl + "/" + config.reviews)
+      .then((res) => setReviews(res.data))
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <section className="reviews">
       <div className="container">

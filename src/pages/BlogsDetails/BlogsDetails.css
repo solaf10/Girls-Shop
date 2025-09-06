@@ -37,6 +37,10 @@
     color: #525966;
     padding-bottom: 64px;
     border-bottom: 0.5px solid #c0c0c0;
+    button {
+      cursor: pointer;
+      background-color: transparent;
+    }
   }
   .posts-slider {
     display: flex;
