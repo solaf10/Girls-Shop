@@ -22,7 +22,7 @@ const NavBar = () => {
       navigate("/login");
     }
   };
-// const [searchedKey , setSearchedKey] = useState("");
+  // const [searchedKey , setSearchedKey] = useState("");
   return (
     <nav className="blurry">
       <div className="container">
@@ -53,7 +53,10 @@ const NavBar = () => {
         <div className="icons">
           <RiUserLine className="icon" onClick={handleUserIconClick} />
           <BsCart3 className="icon" onClick={() => navigate("/cart")} />
-          <FiSearch className="search-icon icon" onClick={() => navigate("/Shop")}/>
+          <FiSearch
+            className="search-icon icon"
+            onClick={() => navigate("/Shop")}
+          />
         </div>
         <div className="popups-holder">
           <div className="user-popup-holder">
@@ -69,7 +72,9 @@ const NavBar = () => {
               <p className="user-name">User Name</p>
               <ul>
                 <li>
-                  <Link to="/">User profile</Link>
+                  <Link to="/profile" onClick={() => setIsUserShow(false)}>
+                    User profile
+                  </Link>
                 </li>
                 <li>
                   <Link to="/">Setting</Link>
