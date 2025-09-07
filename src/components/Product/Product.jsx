@@ -9,7 +9,6 @@ import {
   FaStar,
   FaTwitter,
 } from "react-icons/fa";
-import { AiOutlineDown } from "react-icons/ai";
 import { FiDownload } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
@@ -18,8 +17,10 @@ import axios from "axios";
 import Loader from "../Loader/Loader";
 import config from "../../Constants/enviroment";
 import { toast } from "react-toastify";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import RelatedProducts from "../../sections/Product/RelatedProducts/RelatedProducts";
 export default function Product() {
-  const [productsDetails, setProductsDetails] = useState([]);
+  const [productsDetails, setProductsDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
   const [chosencolor, setchosencolor] = useState("");
@@ -91,6 +92,13 @@ export default function Product() {
     navigate(`/cart`);
   };
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [params.id]);
+  useEffect(() => {
     setIsLoading(true);
     axios
       .get(config.baseUrl + "/" + config.products + "/" + params.id)
@@ -102,7 +110,7 @@ export default function Product() {
         console.log(err);
         setIsLoading(false);
       });
-  }, []);
+  }, [params.id]);
   useEffect(() => {
     console.log(chosencolor);
   }, [chosencolor]);
@@ -215,7 +223,7 @@ export default function Product() {
                     </button>
                   </div>
                 </div>
-                <h2>{name}</h2>
+                <h1>{name}</h1>
                 <p>{desc}</p>
                 <div className="price-box">
                   <span className="price">${salesPrice}</span>
@@ -270,15 +278,20 @@ export default function Product() {
                 <div className="architecture">
                   <p> For Architecture Download</p>
                   <div className="download-button">
-                    <button>
+                    <a href={file?.[0]?.["3d"]} download="3DBlock.3d">
                       <FiDownload />
                       Download Blocks
-                    </button>
+                    </a>
                     <button onClick={handleClickDownloadBlocks}>
-                      <AiOutlineDown
+                      {/* <AiOutlineDown
                         className="file-type"
                         onClick={() => setDownloadBlocks(true)}
-                      />
+                      /> */}
+                      {!downloadBlocksIsOpen ? (
+                        <IoIosArrowDown className="file-type" />
+                      ) : (
+                        <IoIosArrowUp className="file-type" />
+                      )}
                     </button>
                   </div>
                   {downloadBlocksIsOpen && (
@@ -310,7 +323,7 @@ export default function Product() {
             </div>
             <hr />
             <div className="description">
-              <div className="title"> Description & Other Information</div>
+              <h2> Description & Other Information</h2>
               <div className="des">
                 <div className="info">
                   <p className="title">Category</p>
@@ -340,9 +353,9 @@ export default function Product() {
             </div>
             <hr />
             <div className="comment-bar">
-              <h1>
+              <h2>
                 Comment: <span>1</span>
-              </h1>
+              </h2>
               <div className="name-and-comment">
                 <div className="name-and-time">
                   <p className="name"> shahed aldroubi </p>
@@ -360,7 +373,7 @@ export default function Product() {
               </div>
             </div>
             <div className="write-comment-sec">
-              <h1>Post a comment</h1>
+              <h2>Post a comment</h2>
               <div className="write-comment-form">
                 <div className="phone-email-info">
                   <input type="text" placeholder="Phone"></input>
@@ -380,6 +393,7 @@ export default function Product() {
                 <button className="send-comment">Send</button>
               </div>
             </div>
+            <RelatedProducts category={category} id={id} />
           </div>
         </>
       )}

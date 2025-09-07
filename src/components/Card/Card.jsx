@@ -1,18 +1,17 @@
-import React from "react";
 import "./Card.css";
 import { GrView } from "react-icons/gr";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { IoCart } from "react-icons/io5";
-export default function Card({ id, image, name, price, realPrice, onClick }) {
+export default function Card({ image, name, price, onClick }) {
   return (
     <div className="card" onClick={onClick}>
       <div>
         <img src={image} />
         <div className="icons">
-          <div className="icon view">
+          <button className="icon view" onClick={onClick}>
             <p>Quick View</p>
             <GrView />
-          </div>
+          </button>
           <div className="icon cart">
             <p>Add to card</p>
             <IoCart />

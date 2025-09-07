@@ -44,27 +44,27 @@ export default function MaterialStyle() {
       <hr />
       <div className="material">
         <p className="title">Material</p>
-        <form className="checkbox">
+        <div className="checkbox">
           {materials.map((item) => (
             <div key={item} onClick={() => toggleMaterial(item)}>
               {materialChecked[item] ? <FaRegSquareCheck /> : <FaRegSquare />}
               <span>{item}</span>
             </div>
           ))}
-        </form>
+        </div>
       </div>
 
       <hr />
       <div className="style">
         <p className="title">Style</p>
-        <form className="checkbox">
+        <div className="checkbox">
           {styles.map((item) => (
             <div key={item} onClick={() => toggleStyle(item)}>
               {styleChecked[item] ? <FaRegSquareCheck /> : <FaRegSquare />}
               <span>{item}</span>
             </div>
           ))}
-        </form>
+        </div>
         <hr />
       </div>
     </>

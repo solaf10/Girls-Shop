@@ -1,7 +1,7 @@
 import "./BlogsDetails.css";
 import { GrFormPreviousLink } from "react-icons/gr";
 import { GrFormNextLink } from "react-icons/gr";
-import { useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import TopGreenBar from "../../components/TopGreenBar/TopGreenBar";
 import RecentBlog from "../../components/RecentBlog/RecentBlog";
@@ -20,14 +20,6 @@ const BlogsDetails = () => {
 
   const location = useLocation();
   const currentUrl = window.location.origin + location.pathname;
-
-  const handleShare = (url) => {
-    window.open(url, "_blank", "width=600,height=400");
-  };
-  const handleCopyURL = () => {
-    navigator.clipboard.writeText(currentUrl);
-    toast.success("URL copied successfully!!");
-  };
 
   const {
     id,
@@ -85,6 +77,14 @@ const BlogsDetails = () => {
       });
   }, [params.id]);
 
+  const handleShare = (url) => {
+    window.open(url, "_blank", "width=600,height=400");
+  };
+  const handleCopyURL = () => {
+    navigator.clipboard.writeText(currentUrl);
+    toast.success("URL copied successfully!!");
+  };
+
   return (
     <div className="blogs">
       <TopGreenBar dynamicLink={bigTitle} />
@@ -103,9 +103,11 @@ const BlogsDetails = () => {
             </div>
             <div className="share-post">
               <p>Share Post:</p>
-              <a>
+              <button
+                onClick={() => handleShare(`https://wa.me/?text=${currentUrl}`)}
+              >
                 <img src="/assets/Images/whatsapp.png" />
-              </a>
+              </button>
               <button
                 onClick={() =>
                   handleShare(
@@ -117,15 +119,27 @@ const BlogsDetails = () => {
               >
                 <img src="/assets/Images/facebook.png" />
               </button>
-              <a>
+              <button
+                onClick={() =>
+                  handleShare(
+                    `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`
+                  )
+                }
+              >
                 <img src="/assets/Images/linkedin.png" />
-              </a>
+              </button>
               <button onClick={() => handleCopyURL()}>
                 <img src="/assets/Images/link.png" />
               </button>
-              <a>
+              <button
+                onClick={() =>
+                  handleShare(
+                    `mailto:?subject=Check%20this%20product&body=${currentUrl}`
+                  )
+                }
+              >
                 <img src="/assets/Images/email.png" />
-              </a>
+              </button>
             </div>
             <div className="posts-slider">
               <div className="previous">
