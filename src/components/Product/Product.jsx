@@ -19,6 +19,7 @@ import config from "../../Constants/enviroment";
 import { toast } from "react-toastify";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import RelatedProducts from "../../sections/Product/RelatedProducts/RelatedProducts";
+import usePrivateRoute from "../../custom hooks/usePrivateRoute";
 export default function Product() {
   const [productsDetails, setProductsDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -77,7 +78,6 @@ export default function Product() {
   };
   const [addToCart, setAddToCart] = useState(false);
   const handleClickAddToCart = () => {
-    setAddToCart((prev) => !prev);
     axios
       .post("http://localhost:8000/cartProducts", {
         id: id,
@@ -91,6 +91,7 @@ export default function Product() {
       .catch((err) => console.log(err));
     navigate(`/cart`);
   };
+  const handlePrivateRoute = usePrivateRoute(handleClickAddToCart);
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -267,7 +268,7 @@ export default function Product() {
                     <button
                       className="cart-btn"
                       type="submit"
-                      onClick={handleClickAddToCart}
+                      onClick={handlePrivateRoute}
                     >
                       <span>Add to Cart</span>
                       <MdArrowOutward className="arrow-icon" />

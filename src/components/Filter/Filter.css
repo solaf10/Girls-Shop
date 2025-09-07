@@ -1,6 +1,19 @@
 .filter {
   /* width: 200px; */
   width: 100%;
+  .choose-color {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: 0.2s ease;
+  }
+  .choose-color.active {
+    border: 2px solid #c0c0c0;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  }
 }
 .filter .title {
   font-size: 20px;
@@ -127,23 +140,8 @@
   margin: 0px;
 }
 
-.choose-color {
-  display: block;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  transition: 0.2s ease;
-}
-
 input[type="radio"] {
   display: none;
-}
-
-.choose-color.active {
-  border: 2px solid #c0c0c0;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive */

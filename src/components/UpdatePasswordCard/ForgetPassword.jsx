@@ -18,6 +18,7 @@ const ForgetPassword = () => {
           <input
             type="email"
             id="email"
+            required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

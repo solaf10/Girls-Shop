@@ -6,13 +6,8 @@ import config from "../../Constants/enviroment";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
-const FullCart = ({ cartProduct }) => {
+const FullCart = ({ cartProduct, setCartProduct }) => {
   const navigate = useNavigate();
-  const [cartProduc, setCartProduc] = useState([]);
-
-  useEffect(() => {
-    setCartProduc(cartProduct || []);
-  }, [cartProduct]);
 
   const handleSendData = () => {
     navigate("/cart/complate-cart");
@@ -20,14 +15,15 @@ const FullCart = ({ cartProduct }) => {
   const privateRouteHandler = usePrivateRoute(handleSendData);
 
   const handleDelete = (id) => {
-    axios.delete(`${config.baseUrl}/${config.cartProducts}/${id}`)
+    axios
+      .delete(`${config.baseUrl}/${config.cartProducts}/${id}`)
       .then(() => {
-        setCartProduc(prev => prev.filter(pro => pro.id !== id));
-        toast.success("تم حذف المنتج من السلة");
+        setCartProduct((prev) => prev.filter((pro) => pro.id !== id));
+        toast.success("Product was deleted from the cart successfully!!");
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
-        toast.error(" فشل حذف المنتج من السلة");
+        toast.error("process failed!!");
       });
   };
 
@@ -58,10 +54,10 @@ const FullCart = ({ cartProduct }) => {
                 </div>
               </div>
               <div className="body">
-                {cartProduc.map((pro) => (
+                {cartProduct.map((pro) => (
                   <CartProductRow
                     key={pro.id}
-                    id = {pro.id}
+                    id={pro.id}
                     image={pro.image}
                     color={pro.color}
                     price={pro.price}

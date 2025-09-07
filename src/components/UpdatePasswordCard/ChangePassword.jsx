@@ -20,7 +20,7 @@ const ChangePassword = () => {
               className="icon-holder"
               onClick={() => setIsPasswordShow((prev) => !prev)}
             >
-              {isPaswordShow ? (
+              {!isPaswordShow ? (
                 <AiFillEye className="show-password-icon" />
               ) : (
                 <AiFillEyeInvisible className="show-password-icon" />
@@ -32,6 +32,7 @@ const ChangePassword = () => {
           type={isPaswordShow ? "text" : "password"}
           placeholder="********"
           id="new-password"
+          required
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
@@ -45,7 +46,7 @@ const ChangePassword = () => {
               className="icon-holder"
               onClick={() => setIsConfirmationShow((prev) => !prev)}
             >
-              {isConfirmationShow ? (
+              {!isConfirmationShow ? (
                 <AiFillEye className="show-password-icon" />
               ) : (
                 <AiFillEyeInvisible className="show-password-icon" />
@@ -58,14 +59,18 @@ const ChangePassword = () => {
           placeholder="********"
           id="password-confirmation"
           value={confirmPassword}
+          required
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
       </div>
       <input
         className={
-          password && confirmPassword ? "password-btn" : "password-btn disabled"
+          password && confirmPassword && password == confirmPassword
+            ? "password-btn"
+            : "password-btn disabled"
         }
         type="submit"
+        disabled={!password || !confirmPassword || password != confirmPassword}
         value="Change"
         onClick={() => navigate("/updatePassword/changed")}
       />
