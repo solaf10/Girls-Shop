@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaRegSquare, FaRegSquareCheck } from "react-icons/fa6";
 
 export default function MaterialStyle() {
   const materials = [
@@ -39,6 +38,14 @@ export default function MaterialStyle() {
     }));
   };
 
+  // for filter post req
+  const selectedMaterials = Object.keys(materialChecked).filter(
+    (key) => materialChecked[key]
+  );
+
+  const selectedStyles = Object.keys(styleChecked).filter(
+    (key) => styleChecked[key]
+  );
   return (
     <>
       <hr />
@@ -46,9 +53,15 @@ export default function MaterialStyle() {
         <p className="title">Material</p>
         <div className="checkbox">
           {materials.map((item) => (
-            <div key={item} onClick={() => toggleMaterial(item)}>
-              {materialChecked[item] ? <FaRegSquareCheck /> : <FaRegSquare />}
-              <span>{item}</span>
+            <div key={item} className="checkbox-item">
+              <input
+                type="checkbox"
+                name="material"
+                checked={!!materialChecked[item.toLowerCase()]}
+                id={item.toLowerCase()}
+                onChange={() => toggleMaterial(item.toLowerCase())}
+              />
+              <label htmlFor={item.toLowerCase()}>{item}</label>
             </div>
           ))}
         </div>
@@ -59,9 +72,15 @@ export default function MaterialStyle() {
         <p className="title">Style</p>
         <div className="checkbox">
           {styles.map((item) => (
-            <div key={item} onClick={() => toggleStyle(item)}>
-              {styleChecked[item] ? <FaRegSquareCheck /> : <FaRegSquare />}
-              <span>{item}</span>
+            <div key={item} className="checkbox-item">
+              <input
+                type="checkbox"
+                checked={!!styleChecked[item.toLowerCase()]}
+                name="style"
+                id={item.toLowerCase()}
+                onChange={() => toggleStyle(item.toLowerCase())}
+              />
+              <label htmlFor={item.toLowerCase()}>{item}</label>
             </div>
           ))}
         </div>

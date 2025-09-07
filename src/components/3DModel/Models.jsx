@@ -4,7 +4,7 @@ import Card from "../Card/Card";
 import Filter from "../Filter/Filter";
 import { Link, useNavigate } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa6";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import Loader from "../Loader/Loader";
 import config from "../../Constants/enviroment";
@@ -40,9 +40,22 @@ export default function Models() {
     isBtnDisabled,
   } = usePagenation(products);
 
+  const scrollEl = useRef(null);
+
+  useEffect(() => {
+    /* window.scrollTo({
+      top: scrollEl.offse,
+      left: 0,
+      behavior: "smooth",
+    }); */
+    if (scrollEl.current) {
+      scrollEl.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [currentPage]);
+
   return (
     <div className="models">
-      <h3>Our Products</h3>
+      <h3 ref={scrollEl}>Our Products</h3>
       {/* <div className="topBar">
         <div className="search">
           <input placeholder="Search products..."></input>

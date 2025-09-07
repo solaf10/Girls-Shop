@@ -22,6 +22,7 @@ import Product from "./components/Product/Product";
 import SignUp from "./components/SignUp/SignUp";
 import Designer from "./pages/Designer/Designer";
 import { ToastContainer } from "react-toastify";
+import UserProfile from "./components/UserProfile/UserProfile";
 
 const App = () => {
   const location = useLocation();
@@ -47,6 +48,7 @@ const App = () => {
         <Route path="/cart/complate-cart" element={<ComplateCart />} />
         <Route path="/blogs/:id" element={<BlogsDetails />} />
         <Route path="/designer" element={<Designer />} />
+        <Route path="/profile" element={<UserProfile />} />
         <Route path="/updatePassword" element={<UpdatePassword />}>
           <Route
             index
