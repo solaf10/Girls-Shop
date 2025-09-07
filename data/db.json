@@ -404,6 +404,14 @@
       "price": "$560.00",
       "color": "#888",
       "amount": 1
+    },
+    {
+      "id": "98",
+      "name": "XORA corner desk",
+      "image": "/assets/Images/top-sellers4.png",
+      "price": "$560.00",
+      "color": "#eee",
+      "amount": 4
     }
   ]
 }

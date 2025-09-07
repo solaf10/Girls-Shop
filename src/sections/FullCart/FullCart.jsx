@@ -6,6 +6,7 @@ import axios from 'axios';
 import config from '../../Constants/enviroment';
 import Cart from '../../pages/Cart/Cart';
 import CartProductRow from '../../components/CartProductRow/CartProductRow';
+import { toast } from 'react-toastify';
 const FullCart = () => {
     const navigate = useNavigate()
     const handleClick = () => {
@@ -15,13 +16,13 @@ const FullCart = () => {
         navigate('/shop')
     }
         const [cartProduct , setCartProduct] = useState([]); 
-        // const totalPrice = cartProduct.reduce((sum, item) => sum + item.price * count,0); 
         useEffect( () => {
             axios
             .get(config.baseUrl + "/" + config.cartProducts)
             .then( (res) => {console.log(res.data);setCartProduct(res.data)})
             .catch( (err) => console.log(err))
         },[]);
+    
 return (
     <div className='fullcart'>
     <div className="container">

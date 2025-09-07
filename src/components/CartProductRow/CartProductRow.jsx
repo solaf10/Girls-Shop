@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
 import { IoIosCloseCircleOutline } from 'react-icons/io'
 
-const CartProductRow = ({image , color , name , price , amount , totalPrice}) => {
-            const [step, setStep] = useState(1);
-            const [count, setCount] = useState(amount);
-            const handleCount1 = () => {
+const CartProductRow = ({image , color , name , price , amount }) => {
+        const [step, setStep] = useState(1);
+        const [count, setCount] = useState(amount);
+        const handleCount1 = () => {
         if (count == 0) return;
         setCount((c) => c - step);
         };
         const handleCount2 = () => {
         setCount((c) => c + step);}
         const total = parseFloat(price.replace("$", ""));
-        
     return (
     <div>
     <div className='row-pro'>
@@ -21,7 +20,7 @@ const CartProductRow = ({image , color , name , price , amount , totalPrice}) =>
             <p className='pro-name'>{name}</p>
         </div>
         <div><p>{price}</p></div>
-        <div><p style={{width:'12px',height:"12px",backgroundColor:color ,borderRadius:"50%"}}></p></div>
+        <div><p style={{width:'20px',height:"20px",backgroundColor:color ,borderRadius:"50%"}}></p></div>
         
         <div className="product-number">
             <button
