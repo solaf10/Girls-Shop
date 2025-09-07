@@ -2,14 +2,35 @@ import "./FullCart.css";
 import { Link, useNavigate } from "react-router-dom";
 import CartProductRow from "../../components/CartProductRow/CartProductRow";
 import usePrivateRoute from "../../custom hooks/usePrivateRoute";
+import config from "../../Constants/enviroment";
+import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
+import axios from "axios";
 const FullCart = ({ cartProduct }) => {
   const navigate = useNavigate();
-  // const totalPrice = cartProduct.reduce((sum, item) => sum + item.price * count,0);
+  const [cartProduc, setCartProduc] = useState([]);
+
+  useEffect(() => {
+    setCartProduc(cartProduct || []);
+  }, [cartProduct]);
 
   const handleSendData = () => {
     navigate("/cart/complate-cart");
   };
   const privateRouteHandler = usePrivateRoute(handleSendData);
+
+  const handleDelete = (id) => {
+    axios.delete(`${config.baseUrl}/${config.cartProducts}/${id}`)
+      .then(() => {
+        setCartProduc(prev => prev.filter(pro => pro.id !== id));
+        toast.success("تم حذف المنتج من السلة");
+      })
+      .catch(err => {
+        console.log(err);
+        toast.error(" فشل حذف المنتج من السلة");
+      });
+  };
+
   return (
     <div className="fullcart">
       <div className="container">
@@ -37,14 +58,16 @@ const FullCart = ({ cartProduct }) => {
                 </div>
               </div>
               <div className="body">
-                {cartProduct.map((pro) => (
+                {cartProduc.map((pro) => (
                   <CartProductRow
                     key={pro.id}
+                    id = {pro.id}
                     image={pro.image}
                     color={pro.color}
                     price={pro.price}
                     name={pro.name}
                     amount={pro.amount}
+                    onDelete={handleDelete}
                   />
                 ))}
               </div>
