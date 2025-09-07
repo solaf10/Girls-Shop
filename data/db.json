@@ -17,7 +17,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -49,7 +52,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -81,7 +87,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -112,7 +121,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -143,7 +155,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -165,13 +180,18 @@
       "name": "XORA corner desk",
       "price": "$560.00",
       "sale": "%20",
-      "images": ["/assets/Images/top-sellers6.png"],
+      "images": [
+        "/assets/Images/top-sellers6.png"
+      ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 4,
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -202,7 +222,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -235,7 +258,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -263,7 +289,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -291,7 +320,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -319,7 +351,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -347,7 +382,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -375,7 +413,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -403,7 +444,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -431,7 +475,10 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -1012,6 +1059,14 @@
       "price": "$560.00",
       "color": "#888",
       "amount": 1
+    },
+    {
+      "id": "45",
+      "name": "XORA corner desk",
+      "image": "/assets/Images/top-sellers3.png",
+      "price": "$560.00",
+      "color": "",
+      "amount": 0
     }
   ]
 }
