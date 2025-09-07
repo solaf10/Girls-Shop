@@ -1,15 +1,15 @@
-import React, { Children, useState } from "react";
+import React, { useState } from "react";
 import "./Filter.css";
 import PriceColorFilter from "./PriceColorFilter";
-import AccordionItem from "./AccordionItem";
 import MaterialStyle from "./MaterialStyle";
 import ResetFilters from "./ResetFilters";
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import search from "../../../public/assets/Images/search.svg";
 
 const faqs = [
   {
     category: "furniture",
-    type: ["Sofas", "Beds", "Tables", "Chairs Bar", "stools ", "Beds"],
+    type: ["Sofas", "Beds", "Tables", "Chairs Bar", "Stools", "Beds"],
   },
   {
     category: "Decoration",
@@ -25,7 +25,7 @@ const faqs = [
       "Kitchen",
       "Kitchen appliance",
       "Kitchen faucet",
-      "sink",
+      "Sink",
       "Other Kitchen accessories",
     ],
   },
@@ -41,14 +41,19 @@ const faqs = [
 
 export default function Accordion() {
   const [curOpen, setCurOpen] = useState(null);
-
   const [searchedKey, setSearchedKey] = useState("");
+  const [selectedOptions, setSelectedOptions] = useState({});
 
-  const [selectedType, setselectedType] = useState("");
-  const [selectedCategory, setselectedCategory] = useState("");
+  const handleOptionChange = (categoryIndex, value) => {
+    setSelectedOptions((prev) => ({
+      ...prev,
+      [categoryIndex]: value,
+    }));
+  };
 
   return (
     <form className="filter">
+      {/* Search */}
       <div className="search">
         <input
           type="text"
@@ -56,34 +61,30 @@ export default function Accordion() {
           value={searchedKey}
           onChange={(e) => setSearchedKey(e.target.value)}
         />
-        <img src={search} />I
+        <img src={search} alt="search" />
       </div>
+
+      {/* Accordion */}
       <div className="accordion">
         <p className="title">Categories</p>
-
         {faqs.map((el, i) => (
           <AccordionItem
             key={el.category}
-            category={el.category}
-            num={i}
             curOpen={curOpen}
             onOpen={setCurOpen}
+            category={el.category}
+            num={i}
           >
             <ul>
               {el.type.map((option, idx) => (
                 <li key={idx}>
-                  <label htmlFor={option}>
+                  <label>
                     <input
                       type="radio"
                       name={`category-${i}`}
-                      id={option}
-                      checked={
-                        selectedType.toLowerCase() == option.toLowerCase()
-                      }
-                      onChange={(e) =>
-                        e.target.checked &&
-                        setselectedType(option.toLowerCase())
-                      }
+                      value={option}
+                      checked={selectedOptions[i] === option}
+                      onChange={() => handleOptionChange(i, option)}
                     />
                     {option}
                   </label>
@@ -93,6 +94,8 @@ export default function Accordion() {
           </AccordionItem>
         ))}
       </div>
+
+      {/* Other Filters */}
       <PriceColorFilter />
       <MaterialStyle />
       <ResetFilters />
