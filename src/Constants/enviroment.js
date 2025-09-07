@@ -5,5 +5,6 @@ const config = {
   recentblogs: "recentblogs",
   reviews: "reviews",
   cartProducts: "cartProducts",
+  blogs: "postsDetails",
 };
 export default config;

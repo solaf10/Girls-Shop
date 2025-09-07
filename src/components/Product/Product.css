@@ -2,6 +2,23 @@
   /* letter-spacing: 1px; */
   /* margin: 150px 60px 0 60px; */
   margin: 50px 0px;
+  h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  /* reset other pagesStyles */
+  .comment-bar {
+    .name-and-comment {
+      padding-top: 0px;
+    }
+  }
+  .write-comment-sec .write-comment-form {
+    .phone-email-info {
+      padding-top: 0px;
+    }
+  }
+  /* end reset other pagesStyles */
   .view-cart {
     display: flex;
     justify-content: space-between;
@@ -97,7 +114,7 @@
         }
       }
 
-      h2 {
+      h1 {
         margin: 15px 0;
         font-size: 25px;
       }
@@ -222,16 +239,24 @@
             text-align: center;
             gap: 20px;
             display: flex;
+            cursor: pointer;
           }
-
+          a {
+            color: white;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+          }
+          .file-type {
+            font-size: 18px;
+            margin-bottom: 2px;
+          }
           button.file-type::before {
             content: "";
             position: relative;
             width: 555px;
             height: 2px;
             background-color: white;
-          }
-          button.file-type {
           }
         }
         .popup {
@@ -255,6 +280,7 @@
               a {
                 display: flex;
                 justify-content: space-between;
+                color: black;
                 .suffix {
                   font-weight: 500;
                 }
@@ -274,12 +300,16 @@
   }
   hr {
     width: 100%;
-    margin: 50px 0;
+    margin: 60px 0;
   }
   .description {
     .title {
       font-size: 22px;
       font-weight: bold;
+    }
+    .des {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
     .info {
       display: flex;
@@ -296,6 +326,21 @@
       }
     }
   }
+  hr {
+    margin: 0px;
+  }
+  > div {
+    padding: 60px 0px;
+  }
+  > div:first-child {
+    padding-top: 0px;
+  }
+  .description {
+    padding-bottom: 20px;
+  }
+  /* > div:last-child {
+    padding-bottom: 0px;
+  } */
 }
 .single-product .loader-holder {
   height: 100vh;
@@ -372,7 +417,7 @@
           }
         }
         hr {
-          margin: 15px 0;
+          /* margin: 15px 0; */
         }
         .architecture {
           p {
@@ -395,4 +440,14 @@
       }
     }
   }
+}
+.product .description,
+.product .comment-bar,
+.product .write-comment-sec {
+  width: 70%;
+}
+
+.rating {
+  color: #fa8232;
+  margin: 0px 20px;
 }

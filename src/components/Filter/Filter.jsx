@@ -43,9 +43,9 @@ export default function Accordion() {
   const [curOpen, setCurOpen] = useState(null);
 
   return (
-    <div className="filter">
+    <form className="filter">
       <div className="search">
-        <input placeholder="Search products..."></input>
+        <input type="text" placeholder="Search products..." />
         <img src={search} />I
       </div>
       <div className="accordion">
@@ -72,6 +72,6 @@ export default function Accordion() {
       <PriceColorFilter />
       <MaterialStyle />
       <ResetFilters />
-    </div>
+    </form>
   );
 }

@@ -1,6 +1,7 @@
 import "./Header.css";
 import { MdLanguage } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
+import LanguageSwitcher from "../translation/LanguageSwitcher";
 
 const Header = () => {
   return (
@@ -14,7 +15,10 @@ const Header = () => {
           <p>helpcenter</p>
           <div className="language">
             <MdLanguage className="globe-icon" />
-            <span>Language</span>
+            <span>
+              {/* language */}
+              <LanguageSwitcher />
+            </span>
             <IoIosArrowDown className="arrow-icon" />
           </div>
         </div>

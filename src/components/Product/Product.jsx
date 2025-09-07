@@ -9,7 +9,6 @@ import {
   FaStar,
   FaTwitter,
 } from "react-icons/fa";
-import { AiOutlineDown } from "react-icons/ai";
 import { FiDownload } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
@@ -18,39 +17,10 @@ import axios from "axios";
 import Loader from "../Loader/Loader";
 import config from "../../Constants/enviroment";
 import { toast } from "react-toastify";
-
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import RelatedProducts from "../../sections/Product/RelatedProducts/RelatedProducts";
 export default function Product() {
-  /* const productsDetails = [
-    {
-      id: 1,
-      image: "../../../public/assets/Images/product.png",
-      title: "First Time Home Owner Ideas",
-      price: "$233.00",
-      salePrice: "$200.00",
-    },
-    {
-      id: 2,
-      image: "../../../public/assets/Images/product.png",
-      title: "First Time Home Owner Ideas",
-      price: "$233.00",
-      salePrice: "$200.00",
-    },
-    {
-      id: 3,
-      image: "../../../public/assets/Images/product.png",
-      title: "First Time Home Owner Ideas",
-      price: "$233.00",
-      salePrice: "$200.00",
-    },
-    {
-      id: 4,
-      image: "../../../public/assets/Images/product.png",
-      title: "First Time Home Owner Ideas",
-      price: "$233.00",
-      salePrice: "$200.00",
-    },
-  ]; */
-  const [productsDetails, setProductsDetails] = useState([]);
+  const [productsDetails, setProductsDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
   const [chosencolor, setchosencolor] = useState("");
@@ -73,6 +43,7 @@ export default function Product() {
     width,
     height,
     lengthInfo,
+    file,
   } = productsDetails;
 
   // price
@@ -108,18 +79,25 @@ export default function Product() {
   const handleClickAddToCart = () => {
     setAddToCart((prev) => !prev);
     axios
-    .post("http://localhost:8000/cartProducts" , {
-      id:id,
-      name:name,
-      image: image,
-      price: price,
-      color:chosencolor,
-      amount:count,
-    })
-    .then( (res) => setAddToCart(res.data))
-    .catch( (err) => console.log(err))
+      .post("http://localhost:8000/cartProducts", {
+        id: id,
+        name: name,
+        image: image,
+        price: price,
+        color: chosencolor,
+        amount: count,
+      })
+      .then((res) => setAddToCart(res.data))
+      .catch((err) => console.log(err));
     navigate(`/cart`);
   };
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [params.id]);
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -132,10 +110,10 @@ export default function Product() {
         console.log(err);
         setIsLoading(false);
       });
-  }, []);
-  useEffect(()=>{
-    console.log(chosencolor)
-  },[chosencolor])
+  }, [params.id]);
+  useEffect(() => {
+    console.log(chosencolor);
+  }, [chosencolor]);
 
   const colorsEls = colors?.map((color, i) => (
     <div key={i} className="holder">
@@ -179,10 +157,6 @@ export default function Product() {
     toast.success("URL copied successfully!!");
   };
   const handleShare = (url) => {
-    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-      //to convert url to URL-safe.
-      currentUrl
-    )}`;
     window.open(url, "_blank", "width=600,height=400");
   };
   return (
@@ -249,12 +223,16 @@ export default function Product() {
                     </button>
                   </div>
                 </div>
-                <h2>{name}</h2>
+                <h1>{name}</h1>
                 <p>{desc}</p>
                 <div className="price-box">
                   <span className="price">${salesPrice}</span>
-                  <span className="real-price">{price}</span>
-                  <span className="sale">{sale} sale</span>
+                  {numSale != 0 && (
+                    <>
+                      <span className="real-price">{price}</span>
+                      <span className="sale">{sale} sale</span>
+                    </>
+                  )}
                 </div>
                 <form>
                   <div className="colors-holder">
@@ -300,45 +278,42 @@ export default function Product() {
                 <div className="architecture">
                   <p> For Architecture Download</p>
                   <div className="download-button">
-                    <button>
+                    <a href={file?.[0]?.["3d"]} download="3DBlock.3d">
                       <FiDownload />
                       Download Blocks
-                    </button>
+                    </a>
                     <button onClick={handleClickDownloadBlocks}>
-                      <AiOutlineDown
+                      {/* <AiOutlineDown
                         className="file-type"
                         onClick={() => setDownloadBlocks(true)}
-                      />
+                      /> */}
+                      {!downloadBlocksIsOpen ? (
+                        <IoIosArrowDown className="file-type" />
+                      ) : (
+                        <IoIosArrowUp className="file-type" />
+                      )}
                     </button>
                   </div>
                   {downloadBlocksIsOpen && (
                     <div className="popup">
                       <div className="title">File Type</div>
                       <ul>
-                        <li>
-                          <a>
-                            <span className="suffix">.Dwg</span>
-                            <span className="size">1.75MB</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a>
-                            <span className="suffix">.Max</span>
-                            <span className="size">1.75MB</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a>
-                            <span className="suffix">.Psd</span>
-                            <span className="size">1.75MB</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a>
-                            <span className="suffix">Download Zip</span>
-                            <span className="size">1.75MB</span>
-                          </a>
-                        </li>
+                        {file?.map((f, index) => {
+                          const [key, value] = Object.entries(f)[0];
+                          let suffix = "";
+                          if (key === "2d") suffix = ".2D";
+                          if (key === "3d") suffix = ".3D";
+                          if (key === "skp") suffix = ".SketchUp";
+
+                          return (
+                            <li key={index}>
+                              <a href={value} download>
+                                <span className="suffix">{suffix}</span>
+                                <span className="size">1.75MB</span>
+                              </a>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   )}
@@ -348,33 +323,77 @@ export default function Product() {
             </div>
             <hr />
             <div className="description">
-              <div className="title"> Description & Other Information</div>
-              <div className="info">
-                <p className="title">Category</p>
-                <p className="desc">{category}</p>
-              </div>
-              <div className="info">
-                <p className="title">Material</p>
-                <p className="desc">{material}</p>
-              </div>
-              <div className="info">
-                <p className="title">Style</p>
-                <p className="desc">{style}</p>
-              </div>
-              <div className="info">
-                <p className="title">Width</p>
-                <p className="desc">{width}</p>
-              </div>
-              <div className="info">
-                <p className="title">Height</p>
-                <p className="desc">{height}</p>
-              </div>
-              <div className="info">
-                <p className="title">Length</p>
-                <p className="desc">{lengthInfo}</p>
+              <h2> Description & Other Information</h2>
+              <div className="des">
+                <div className="info">
+                  <p className="title">Category</p>
+                  <p className="desc">{category}</p>
+                </div>
+                <div className="info">
+                  <p className="title">Material</p>
+                  <p className="desc">{material}</p>
+                </div>
+                <div className="info">
+                  <p className="title">Style</p>
+                  <p className="desc">{style}</p>
+                </div>
+                <div className="info">
+                  <p className="title">Length</p>
+                  <p className="desc">{lengthInfo}</p>
+                </div>
+                <div className="info">
+                  <p className="title">Width</p>
+                  <p className="desc">{width}</p>
+                </div>
+                <div className="info">
+                  <p className="title">Height</p>
+                  <p className="desc">{height}</p>
+                </div>
               </div>
             </div>
             <hr />
+            <div className="comment-bar">
+              <h2>
+                Comment: <span>1</span>
+              </h2>
+              <div className="name-and-comment">
+                <div className="name-and-time">
+                  <p className="name"> shahed aldroubi </p>
+                  <div className="rating">
+                    {stars}
+                    {/* <p className="rev">(reviews {percentage}%)</p> */}
+                  </div>
+                  <p className="time"> 5/9/2025</p>
+                </div>
+
+                <p className="comment">
+                  "Such a well-written piece! Insightful and inspiring — keep up
+                  the amazing work!"
+                </p>
+              </div>
+            </div>
+            <div className="write-comment-sec">
+              <h2>Post a comment</h2>
+              <div className="write-comment-form">
+                <div className="phone-email-info">
+                  <input type="text" placeholder="Phone"></input>
+                  <input type="text" placeholder="E-mail"></input>
+                </div>
+                <div className="textarea-to-write-comment">
+                  <label>Your Message</label>
+                  <textarea />
+                </div>
+                <div className="agree-yo-save-your-info">
+                  <input className="check" type="checkbox" />
+                  <label>
+                    Save my name, email, and website in this browser for the
+                    next time I comment.
+                  </label>
+                </div>
+                <button className="send-comment">Send</button>
+              </div>
+            </div>
+            <RelatedProducts category={category} id={id} />
           </div>
         </>
       )}
