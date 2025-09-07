@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
-const CartProductRow = ({ image, color, name, price, amount }) => {
+const CartProductRow = ({id, image, color, name, price, amount , onDelete}) => {
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(amount);
   const handleCount1 = () => {
@@ -18,7 +18,10 @@ const CartProductRow = ({ image, color, name, price, amount }) => {
     <div>
       <div className="row-pro">
         <div className="img-pro">
-          <IoIosCloseCircleOutline className="close" />
+          <IoIosCloseCircleOutline 
+          className="close"
+          style={{cursor:"pointer"}} 
+          onClick={ () => onDelete(id)}/>
           <img src={image} />
           <p className="pro-name">{name}</p>
         </div>
@@ -28,8 +31,8 @@ const CartProductRow = ({ image, color, name, price, amount }) => {
         <div>
           <p
             style={{
-              width: "12px",
-              height: "12px",
+              width: "20px",
+              height: "20px",
               backgroundColor: color,
               borderRadius: "50%",
             }}

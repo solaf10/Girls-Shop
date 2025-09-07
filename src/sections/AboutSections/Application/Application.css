@@ -70,3 +70,11 @@
     z-index: 1;
   }
 }
+@media (max-width: 1192px){
+  .application .phone-img .one{
+    display: none;
+  }
+  .application .phone-img .two{
+    display: none;
+  }
+}

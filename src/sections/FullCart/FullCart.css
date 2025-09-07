@@ -89,6 +89,7 @@ hr,
   gap: 9px;
   width: 40%;
   padding: 24px 20px;
+  height: fit-content;
 }
 .fullcart .price .title {
   p {
