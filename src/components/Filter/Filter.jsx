@@ -47,6 +47,13 @@ export default function Accordion() {
   const [selectedType, setselectedType] = useState("");
   const [selectedCategory, setselectedCategory] = useState("");
 
+  const handleAccordionFilter = (e) => {
+    if (e.target.checked) {
+      setselectedType(e.target.id.toLowerCase());
+      setselectedCategory(e.target.name.toLowerCase());
+    }
+  };
+
   return (
     <form className="filter">
       <div className="search">
@@ -72,18 +79,20 @@ export default function Accordion() {
             <ul>
               {el.type.map((option, idx) => (
                 <li key={idx}>
-                  <label htmlFor={option}>
+                  <label
+                    className={
+                      option.toLowerCase() == selectedType ? "active" : ""
+                    }
+                    htmlFor={option}
+                  >
                     <input
                       type="radio"
-                      name={`category-${i}`}
+                      name={el.category}
                       id={option}
                       checked={
                         selectedType.toLowerCase() == option.toLowerCase()
                       }
-                      onChange={(e) =>
-                        e.target.checked &&
-                        setselectedType(option.toLowerCase())
-                      }
+                      onChange={handleAccordionFilter}
                     />
                     {option}
                   </label>

@@ -18,6 +18,11 @@
   label {
     display: inline-block;
     width: 100%;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  label.active {
+    color: #2a4d47;
   }
 }
 .item .category-holder {
@@ -56,7 +61,7 @@
   gap: 12px;
 }
 .content-box ul li:hover {
-  color: #23262f;
+  color: #2a4d47;
 }
 
 .filter-container {
