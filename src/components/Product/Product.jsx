@@ -20,6 +20,7 @@ import { toast } from "react-toastify";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import RelatedProducts from "../../sections/Product/RelatedProducts/RelatedProducts";
 import usePrivateRoute from "../../custom hooks/usePrivateRoute";
+import UserAutherization from "../UserAutherization/UserAutherization";
 export default function Product() {
   const [productsDetails, setProductsDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -224,16 +225,18 @@ export default function Product() {
                     </button>
                   </div>
                 </div>
-                <h1>{name}</h1>
-                <p>{desc}</p>
-                <div className="price-box">
-                  <span className="price">${salesPrice}</span>
-                  {numSale != 0 && (
-                    <>
-                      <span className="real-price">{price}</span>
-                      <span className="sale">{sale} sale</span>
-                    </>
-                  )}
+                <div className="product-info">
+                  <h1>{name}</h1>
+                  <p>{desc}</p>
+                  <div className="price-box">
+                    <span className="price">${salesPrice}</span>
+                    {numSale != 0 && (
+                      <>
+                        <span className="real-price">{price}</span>
+                        <span className="sale">{sale} sale</span>
+                      </>
+                    )}
+                  </div>
                 </div>
                 <form>
                   <div className="colors-holder">
@@ -275,51 +278,53 @@ export default function Product() {
                     </button>
                   </div>
                 </form>
-                <hr />
-                <div className="architecture">
-                  <p> For Architecture Download</p>
-                  <div className="download-button">
-                    <a href={file?.[0]?.["3d"]} download="3DBlock.3d">
-                      <FiDownload />
-                      Download Blocks
-                    </a>
-                    <button onClick={handleClickDownloadBlocks}>
-                      {/* <AiOutlineDown
+                <UserAutherization>
+                  <hr />
+                  <div className="architecture">
+                    <p> For Architecture Download</p>
+                    <div className="download-button">
+                      <a href={file?.[0]?.["3d"]} download="3DBlock.3d">
+                        <FiDownload />
+                        Download Blocks
+                      </a>
+                      <button onClick={handleClickDownloadBlocks}>
+                        {/* <AiOutlineDown
                         className="file-type"
                         onClick={() => setDownloadBlocks(true)}
                       /> */}
-                      {!downloadBlocksIsOpen ? (
-                        <IoIosArrowDown className="file-type" />
-                      ) : (
-                        <IoIosArrowUp className="file-type" />
-                      )}
-                    </button>
-                  </div>
-                  {downloadBlocksIsOpen && (
-                    <div className="popup">
-                      <div className="title">File Type</div>
-                      <ul>
-                        {file?.map((f, index) => {
-                          const [key, value] = Object.entries(f)[0];
-                          let suffix = "";
-                          if (key === "2d") suffix = ".2D";
-                          if (key === "3d") suffix = ".3D";
-                          if (key === "skp") suffix = ".SketchUp";
-
-                          return (
-                            <li key={index}>
-                              <a href={value} download>
-                                <span className="suffix">{suffix}</span>
-                                <span className="size">1.75MB</span>
-                              </a>
-                            </li>
-                          );
-                        })}
-                      </ul>
+                        {!downloadBlocksIsOpen ? (
+                          <IoIosArrowDown className="file-type" />
+                        ) : (
+                          <IoIosArrowUp className="file-type" />
+                        )}
+                      </button>
                     </div>
-                  )}
-                  <p>Daily Credits - 3/3 </p>
-                </div>
+                    {downloadBlocksIsOpen && (
+                      <div className="popup">
+                        <div className="title">File Type</div>
+                        <ul>
+                          {file?.map((f, index) => {
+                            const [key, value] = Object.entries(f)[0];
+                            let suffix = "";
+                            if (key === "2d") suffix = ".2D";
+                            if (key === "3d") suffix = ".3D";
+                            if (key === "skp") suffix = ".SketchUp";
+
+                            return (
+                              <li key={index}>
+                                <a href={value} download>
+                                  <span className="suffix">{suffix}</span>
+                                  <span className="size">1.75MB</span>
+                                </a>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    )}
+                    <p>Daily Credits - 3/3 </p>
+                  </div>
+                </UserAutherization>
               </div>
             </div>
             <hr />

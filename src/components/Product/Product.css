@@ -58,6 +58,7 @@
         max-width: 100%;
         img {
           width: 100%;
+          max-height: 535px;
         }
       }
       .more-photos {
@@ -447,7 +448,9 @@
   width: 70%;
 }
 
-.rating {
-  color: #fa8232;
-  margin: 0px 20px;
+.name-and-time {
+  .rating {
+    color: #fa8232;
+    margin: 0px 20px;
+  }
 }

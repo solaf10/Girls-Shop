@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import config from "../../Constants/enviroment";
 import { toast } from "react-toastify";
+import Loader from "../../components/Loader/Loader";
 const BlogsDetails = () => {
   const [searchedKey, setSearchedKey] = useState("");
   const [recentBlogs, setRecentBlogs] = useState([]);
@@ -89,132 +90,140 @@ const BlogsDetails = () => {
     <div className="blogs">
       <TopGreenBar dynamicLink={bigTitle} />
       <div className="container">
-        <div className="blogs-detais-container">
-          <div className="article-detailes">
-            <img className="blog-img" src={image} />
-            <div className="date-publisher">
-              <p>{PublishDate}</p>
-              <p>-</p>
-              <p>{publisher}</p>
-            </div>
-            <div className="article-body">
-              <h1>{bigTitle}</h1>
-              <p>{articleText}</p>
-            </div>
-            <div className="share-post">
-              <p>Share Post:</p>
-              <button
-                onClick={() => handleShare(`https://wa.me/?text=${currentUrl}`)}
-              >
-                <img src="/assets/Images/whatsapp.png" />
-              </button>
-              <button
-                onClick={() =>
-                  handleShare(
-                    `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                      currentUrl
-                    )}`
-                  )
-                }
-              >
-                <img src="/assets/Images/facebook.png" />
-              </button>
-              <button
-                onClick={() =>
-                  handleShare(
-                    `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`
-                  )
-                }
-              >
-                <img src="/assets/Images/linkedin.png" />
-              </button>
-              <button onClick={() => handleCopyURL()}>
-                <img src="/assets/Images/link.png" />
-              </button>
-              <button
-                onClick={() =>
-                  handleShare(
-                    `mailto:?subject=Check%20this%20product&body=${currentUrl}`
-                  )
-                }
-              >
-                <img src="/assets/Images/email.png" />
-              </button>
-            </div>
-            <div className="posts-slider">
-              <div className="previous">
-                <GrFormPreviousLink className="previous-icon" />
-                <p>Previous Post</p>
+        {isLoading ? (
+          <div className="loader-holder">
+            <Loader />
+          </div>
+        ) : (
+          <div className="blogs-detais-container">
+            <div className="article-detailes">
+              <img className="blog-img" src={image} />
+              <div className="date-publisher">
+                <p>{PublishDate}</p>
+                <p>-</p>
+                <p>{publisher}</p>
               </div>
-              <div className="next">
-                <p>Next Post</p>
-                <GrFormNextLink className="next-icon" />
+              <div className="article-body">
+                <h1>{bigTitle}</h1>
+                <p>{articleText}</p>
               </div>
-            </div>
-            <div className="comment-bar">
-              <h1>
-                Comment: <span>1</span>
-              </h1>
-              <div className="name-and-comment">
-                <div className="name-and-time">
-                  <p className="name">Batoul abdulHadi </p>
-                  <p className="time"> 5 days ago</p>
+              <div className="share-post">
+                <p>Share Post:</p>
+                <button
+                  onClick={() =>
+                    handleShare(`https://wa.me/?text=${currentUrl}`)
+                  }
+                >
+                  <img src="/assets/Images/whatsapp.png" />
+                </button>
+                <button
+                  onClick={() =>
+                    handleShare(
+                      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                        currentUrl
+                      )}`
+                    )
+                  }
+                >
+                  <img src="/assets/Images/facebook.png" />
+                </button>
+                <button
+                  onClick={() =>
+                    handleShare(
+                      `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`
+                    )
+                  }
+                >
+                  <img src="/assets/Images/linkedin.png" />
+                </button>
+                <button onClick={() => handleCopyURL()}>
+                  <img src="/assets/Images/link.png" />
+                </button>
+                <button
+                  onClick={() =>
+                    handleShare(
+                      `mailto:?subject=Check%20this%20product&body=${currentUrl}`
+                    )
+                  }
+                >
+                  <img src="/assets/Images/email.png" />
+                </button>
+              </div>
+              <div className="posts-slider">
+                <div className="previous">
+                  <GrFormPreviousLink className="previous-icon" />
+                  <p>Previous Post</p>
                 </div>
+                <div className="next">
+                  <p>Next Post</p>
+                  <GrFormNextLink className="next-icon" />
+                </div>
+              </div>
+              <div className="comment-bar">
+                <h1>
+                  Comment: <span>1</span>
+                </h1>
+                <div className="name-and-comment">
+                  <div className="name-and-time">
+                    <p className="name">Batoul abdulHadi </p>
+                    <p className="time"> 5 days ago</p>
+                  </div>
 
-                <p className="comment">
-                  "Such a well-written piece! Insightful and inspiring — keep up
-                  the amazing work!"
-                </p>
+                  <p className="comment">
+                    "Such a well-written piece! Insightful and inspiring — keep
+                    up the amazing work!"
+                  </p>
+                </div>
+              </div>
+              <div className="write-comment-sec">
+                <h1>Post a comment</h1>
+                <div className="write-comment-form">
+                  <div className="phone-email-info">
+                    <input type="text" placeholder="Phone"></input>
+                    <input type="text" placeholder="E-mail"></input>
+                  </div>
+                  <div className="textarea-to-write-comment">
+                    <label>Your Message</label>
+                    <textarea />
+                  </div>
+                  <div className="agree-yo-save-your-info">
+                    <input className="check" type="checkbox" />
+                    <label>
+                      Save my name, email, and website in this browser for the
+                      next time I comment.
+                    </label>
+                  </div>
+                  <button className="send-comment">Send</button>
+                </div>
               </div>
             </div>
-            <div className="write-comment-sec">
-              <h1>Post a comment</h1>
-              <div className="write-comment-form">
-                <div className="phone-email-info">
-                  <input type="text" placeholder="Phone"></input>
-                  <input type="text" placeholder="E-mail"></input>
+            <div className="recent-posts-info">
+              <h3>Search</h3>
+              <div className="search-container">
+                <input
+                  type="text"
+                  value={searchedKey}
+                  onChange={(e) => setSearchedKey(e.target.value)}
+                />
+                <CiSearch className="search-icon" />
+              </div>
+              <div className="recent-posts">
+                <h2 className="recent-blogs-text">Recent Posts</h2>
+                <div className="recent-blogs">
+                  {filteredBlogs.map((recent) => (
+                    <RecentBlog
+                      key={recent.id}
+                      id={recent.id}
+                      title={recent.title}
+                      date={recent.date}
+                      publisher={recent?.publisher}
+                    />
+                  ))}
                 </div>
-                <div className="textarea-to-write-comment">
-                  <label>Your Message</label>
-                  <textarea />
-                </div>
-                <div className="agree-yo-save-your-info">
-                  <input className="check" type="checkbox" />
-                  <label>
-                    Save my name, email, and website in this browser for the
-                    next time I comment.
-                  </label>
-                </div>
-                <button className="send-comment">Send</button>
               </div>
             </div>
           </div>
-          <div className="recent-posts-info">
-            <h3>Search</h3>
-            <div className="search-container">
-              <input
-                type="text"
-                value={searchedKey}
-                onChange={(e) => setSearchedKey(e.target.value)}
-              />
-              <CiSearch className="search-icon" />
-            </div>
-            <div className="recent-posts">
-              <h2 className="recent-blogs-text">Recent Posts</h2>
-              <div className="recent-blogs">
-                {filteredBlogs.map((recent) => (
-                  <RecentBlog
-                    key={recent.id}
-                    id={recent.id}
-                    title={recent.title}
-                    date={recent.date}
-                    publisher={recent?.publisher}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

@@ -10,17 +10,17 @@ const Designer = () => {
   const countriesOptions = ["Syria", "Saudi", "Palestine"];
   const creativeOptions = ["Syria", "Saudi", "Palestine"];
 
-  const [designers, setDesigners] = useState([]); 
+  const [designers, setDesigners] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState(""); 
-  const [filteredDesigners, setFilteredDesigners] = useState([]); 
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredDesigners, setFilteredDesigners] = useState([]);
 
   useEffect(() => {
     setLoading(true);
     axios
       .get("http://localhost:8000/designers")
       .then((res) => {
-        setDesigners(res.data); 
+        setDesigners(res.data);
         setFilteredDesigners(res.data);
         setLoading(false);
       })
@@ -30,7 +30,6 @@ const Designer = () => {
       });
   }, []);
 
-  
   const handleKeyDown = () => {
     const arr = designers.filter((designer) =>
       designer.designerName.toLowerCase().includes(searchTerm.toLowerCase())
@@ -39,7 +38,7 @@ const Designer = () => {
   };
 
   return (
-    <div className="single-product">
+    <div className="designers-holder">
       {loading ? (
         <div className="loader-holder">
           <Loader />
@@ -58,7 +57,7 @@ const Designer = () => {
                     type="text"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    onKeyDown={handleKeyDown} 
+                    onKeyDown={handleKeyDown}
                   />
                   <img src="/assets/Images/search.png" alt="search" />
                 </div>
@@ -88,7 +87,9 @@ const Designer = () => {
                   />
                 ))
               ) : (
-                <p className="no-designer-matches">We couldn't find a designer matching your search!</p>
+                <p className="no-designer-matches">
+                  We couldn't find a designer matching your search!
+                </p>
               )}
             </div>
           </div>

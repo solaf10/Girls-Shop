@@ -1,20 +1,23 @@
 import "./NavBar.css";
+import { useLocation, useNavigate, NavLink, Link } from "react-router-dom";
 import { RiUserLine } from "react-icons/ri";
 import { BsCart3 } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
-import { NavLink, Link, useNavigate } from "react-router-dom";
-import { IoMenu, IoClose } from "react-icons/io5";
 import { useState } from "react";
 import { MdLanguage } from "react-icons/md";
 import { IoIosArrowDown, IoMdLogOut, IoIosArrowForward } from "react-icons/io";
 import { FaUser } from "react-icons/fa6";
 import { TbCube } from "react-icons/tb";
+import { IoMenu } from "react-icons/io5";
 
 const NavBar = () => {
   const [isMenuShow, setIsMenuShow] = useState(false);
   const [isUserShow, setIsUserShow] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
   const isToken = localStorage.getItem("token") != null;
+
   const handleUserIconClick = () => {
     if (isToken) {
       setIsUserShow(true);
@@ -22,7 +25,14 @@ const NavBar = () => {
       navigate("/login");
     }
   };
-  // const [searchedKey , setSearchedKey] = useState("");
+
+  const isAuthPage =
+    location.pathname === "/login" ||
+    location.pathname === "/signup" ||
+    location.pathname.includes("/updatePassword");
+  const isCartPage = location.pathname == "/cart";
+  const isShopPage = location.pathname == "/shop";
+
   return (
     <nav className="blurry">
       <div className="container">
@@ -51,12 +61,25 @@ const NavBar = () => {
           </li>
         </ul>
         <div className="icons">
-          <RiUserLine className="icon" onClick={handleUserIconClick} />
-          <BsCart3 className="icon" onClick={() => navigate("/cart")} />
-          <FiSearch
-            className="search-icon icon"
-            onClick={() => navigate("/Shop")}
-          />
+          {/* زر الأيقونة */}
+          <button
+            onClick={handleUserIconClick}
+            className={`icon-btn ${isAuthPage ? "active" : ""}`}
+          >
+            <RiUserLine className="icon" />
+          </button>
+          <button
+            className={`icon-btn ${isCartPage ? "active" : ""}`}
+            onClick={() => navigate("/cart")}
+          >
+            <BsCart3 className="icon" />
+          </button>
+          <button
+            className={`icon-btn ${isShopPage ? "active" : ""}`}
+            onClick={() => navigate("/shop")}
+          >
+            <FiSearch className="search-icon icon" />
+          </button>
         </div>
         <div className="popups-holder">
           <div className="user-popup-holder">
@@ -72,9 +95,7 @@ const NavBar = () => {
               <p className="user-name">User Name</p>
               <ul>
                 <li>
-                  <Link to="/profile" onClick={() => setIsUserShow(false)}>
-                    User profile
-                  </Link>
+                  <Link to="/">User profile</Link>
                 </li>
                 <li>
                   <Link to="/">Setting</Link>

@@ -3,6 +3,7 @@ import "./HomeHero.css";
 import { useState } from "react";
 import CustomizeOrder from "../../../components/CustomizeOrder/CustomizeOrder";
 import { useTranslation } from "react-i18next";
+import UserAutherization from "../../../components/UserAutherization/UserAutherization";
 
 const HomeHero = () => {
   const { t, i18n } = useTranslation();
@@ -37,10 +38,12 @@ const HomeHero = () => {
           <Link to="/shop" className="shop-btn btn">
             Shop Now
           </Link>
-          <button className="customize-btn btn" onClick={openPopup}>
-            Customize order
-          </button>
-          {isPopupOpen && <CustomizeOrder closePopup={closePopup} />}
+          <UserAutherization>
+            <button className="customize-btn btn" onClick={openPopup}>
+              Customize order
+            </button>
+            {isPopupOpen && <CustomizeOrder closePopup={closePopup} />}
+          </UserAutherization>
         </div>
       </div>
     </div>

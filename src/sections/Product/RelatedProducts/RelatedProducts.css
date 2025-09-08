@@ -14,7 +14,7 @@
   justify-content: center;
   align-items: center;
 }
-.related-products .container .all-btn {
+.related-products .all-btn {
   display: block;
   width: fit-content;
   padding: 16px 24px;
@@ -25,8 +25,10 @@
   border: 1px solid var(--primary-color);
   background-color: var(--primary-color);
   transition: 0.5s;
+  cursor: pointer;
+  margin: 50px auto 0px;
 }
-.related-products .container .all-btn:hover {
+.related-products .all-btn:hover {
   color: white;
   background-color: var(--secondary-color);
 }

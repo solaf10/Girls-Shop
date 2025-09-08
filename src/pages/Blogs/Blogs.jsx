@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import PagenationControllers from "../../components/PagenationControllers/PagenationControllers";
 import usePagenation from "../../custom hooks/usePagenation";
+import SkeletonCard from "../../components/Skeleton/SkeletonCard";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -46,8 +47,8 @@ const Blogs = () => {
       <TopGreenBar />
       <div className="container">
         {loading ? (
-          <div className="loader-holder">
-            <Loader />
+          <div className="holder-blogs">
+            <SkeletonCard count={12} />
           </div>
         ) : blogs.length === 0 ? (
           <p className="no-blogs">There Are No Blogs Right Now !</p>

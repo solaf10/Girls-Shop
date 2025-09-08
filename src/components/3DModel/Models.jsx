@@ -1,15 +1,13 @@
 import "./index.css";
-import img from "../../../public/assets/Images/3d-models-2.png";
 import Card from "../Card/Card";
 import Filter from "../Filter/Filter";
-import { Link, useNavigate } from "react-router-dom";
-import { FaAngleDown } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
-import Loader from "../Loader/Loader";
 import config from "../../Constants/enviroment";
 import PagenationControllers from "../PagenationControllers/PagenationControllers";
 import usePagenation from "../../custom hooks/usePagenation";
+import SkeletonCard from "../Skeleton/SkeletonCard";
 export default function Models() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -74,7 +72,9 @@ export default function Models() {
           <Filter />
         </div>
         {isLoading ? (
-          <Loader />
+          <div className="cards">
+            <SkeletonCard count={12} />
+          </div>
         ) : (
           <div className="products-holder" style={{ width: "100%" }}>
             <div className="cards">

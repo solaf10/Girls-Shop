@@ -1,54 +1,57 @@
-.profile-holder{
-     padding-top: 133px;
+.profile-holder {
+  padding-top: 133px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to left, #00000033, #00000033),
-    url("/public/assets/Images/profile22bg.jpg");
+    url("/assets/Images/profile22bg.jpg");
   background-repeat: no-repeat;
   background-size: 100vw;
   background-position: center;
 }
-.profile-holder .profile-container{
-   width: 50%;
+.profile-holder .profile-container {
+  width: 50%;
   height: 100%;
   padding: 25px;
   background-color: aliceblue;
-  
 }
- .profile-holder .profile-container .profile-img-container{
-      display: flex;
+.profile-holder .profile-container .profile-img-container {
+  display: flex;
   justify-content: center;
   align-items: center;
-    flex-direction: column;
-    gap: 8px;
-.user-image{
+  flex-direction: column;
+  gap: 8px;
+  .user-image {
     width: 100px;
     height: 100px;
     border-radius: 50%;
   }
-  p{
+  p {
     font-size: 16px;
   }
 }
-.profile-holder .profile-container .user-profile-info{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.profile-holder .profile-container .user-profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .profile-holder .profile-container .user-profile-info .profile-sps-info {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   color: rgb(85, 83, 83);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(85, 83, 83);
 }
-.profile-holder .profile-container .user-profile-info .profile-sps-info .icon-title{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-      gap: 8px;
-} 
+.profile-holder
+  .profile-container
+  .user-profile-info
+  .profile-sps-info
+  .icon-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
 /* popup */
 
 .popup-overlay {
@@ -57,53 +60,52 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); 
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999; 
+  z-index: 999;
 }
-
 
 .popup-box-profile {
   background: white;
   padding: 20px;
-   width: 30%;
+  width: 30%;
   max-width: 90%;
-   padding: 20px 30px;
-    margin-top: 133px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  padding: 20px 30px;
+  margin-top: 133px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  label{
-  color: rgb(85, 83, 83);
-  font-size: 12px;
+  label {
+    color: rgb(85, 83, 83);
+    font-size: 12px;
   }
-  input{
-           width: 100%;
-          margin: 6px 0;
-          padding: 8px;
-          margin-bottom: 10px;
-          border: 1px solid var(--nutral-color);
-          border-radius: 4px;
+  input {
+    width: 100%;
+    margin: 6px 0;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--nutral-color);
+    border-radius: 4px;
   }
 }
-.update-pass-btn .change-pass-btn-profile{
+.update-pass-btn .change-pass-btn-profile {
   width: 300px;
 }
-  .update-pass-btn{
+.update-pass-btn {
   display: flex;
   align-items: center;
   justify-content: center;
- button{
-   width: 100%;
-   margin: 6px 0;
-   padding: 8px;
-   background-color: #1d322f;
+  button {
+    width: 100%;
+    margin: 6px 0;
+    padding: 8px;
+    background-color: #1d322f;
     border-radius: 4px;
-    color: #EAECEC;
- }
+    color: #eaecec;
+  }
 }
-.popup-box-profile .password-header{
+.popup-box-profile .password-header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +123,7 @@
 
 .input-wrapper input {
   width: 100%;
-  padding: 8px 35px 8px 10px; 
+  padding: 8px 35px 8px 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
 }
@@ -133,6 +135,3 @@
   font-size: 18px;
   color: #555;
 }
-
-
-

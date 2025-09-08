@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Loader from "../../../components/Loader/Loader";
 import config from "../../../Constants/enviroment";
+import SkeletonCard from "../../../components/Skeleton/SkeletonCard";
 
 const SpecificProducts = () => {
   /* const products = [
@@ -112,7 +113,9 @@ const SpecificProducts = () => {
           </p>
         </div>
         {isLoading ? (
-          <Loader />
+          <div className="cards">
+            <SkeletonCard count={8} />
+          </div>
         ) : (
           <>
             <div className="cards">{productCards}</div>

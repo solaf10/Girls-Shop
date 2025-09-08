@@ -10,6 +10,7 @@ import RecentBlogs from "../../sections/HomeSections/RecentBlogs/RecentBlogs";
 import Reviews from "../../sections/HomeSections/Reviews/Reviews";
 import ReviewForm from "../../sections/ReviewForm/ReviewForm";
 import SpecificProducts from "../../sections/HomeSections/SpecificProducts/SpecificProducts";
+import UserAutherization from "../../components/UserAutherization/UserAutherization";
 
 const Home = () => {
   return (
@@ -21,7 +22,9 @@ const Home = () => {
       <Choice />
       <SpecificProducts />
       <NewProducts />
-      <CustomOrder />
+      <UserAutherization>
+        <CustomOrder />
+      </UserAutherization>
       <RecentBlogs />
       <Reviews />
       <ReviewForm />

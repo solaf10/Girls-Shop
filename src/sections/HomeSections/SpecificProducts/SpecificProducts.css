@@ -7,7 +7,7 @@
   margin-top: 90px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 60px 27px;
+  gap: 30px;
 }
 .specific-products .container .btn-holder {
   margin-top: 60px;
