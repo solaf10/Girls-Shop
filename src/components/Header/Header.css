@@ -23,7 +23,7 @@ header .container .holder,
   gap: 0.6vw;
 }
 header .container .holder .language {
-  margin-left: 5.5vw;
+  /* margin-left: 5.5vw; */
 }
 .language .globe-icon {
   font-size: 24px;

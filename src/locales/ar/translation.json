@@ -164,5 +164,9 @@
     "haveAccount": "هل لديك حساب؟",
     "login": "تسجيل الدخول",
     "success": "تم إنشاء الحساب بنجاح!"
+  },
+  "mainCategories": {
+    "interior": "تصميم داخلي",
+    "exterior": "تصميم خارجي"
   }
 }

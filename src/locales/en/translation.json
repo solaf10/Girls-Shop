@@ -164,5 +164,9 @@
     "haveAccount": "Have an account?",
     "login": "Log In",
     "success": "Successfully signed up!"
+  },
+  "mainCategories": {
+    "interior": "Interior Design",
+    "exterior": "Exterior Design"
   }
 }
