@@ -1,18 +1,31 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./UpdatePasswordCard.css";
 
-const OTPInput = ({ setIsComplete }) => {
+const OTPInput = ({ index, inputsRefs, setIsComplete }) => {
   const [otpNum, setOtpNum] = useState("");
-  if (otpNum) {
-    setIsComplete(true);
-  } else {
-    setIsComplete(false);
-  }
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    if (/^\d?$/.test(value)) {
+      setOtpNum(value);
+
+      if (value && index < inputsRefs.current.length - 1) {
+        inputsRefs.current[index + 1].focus();
+      }
+
+      const allFilled = inputsRefs.current.every((input) => input.value !== "");
+      setIsComplete(allFilled);
+    }
+  };
+
   return (
     <input
-      type="text"
+      type="number"
+      required
+      maxLength={1}
       value={otpNum}
-      onChange={(e) => setOtpNum(e.target.value)}
+      ref={(el) => (inputsRefs.current[index] = el)}
+      onChange={handleChange}
       style={{
         borderColor: otpNum ? "var(--primary-color)" : "#66666",
       }}

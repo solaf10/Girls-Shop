@@ -1,5 +1,226 @@
 {
-  "home": "home",
-  "From cozy sofas to elegant dining sets, discover furniture that turns your house into a home. Let me know if you d like a different tone or style!": "From cozy sofas to elegant dining sets, discover furniture that turns your house into a home. Let me know if you d like a different tone or style!"
-  
+  "header": {
+    "customize": "Need to customize your own design?",
+    "showrooms": "Showrooms",
+    "helpCenter": "Help Center"
+  },
+  "navbar": {
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About",
+    "blogs": "Blogs",
+    "contact": "Contact Us",
+    "designers": "Designers",
+    "userName": "User Name",
+    "userProfile": "User Profile",
+    "settings": "Settings",
+    "logout": "Log Out",
+    "language": "Language"
+  },
+  "homeHero": {
+    "title": "Style Meets Comfort Furniture Made for You",
+    "desc": "From cozy sofas to elegant dining sets, discover furniture that turns your house into a home. Let me know if you'd like a different tone or style!",
+    "shopNow": "Shop Now",
+    "customizeOrder": "Customize Order"
+  },
+  "experts": {
+    "yearsExperience": "Years of Experience",
+    "openedInCountry": "Opened in the Country",
+    "furnitureSold": "Furniture Sold",
+    "designsDownloaded": "Block Designs Downloaded"
+  },
+  "features": {
+    "title": "More Than Just a Furniture Store – Your Source for Architectural Blocks",
+    "subtitle": "Explore a unique blend of quality furniture and essential architectural resources, all in one place.",
+    "premiumTitle": "Premium Furniture:",
+    "premiumDesc": "Discover beautifully crafted furniture for every space.",
+    "blocksTitle": "Architectural Blocks:",
+    "blocksDesc": "Access downloadable architectural blocks for your design projects.",
+    "allInOneTitle": "All-in-One Resource:",
+    "allInOneDesc": "Elevate your projects with furniture and design tools in one place."
+  },
+  "mainCategories": {
+    "title": "Browse As",
+    "subtitle": "From elegant interiors to inspiring exteriors and artistic scenes — browse our categories and find the perfect touch for every corner of your home.",
+    "interior": "Interior Design",
+    "scenes": "Scenes",
+    "exterior": "Exterior Design"
+  },
+  "choice": {
+    "title": "The Best Furniture Manufacturer of your choice",
+    "description": "At ArchiLink, we craft high-quality, stylish, and durable furniture designed to elevate any space. With expert craftsmanship and premium materials, we bring comfort, elegance, and functionality to your home or business. Choose excellence. Choose ArchiLink."
+  },
+  "specificProducts": {
+    "title": "Top Sellers",
+    "subtitle": "Our top sellers are carefully selected from the world’s best products, offering you number-one quality and trusted excellence.",
+    "viewAll": "View All"
+  },
+  "newProducts": {
+    "title": "Shop by Category",
+    "subtitle": "Get the perfect piece for every space—living, dining, bedroom & more—all now with special promo prices!",
+    "checkAll": "Check All",
+    "categories": {
+      "furniture": "Furniture",
+      "kitchen": "Kitchen",
+      "bathroom": "Bathroom",
+      "childroom": "Childroom",
+      "streetLighting": "Street lighting",
+      "decoration": "Decoration",
+      "outdoorFurniture": "Outdoor furniture"
+    }
+  },
+  "customOrder": {
+    "title": "We help you make Modern Interior Design",
+    "subtitle": "Bringing your vision to life with stylish, functional pieces for the perfect modern space.",
+    "box1": {
+      "title": "Inspire Your Space",
+      "desc": "We bring contemporary design ideas to life, transforming any room into a stylish, functional space."
+    },
+    "box2": {
+      "title": "Tailored to You",
+      "desc": "Your vision is our guide. We help you curate a personalized design that perfectly reflects your style and needs."
+    },
+    "button": "Make Your Own Design"
+  },
+  "recentBlogs": {
+    "title": "Recent Blog",
+    "subtitle": "Explore fresh insights from the world of interior and exterior design. Our recent blogs bring you expert advice, décor trends, and scene styling inspiration — all in one place.",
+    "viewAll": "View All Blogs",
+    "posts": {
+      "post1": { "title": "First Time Home Owner Ideas" },
+      "post2": { "title": "First Time Home Owner Ideas" },
+      "post3": { "title": "First Time Home Owner Ideas" }
+    }
+  },
+  "reviews": {
+    "title": "What people are saying about us"
+  },
+  "reviewForm": {
+    "title": "Your Feedback Matters: Share Your Review",
+    "placeholder": "Your Review",
+    "button": "Send"
+  },
+  "footer": {
+    "title": "Girl’Shop",
+    "pages": "Pages",
+    "others": "Others",
+    "contactInfo": "Contact Info",
+    "home": "Home",
+    "shop": "Shop",
+    "blogs": "Blogs",
+    "about": "About",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "contact": "Contact Us",
+    "rights": "© Girls'Shop 2025 - All Rights Reserved"
+  },
+  "designer": {
+    "title": "Designers",
+    "searchPlaceholder": "Search Designer ...",
+    "searchAlt": "search",
+    "countries": "Countries",
+    "creative": "Creative",
+    "noMatches": "We couldn't find a designer matching your search!"
+  },
+  "login": {
+    "welcomeTitle": "Sign In & Style Your Space",
+    "welcomeDesc": "Log in to explore exquisite furniture collections, manage your orders, and bring your dream home to life with ease and elegance.",
+    "title": "Log in",
+    "error": "Invalid password or email",
+    "facebook": "Continue with Facebook",
+    "google": "Continue with Google",
+    "or": "OR",
+    "email": "Email",
+    "password": "Password",
+    "show": "Show",
+    "hide": "Hide",
+    "forgot": "Forget your password",
+    "submit": "LogIn",
+    "noAccount": "Don’t have an account?",
+    "signup": "Sign up",
+    "success": "Logged in successfully!"
+  },
+  "signup": {
+    "welcomeTitle": "Your plan includes",
+    "plan": {
+      "projects": "Unlimited projects and resources",
+      "templates": "Unlimited templates",
+      "storage": "Unlimited storage",
+      "views": "List, Board, and Calendar views..."
+    },
+    "title": "Sign Up",
+    "error": "Password did not match",
+    "facebook": "Continue with Facebook",
+    "google": "Continue with Google",
+    "or": "OR",
+    "email": "Email",
+    "phone": "Phone Number",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "show": "Show",
+    "hide": "Hide",
+    "forgot": "Forget your password",
+    "submit": "Sign Up",
+    "haveAccount": "Have an account?",
+    "login": "Log In",
+    "success": "Successfully signed up!"
+  },
+  "OTPSend":{
+  "code not send?":"code not send?",
+  "Resend":"Resend"
+  },
+  "ForgetPassword":{
+    "Email":"Email",
+    "Back To LogIn":"Back To LogIn"
+  },
+  "ChangePassword":{
+  "Password":"Password",
+  "Confirm Password":"Confirm Password"
+  },
+  "Blogs":{
+    "There Are No Blogs Right Now !":"There Are No Blogs Right Now !",
+    "No blog found matching your input.":"No blog found matching your input."
+  },
+  "BlogsDetails":{
+    "Previous Post":"Previous Post",
+    "Next Post":"Next Post",
+    "Comment:":"Comment:",
+    "Batoul abdulHadi":"Batoul abdulHadi",
+    "5 days ago":"5 days ago",
+    "Such a well-written piece! Insightful and inspiring — keepup the amazing work!":"Such a well-written piece! Insightful and inspiring — keepup the amazing work!",
+    "Post a comment":"Post a comment",
+    "Your Message":"Your Message",
+    "Save my name, email, and website in this browser for thenext time I comment.":"Save my name, email, and website in this browser for thenext time I comment.",
+    "Send":"Send",
+    "Search":"Search",
+    "Recent Posts":"Recent Posts"
+  },
+  "FullCart":{
+  "cart": "Cart",
+  "product": "Product",
+  "price": "Price",
+  "color": "Color",
+  "amount": "Amount",
+  "total_price": "Total Price",
+  "return_shopping": "Return Shopping",
+  "over_all": "Over All",
+  "sub_total": "Sub Total",
+  "shipping": "Shipping",
+  "next_step": "Next step",
+  "discount": "Discount",
+  "total": "Total",
+  "continue_checkout": "Continue to check out",
+  "product_deleted_success": "Product was deleted from the cart successfully!!",
+  "process_failed": "Process failed!!"
+  },
+  "EmptyCart":{
+    "Your cart is currently empty.":"Your cart is currently empty.",
+    "Return to shop":"Return to shop"
+  },
+  "ComplateCart":{
+    "Return to shop":"Return to shop",
+    "Your request has been successfully completed.":"Your request has been successfully completed.",
+    "ourteam":"Our team will review and process it shortly, and we will contact you with updates regarding your order status.Thank you for choosing us."
+  }
+
 }

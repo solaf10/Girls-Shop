@@ -1,8 +1,10 @@
 import React from 'react'
 import './ComplateCart.css'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 const ComplateCart = () => {
-    const navigate = useNavigate()
+    const {t} = useTranslation();
+    const navigate = useNavigate();
     const handleClick = () => {
         navigate('/shop');
     };
@@ -11,12 +13,12 @@ return (
         <div className="container">
             <div className="box">
                 <img src="/public/assets/Images/CheckCircle.png" alt="" />
-                <h3>Your request has been successfully completed.</h3>
-                <p>Here you can write text Here you can write text Here you can write text Here you can write text
-                    Here you can write text Here you can write text Here you can write text Here you can write text 
-                    Here you can write text Here you can write text 
-                    Here you can write text</p>
-                <button onClick={handleClick}>Return to shop</button>
+                <h3>{t(`ComplateCart.Your request has been successfully completed.`)}</h3>
+                <p>{t(`ComplateCart.Our team will review and process it shortly, 
+                    and we will contact you with updates regarding your order status. 
+                    Thank you for choosing us.`)}
+                </p>
+                <button onClick={handleClick}>{t(`ComplateCart.Return to shop`)}</button>
             </div>
         </div>
     </div>

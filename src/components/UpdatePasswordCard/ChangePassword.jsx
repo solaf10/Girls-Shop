@@ -2,8 +2,10 @@ import "./UpdatePasswordCard.css";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { useTranslation } from "react-i18next";
 
 const ChangePassword = () => {
+  const {t} = useTranslation();
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isPaswordShow, setIsPasswordShow] = useState(false);
@@ -13,14 +15,14 @@ const ChangePassword = () => {
     <form>
       <div className="new-password password-holder">
         <label htmlFor="new-password">
-          <span className="label-text">Password</span>
+          <span className="label-text">{t(`ChangePassword.Password`)}</span>
           <div className="show-password-holder">
             <span>{isPaswordShow ? "Hide" : "Show"}</span>
             <div
               className="icon-holder"
               onClick={() => setIsPasswordShow((prev) => !prev)}
             >
-              {isPaswordShow ? (
+              {!isPaswordShow ? (
                 <AiFillEye className="show-password-icon" />
               ) : (
                 <AiFillEyeInvisible className="show-password-icon" />
@@ -32,20 +34,21 @@ const ChangePassword = () => {
           type={isPaswordShow ? "text" : "password"}
           placeholder="********"
           id="new-password"
+          required
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
       <div className="password-holder password-confirmation-holder">
         <label htmlFor="password-confirmation">
-          <span className="label-text">Confirm Password</span>
+          <span className="label-text">{t(`ChangePassword.Confirm Password`)}</span>
           <div className="show-password-holder">
             <span>{isConfirmationShow ? "Hide" : "Show"}</span>
             <div
               className="icon-holder"
               onClick={() => setIsConfirmationShow((prev) => !prev)}
             >
-              {isConfirmationShow ? (
+              {!isConfirmationShow ? (
                 <AiFillEye className="show-password-icon" />
               ) : (
                 <AiFillEyeInvisible className="show-password-icon" />
@@ -58,14 +61,18 @@ const ChangePassword = () => {
           placeholder="********"
           id="password-confirmation"
           value={confirmPassword}
+          required
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
       </div>
       <input
         className={
-          password && confirmPassword ? "password-btn" : "password-btn disabled"
+          password && confirmPassword && password == confirmPassword
+            ? "password-btn"
+            : "password-btn disabled"
         }
         type="submit"
+        disabled={!password || !confirmPassword || password != confirmPassword}
         value="Change"
         onClick={() => navigate("/updatePassword/changed")}
       />

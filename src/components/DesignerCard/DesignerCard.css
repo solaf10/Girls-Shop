@@ -1,50 +1,67 @@
-.designer-card{
-    padding: 16px 24px;
-    border: 1px solid #C0C0C0;
-    margin-top: 40px;
- 
+.designer-card {
+  padding: 16px 24px;
+  border: 1px solid #c0c0c0;
+  margin-top: 40px;
 }
-.designer-card .designer-info{
-display: flex;
-align-items: center;
-gap: 16px;
+.designer-card .designer-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
-.designer-card .designer-info .more-info-designer{
-    display: flex;
-flex-direction: column;
-gap: 18px;
+.designer-card .designer-info .more-info-designer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.designer-card .designer-info .more-info-designer .designer-name {
+  font-weight: 600;
+  font-size: 20px;
+}
+.designer-card .designer-info .more-info-designer .designer-location,
+.designer-card .designer-info .more-info-designer .designer-num {
+  display: flex;
+  gap: 8px;
+  font-weight: 200;
+  font-size: 16px;
+}
 
-}
-.designer-card .designer-info .more-info-designer .designer-name{
-    font-weight: 600;
-    font-size: 20px;
-}
-.designer-card .designer-info .more-info-designer .designer-location, .designer-card .designer-info .more-info-designer .designer-num{
-    display: flex;
-    gap: 8px;
-     font-weight: 200;
-    font-size: 16px;
+.designer-card .designer-work-swipper {
+  padding: 16px 0;
+  img {
+    width: 162px;
+    height: 148px;
+  }
 }
 
-.designer-card .designer-work-swipper{
-    padding: 16px 0;
-    img{
-        width: 162px;
-        height: 148px;
+.designer-card .designer-work-swipper img:hover {
+  transform: scale(1.4);
+}
+.designer-card .designer-work-swipper img {
+  width: 162px;
+  height: 148px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.designer-card .designer-work-swipper img:hover {
+  transform: translateY(-8px) scale(1.15);
+  z-index: 10;
+}
+@media (max-width: 992px) {
+  .designer-card .designer-work-swipper {
+    img {
+      width: 75px;
+      height: 75px;
     }
-}
+  }
+  .designer-card .designer-work-swipper img {
+    width: 75px;
+    height: 75px;
+  }
 
-.designer-card .designer-work-swipper img:hover{
-    transform: scale(1.4);
- 
-}
-
-@media  (max-width:992px) {
-    .designer-card .designer-work-swipper{
-   
-    img{
-        width: 75px;
-        height:75px;
-    }
-}
+  .designer-card .designer-work-swipper img:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
 }

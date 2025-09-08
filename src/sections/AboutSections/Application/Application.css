@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: flex-end;
   margin: 0px 90px;
+  padding-left: 30%;
 }
 .application .container .text {
   display: flex;
@@ -68,13 +69,5 @@
     left: 90px;
     top: 5px;
     z-index: 1;
-  }
-}
-@media (max-width: 1192px){
-  .application .phone-img .one{
-    display: none;
-  }
-  .application .phone-img .two{
-    display: none;
   }
 }

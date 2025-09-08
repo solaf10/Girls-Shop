@@ -22,7 +22,7 @@ const Cart = () => {
       {cartProduct.length == 0 ? (
         <EmptyCart />
       ) : (
-        <FullCart cartProduct={cartProduct} />
+        <FullCart cartProduct={cartProduct} setCartProduct={setCartProduct} />
       )}
     </div>
   );

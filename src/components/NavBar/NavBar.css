@@ -49,7 +49,24 @@ nav .container .icons {
   display: flex;
   align-items: center;
   /* gap: 24px; */
-  gap: 1.7vw;
+  /* gap: 1.7vw; */
+
+  button {
+    background-color: transparent;
+    font-size: inherit;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+  }
+  .active,
+  button:hover {
+    background-color: #ccc;
+    background: #eee;
+    border-radius: 50%;
+  }
 }
 nav .container .icons .icon {
   cursor: pointer;
