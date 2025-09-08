@@ -1,21 +1,19 @@
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next'; 
 import './UserProfile.css'
-import { AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMail, AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { LuPhone } from "react-icons/lu";
 import { GrLocation } from "react-icons/gr";
 import { BsWallet2 } from "react-icons/bs";
-import { useState } from 'react';
 import { IoCloseOutline } from "react-icons/io5";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { TbEdit } from "react-icons/tb";
 
 const UserProfile = () => {
+  const { t } = useTranslation(); 
   const [isOpen, setIsOpen] = useState(false);
-
   const [showOldPass, setShowOldPass] = useState(false);
   const [showNewPass, setShowNewPass] = useState(false);
   const [showConfirmPass, setShowConfirmPass] = useState(false);
-
- 
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageChange = (e) => {
@@ -28,7 +26,8 @@ const UserProfile = () => {
   return (
     <div className='profile-holder'>
       <div className='profile-container'>
-        <h3>My Profile</h3>
+      
+        <h3>{t('userProfile.myProfile')}</h3>
         <div className='profile-img-container'>
           <div className="image-wrapper">
             <img 
@@ -47,14 +46,14 @@ const UserProfile = () => {
               onChange={handleImageChange} 
             />
           </div>
-          <p>Johe smith</p>
+          <p>{t('userProfile.userName')}</p>
         </div>
 
         <div className="user-profile-info">
           <div className='email-profile profile-sps-info'>
             <div className='icon-title'>
               <AiOutlineMail />
-              <p>Email</p>
+              <p>{t('userProfile.email')}</p>
             </div>
             <p>Johesmith@gmail.com</p>
           </div>
@@ -62,7 +61,7 @@ const UserProfile = () => {
           <div className='phone-profile profile-sps-info '>
             <div className='icon-title'>
               <LuPhone />
-              <p>Phone</p>
+              <p>{t('userProfile.phone')}</p>
             </div>
             <p>+963988136449</p>
           </div>
@@ -70,7 +69,7 @@ const UserProfile = () => {
           <div className='area-profile profile-sps-info'>
             <div className='icon-title'>
               <GrLocation />
-              <p>Area</p>
+              <p>{t('userProfile.area')}</p>
             </div>
             <p>New York, USA</p>
           </div>
@@ -78,28 +77,33 @@ const UserProfile = () => {
           <div className='balancy-profile profile-sps-info'>
             <div className='icon-title'>
               <BsWallet2 />
-              <p>Balance</p>
+              <p>{t('userProfile.balance')}</p>
             </div>
             <p>0 $</p>
           </div>
-            <div className='update-pass-btn'><button className="change-pass-btn-profile" onClick={() => setIsOpen(true)}>Change Password</button></div> 
+          <div className='update-pass-btn'>
+            <button className="change-pass-btn-profile" onClick={() => setIsOpen(true)}>
+              {t('userProfile.changePasswordBtn')}
+            </button>
+          </div> 
 
           {isOpen && (
             <div className="popup-overlay">
               <div className="popup-box-profile">
-                <button onClick={() => setIsOpen(false)}><IoCloseOutline /></button>
+                <button onClick={() => setIsOpen(false)}>
+                  <IoCloseOutline />
+                </button>
                 <div className='password-header'>
-                  <h4>Change Your Password</h4>
+                  <h4>{t('userProfile.changePasswordPopupTitle')}</h4>
                 </div>
 
                 <div>
-                  <label>Your Email</label>
+                  <label>{t('userProfile.yourEmail')}</label>
                   <input type='email' />
                 </div>
 
-                
                 <div className="password-input">
-                  <label>Old Password</label>
+                  <label>{t('userProfile.oldPassword')}</label>
                   <div className="input-wrapper">
                     <input 
                       type={showOldPass ? "text" : "password"} 
@@ -113,9 +117,8 @@ const UserProfile = () => {
                   </div>
                 </div>
 
-              
                 <div className="password-input">
-                  <label>New Password</label>
+                  <label>{t('userProfile.newPassword')}</label>
                   <div className="input-wrapper">
                     <input 
                       type={showNewPass ? "text" : "password"} 
@@ -129,9 +132,8 @@ const UserProfile = () => {
                   </div>
                 </div>
 
-              
                 <div className="password-input">
-                  <label>Confirm Password</label>
+                  <label>{t('userProfile.confirmPassword')}</label>
                   <div className="input-wrapper">
                     <input 
                       type={showConfirmPass ? "text" : "password"} 
@@ -146,7 +148,9 @@ const UserProfile = () => {
                 </div>
 
                 <div className='update-pass-btn'>
-                  <button>Update Password</button>
+                  <button>
+                    {t('userProfile.updatePasswordBtn')}
+                  </button>
                 </div>
               </div>
             </div>
