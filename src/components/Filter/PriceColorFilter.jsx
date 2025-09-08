@@ -2,7 +2,9 @@ import { useState } from "react";
 import "./Filter.css";
 
 function PriceColorFilter() {
-  const [price, setPrice] = useState([0, 1000]);
+  const [price, setPrice] = useState(500); // قيمة وحدة بدل مصفوفة
+  const [chosenColor, setChosenColor] = useState(null);
+
   const colors = [
     "#ddd",
     "#a00",
@@ -24,45 +26,22 @@ function PriceColorFilter() {
     "#000",
   ];
 
-  const handleMinChange = (e) => {
-    const newMin = parseInt(e.target.value);
-    if (newMin <= price[1]) {
-      setPrice([newMin, price[1]]);
-    }
-  };
-
-  const handleMaxChange = (e) => {
-    const newMax = parseInt(e.target.value);
-    if (newMax >= price[0]) {
-      setPrice([price[0], newMax]);
-    }
-  };
-
   return (
     <div className="filter-container">
       <hr />
       <div className="filter-section">
         <p className="title">Price</p>
 
-        <form className="range-slider">
+        <div className="range-slider">
           <input
             type="range"
             min="0"
             max="1000"
-            value={price[0]}
-            onChange={handleMinChange}
+            value={price}
+            onChange={(e) => setPrice(parseInt(e.target.value))}
           />
-          <input
-            type="range"
-            min="0"
-            max="1000"
-            value={price[1]}
-            onChange={handleMaxChange}
-          />
-        </form>
-        <p className="price-text">
-          Price: ${price[0]} - ${price[1]}
-        </p>
+        </div>
+        <p className="price-text">Price: ${price}</p>
       </div>
 
       <hr />
@@ -71,12 +50,23 @@ function PriceColorFilter() {
         <p className="title">Color</p>
 
         <div className="color-options">
-          {colors.map((color, idx) => (
-            <div
-              key={idx}
-              className="color-circle"
-              style={{ backgroundColor: color }}
-            ></div>
+          {colors.map((color, i) => (
+            <div key={i} className="holder">
+              <label
+                className={
+                  color === chosenColor ? "active choose-color" : "choose-color"
+                }
+                style={{ backgroundColor: color }}
+                htmlFor={`color-${i}`}
+              ></label>
+              <input
+                type="radio"
+                name="color"
+                id={`color-${i}`}
+                onChange={() => setChosenColor(color)}
+                checked={chosenColor === color}
+              />
+            </div>
           ))}
         </div>
       </div>

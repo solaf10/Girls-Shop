@@ -5,67 +5,81 @@
   display: flex;
   gap: 23px;
 }
-.fullcart .info .product-table,
+.fullcart .info .pro,
 .fullcart .info .price,
 hr,
-.fullcart .pro .table .count {
+.fullcart .pro .table .product-number {
   border: solid 1px #e4e7e9;
 }
-.fullcart .product-table {
-  width: 60%;
-  table {
+.fullcart .info .pro {
+  width: 75%;
+  .title {
+    padding: 20px 24px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #191c1f;
+  }
+  .table {
     width: 100%;
   }
 }
-.fullcart .info .product-table table caption {
-  text-align: start;
-  padding: 20px 24px;
-  font-weight: 400;
-}
-.fullcart .info .product-table table thead tr {
+.fullcart .info .pro .table .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 10px;
-  width: 100%;
+  padding: 10px 24px;
   background-color: #e4e7e9;
   color: #475156;
   gap: 24px;
-}
-.fullcart .info .product-table table tbody tr {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 10px;
-  width: 100%;
-}
-.fullcart tbody tr .first-td {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.fullcart tbody tr .third-td {
-  display: flex;
-  align-items: center;
-  border: solid 1px #e4e7e9;
-  span {
-    padding: 0px 15px;
+  .td {
+    width: 27%;
+    text-align: center;
   }
 }
-.fullcart .product-table a {
-  display: inline-block;
-  padding: 16px 24px;
-  border: 1px solid #23262f;
-  color: #23262f;
-  background-color: white;
-  font-weight: 600;
-  font-size: 14px;
-  margin: 10px;
-  margin-top: 0px;
-  transition: 0.5s;
-  cursor: pointer;
+.fullcart .body .row-pro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 24px;
+  gap: 30;
 }
-.fullcart .product-table a:hover {
+.fullcart .body .img-pro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  /* width: 27%; */
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+.fullcart .body .product-number {
+  width: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
+}
+
+.fullcart .pro .ret {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  a {
+    padding: 16px 24px;
+    border: 1px solid #23262f;
+    color: #23262f;
+    background-color: white;
+    transition: 0.5s;
+    p {
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}
+.fullcart .pro a:hover {
   background-color: #1d322f;
   color: white;
 }
@@ -75,6 +89,7 @@ hr,
   gap: 9px;
   width: 40%;
   padding: 24px 20px;
+  height: fit-content;
 }
 .fullcart .price .title {
   p {
@@ -119,17 +134,4 @@ hr,
 .fullcart .price button:hover {
   color: white;
   background-color: var(--secondary-color);
-}
-@media (max-width: 768px) {
-  .fullcart .info .product-table {
-    overflow-x: auto;
-  }
-  .fullcart .info .price {
-    width: fit-content;
-  }
-}
-@media (max-width: 500px) {
-  .fullcart .container .info {
-    flex-direction: column;
-  }
 }

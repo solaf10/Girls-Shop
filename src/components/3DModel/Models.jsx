@@ -1,13 +1,13 @@
 import "./index.css";
-import img from "../../../public/assets/Images/3d-models-2.png";
 import Card from "../Card/Card";
 import Filter from "../Filter/Filter";
-import { Link, useNavigate } from "react-router-dom";
-import { FaAngleDown } from "react-icons/fa6";
-import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
-import Loader from "../Loader/Loader";
 import config from "../../Constants/enviroment";
+import PagenationControllers from "../PagenationControllers/PagenationControllers";
+import usePagenation from "../../custom hooks/usePagenation";
+import SkeletonCard from "../Skeleton/SkeletonCard";
 export default function Models() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -16,80 +16,6 @@ export default function Models() {
   const handleClick = (id) => {
     navigate(`/shop/${id}`);
   };
-  /* const products = [
-    {
-      id: 1,
-      image: img,
-      name: "XORA corner desk",
-      price: "$560.00",
-      realPrice: "$600.00",
-      color: "#eee",
-    },
-    {
-      id: 2,
-      image: img,
-      name: "XORA corner desk",
-      price: "$560.00",
-      realPrice: "$600.00",
-      color: "#eee",
-    },
-    {
-      id: 3,
-      image: img,
-      name: "XORA corner desk",
-      price: "$560.00",
-      realPrice: "$600.00",
-      color: "#eee",
-    },
-    {
-      id: 4,
-      image: img,
-      name: "XORA corner desk",
-      price: "$560.00",
-      realPrice: "$600.00",
-      color: "#eee",
-    },
-    {
-      id: 5,
-      image: img,
-      name: "XORA corner desk",
-      price: "$560.00",
-      realPrice: "$600.00",
-      color: "#eee",
-    },
-    {
-      id: 6,
-      image: img,
-      name: "XORA corner desk",
-      price: "$560.00",
-      realPrice: "$600.00",
-      color: "#eee",
-    },
-    {
-      id: 7,
-      image: img,
-      name: "XORA corner desk",
-      price: "$560.00",
-      realPrice: "$600.00",
-      color: "#eee",
-    },
-    {
-      id: 8,
-      image: img,
-      name: "XORA corner desk",
-      price: "$560.00",
-      realPrice: "$600.00",
-      color: "#eee",
-    },
-    {
-      id: 9,
-      image: img,
-      name: "XORA corner desk",
-      price: "$560.00",
-      realPrice: "$600.00",
-      color: "#eee",
-    },
-  ]; */
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -103,9 +29,31 @@ export default function Models() {
         console.log(err);
       });
   }, []);
+  const {
+    goToPage,
+    nextPage,
+    currentPage,
+    currentCards,
+    totalPages,
+    isBtnDisabled,
+  } = usePagenation(products);
+
+  const scrollEl = useRef(null);
+
+  useEffect(() => {
+    /* window.scrollTo({
+      top: scrollEl.offse,
+      left: 0,
+      behavior: "smooth",
+    }); */
+    if (scrollEl.current) {
+      scrollEl.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [currentPage]);
+
   return (
     <div className="models">
-      <h3>3D Scenesv</h3>
+      <h3 ref={scrollEl}>Our Products</h3>
       {/* <div className="topBar">
         <div className="search">
           <input placeholder="Search products..."></input>
@@ -124,21 +72,34 @@ export default function Models() {
           <Filter />
         </div>
         {isLoading ? (
-          <Loader />
-        ) : (
           <div className="cards">
-            {products.map((product) => (
-              <Card
-                onClick={() => {
-                  handleClick(product.id);
-                }}
-                key={product.id}
-                image={product.image}
-                name={product.name}
-                price={product.price}
-                realPrice={product.realPrice}
-              />
-            ))}
+            <SkeletonCard count={12} />
+          </div>
+        ) : (
+          <div className="products-holder" style={{ width: "100%" }}>
+            <div className="cards">
+              {currentCards.map((product) => (
+                <Card
+                  onClick={() => {
+                    handleClick(product.id);
+                  }}
+                  key={product.id}
+                  id={product.id}
+                  image={product.image}
+                  name={product.name}
+                  price={product.price}
+                  sale={product.sale}
+                  realPrice={product.realPrice}
+                />
+              ))}
+            </div>
+            <PagenationControllers
+              goToPage={goToPage}
+              nextPage={nextPage}
+              currentPage={currentPage}
+              totalPages={totalPages}
+              isBtnDisabled={isBtnDisabled}
+            />
           </div>
         )}
       </div>

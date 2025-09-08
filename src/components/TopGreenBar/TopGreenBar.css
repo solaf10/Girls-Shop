@@ -23,4 +23,9 @@
   font-size: 14px;
   color: #eaecec;
   text-transform: capitalize;
+  transition: 0.5s;
+}
+
+.top-green-bar .go-to-this-page:hover {
+  font-weight: bold;
 }

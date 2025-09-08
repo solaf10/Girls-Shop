@@ -1,9 +1,18 @@
+import { useEffect, useState } from "react";
 import "./ReviewForm.css";
-import { useTranslation } from "react-i18next";
+import axios from "axios";
 
 const ReviewForm = () => {
   const { t } = useTranslation();
-
+  const [review , setReview] = useState("")
+  const sendReview = () =>  {
+  axios
+  .post("http://localhost:8000/reviews" , {
+    yourReview:content 
+  })
+  .then( (res) => setReview(res))
+  .catch( (err) => console.log(err))
+  }
   return (
     <div className="review-form">
       <div className="container">
@@ -17,6 +26,7 @@ const ReviewForm = () => {
           <form>
             <textarea
               className="review-input"
+              onChange={(event)=>setReview(event.target.value)}
               placeholder={t("reviewForm.placeholder")}
             ></textarea>
             <input

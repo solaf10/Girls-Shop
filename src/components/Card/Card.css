@@ -4,9 +4,16 @@
   transition: all 0.2s ease-in-out;
   height: fit-content;
   width: 100%;
-  max-width: 300px;
+  /* max-width: 300px; */
+  max-width: 100%;
   overflow: hidden;
   position: relative;
+  span.real-price {
+    margin-left: 18px;
+    font-size: 14px;
+    color: #c0c0c0;
+    text-decoration: line-through;
+  }
 }
 .models .products .cards .card div {
   position: relative;

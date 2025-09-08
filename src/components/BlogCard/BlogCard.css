@@ -25,3 +25,15 @@
 }
 @media (max-width: 500px) {
 }
+.blog-card {
+  cursor: pointer;
+}
+.blog-card:hover .image {
+  overflow: hidden;
+  img {
+    transition: 0.5s;
+  }
+}
+.blog-card:hover .image img {
+  transform: scale(1.05);
+}

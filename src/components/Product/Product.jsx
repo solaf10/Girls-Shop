@@ -9,7 +9,6 @@ import {
   FaStar,
   FaTwitter,
 } from "react-icons/fa";
-import { AiOutlineDown } from "react-icons/ai";
 import { FiDownload } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
@@ -18,38 +17,12 @@ import axios from "axios";
 import Loader from "../Loader/Loader";
 import config from "../../Constants/enviroment";
 import { toast } from "react-toastify";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import RelatedProducts from "../../sections/Product/RelatedProducts/RelatedProducts";
+import usePrivateRoute from "../../custom hooks/usePrivateRoute";
+import UserAutherization from "../UserAutherization/UserAutherization";
 export default function Product() {
-  /* const productsDetails = [
-    {
-      id: 1,
-      image: "../../../public/assets/Images/product.png",
-      title: "First Time Home Owner Ideas",
-      price: "$233.00",
-      salePrice: "$200.00",
-    },
-    {
-      id: 2,
-      image: "../../../public/assets/Images/product.png",
-      title: "First Time Home Owner Ideas",
-      price: "$233.00",
-      salePrice: "$200.00",
-    },
-    {
-      id: 3,
-      image: "../../../public/assets/Images/product.png",
-      title: "First Time Home Owner Ideas",
-      price: "$233.00",
-      salePrice: "$200.00",
-    },
-    {
-      id: 4,
-      image: "../../../public/assets/Images/product.png",
-      title: "First Time Home Owner Ideas",
-      price: "$233.00",
-      salePrice: "$200.00",
-    },
-  ]; */
-  const [productsDetails, setProductsDetails] = useState([]);
+  const [productsDetails, setProductsDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
   const [chosencolor, setchosencolor] = useState("");
@@ -96,9 +69,6 @@ export default function Product() {
   };
 
   const navigate = useNavigate();
-  const handleClickToCart = () => {
-    navigate(`/cart`);
-  };
   const params = useParams();
 
   // const product = productsDetails.find((b) => b.id === parseInt(id));
@@ -109,8 +79,27 @@ export default function Product() {
   };
   const [addToCart, setAddToCart] = useState(false);
   const handleClickAddToCart = () => {
-    setAddToCart((prev) => !prev);
+    axios
+      .post("http://localhost:8000/cartProducts", {
+        id: id,
+        name: name,
+        image: image,
+        price: price,
+        color: chosencolor,
+        amount: count,
+      })
+      .then((res) => setAddToCart(res.data))
+      .catch((err) => console.log(err));
+    navigate(`/cart`);
   };
+  const handlePrivateRoute = usePrivateRoute(handleClickAddToCart);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [params.id]);
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -123,7 +112,10 @@ export default function Product() {
         console.log(err);
         setIsLoading(false);
       });
-  }, []);
+  }, [params.id]);
+  useEffect(() => {
+    console.log(chosencolor);
+  }, [chosencolor]);
 
   const colorsEls = colors?.map((color, i) => (
     <div key={i} className="holder">
@@ -182,7 +174,8 @@ export default function Product() {
             {addToCart && (
               <div className="view-cart">
                 <p>“Ceiling Light” has been added to your cart</p>
-                <a onClick={handleClickToCart}>View Cart</a>
+                {/* <a onClick={handleClickToCart}>View Cart</a> */}
+                <a>View Cart</a>
               </div>
             )}
             <div className="product-content">
@@ -232,12 +225,18 @@ export default function Product() {
                     </button>
                   </div>
                 </div>
-                <h2>{name}</h2>
-                <p>{desc}</p>
-                <div className="price-box">
-                  <span className="price">${salesPrice}</span>
-                  <span className="real-price">{price}</span>
-                  <span className="sale">{sale} sale</span>
+                <div className="product-info">
+                  <h1>{name}</h1>
+                  <p>{desc}</p>
+                  <div className="price-box">
+                    <span className="price">${salesPrice}</span>
+                    {numSale != 0 && (
+                      <>
+                        <span className="real-price">{price}</span>
+                        <span className="sale">{sale} sale</span>
+                      </>
+                    )}
+                  </div>
                 </div>
                 <form>
                   <div className="colors-holder">
@@ -272,60 +271,65 @@ export default function Product() {
                     <button
                       className="cart-btn"
                       type="submit"
-                      onClick={handleClickAddToCart}
+                      onClick={handlePrivateRoute}
                     >
                       <span>Add to Cart</span>
                       <MdArrowOutward className="arrow-icon" />
                     </button>
                   </div>
                 </form>
-                <hr />
-                <div className="architecture">
-                  <p> For Architecture Download</p>
-                  <div className="download-button">
-                    <button >
-                      <FiDownload />
-                     
+                <UserAutherization>
+                  <hr />
+                  <div className="architecture">
+                    <p> For Architecture Download</p>
+                    <div className="download-button">
+                      <a href={file?.[0]?.["3d"]} download="3DBlock.3d">
+                        <FiDownload />
                         Download Blocks
-                     
-                    </button>
-                    <button onClick={handleClickDownloadBlocks}>
-                      <AiOutlineDown
+                      </a>
+                      <button onClick={handleClickDownloadBlocks}>
+                        {/* <AiOutlineDown
                         className="file-type"
                         onClick={() => setDownloadBlocks(true)}
-                      />
-                    </button>
-                  </div>
-                  {downloadBlocksIsOpen && (
-                    <div className="popup">
-                      <div className="title">File Type</div>
-                                          <ul>
-                        {file?.map((f, index) => {
-                          const [key, value] = Object.entries(f)[0];
-                          let suffix = "";
-                          if (key === "2d") suffix = ".2D";
-                          if (key === "3d") suffix = ".3D";
-                          if (key === "skp") suffix = ".SketchUp";
-
-                          return (
-                            <li key={index}>
-                              <a href={value} download>
-                                <span className="suffix">{suffix}</span>
-                                <span className="size">1.75MB</span>
-                              </a>
-                            </li>
-                          );
-                        })}
-                      </ul>
+                      /> */}
+                        {!downloadBlocksIsOpen ? (
+                          <IoIosArrowDown className="file-type" />
+                        ) : (
+                          <IoIosArrowUp className="file-type" />
+                        )}
+                      </button>
                     </div>
-                  )}
-                  <p>Daily Credits - 3/3 </p>
-                </div>
+                    {downloadBlocksIsOpen && (
+                      <div className="popup">
+                        <div className="title">File Type</div>
+                        <ul>
+                          {file?.map((f, index) => {
+                            const [key, value] = Object.entries(f)[0];
+                            let suffix = "";
+                            if (key === "2d") suffix = ".2D";
+                            if (key === "3d") suffix = ".3D";
+                            if (key === "skp") suffix = ".SketchUp";
+
+                            return (
+                              <li key={index}>
+                                <a href={value} download>
+                                  <span className="suffix">{suffix}</span>
+                                  <span className="size">1.75MB</span>
+                                </a>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    )}
+                    <p>Daily Credits - 3/3 </p>
+                  </div>
+                </UserAutherization>
               </div>
             </div>
             <hr />
             <div className="description">
-              <div className="title"> Description & Other Information</div>
+              <h2> Description & Other Information</h2>
               <div className="des">
                 <div className="info">
                   <p className="title">Category</p>
@@ -355,9 +359,9 @@ export default function Product() {
             </div>
             <hr />
             <div className="comment-bar">
-              <h1>
+              <h2>
                 Comment: <span>1</span>
-              </h1>
+              </h2>
               <div className="name-and-comment">
                 <div className="name-and-time">
                   <p className="name"> shahed aldroubi </p>
@@ -375,7 +379,7 @@ export default function Product() {
               </div>
             </div>
             <div className="write-comment-sec">
-              <h1>Post a comment</h1>
+              <h2>Post a comment</h2>
               <div className="write-comment-form">
                 <div className="phone-email-info">
                   <input type="text" placeholder="Phone"></input>
@@ -395,6 +399,7 @@ export default function Product() {
                 <button className="send-comment">Send</button>
               </div>
             </div>
+            <RelatedProducts category={category} id={id} />
           </div>
         </>
       )}

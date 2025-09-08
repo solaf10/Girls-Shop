@@ -1,23 +1,39 @@
-import React from "react";
 import "./Card.css";
 import { GrView } from "react-icons/gr";
 import { MdOutlineFileDownload } from "react-icons/md";
-import { IoCart } from "react-icons/io5";
-export default function Card({ id, image, name, price, realPrice, onClick }) {
+import { FaLink } from "react-icons/fa6";
+import { useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
+export default function Card({ id, image, name, sale, price, onClick }) {
+  // price
+  const rawPrice = price || "$0";
+  const rawSale = sale || "0%";
+
+  const numPrice = parseFloat(rawPrice.replace("$", ""));
+  const numSale = parseFloat(rawSale.replace("%", "")) / 100;
+
+  const salesPrice = numPrice * (1 - numSale);
+  //
+  const location = useLocation();
+  const currentUrl = window.location.origin + location.pathname + "/" + id;
+  const handleCopyURL = () => {
+    navigator.clipboard.writeText(currentUrl);
+    toast.success("URL copied successfully!!");
+  };
   return (
-    <div className="card" onClick={onClick}>
+    <div className="card">
       <div>
         <img src={image} />
         <div className="icons">
-          <div className="icon view">
+          <button className="icon view" onClick={onClick}>
             <p>Quick View</p>
             <GrView />
-          </div>
-          <div className="icon cart">
-            <p>Add to card</p>
-            <IoCart />
-          </div>
-          <div className="icon download">
+          </button>
+          <button onClick={handleCopyURL} className="icon copy">
+            <p>Copy Link</p>
+            <FaLink />
+          </button>
+          <div onClick={() => setIsShareOpen(true)} className="icon download">
             <p>Download block</p>
             <MdOutlineFileDownload />
           </div>
@@ -25,7 +41,10 @@ export default function Card({ id, image, name, price, realPrice, onClick }) {
       </div>
       <div className="info">
         <p>{name}</p>
-        <div className="price">{price} </div>
+        <div className="price">
+          <span>{salesPrice} </span>
+          {numSale !== 0 && <span className="real-price">{price} </span>}
+        </div>
       </div>
     </div>
   );

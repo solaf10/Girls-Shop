@@ -2,6 +2,8 @@ header {
   height: 50px;
   color: white;
   background-color: var(--secondary-color);
+  background-color: #61706e;
+  background-color: #4a5957;
 }
 header .container,
 header .container .holder,

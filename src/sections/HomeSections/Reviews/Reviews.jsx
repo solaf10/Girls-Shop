@@ -8,6 +8,7 @@ import ReviewCard from "../../../components/ReviewCard/ReviewCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
+import config from "../../../Constants/enviroment";
 
 const Reviews = () => {
   const { t } = useTranslation();
@@ -15,7 +16,7 @@ const Reviews = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/reviews")
+      .get(config.baseUrl + "/" + config.reviews)
       .then((res) => setReviews(res.data))
       .catch((err) => console.log(err));
   }, []);

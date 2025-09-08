@@ -22,6 +22,11 @@ import Product from "./components/Product/Product";
 import SignUp from "./components/SignUp/SignUp";
 import Designer from "./pages/Designer/Designer";
 import { ToastContainer } from "react-toastify";
+import UserProfile from "./components/UserProfile/UserProfile";
+import { createContext } from "react";
+import { IsCustomerProvider } from "./context/IsCustomerContext";
+
+const isCustomerContext = createContext(null);
 
 const App = () => {
   const location = useLocation();
@@ -34,74 +39,78 @@ const App = () => {
         <NavBar />
         <ToastContainer position="top-right" />
       </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<LogIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/shop/:id" element={<Product />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/cart/complate-cart" element={<ComplateCart />} />
-        <Route path="/blogs/:id" element={<BlogsDetails />} />
-        <Route path="/designer" element={<Designer />} />
-        <Route path="/updatePassword" element={<UpdatePassword />}>
-          <Route
-            index
-            element={
-              <UpdatePasswordCard
-                title="Forget Password"
-                desc="Please enter your email to resend code on it"
-              >
-                <ForgetPassword />
-              </UpdatePasswordCard>
-            }
-          />
-          <Route
-            path="sendOTP"
-            element={
-              <UpdatePasswordCard
-                title="OTP Sent"
-                desc={
-                  <>
-                    <span>
-                      Please enter OTP that send to your email address
-                      johnDoe@gmail.com
-                    </span>
-                    <Link to="/updatePassword"> change?</Link>
-                  </>
-                }
-              >
-                <OTPSend />
-              </UpdatePasswordCard>
-            }
-          />
-          <Route
-            path="change"
-            element={
-              <UpdatePasswordCard
-                title="Change Password"
-                desc="Please enter new password"
-              >
-                <ChangePassword />
-              </UpdatePasswordCard>
-            }
-          />
-          <Route
-            path="changed"
-            element={
-              <UpdatePasswordCard
-                title="Great!!!"
-                desc="Password Changed Successfully"
-              >
-                <ChangedPassword />
-              </UpdatePasswordCard>
-            }
-          />
-        </Route>
-      </Routes>
+
+      <IsCustomerProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/:id" element={<Product />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart/complate-cart" element={<ComplateCart />} />
+          <Route path="/blogs/:id" element={<BlogsDetails />} />
+          <Route path="/designer" element={<Designer />} />
+          <Route path="/profile" element={<UserProfile />} />
+          <Route path="/updatePassword" element={<UpdatePassword />}>
+            <Route
+              index
+              element={
+                <UpdatePasswordCard
+                  title="Forget Password"
+                  desc="Please enter your email to resend code on it"
+                >
+                  <ForgetPassword />
+                </UpdatePasswordCard>
+              }
+            />
+            <Route
+              path="sendOTP"
+              element={
+                <UpdatePasswordCard
+                  title="OTP Sent"
+                  desc={
+                    <>
+                      <span>
+                        Please enter OTP that send to your email address
+                        johnDoe@gmail.com
+                      </span>
+                      <Link to="/updatePassword"> change?</Link>
+                    </>
+                  }
+                >
+                  <OTPSend />
+                </UpdatePasswordCard>
+              }
+            />
+            <Route
+              path="change"
+              element={
+                <UpdatePasswordCard
+                  title="Change Password"
+                  desc="Please enter new password"
+                >
+                  <ChangePassword />
+                </UpdatePasswordCard>
+              }
+            />
+            <Route
+              path="changed"
+              element={
+                <UpdatePasswordCard
+                  title="Great!!!"
+                  desc="Password Changed Successfully"
+                >
+                  <ChangedPassword />
+                </UpdatePasswordCard>
+              }
+            />
+          </Route>
+        </Routes>
+      </IsCustomerProvider>
       {!isAuthPage && <Footer />}
     </>
   );
