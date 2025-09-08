@@ -84,9 +84,11 @@ export default function Models() {
                     handleClick(product.id);
                   }}
                   key={product.id}
+                  id={product.id}
                   image={product.image}
                   name={product.name}
                   price={product.price}
+                  sale={product.sale}
                   realPrice={product.realPrice}
                 />
               ))}
