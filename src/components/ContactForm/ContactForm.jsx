@@ -1,54 +1,55 @@
+import React from "react";
+import { useTranslation } from "react-i18next";
 import "./ContactForm.css";
 
 const ContactForm = () => {
+  const { t } = useTranslation(); 
+
   return (
     <div className="contact-more-info-about-us">
       <div className="contact-section">
         <div className="head-contact-us-page">
           <div className="we-love-hear-you-sec">
-            <h1>We Love To Hear From You</h1>
-            <p>
-              Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-              turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-              nec fringi
-            </p>
+       
+            <h1>{t('contactForm.weLoveToHear')}</h1>
+            <p>{t('contactForm.weLoveToHearDesc')}</p>
           </div>
           <div className="leave-massege-sec">
-            <h1>Leave A Message</h1>
-            <p>Use the form below to get in touch with the sales team</p>
+            <h1>{t('contactForm.leaveMessage')}</h1>
+            <p>{t('contactForm.leaveMessageDesc')}</p>
           </div>
         </div>
         <div className="shop-info-and-form">
           <div className="contact-shop-info">
             <div className="address-and-business-hours">
               <div className="all-details-info">
-                <h2>Address</h2>
+                <h2>{t('contactForm.addressTitle')}</h2>
                 <div className="more-details">
-                  <img src="/assets/Images/locationIcon.svg"/>
-                  <p>Syria , Homs , AlHamra Street , 12 </p>
+                  <img src="/assets/Images/locationIcon.svg" alt="Location Icon" />
+                  <p>{t('contactForm.addressDetails')}</p>
                 </div>
               </div>
               <div className="all-details-info">
-                <h2>Business Hours</h2>
+                <h2>{t('contactForm.businessHoursTitle')}</h2>
                 <div className="more-details">
-                <img src="/assets/Images/calendarIcon.svg"/>
-                  <p>su - sat : 8am - 5pm</p>
+                  <img src="/assets/Images/calendarIcon.svg" alt="Calendar Icon" />
+                  <p>{t('contactForm.businessHoursDetails')}</p>
                 </div>
               </div>
             </div>
             <div className="phone-and-email">
               <div className="all-details-info">
-                <h2>Phone-Number</h2>
+                <h2>{t('contactForm.phoneNumberTitle')}</h2>
                 <div className="more-details">
-                <img src="/assets/Images/callIcon.svg"/>
-                  <p>+963988136449</p>
+                  <img src="/assets/Images/callIcon.svg" alt="Phone Icon" />
+                  <p>{t('contactForm.phoneNumberDetails')}</p>
                 </div>
               </div>
               <div className="all-details-info">
-                <h2>E-Mail</h2>
+                <h2>{t('contactForm.emailTitle')}</h2>
                 <div className="more-details">
-                <img src="/assets/Images/msgIcon.svg"/>
-                  <p>girlshop@gmail.com</p>
+                  <img src="/assets/Images/msgIcon.svg" alt="Message Icon" />
+                  <p>{t('contactForm.emailDetails')}</p>
                 </div>
               </div>
             </div>
@@ -60,24 +61,25 @@ const ContactForm = () => {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                title="Google Map"
               ></iframe>
             </div>
           </div>
           <div className="contact-form">
             <div className="name-and-email-input">
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="E-mail" />
+              <input type="text" placeholder={t('contactForm.namePlaceholder')} required />
+              <input type="email" placeholder={t('contactForm.emailPlaceholder')} required />
             </div>
             <div className="phone-and-subject-input">
-              <input type="text" placeholder="Phone" />
-              <input type="text" placeholder="Subject" />
+              <input type="text" placeholder={t('contactForm.phonePlaceholder')} required />
+              <input type="text" placeholder={t('contactForm.subjectPlaceholder')} required />
             </div>
             <div className="textarea">
-              <label>Your Message</label>
+              <label>{t('contactForm.yourMessageLabel')}</label>
               <textarea />
             </div>
             <button className="submit-btn">
-              <a>Send</a>
+              <a>{t('contactForm.sendButton')}</a>
             </button>
           </div>
         </div>

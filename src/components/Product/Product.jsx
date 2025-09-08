@@ -1,4 +1,4 @@
-import "./Product.css";
+import React from "react";
 import { useEffect, useState } from "react";
 import {
   FaCopy,
@@ -21,7 +21,11 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import RelatedProducts from "../../sections/Product/RelatedProducts/RelatedProducts";
 import usePrivateRoute from "../../custom hooks/usePrivateRoute";
 import UserAutherization from "../UserAutherization/UserAutherization";
+import { useTranslation } from "react-i18next"; 
+import "./Product.css";
+
 export default function Product() {
+  const { t } = useTranslation(); 
   const [productsDetails, setProductsDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
@@ -71,8 +75,6 @@ export default function Product() {
   const navigate = useNavigate();
   const params = useParams();
 
-  // const product = productsDetails.find((b) => b.id === parseInt(id));
-
   const [downloadBlocksIsOpen, setDownloadBlocksIsOpen] = useState(false);
   const handleClickDownloadBlocks = () => {
     setDownloadBlocksIsOpen((prev) => !prev);
@@ -93,6 +95,7 @@ export default function Product() {
     navigate(`/cart`);
   };
   const handlePrivateRoute = usePrivateRoute(handleClickAddToCart);
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -100,6 +103,7 @@ export default function Product() {
       behavior: "smooth",
     });
   }, [params.id]);
+
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -113,6 +117,7 @@ export default function Product() {
         setIsLoading(false);
       });
   }, [params.id]);
+
   useEffect(() => {
     console.log(chosencolor);
   }, [chosencolor]);
@@ -134,6 +139,7 @@ export default function Product() {
       />
     </div>
   ));
+
   // rating
   const stars = [...new Array(5)].map((el, i) =>
     i + 1 <= rate ? (
@@ -142,6 +148,7 @@ export default function Product() {
       <FaRegStar className="icon" key={i} />
     )
   );
+
   // imgs
   const imgsEls = images?.map((img, i) => (
     <img
@@ -151,16 +158,20 @@ export default function Product() {
       onClick={() => setCurrentImage(i)}
     />
   ));
+
   const location = useLocation();
   const currentUrl = window.location.origin + location.pathname;
+
   const handleCopyURL = (e) => {
     e.preventDefault();
     navigator.clipboard.writeText(currentUrl);
     toast.success("URL copied successfully!!");
   };
+
   const handleShare = (url) => {
     window.open(url, "_blank", "width=600,height=400");
   };
+
   return (
     <div className="single-product">
       {isLoading ? (
@@ -173,9 +184,8 @@ export default function Product() {
           <div className="product container">
             {addToCart && (
               <div className="view-cart">
-                <p>“Ceiling Light” has been added to your cart</p>
-                {/* <a onClick={handleClickToCart}>View Cart</a> */}
-                <a>View Cart</a>
+                <p>{t('product.addedToCart')}</p>
+                <a>{t('product.viewCart')}</a>
               </div>
             )}
             <div className="product-content">
@@ -189,10 +199,12 @@ export default function Product() {
                 <div className="top-product">
                   <div className="rating">
                     {stars}
-                    <p className="rev">(reviews {percentage}%)</p>
+                    <p className="rev">
+                      ({t('product.reviews')} {percentage}%)
+                    </p>
                   </div>
                   <div className="share">
-                    <p>share : </p>
+                    <p>{t('product.share')}</p>
                     <button onClick={handleCopyURL} className="icon">
                       <FaCopy />
                     </button>
@@ -216,7 +228,7 @@ export default function Product() {
                         handleShare(
                           `https://twitter.com/intent/tweet?url=${encodeURIComponent(
                             currentUrl
-                          )}&text=${encodeURIComponent("Check this out!")}`
+                          )}&text=${encodeURIComponent(t('product.shareText'))}`
                         )
                       }
                       className="icon"
@@ -233,14 +245,16 @@ export default function Product() {
                     {numSale != 0 && (
                       <>
                         <span className="real-price">{price}</span>
-                        <span className="sale">{sale} sale</span>
+                        <span className="sale">
+                          {sale} {t('product.sale')}
+                        </span>
                       </>
                     )}
                   </div>
                 </div>
                 <form>
                   <div className="colors-holder">
-                    <p>Colors</p>
+                    <p>{t('product.colors')}</p>
                     <div className="colors">{colorsEls}</div>
                   </div>
                   <div className="cart">
@@ -273,7 +287,7 @@ export default function Product() {
                       type="submit"
                       onClick={handlePrivateRoute}
                     >
-                      <span>Add to Cart</span>
+                      <span>{t('product.addToCart')}</span>
                       <MdArrowOutward className="arrow-icon" />
                     </button>
                   </div>
@@ -281,17 +295,13 @@ export default function Product() {
                 <UserAutherization>
                   <hr />
                   <div className="architecture">
-                    <p> For Architecture Download</p>
+                    <p>{t('product.forArchitecture')}</p>
                     <div className="download-button">
                       <a href={file?.[0]?.["3d"]} download="3DBlock.3d">
                         <FiDownload />
-                        Download Blocks
+                        {t('product.downloadBlocks')}
                       </a>
                       <button onClick={handleClickDownloadBlocks}>
-                        {/* <AiOutlineDown
-                        className="file-type"
-                        onClick={() => setDownloadBlocks(true)}
-                      /> */}
                         {!downloadBlocksIsOpen ? (
                           <IoIosArrowDown className="file-type" />
                         ) : (
@@ -301,7 +311,7 @@ export default function Product() {
                     </div>
                     {downloadBlocksIsOpen && (
                       <div className="popup">
-                        <div className="title">File Type</div>
+                        <div className="title">{t('product.fileType')}</div>
                         <ul>
                           {file?.map((f, index) => {
                             const [key, value] = Object.entries(f)[0];
@@ -309,7 +319,6 @@ export default function Product() {
                             if (key === "2d") suffix = ".2D";
                             if (key === "3d") suffix = ".3D";
                             if (key === "skp") suffix = ".SketchUp";
-
                             return (
                               <li key={index}>
                                 <a href={value} download>
@@ -322,37 +331,37 @@ export default function Product() {
                         </ul>
                       </div>
                     )}
-                    <p>Daily Credits - 3/3 </p>
+                    <p>{t('product.dailyCredits')}</p>
                   </div>
                 </UserAutherization>
               </div>
             </div>
             <hr />
             <div className="description">
-              <h2> Description & Other Information</h2>
+              <h2>{t('product.descriptionTitle')}</h2>
               <div className="des">
                 <div className="info">
-                  <p className="title">Category</p>
+                  <p className="title">{t('product.category')}</p>
                   <p className="desc">{category}</p>
                 </div>
                 <div className="info">
-                  <p className="title">Material</p>
+                  <p className="title">{t('product.material')}</p>
                   <p className="desc">{material}</p>
                 </div>
                 <div className="info">
-                  <p className="title">Style</p>
+                  <p className="title">{t('product.style')}</p>
                   <p className="desc">{style}</p>
                 </div>
                 <div className="info">
-                  <p className="title">Length</p>
+                  <p className="title">{t('product.length')}</p>
                   <p className="desc">{lengthInfo}</p>
                 </div>
                 <div className="info">
-                  <p className="title">Width</p>
+                  <p className="title">{t('product.width')}</p>
                   <p className="desc">{width}</p>
                 </div>
                 <div className="info">
-                  <p className="title">Height</p>
+                  <p className="title">{t('product.height')}</p>
                   <p className="desc">{height}</p>
                 </div>
               </div>
@@ -360,43 +369,35 @@ export default function Product() {
             <hr />
             <div className="comment-bar">
               <h2>
-                Comment: <span>1</span>
+                {t('product.commentTitle')}<span>1</span>
               </h2>
               <div className="name-and-comment">
                 <div className="name-and-time">
-                  <p className="name"> shahed aldroubi </p>
+                  <p className="name">{t('product.commentName')}</p>
                   <div className="rating">
                     {stars}
-                    {/* <p className="rev">(reviews {percentage}%)</p> */}
                   </div>
-                  <p className="time"> 5/9/2025</p>
+                  <p className="time">{t('product.commentTime')}</p>
                 </div>
-
-                <p className="comment">
-                  "Such a well-written piece! Insightful and inspiring — keep up
-                  the amazing work!"
-                </p>
+                <p className="comment">{t('product.commentText')}</p>
               </div>
             </div>
             <div className="write-comment-sec">
-              <h2>Post a comment</h2>
+              <h2>{t('product.postComment')}</h2>
               <div className="write-comment-form">
                 <div className="phone-email-info">
-                  <input type="text" placeholder="Phone"></input>
-                  <input type="text" placeholder="E-mail"></input>
+                  <input type="text" placeholder={t('product.phonePlaceholder')}></input>
+                  <input type="text" placeholder={t('product.emailPlaceholder')}></input>
                 </div>
                 <div className="textarea-to-write-comment">
-                  <label>Your Message</label>
+                  <label>{t('product.yourMessage')}</label>
                   <textarea />
                 </div>
                 <div className="agree-yo-save-your-info">
                   <input className="check" type="checkbox" />
-                  <label>
-                    Save my name, email, and website in this browser for the
-                    next time I comment.
-                  </label>
+                  <label>{t('product.saveInfo')}</label>
                 </div>
-                <button className="send-comment">Send</button>
+                <button className="send-comment">{t('product.send')}</button>
               </div>
             </div>
             <RelatedProducts category={category} id={id} />

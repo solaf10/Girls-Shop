@@ -131,14 +131,16 @@
     "google": "متابعة عبر google",
     "or": "أو",
     "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف",
     "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
     "show": "عرض",
     "hide": "إخفاء",
     "forgot": "نسيت كلمة المرور",
     "submit": "تسجيل الدخول",
     "noAccount": "ليس لديك حساب؟",
     "signup": "إنشاء حساب",
-    "success": "تم تسجيل الدخول بنجاح!"
+    "success": "تم إنشاء الحساب بنجاح!"
   },
   "signup": {
     "welcomeTitle": "خطتك تتضمن",
@@ -165,58 +167,166 @@
     "login": "تسجيل الدخول",
     "success": "تم إنشاء الحساب بنجاح!"
   },
-  "OTPSend":{
-  "code not send?":"الكود لم يرسل؟",
-  "Resend":"إعادة ارسال"
+  "OTPSend": {
+    "code not send?": "الكود لم يرسل؟",
+    "Resend": "إعادة ارسال"
   },
-  "ForgetPassword":{
-    "Email":"البريد الالكتروني",
-    "Back To LogIn":"العودة إلى تسجيل الدخول"
+  "ForgetPassword": {
+    "Email": "البريد الالكتروني",
+    "Back To LogIn": "العودة إلى تسجيل الدخول"
   },
-  "ChangePassword":{
-  "Password":"كلمة المرور",
-  "Confirm Password":"تأكيد كلمة المرور"
+  "ChangePassword": {
+    "Password": "كلمة المرور",
+    "Confirm Password": "تأكيد كلمة المرور"
   },
-  "Blogs":{
-    "There Are No Blogs Right Now !":"!لا توجد مدوّنات حالياً",
-    "No blog found matching your input.":"لم يتم العثور على أي مدوّنة مطابقة لمدخلاتك."
+  "Blogs": {
+    "There Are No Blogs Right Now !": "!لا توجد مدوّنات حالياً",
+    "No blog found matching your input.": "لم يتم العثور على أي مدوّنة مطابقة لمدخلاتك."
   },
-  "BlogsDetails":{
-    "Previous Post":"المنشور السابق",
-    "Next Post":"المنشور التالي",
-    "Comment:":"تعليق:",
-    "Batoul abdulHadi":"بتول عبد الهادي",
-    "5 days ago":"منذ 5 أيام",
-    "Such a well-written piece! Insightful and inspiring — keepup the amazing work!":"مقال مكتوب بشكل رائع! عميق وملهم — استمر في هذا العمل المميز!",
-    "Post a comment":"نشر التعليق",
-    "Your Message":"رسالتك",
-    "Save my name, email, and website in this browser for thenext time I comment.":"احفظ اسمي وبريدي الإلكتروني وموقعي الإلكتروني في هذا المتصفح لاستخدامها عند التعليق المرة القادمة.",
-    "Send":"إرسال",
-    "Search":"بحث",
-    "Recent Posts":"المنشورات الأخيرة"
+  "BlogsDetails": {
+    "Previous Post": "المنشور السابق",
+    "Next Post": "المنشور التالي",
+    "Comment:": "تعليق:",
+    "Batoul abdulHadi": "بتول عبد الهادي",
+    "5 days ago": "منذ 5 أيام",
+    "Such a well-written piece! Insightful and inspiring — keepup the amazing work!": "مقال مكتوب بشكل رائع! عميق وملهم — استمر في هذا العمل المميز!",
+    "Post a comment": "نشر التعليق",
+    "Your Message": "رسالتك",
+    "Save my name, email, and website in this browser for thenext time I comment.": "احفظ اسمي وبريدي الإلكتروني وموقعي الإلكتروني في هذا المتصفح لاستخدامها عند التعليق المرة القادمة.",
+    "Send": "إرسال",
+    "Search": "بحث",
+    "Recent Posts": "المنشورات الأخيرة"
   },
-  "FullCart":{
-  "cart": "السلة",
-  "product": "المنتج",
-  "price": "السعر",
-  "color": "اللون",
-  "amount": "الكمية",
-  "total_price": "السعر الإجمالي",
-  "return_shopping": "العودة للتسوق",
-  "over_all": "الإجمالي",
-  "sub_total": "المجموع الفرعي",
-  "shipping": "الشحن",
-  "next_step": "الخطوة التالية",
-  "discount": "الخصم",
-  "total": "الإجمالي",
-  "continue_checkout": "متابعة الدفع",
-  "product_deleted_success": "!!تم حذف المنتج من السلة بنجاح",
-  "process_failed": "فشلت العملية!!"
-},
-  "EmptyCart":{
-    "Your cart is currently empty.":"السلة فارغة تماما!",
-    "Return to shop":"العودة للتسوق",
-    "ourteam":"سيقوم فريقنا بمراجعته ومعالجته في أقرب وقت، وسيتم التواصل معك لتزويدك بتحديثات حول حالة الطلب. شكرًا لتعاملك معنا."
+  "FullCart": {
+    "cart": "السلة",
+    "product": "المنتج",
+    "price": "السعر",
+    "color": "اللون",
+    "amount": "الكمية",
+    "total_price": "السعر الإجمالي",
+    "return_shopping": "العودة للتسوق",
+    "over_all": "الإجمالي",
+    "sub_total": "المجموع الفرعي",
+    "shipping": "الشحن",
+    "next_step": "الخطوة التالية",
+    "discount": "الخصم",
+    "total": "الإجمالي",
+    "continue_checkout": "متابعة الدفع",
+    "product_deleted_success": "!!تم حذف المنتج من السلة بنجاح",
+    "process_failed": "فشلت العملية!!"
+  },
+  "EmptyCart": {
+    "Your cart is currently empty.": "السلة فارغة تماما!",
+    "Return to shop": "العودة للتسوق"
+  },
+  "ComplateCart": {
+    "Return to shop": "العودة للتسوق",
+    "Your request has been successfully completed.": "تم إكمال طلبك بنجاح.",
+    "ourteam": "سيقوم فريقنا بمراجعته ومعالجته في أقرب وقت، وسيتم التواصل معك لتزويدك بتحديثات حول حالة الطلب. شكرًا لتعاملك معنا."
+  },
+  "about": {
+    "title": "أفضل مصنع أثاث من اختيارك",
+    "description": "في متجر Girls’shop، نصنع أثاثاً عالي الجودة أنيقاً ومتيناً مصمماً ليرتقي بأي مساحة. من خلال الحرفية المتقنة والمواد الفاخرة، نقدم الراحة والأناقة والوظائف لمنزلك أو عملك. اختر التميز. اختر متجر Girls’shop."
+  },
+  "inspiredLiving": {
+    "mainTitle": "حياة ملهمة: رؤيتنا ورسالتنا",
+    "mainDesc": "تأثيث الأحلام، تعريف الأناقة",
+    "visionTitle": "رؤيتنا",
+    "visionDesc": "تتمثل رؤيتنا في إعادة تعريف مساحات المنازل والمكاتب من خلال تقديم أثاث عالي الجودة، أنيق وبأسعار معقولة يجمع بين الراحة والابتكار. نهدف إلى خلق تجربة تسوق عبر الإنترنت سلسة، حيث يمكن للعملاء اكتشاف تصاميم فريدة، مواد مستدامة، وحلول شخصية لتحويل مساحاتهم إلى شيء مميز حقًا.",
+    "missionTitle": "رسالتنا",
+    "missionDesc": "تتمثل مهمتنا في إنشاء أثاث مصمم بشكل جميل وعالي الجودة يعزز من راحة وأسلوب كل منزل. نحن ملتزمون بالاستدامة، الحرفية، والأسعار المعقولة، لضمان أن يجد عملاؤنا قطعًا تعكس ذوقهم الفريد مع دعم ممارسات الإنتاج الأخلاقية. من خلال الجمع بين الجماليات الخالدة والوظائف الحديثة، نهدف إلى جعل كل مساحة تشبه المنزل.",
+    "valueTitle": "قيمنا",
+    "valueDesc": "تتمثل رؤيتنا في إعادة تعريف مساحات المنازل والمكاتب بأثاث أنيق، عالي الجودة، ومستدام يجمع بين الأسلوب والراحة والوظائف. نسعى جاهدين لتقديم تجربة تسوق عبر الإنترنت سلسة، لإلهام العملاء لخلق مساحات معيشة جميلة وشخصية مع مجموعاتنا المصممة بعناية."
+  },
+  "application": {
+    "title": "قم بتنزيل تطبيق PROJECT",
+    "p1": "استمتع بفوائد منصتنا على جهازك المحمول المفضل.",
+    "p2": "اكتشف نماذج جديدة، وأنشئ لوحات مزاج ومجموعات لمشاريعك، كل ذلك أثناء التنقل.",
+    "scan": "امسح لتنزيل التطبيق"
+  },
+  "followUs": {
+    "title": "تابعونا على انستغرام"
+  },
+  "contactForm": {
+    "weLoveToHear": "يسعدنا أن نسمع منك",
+    "weLoveToHearDesc": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringi",
+    "leaveMessage": "اترك رسالة",
+    "leaveMessageDesc": "استخدم النموذج أدناه للتواصل مع فريق المبيعات",
+    "addressTitle": "العنوان",
+    "addressDetails": "سوريا، حمص، شارع الحمرا، 12",
+    "businessHoursTitle": "ساعات العمل",
+    "businessHoursDetails": "الأحد - السبت: 8 صباحًا - 5 مساءً",
+    "phoneNumberTitle": "رقم الهاتف",
+    "phoneNumberDetails": "+963988136449",
+    "emailTitle": "البريد الإلكتروني",
+    "emailDetails": "ArchiLink@gmail.com",
+    "namePlaceholder": "الاسم",
+    "emailPlaceholder": "البريد الإلكتروني",
+    "phonePlaceholder": "رقم الهاتف",
+    "subjectPlaceholder": "الموضوع",
+    "yourMessageLabel": "رسالتك",
+    "sendButton": "إرسال"
+  },
+  "userProfile": {
+    "myProfile": "ملفي الشخصي",
+    "userName": "جو سميث",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف",
+    "area": "المنطقة",
+    "balance": "الرصيد",
+    "changePasswordBtn": "تغيير كلمة المرور",
+    "changePasswordPopupTitle": "تغيير كلمة المرور الخاصة بك",
+    "yourEmail": "البريد الإلكتروني الخاص بك",
+    "oldPassword": "كلمة المرور القديمة",
+    "newPassword": "كلمة المرور الجديدة",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "updatePasswordBtn": "تحديث كلمة المرور"
+  },
+  "shopHero": {
+    "interior": "تصميم داخلي",
+    "exterior": "تصميم خارجي"
+  },
+  "models": {
+    "title": "منتجاتنا"
+  },
+  "reviewShop": {
+    "highQuality": "جودة عالية",
+    "highQualityDesc": "مصنعة من أفضل المواد",
+    "warrantyProtection": "حماية الضمان",
+    "warrantyProtectionDesc": "أكثر من سنتين",
+    "freeShipping": "شحن مجاني",
+    "freeShippingDesc": "للطلبات فوق 150 دولار",
+    "support": "دعم 24/7",
+    "supportDesc": "دعم مخصص"
+  },
+  "product": {
+    "addedToCart": "“Ceiling Light” تمت إضافته إلى السلة",
+    "viewCart": "عرض السلة",
+    "share": "مشاركة : ",
+    "sale": " تخفيض",
+    "reviews": "تقييمات",
+    "colors": "الألوان",
+    "addToCart": "أضف إلى السلة",
+    "forArchitecture": "للتصميم المعماري",
+    "downloadBlocks": "تحميل البلوكات",
+    "dailyCredits": "التحميل اليومي - 3/3",
+    "fileType": "نوع الملف",
+    "descriptionTitle": "الوصف ومعلومات أخرى",
+    "category": "الفئة",
+    "material": "الخامة",
+    "style": "النمط",
+    "length": "الطول",
+    "width": "العرض",
+    "height": "الارتفاع",
+    "commentTitle": "تعليق: ",
+    "commentName": "شهد الدروبي",
+    "commentTime": "9/5/2025",
+    "commentText": "مقال مكتوب بشكل جيد! ثاقب وملهم - استمر في العمل المذهل!",
+    "postComment": "اكتب تعليق",
+    "phonePlaceholder": "رقم الهاتف",
+    "emailPlaceholder": "البريد الإلكتروني",
+    "yourMessage": "رسالتك",
+    "saveInfo": "احفظ اسمي، بريدي الإلكتروني، وموقعي في هذا المتصفح من أجل المرة القادمة التي أعلق فيها.",
+    "send": "إرسال"
   }
-
 }
