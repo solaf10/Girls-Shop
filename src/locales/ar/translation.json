@@ -164,5 +164,59 @@
     "haveAccount": "هل لديك حساب؟",
     "login": "تسجيل الدخول",
     "success": "تم إنشاء الحساب بنجاح!"
+  },
+  "OTPSend":{
+  "code not send?":"الكود لم يرسل؟",
+  "Resend":"إعادة ارسال"
+  },
+  "ForgetPassword":{
+    "Email":"البريد الالكتروني",
+    "Back To LogIn":"العودة إلى تسجيل الدخول"
+  },
+  "ChangePassword":{
+  "Password":"كلمة المرور",
+  "Confirm Password":"تأكيد كلمة المرور"
+  },
+  "Blogs":{
+    "There Are No Blogs Right Now !":"!لا توجد مدوّنات حالياً",
+    "No blog found matching your input.":"لم يتم العثور على أي مدوّنة مطابقة لمدخلاتك."
+  },
+  "BlogsDetails":{
+    "Previous Post":"المنشور السابق",
+    "Next Post":"المنشور التالي",
+    "Comment:":"تعليق:",
+    "Batoul abdulHadi":"بتول عبد الهادي",
+    "5 days ago":"منذ 5 أيام",
+    "Such a well-written piece! Insightful and inspiring — keepup the amazing work!":"مقال مكتوب بشكل رائع! عميق وملهم — استمر في هذا العمل المميز!",
+    "Post a comment":"نشر التعليق",
+    "Your Message":"رسالتك",
+    "Save my name, email, and website in this browser for thenext time I comment.":"احفظ اسمي وبريدي الإلكتروني وموقعي الإلكتروني في هذا المتصفح لاستخدامها عند التعليق المرة القادمة.",
+    "Send":"إرسال",
+    "Search":"بحث",
+    "Recent Posts":"المنشورات الأخيرة"
+  },
+  "FullCart":{
+  "cart": "السلة",
+  "product": "المنتج",
+  "price": "السعر",
+  "color": "اللون",
+  "amount": "الكمية",
+  "total_price": "السعر الإجمالي",
+  "return_shopping": "العودة للتسوق",
+  "over_all": "الإجمالي",
+  "sub_total": "المجموع الفرعي",
+  "shipping": "الشحن",
+  "next_step": "الخطوة التالية",
+  "discount": "الخصم",
+  "total": "الإجمالي",
+  "continue_checkout": "متابعة الدفع",
+  "product_deleted_success": "!!تم حذف المنتج من السلة بنجاح",
+  "process_failed": "فشلت العملية!!"
+},
+  "EmptyCart":{
+    "Your cart is currently empty.":"السلة فارغة تماما!",
+    "Return to shop":"العودة للتسوق",
+    "ourteam":"سيقوم فريقنا بمراجعته ومعالجته في أقرب وقت، وسيتم التواصل معك لتزويدك بتحديثات حول حالة الطلب. شكرًا لتعاملك معنا."
   }
+
 }

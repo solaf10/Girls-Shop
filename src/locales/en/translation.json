@@ -164,5 +164,63 @@
     "haveAccount": "Have an account?",
     "login": "Log In",
     "success": "Successfully signed up!"
+  },
+  "OTPSend":{
+  "code not send?":"code not send?",
+  "Resend":"Resend"
+  },
+  "ForgetPassword":{
+    "Email":"Email",
+    "Back To LogIn":"Back To LogIn"
+  },
+  "ChangePassword":{
+  "Password":"Password",
+  "Confirm Password":"Confirm Password"
+  },
+  "Blogs":{
+    "There Are No Blogs Right Now !":"There Are No Blogs Right Now !",
+    "No blog found matching your input.":"No blog found matching your input."
+  },
+  "BlogsDetails":{
+    "Previous Post":"Previous Post",
+    "Next Post":"Next Post",
+    "Comment:":"Comment:",
+    "Batoul abdulHadi":"Batoul abdulHadi",
+    "5 days ago":"5 days ago",
+    "Such a well-written piece! Insightful and inspiring — keepup the amazing work!":"Such a well-written piece! Insightful and inspiring — keepup the amazing work!",
+    "Post a comment":"Post a comment",
+    "Your Message":"Your Message",
+    "Save my name, email, and website in this browser for thenext time I comment.":"Save my name, email, and website in this browser for thenext time I comment.",
+    "Send":"Send",
+    "Search":"Search",
+    "Recent Posts":"Recent Posts"
+  },
+  "FullCart":{
+  "cart": "Cart",
+  "product": "Product",
+  "price": "Price",
+  "color": "Color",
+  "amount": "Amount",
+  "total_price": "Total Price",
+  "return_shopping": "Return Shopping",
+  "over_all": "Over All",
+  "sub_total": "Sub Total",
+  "shipping": "Shipping",
+  "next_step": "Next step",
+  "discount": "Discount",
+  "total": "Total",
+  "continue_checkout": "Continue to check out",
+  "product_deleted_success": "Product was deleted from the cart successfully!!",
+  "process_failed": "Process failed!!"
+  },
+  "EmptyCart":{
+    "Your cart is currently empty.":"Your cart is currently empty.",
+    "Return to shop":"Return to shop"
+  },
+  "ComplateCart":{
+    "Return to shop":"Return to shop",
+    "Your request has been successfully completed.":"Your request has been successfully completed.",
+    "ourteam":"Our team will review and process it shortly, and we will contact you with updates regarding your order status.Thank you for choosing us."
   }
+
 }
