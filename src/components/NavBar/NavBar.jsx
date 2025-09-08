@@ -3,7 +3,7 @@ import { useLocation, useNavigate, NavLink, Link } from "react-router-dom";
 import { RiUserLine } from "react-icons/ri";
 import { BsCart3 } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdLanguage } from "react-icons/md";
 import { IoIosArrowDown, IoMdLogOut, IoIosArrowForward } from "react-icons/io";
 import { FaUser } from "react-icons/fa6";
@@ -27,10 +27,14 @@ const NavBar = () => {
       navigate("/login");
     }
   };
+  useEffect(() => {
+    setIsUserShow(false);
+  }, [location.pathname]);
 
   const isAuthPage =
     location.pathname === "/login" ||
     location.pathname === "/signup" ||
+    location.pathname === "/profile" ||
     location.pathname.includes("/updatePassword");
   const isCartPage = location.pathname == "/cart";
   const isShopPage = location.pathname == "/shop";
@@ -98,7 +102,7 @@ const NavBar = () => {
               <p className="user-name">{t("navbar.userName")}</p>
               <ul>
                 <li>
-                  <Link to="/">{t("navbar.userProfile")}</Link>
+                  <Link to="/profile">{t("navbar.userProfile")}</Link>
                 </li>
                 <li>
                   <Link to="/">{t("navbar.settings")}</Link>
