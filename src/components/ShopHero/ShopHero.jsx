@@ -5,11 +5,11 @@ import "./ShopHero.css";
 export default function ShopHero() {
   const { t } = useTranslation(); 
   
+
   return (
     <>
       <div className="holder">
         <div className="card interior">
-         
           <p>{t('shopHero.interior')}</p>
         </div>
         <div className="card exterior">

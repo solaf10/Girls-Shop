@@ -14,12 +14,8 @@ const Header = () => {
         <div className="holder">
           <p>{t("header.showrooms")}</p>
           <p>{t("header.helpCenter")}</p>
-          <div className="language">
-            <MdLanguage className="globe-icon" />
-            <span>
-              <LanguageSwitcher />
-            </span>
-            <IoIosArrowDown className="arrow-icon" />
+          <div className="language" style={{ cursor: "pointer" }}>
+            <LanguageSwitcher />
           </div>
         </div>
       </div>
