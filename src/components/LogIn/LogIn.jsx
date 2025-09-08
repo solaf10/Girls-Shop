@@ -1,10 +1,14 @@
 import { useState } from "react";
 import "./LogIn.css";
-import { BsEye, BsEyeFill, BsEyeSlash } from "react-icons/bs";
+import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 function LogIn() {
+  const { t } = useTranslation();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -16,7 +20,7 @@ function LogIn() {
       setError(true);
     } else {
       setError(false);
-      alert("Logged in successfully!");
+      alert(t("login.success"));
     }
   };
 
@@ -24,11 +28,8 @@ function LogIn() {
     <div className="login-page">
       <div className="left-section">
         <div className="welcome-text">
-          <h1>"Sign In & Style Your Space"</h1>
-          <p>
-            Log in to explore exquisite furniture collections, manage your
-            orders, and bring your dream home to life with ease and elegance.
-          </p>
+          <h1>{t("login.welcomeTitle")}</h1>
+          <p>{t("login.welcomeDesc")}</p>
         </div>
       </div>
 
@@ -36,26 +37,24 @@ function LogIn() {
         <div className="login-form">
           {error && (
             <div className="error-message">
-              <p>Invalid password or email</p>
+              <p>{t("login.error")}</p>
             </div>
           )}
-          <h2>Log in</h2>
+          <h2>{t("login.title")}</h2>
 
           <button className="facebook-btn">
-            {" "}
             <FaFacebook style={{ width: "18px", height: "18px" }} />
-            <span>Continue with Facebook</span>
+            <span>{t("login.facebook")}</span>
           </button>
           <button className="google-btn">
-            {" "}
             <FcGoogle style={{ width: "18px", height: "18px" }} />
-            <span>Continue with Google</span>
+            <span>{t("login.google")}</span>
           </button>
 
-          <div className="divider">OR</div>
+          <div className="divider">{t("login.or")}</div>
 
           <form onSubmit={handleSubmit}>
-            <p>Email</p>
+            <p>{t("login.email")}</p>
             <input
               type="email"
               value={email}
@@ -63,7 +62,7 @@ function LogIn() {
               className={error ? "input-error" : ""}
             />
             <div className="password-field">
-              <p>Password</p>
+              <p>{t("login.password")}</p>
               <input
                 type={showPassword ? "text" : "password"}
                 value={password}
@@ -76,30 +75,27 @@ function LogIn() {
               >
                 {showPassword ? (
                   <>
-                    {" "}
-                    <span>Hide</span> <BsEyeSlash />
+                    <span>{t("login.hide")}</span> <BsEyeSlash />
                   </>
                 ) : (
                   <>
-                    {" "}
-                    <span>Show</span>
-                    <BsEye />
+                    <span>{t("login.show")}</span> <BsEye />
                   </>
                 )}
               </span>
             </div>
 
             <div className="forgot-password">
-              <Link to="/updatePassword">Forget your password</Link>
+              <Link to="/updatePassword">{t("login.forgot")}</Link>
             </div>
 
             <button className="sign-in-btn" type="submit">
-              LogIn
+              {t("login.submit")}
             </button>
           </form>
 
           <p className="signup-link">
-            Don’t have an account? <Link to="/signup">Sign up</Link>
+            {t("login.noAccount")} <Link to="/signup">{t("login.signup")}</Link>
           </p>
         </div>
       </div>

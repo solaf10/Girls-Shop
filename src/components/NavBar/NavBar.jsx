@@ -9,12 +9,15 @@ import { MdLanguage } from "react-icons/md";
 import { IoIosArrowDown, IoMdLogOut, IoIosArrowForward } from "react-icons/io";
 import { FaUser } from "react-icons/fa6";
 import { TbCube } from "react-icons/tb";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
+  const { t } = useTranslation();
   const [isMenuShow, setIsMenuShow] = useState(false);
   const [isUserShow, setIsUserShow] = useState(false);
   const navigate = useNavigate();
   const isToken = localStorage.getItem("token") != null;
+
   const handleUserIconClick = () => {
     if (isToken) {
       setIsUserShow(true);
@@ -32,22 +35,22 @@ const NavBar = () => {
         </div>
         <ul className="links">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/">{t("navbar.home")}</NavLink>
           </li>
           <li>
-            <NavLink to="/shop">Shop</NavLink>
+            <NavLink to="/shop">{t("navbar.shop")}</NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about">{t("navbar.about")}</NavLink>
           </li>
           <li>
-            <NavLink to="/blogs">Blogs</NavLink>
+            <NavLink to="/blogs">{t("navbar.blogs")}</NavLink>
           </li>
           <li>
-            <NavLink to="/contact">contact us</NavLink>
+            <NavLink to="/contact">{t("navbar.contact")}</NavLink>
           </li>
           <li>
-            <NavLink to="/designer">Designers</NavLink>
+            <NavLink to="/designer">{t("navbar.designers")}</NavLink>
           </li>
         </ul>
         <div className="icons">
@@ -55,6 +58,7 @@ const NavBar = () => {
           <BsCart3 className="icon" onClick={() => navigate("/cart")} />
           <FiSearch className="search-icon icon" />
         </div>
+
         <div className="popups-holder">
           <div className="user-popup-holder">
             <div
@@ -66,22 +70,23 @@ const NavBar = () => {
               className="user-popup"
               style={isUserShow ? { top: "147px" } : { top: "-100%" }}
             >
-              <p className="user-name">User Name</p>
+              <p className="user-name">{t("navbar.userName")}</p>
               <ul>
                 <li>
-                  <Link to="/">User profile</Link>
+                  <Link to="/">{t("navbar.userProfile")}</Link>
                 </li>
                 <li>
-                  <Link to="/">Setting</Link>
+                  <Link to="/">{t("navbar.settings")}</Link>
                 </li>
               </ul>
               <p className="log-out">
-                <span>Log Out</span>
+                <span>{t("navbar.logout")}</span>
                 <IoIosArrowForward />
               </p>
             </div>
           </div>
         </div>
+
         <div className="sidebar-holder">
           <IoMenu className="menu-icon" onClick={() => setIsMenuShow(true)} />
           <div
@@ -103,31 +108,31 @@ const NavBar = () => {
             </div>
             <ul>
               <li>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/">{t("navbar.home")}</NavLink>
               </li>
               <li>
-                <NavLink to="/shop">Shop</NavLink>
+                <NavLink to="/shop">{t("navbar.shop")}</NavLink>
               </li>
               <li>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/about">{t("navbar.about")}</NavLink>
               </li>
               <li>
-                <NavLink to="/designer">Designers</NavLink>
+                <NavLink to="/designer">{t("navbar.designers")}</NavLink>
               </li>
               <li>
-                <NavLink to="/contact">contact us</NavLink>
+                <NavLink to="/contact">{t("navbar.contact")}</NavLink>
               </li>
             </ul>
             <div className="language">
               <div className="holder">
                 <MdLanguage className="globe-icon" />
-                <span>Language</span>
+                <span>{t("navbar.language")}</span>
               </div>
               <IoIosArrowDown className="arrow-icon" />
             </div>
             <button className="log-out">
               <IoMdLogOut />
-              <span>Log Out</span>
+              <span>{t("navbar.logout")}</span>
             </button>
           </div>
         </div>

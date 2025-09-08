@@ -1,6 +1,9 @@
 import "./ReviewForm.css";
+import { useTranslation } from "react-i18next";
 
 const ReviewForm = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="review-form">
       <div className="container">
@@ -9,14 +12,18 @@ const ReviewForm = () => {
         </div>
         <div className="text">
           <div className="home-main-title">
-            <h2>Your Feedback Matters: Share Your Review</h2>
+            <h2>{t("reviewForm.title")}</h2>
           </div>
           <form>
             <textarea
               className="review-input"
-              placeholder="Your Review"
+              placeholder={t("reviewForm.placeholder")}
             ></textarea>
-            <input className="send-btn" type="submit" value="Send" />
+            <input
+              className="send-btn"
+              type="submit"
+              value={t("reviewForm.button")}
+            />
           </form>
         </div>
       </div>

@@ -7,85 +7,24 @@ import "./Reviews.css";
 import ReviewCard from "../../../components/ReviewCard/ReviewCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
+
 const Reviews = () => {
+  const { t } = useTranslation();
   const [reviews, setReviews] = useState([]);
-  // const reviews = [
-  //   {
-  //     id: 1,
-  //     image: "/assets/Images/avatar.png",
-  //     publisher: "John Doe",
-  //     title: "Architecture",
-  //     content:
-  //       "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”",
-  //   },
-  //   {
-  //     id: 2,
-  //     image: "/assets/Images/avatar.png",
-  //     publisher: "John Doe",
-  //     title: "Architecture",
-  //     content:
-  //       "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”",
-  //   },
-  //   {
-  //     id: 3,
-  //     image: "/assets/Images/avatar.png",
-  //     publisher: "John Doe",
-  //     title: "Architecture",
-  //     content:
-  //       "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”",
-  //   },
-  //   {
-  //     id: 4,
-  //     image: "/assets/Images/avatar.png",
-  //     publisher: "John Doe",
-  //     title: "Architecture",
-  //     content:
-  //       "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”",
-  //   },
-  //   {
-  //     id: 5,
-  //     image: "/assets/Images/avatar.png",
-  //     publisher: "John Doe",
-  //     title: "Architecture",
-  //     content:
-  //       "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”",
-  //   },
-  //   {
-  //     id: 6,
-  //     image: "/assets/Images/avatar.png",
-  //     publisher: "John Doe",
-  //     title: "Architecture",
-  //     content:
-  //       "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”",
-  //   },
-  //   {
-  //     id: 7,
-  //     image: "/assets/Images/avatar.png",
-  //     publisher: "John Doe",
-  //     title: "Architecture",
-  //     content:
-  //       "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”",
-  //   },
-  //   {
-  //     id: 8,
-  //     image: "/assets/Images/avatar.png",
-  //     publisher: "John Doe",
-  //     title: "Architecture",
-  //     content:
-  //       "“They are have a perfect touch for make something so professional ,interest and useful for a lot of people .”",
-  //   },
-  // ];
+
   useEffect(() => {
     axios
       .get("http://localhost:8000/reviews")
       .then((res) => setReviews(res.data))
       .catch((err) => console.log(err));
   }, []);
+
   return (
     <section className="reviews">
       <div className="container">
         <div className="home-main-title">
-          <h2>What people are saying about us</h2>
+          <h2>{t("reviews.title")}</h2>
         </div>
         <Swiper
           modules={[Navigation, Pagination]}

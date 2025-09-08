@@ -3,8 +3,10 @@ import "./CustomOrder.css";
 import { FaCheckCircle } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import CustomizeOrder from "../../../components/CustomizeOrder/CustomizeOrder";
+import { useTranslation } from "react-i18next";
 
-const CustomOrder = ({}) => {
+const CustomOrder = () => {
+  const { t } = useTranslation();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const openPopup = () => {
@@ -14,6 +16,7 @@ const CustomOrder = ({}) => {
   const closePopup = () => {
     setIsPopupOpen(false);
   };
+
   return (
     <section className="custom-order">
       <div className="container">
@@ -32,11 +35,8 @@ const CustomOrder = ({}) => {
         </div>
         <div className="text">
           <div className="sub-title">
-            <h2>We help you make Modern Interior Design</h2>
-            <p>
-              "Bringing your vision to life with stylish, functional pieces for
-              the perfect modern space."
-            </p>
+            <h2>{t("customOrder.title")}</h2>
+            <p>{t("customOrder.subtitle")}</p>
           </div>
           <div className="holder">
             <div className="box">
@@ -44,11 +44,8 @@ const CustomOrder = ({}) => {
                 <FaCheckCircle className="icon" />
               </div>
               <div className="content">
-                <h3>Inspire Your Space</h3>
-                <p>
-                  We bring contemporary design ideas to life, transforming any
-                  room into a stylish, functional space.
-                </p>
+                <h3>{t("customOrder.box1.title")}</h3>
+                <p>{t("customOrder.box1.desc")}</p>
               </div>
             </div>
             <div className="box">
@@ -56,16 +53,13 @@ const CustomOrder = ({}) => {
                 <FaCheckCircle className="icon" />
               </div>
               <div className="content">
-                <h3>Tailored to You</h3>
-                <p>
-                  Your vision is our guide. We help you curate a personalized
-                  design that perfectly reflects your style and needs.
-                </p>
+                <h3>{t("customOrder.box2.title")}</h3>
+                <p>{t("customOrder.box2.desc")}</p>
               </div>
             </div>
           </div>
           <button className="make-your-own-design-btn" onClick={openPopup}>
-            <span>Make Your Own Design</span>
+            <span>{t("customOrder.button")}</span>
             <MdArrowOutward className="arrow-icon" />
           </button>
           {isPopupOpen && <CustomizeOrder closePopup={closePopup} />}

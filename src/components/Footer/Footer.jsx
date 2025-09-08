@@ -1,17 +1,20 @@
 import "./Footer.css";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
 import { LiaEnvelopeOpenTextSolid } from "react-icons/lia";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer>
       <div className="container">
         <div className="footer-header">
           <div className="title">
-            <h2>Girl’Shop</h2>
+            <h2>{t("footer.title")}</h2>
             <div className="images">
               <img
                 src="/assets/Images/google-play-store.png"
@@ -35,34 +38,34 @@ const Footer = () => {
         <div className="footer-content">
           <div className="content">
             <ul className="pages">
-              <h3>pages</h3>
+              <h3>{t("footer.pages")}</h3>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/">{t("footer.home")}</Link>
               </li>
               <li>
-                <Link to="/shop">Shop</Link>
+                <Link to="/shop">{t("footer.shop")}</Link>
               </li>
               <li>
-                <Link to="/blogs">Blogs</Link>
+                <Link to="/blogs">{t("footer.blogs")}</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/about">{t("footer.about")}</Link>
               </li>
             </ul>
             <ul className="others">
-              <h3>Others</h3>
+              <h3>{t("footer.others")}</h3>
               <li>
-                <Link>Terms and conditions</Link>
+                <Link>{t("footer.terms")}</Link>
               </li>
               <li>
-                <Link>privacy policy</Link>
+                <Link>{t("footer.privacy")}</Link>
               </li>
               <li>
-                <Link to="/contact">contact Us</Link>
+                <Link to="/contact">{t("footer.contact")}</Link>
               </li>
             </ul>
             <div className="contact-infos">
-              <h3>Contact Info</h3>
+              <h3>{t("footer.contactInfo")}</h3>
               <div className="contact-info">
                 <FiPhone className="contact-icon" />
                 <p>+963988136449</p>
@@ -88,7 +91,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-rights">
-        <p>© Girls'Shop 2025- All Rights Reserved</p>
+        <p>{t("footer.rights")}</p>
       </div>
     </footer>
   );
