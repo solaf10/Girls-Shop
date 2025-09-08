@@ -5,8 +5,11 @@ import DropDownDesigner from "../../components/DropDownDesigner/DropDownDesigner
 import DesignerCard from "../../components/DesignerCard/DesignerCard";
 import TopGreenBar from "../../components/TopGreenBar/TopGreenBar";
 import Loader from "../../components/Loader/Loader";
+import { useTranslation } from "react-i18next";
 
 const Designer = () => {
+  const { t } = useTranslation();
+
   const countriesOptions = ["Syria", "Saudi", "Palestine"];
   const creativeOptions = ["Syria", "Saudi", "Palestine"];
 
@@ -48,27 +51,30 @@ const Designer = () => {
           <TopGreenBar />
           <div className="designers container">
             <div className="designer-header">
-              <h1>Designers</h1>
+              <h1>{t("designer.title")}</h1>
               <div className="search-filter-designer">
                 <div className="search-designer">
                   <input
                     id="search"
-                    placeholder="Search Designer ..."
+                    placeholder={t("designer.searchPlaceholder")}
                     type="text"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     onKeyDown={handleKeyDown}
                   />
-                  <img src="/assets/Images/search.png" alt="search" />
+                  <img
+                    src="/assets/Images/search.png"
+                    alt={t("designer.searchAlt")}
+                  />
                 </div>
                 <div className="filter-designer">
                   <DropDownDesigner
                     options={countriesOptions}
-                    placeholder="Countries"
+                    placeholder={t("designer.countries")}
                   />
                   <DropDownDesigner
                     options={creativeOptions}
-                    placeholder="Creative"
+                    placeholder={t("designer.creative")}
                   />
                 </div>
               </div>
@@ -87,9 +93,7 @@ const Designer = () => {
                   />
                 ))
               ) : (
-                <p className="no-designer-matches">
-                  We couldn't find a designer matching your search!
-                </p>
+                <p className="no-designer-matches">{t("designer.noMatches")}</p>
               )}
             </div>
           </div>

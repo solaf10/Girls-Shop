@@ -3,6 +3,7 @@ import "./ReviewForm.css";
 import axios from "axios";
 
 const ReviewForm = () => {
+  const { t } = useTranslation();
   const [review , setReview] = useState("")
   const sendReview = () =>  {
   axios
@@ -20,15 +21,19 @@ const ReviewForm = () => {
         </div>
         <div className="text">
           <div className="home-main-title">
-            <h2>Your Feedback Matters: Share Your Review</h2>
+            <h2>{t("reviewForm.title")}</h2>
           </div>
           <form>
             <textarea
               className="review-input"
-              placeholder="Your Review"
-              onChange={(event) => {setReview(event.target.value)}}
+              onChange={(event)=>setReview(event.target.value)}
+              placeholder={t("reviewForm.placeholder")}
             ></textarea>
-            <input className="send-btn" type="submit" value="Send" onClick={sendReview}/>
+            <input
+              className="send-btn"
+              type="submit"
+              value={t("reviewForm.button")}
+            />
           </form>
         </div>
       </div>

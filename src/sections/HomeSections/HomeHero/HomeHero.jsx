@@ -6,17 +6,8 @@ import { useTranslation } from "react-i18next";
 import UserAutherization from "../../../components/UserAutherization/UserAutherization";
 
 const HomeHero = () => {
-  const { t, i18n } = useTranslation();
-  const formatDate = (dateString) => {
-    if (!dateString) return "";
-    const d = new Date(dateString);
-    return d.toLocaleDateString(i18n.language, {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-  };
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const { t } = useTranslation();
 
   const openPopup = () => {
     setIsPopupOpen(true);
@@ -25,25 +16,25 @@ const HomeHero = () => {
   const closePopup = () => {
     setIsPopupOpen(false);
   };
+
   return (
     <div className="home-hero">
       <div className="container">
-        <h1>Style Meets Comfort Furniture Made for You</h1>
-        <p className="desc">
-          {t(
-            ` From cozy sofas to elegant dining sets, discover furniture that turns your house into a home. Let me know if you d like a different tone or style!`
-          )}
-        </p>
+        <h1>{t("homeHero.title")}</h1>
+        <p className="desc">{t("homeHero.desc")}</p>
         <div className="btns">
           <Link to="/shop" className="shop-btn btn">
-            Shop Now
+            {t("homeHero.shopNow")}
           </Link>
+
+          
           <UserAutherization>
             <button className="customize-btn btn" onClick={openPopup}>
-              Customize order
+             {t("homeHero.customizeOrder")}
             </button>
             {isPopupOpen && <CustomizeOrder closePopup={closePopup} />}
           </UserAutherization>
+
         </div>
       </div>
     </div>
