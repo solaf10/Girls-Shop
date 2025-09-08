@@ -2,8 +2,10 @@ import { useState, useRef } from "react";
 import { useNavigate } from "react-router";
 import OTPInput from "./OTPInput";
 import "./UpdatePasswordCard.css";
+import { useTranslation } from "react-i18next";
 
 const OTPSend = () => {
+  const {t} = useTranslation();
   const [isComplete, setIsComplete] = useState(false);
   const inputsRefs = useRef([]);
   const otpCodeLength = [0, 1, 2, 3]; // 4 inputs
@@ -24,7 +26,7 @@ const OTPSend = () => {
       <div className="setting">
         <p className="counter">00:00</p>
         <p className="resend-holder">
-          code not send ? <button type="button">Resend</button>
+          {t(`OTPSend.code not send ?`)} <button type="button">{t(`OTPSend.Resend`)}</button>
         </p>
       </div>
       <input

@@ -10,7 +10,9 @@ import axios from "axios";
 import config from "../../Constants/enviroment";
 import { toast } from "react-toastify";
 import Loader from "../../components/Loader/Loader";
+import { useTranslation } from "react-i18next";
 const BlogsDetails = () => {
+  const {t} = useTranslation();
   const [searchedKey, setSearchedKey] = useState("");
   const [recentBlogs, setRecentBlogs] = useState([]);
   const [filteredBlogs, setFilteredBlogs] = useState(recentBlogs);
@@ -152,53 +154,53 @@ const BlogsDetails = () => {
               <div className="posts-slider">
                 <div className="previous">
                   <GrFormPreviousLink className="previous-icon" />
-                  <p>Previous Post</p>
+                  <p> {t(`BlogsDetails.Previous Post`)}</p>
                 </div>
                 <div className="next">
-                  <p>Next Post</p>
+                  <p>{t(`BlogsDetails.Next Post`)}</p>
                   <GrFormNextLink className="next-icon" />
                 </div>
               </div>
               <div className="comment-bar">
                 <h1>
-                  Comment: <span>1</span>
+                  {t(`BlogsDetails.comment:`)} <span>1</span>
                 </h1>
                 <div className="name-and-comment">
                   <div className="name-and-time">
-                    <p className="name">Batoul abdulHadi </p>
-                    <p className="time"> 5 days ago</p>
+                    <p className="name">{t(`BlogsDetails.Batoul abdulHadi`)} </p>
+                    <p className="time"> {t(`BlogsDetails.5 Days ago`)}</p>
                   </div>
 
                   <p className="comment">
-                    "Such a well-written piece! Insightful and inspiring — keep
-                    up the amazing work!"
+                    {t(`"BlogsDetails.Such a well-written piece! Insightful and inspiring — keep
+                                        up the amazing work!"`)}
                   </p>
                 </div>
               </div>
               <div className="write-comment-sec">
-                <h1>Post a comment</h1>
+                <h1>{t(`BlogsDetails.Post a comment`)}</h1>
                 <div className="write-comment-form">
                   <div className="phone-email-info">
                     <input type="text" placeholder="Phone"></input>
                     <input type="text" placeholder="E-mail"></input>
                   </div>
                   <div className="textarea-to-write-comment">
-                    <label>Your Message</label>
+                    <label>{t(`BlogsDetails.Your Message`)}</label>
                     <textarea />
                   </div>
                   <div className="agree-yo-save-your-info">
                     <input className="check" type="checkbox" />
                     <label>
-                      Save my name, email, and website in this browser for the
-                      next time I comment.
+                      {t(`BlogsDetails.Save my name, email, and website in this browser for the
+                      next time I comment.`)}
                     </label>
                   </div>
-                  <button className="send-comment">Send</button>
+                  <button className="send-comment">{t(`BlogsDetails.Send`)}</button>
                 </div>
               </div>
             </div>
             <div className="recent-posts-info">
-              <h3>Search</h3>
+              <h3>{t(`BlogsDetails.Search`)}</h3>
               <div className="search-container">
                 <input
                   type="text"
@@ -208,7 +210,7 @@ const BlogsDetails = () => {
                 <CiSearch className="search-icon" />
               </div>
               <div className="recent-posts">
-                <h2 className="recent-blogs-text">Recent Posts</h2>
+                <h2 className="recent-blogs-text">{t(`BlogsDetails.Recent Posts`)}</h2>
                 <div className="recent-blogs">
                   {filteredBlogs.map((recent) => (
                     <RecentBlog

@@ -9,8 +9,10 @@ import Loader from "../../components/Loader/Loader";
 import PagenationControllers from "../../components/PagenationControllers/PagenationControllers";
 import usePagenation from "../../custom hooks/usePagenation";
 import SkeletonCard from "../../components/Skeleton/SkeletonCard";
+import { useTranslation } from "react-i18next";
 
 const Blogs = () => {
+  const {t} = useTranslation();
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
@@ -51,7 +53,7 @@ const Blogs = () => {
             <SkeletonCard count={12} />
           </div>
         ) : blogs.length === 0 ? (
-          <p className="no-blogs">There Are No Blogs Right Now !</p>
+          <p className="no-blogs">{t(`Blogs.There Are No Blogs Right Now !`)}</p>
         ) : (
           <>
             <div className="search-holder-blog">
@@ -80,7 +82,7 @@ const Blogs = () => {
                   />
                 ))
               ) : (
-                <p className="no-blogs">No blog found matching your input.</p>
+                <p className="no-blogs">{t(`Blogs.No blog found matching your input.`)}</p>
               )}
             </div>
             <PagenationControllers

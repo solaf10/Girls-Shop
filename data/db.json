@@ -987,14 +987,5 @@
       "date": "Feb 8th, 2025"
     }
   ],
-  "cartProducts": [
-    {
-      "id": "34",
-      "name": "XORA corner desk",
-      "image": "/assets/Images/top-sellers2.png",
-      "price": "$560.00",
-      "color": "#888",
-      "amount": 0
-    }
-  ]
+  "cartProducts": []
 }
