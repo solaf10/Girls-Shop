@@ -17,10 +17,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -52,10 +49,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -87,10 +81,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -121,10 +112,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -155,10 +143,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -180,18 +165,13 @@
       "name": "XORA corner desk",
       "price": "$560.00",
       "sale": "%20",
-      "images": [
-        "/assets/Images/top-sellers6.png"
-      ],
+      "images": ["/assets/Images/top-sellers6.png"],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 4,
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -222,10 +202,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -258,10 +235,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -289,10 +263,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -320,10 +291,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -351,10 +319,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -382,10 +347,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -413,10 +375,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -444,10 +403,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -475,10 +431,7 @@
       "category": "chairs",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -995,6 +948,48 @@
       "price": "$560.00",
       "color": "#888",
       "amount": 0
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "name": "shahed",
+      "e-mail": "shahed@gmail.com",
+      "phone": "0934343434",
+      "date": "4/5/2025",
+      "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+    },
+    {
+      "id": "2",
+      "name": "batoul",
+      "e-mail": "batoul@gmail.com",
+      "phone": "0934343434",
+      "date": "3/2/2025",
+      "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+    },
+    {
+      "id": "3",
+      "name": "solaf",
+      "e-mail": "solaf@gmail.com",
+      "phone": "0934343434",
+      "date": "8/9/2025",
+      "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+    },
+    {
+      "id": "4",
+      "name": "sedra",
+      "e-mail": "sedra@gmail.com",
+      "phone": "0934343434",
+      "date": "8/9/2025",
+      "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+    },
+    {
+      "id": "5",
+      "name": "amina",
+      "e-mail": "amina@gmail.com",
+      "phone": "0934343434",
+      "date": "8/9/2025",
+      "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
     }
   ]
 }
