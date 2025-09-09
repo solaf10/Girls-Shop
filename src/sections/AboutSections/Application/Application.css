@@ -1,78 +1,73 @@
-.application{
-    position: relative;
-    margin-bottom: 20px;
+.application {
+  position: relative;
+  margin-bottom: 20px;
 }
-.application .container{
-    background-color: #E2E2E2;
+.application .container {
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0px 90px;
+  padding-left: 30%;
+}
+.application .container .text {
+  display: flex;
+  flex-direction: column;
+}
+.application .text .title {
+  padding-top: 42px;
+  padding-bottom: 28px;
+  h2 {
+    font-weight: 600px;
+    font-size: 30px;
+  }
+  p {
+    font-weight: 400px;
+    font-size: 20px;
+  }
+}
+.application .text .desc {
+  padding-bottom: 24px;
+  p {
+    font-weight: 400px;
+    font-size: 16px;
+  }
+}
+.application .container .image {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding-bottom: 27px;
+}
+.application .image .app {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  .app-img {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    margin: 0px 90px;
+    gap: 16px;
+  }
+  p {
+    font-weight: 400px;
+    font-size: 24px;
+  }
 }
-.application .container .text{
-    display: flex;
-    flex-direction: column;
-}
-.application .text .title{
-    padding-top: 42px;
-    padding-bottom: 28px;
-    h2{
-        font-weight: 600px;
-        font-size: 30px;
-    }
-    p{
-        font-weight: 400px;
-        font-size: 20px; 
-    }
-}
-.application .text .desc{
-    padding-bottom: 24px;
-    p{
-        font-weight: 400px;
-        font-size: 16px; 
-    }
-}
-.application .container .image{
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    padding-bottom: 27px;
-}
-.application .image .app{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-    .app-img{
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-    p{
-        font-weight: 400px;
-        font-size: 24px;
-    }
-}
-.application .phone-img{
+.application .phone-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  .one {
     position: absolute;
-    top: 0;
-    left: 0;
-    .one{
-        position: absolute;
-        top: 70px;
-        left: 250px;
-        z-index: 2;
-    }
-    .two{
-        position: absolute;
-        left: 90px;
-        top: 5px;
-        z-index: 1;
-    }
-}
-@media (max-width: 991px) {
-    }
-
-@media (max-width: 1250px) {
-    
+    top: 70px;
+    left: 250px;
+    z-index: 2;
+  }
+  .two {
+    position: absolute;
+    left: 90px;
+    top: 5px;
+    z-index: 1;
+  }
 }

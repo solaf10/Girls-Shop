@@ -3,6 +3,8 @@ const config = {
   products: "products",
   topsellers: "topsellers",
   recentblogs: "recentblogs",
+  reviews: "reviews",
+  cartProducts: "cartProducts",
   blogs: "postsDetails",
 };
 export default config;

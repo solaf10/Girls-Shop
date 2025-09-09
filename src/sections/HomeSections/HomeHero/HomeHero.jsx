@@ -3,6 +3,7 @@ import "./HomeHero.css";
 import { useState } from "react";
 import CustomizeOrder from "../../../components/CustomizeOrder/CustomizeOrder";
 import { useTranslation } from "react-i18next";
+import UserAutherization from "../../../components/UserAutherization/UserAutherization";
 
 const HomeHero = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -25,10 +26,15 @@ const HomeHero = () => {
           <Link to="/shop" className="shop-btn btn">
             {t("homeHero.shopNow")}
           </Link>
-          <button className="customize-btn btn" onClick={openPopup}>
-            {t("homeHero.customizeOrder")}
-          </button>
-          {isPopupOpen && <CustomizeOrder closePopup={closePopup} />}
+
+          
+          <UserAutherization>
+            <button className="customize-btn btn" onClick={openPopup}>
+             {t("homeHero.customizeOrder")}
+            </button>
+            {isPopupOpen && <CustomizeOrder closePopup={closePopup} />}
+          </UserAutherization>
+
         </div>
       </div>
     </div>

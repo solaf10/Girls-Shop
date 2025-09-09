@@ -1,7 +1,8 @@
 .shop .container .holder {
-  margin-top: 70px;
+  margin-top: 60px;
   display: flex;
   gap: 70px;
+  margin-bottom: 20px;
 }
 .shop .container .holder .card {
   position: relative;

@@ -41,7 +41,7 @@ const Designer = () => {
   };
 
   return (
-    <div className="single-product">
+    <div className="designers-holder">
       {loading ? (
         <div className="loader-holder">
           <Loader />
