@@ -4,12 +4,17 @@ const IsCustomerContext = createContext();
 
 function IsCustomerProvider({ children }) {
   const [isCustomer, setIsCustomer] = useState(
-    () => localStorage.getItem("role") != null
+    () =>
+      localStorage.getItem("role") == "customer" &&
+      localStorage.getItem("role")?.includes("customer")
   );
 
   useEffect(() => {
     const handleStorageChange = () => {
-      setIsCustomer(localStorage.getItem("role") != null);
+      setIsCustomer(
+        localStorage.getItem("role") != null &&
+          localStorage.getItem("role")?.includes("customer")
+      );
     };
 
     window.addEventListener("storage", handleStorageChange);

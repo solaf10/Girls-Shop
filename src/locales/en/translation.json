@@ -165,62 +165,167 @@
     "login": "Log In",
     "success": "Successfully signed up!"
   },
-  "OTPSend":{
-  "code not send?":"code not send?",
-  "Resend":"Resend"
+  "OTPSend": {
+    "code not send?": "code not send?",
+    "Resend": "Resend"
   },
-  "ForgetPassword":{
-    "Email":"Email",
-    "Back To LogIn":"Back To LogIn"
+  "ForgetPassword": {
+    "Email": "Email",
+    "Back To LogIn": "Back To LogIn"
   },
-  "ChangePassword":{
-  "Password":"Password",
-  "Confirm Password":"Confirm Password"
+  "ChangePassword": {
+    "Password": "Password",
+    "Confirm Password": "Confirm Password"
   },
-  "Blogs":{
-    "There Are No Blogs Right Now !":"There Are No Blogs Right Now !",
-    "No blog found matching your input.":"No blog found matching your input."
+  "Blogs": {
+    "There Are No Blogs Right Now !": "There Are No Blogs Right Now !",
+    "No blog found matching your input.": "No blog found matching your input."
   },
-  "BlogsDetails":{
-    "Previous Post":"Previous Post",
-    "Next Post":"Next Post",
-    "Comment:":"Comment:",
-    "Batoul abdulHadi":"Batoul abdulHadi",
-    "5 days ago":"5 days ago",
-    "Such a well-written piece! Insightful and inspiring — keepup the amazing work!":"Such a well-written piece! Insightful and inspiring — keepup the amazing work!",
-    "Post a comment":"Post a comment",
-    "Your Message":"Your Message",
-    "Save my name, email, and website in this browser for thenext time I comment.":"Save my name, email, and website in this browser for thenext time I comment.",
-    "Send":"Send",
-    "Search":"Search",
-    "Recent Posts":"Recent Posts"
+  "BlogsDetails": {
+    "Previous Post": "Previous Post",
+    "Next Post": "Next Post",
+    "Comment:": "Comment:",
+    "Batoul abdulHadi": "Batoul abdulHadi",
+    "5 days ago": "5 days ago",
+    "Such a well-written piece! Insightful and inspiring — keepup the amazing work!": "Such a well-written piece! Insightful and inspiring — keepup the amazing work!",
+    "Post a comment": "Post a comment",
+    "Your Message": "Your Message",
+    "Save my name, email, and website in this browser for thenext time I comment.": "Save my name, email, and website in this browser for thenext time I comment.",
+    "Send": "Send",
+    "Search": "Search",
+    "Recent Posts": "Recent Posts"
   },
-  "FullCart":{
-  "cart": "Cart",
-  "product": "Product",
-  "price": "Price",
-  "color": "Color",
-  "amount": "Amount",
-  "total_price": "Total Price",
-  "return_shopping": "Return Shopping",
-  "over_all": "Over All",
-  "sub_total": "Sub Total",
-  "shipping": "Shipping",
-  "next_step": "Next step",
-  "discount": "Discount",
-  "total": "Total",
-  "continue_checkout": "Continue to check out",
-  "product_deleted_success": "Product was deleted from the cart successfully!!",
-  "process_failed": "Process failed!!"
+  "FullCart": {
+    "cart": "Cart",
+    "product": "Product",
+    "price": "Price",
+    "color": "Color",
+    "amount": "Amount",
+    "total_price": "Total Price",
+    "return_shopping": "Return Shopping",
+    "over_all": "Over All",
+    "sub_total": "Sub Total",
+    "shipping": "Shipping",
+    "next_step": "Next step",
+    "discount": "Discount",
+    "total": "Total",
+    "continue_checkout": "Continue to check out",
+    "product_deleted_success": "Product was deleted from the cart successfully!!",
+    "process_failed": "Process failed!!"
   },
-  "EmptyCart":{
-    "Your cart is currently empty.":"Your cart is currently empty.",
-    "Return to shop":"Return to shop"
+  "EmptyCart": {
+    "Your cart is currently empty.": "Your cart is currently empty.",
+    "Return to shop": "Return to shop"
   },
-  "ComplateCart":{
-    "Return to shop":"Return to shop",
-    "Your request has been successfully completed.":"Your request has been successfully completed.",
-    "ourteam":"Our team will review and process it shortly, and we will contact you with updates regarding your order status.Thank you for choosing us."
-  }
+  "ComplateCart": {
+    "Return to shop": "Return to shop",
+    "Your request has been successfully completed.": "Your request has been successfully completed.",
+    "ourteam": "Our team will review and process it shortly, and we will contact you with updates regarding your order status.Thank you for choosing us."
+  },
+  "about": {
+    "title": "The Best Furniture Manufacturer of your choice",
+    "description": "At ArchiLink, we craft high-quality, stylish, and durable furniture designed to elevate any space. With expert craftsmanship and premium materials, we bring comfort, elegance, and functionality to your home or business. Choose excellence. Choose ArchiLink."
+  },
+  "inspiredLiving": {
+    "mainTitle": "Inspired Living: Our Mission & Vision",
+    "mainDesc": "Furnishing Dreams, Defining Elegance",
+    "visionTitle": "Our Vision",
+    "visionDesc": "Our vision is to redefine home and office spaces by offering high-quality, stylish, and affordable furniture that blends comfort with innovation. We aim to create a seamless online shopping experience, where customers can discover unique designs, sustainable materials, and personalized solutions to transform their spaces into something truly special.",
+    "missionTitle": "Our Mission",
+    "missionDesc": "Our mission is to create beautifully designed, high-quality furniture that enhances the comfort and style of every home. We are committed to sustainability, craftsmanship, and affordability, ensuring that our customers find pieces that reflect their unique taste while supporting ethical production practices. By combining timeless aesthetics with modern functionality, we aim to make every space feel like home.",
+    "valueTitle": "Our Value",
+    "valueDesc": "Our vision is to redefine home and office spaces with elegant, high-quality, and sustainable furniture that blends style, comfort, and functionality. We strive to offer a seamless online shopping experience, inspiring customers to create beautiful and personalized living spaces with our thoughtfully crafted collections."
+  },
+  "application": {
+    "title": "Download PROJECT APP",
+    "p1": "Enjoy the benefits of our platform on your favorite mobile device.",
+    "p2": "Explore new models, create mood boards and collections for your projects while accessing our platform on the go.",
+    "scan": "Scan To download"
+  },
+  "followUs": {
+    "title": "Follow Us on Instagram"
+  },
+  "contactForm": {
+    "weLoveToHear": "We Love To Hear From You",
+    "weLoveToHearDesc": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringi",
+    "leaveMessage": "Leave A Message",
+    "leaveMessageDesc": "Use the form below to get in touch with the sales team",
+    "addressTitle": "Address",
+    "addressDetails": "Syria, Homs, AlHamra Street, 12",
+    "businessHoursTitle": "Business Hours",
+    "businessHoursDetails": "su - sat : 8am - 5pm",
+    "phoneNumberTitle": "Phone-Number",
+    "phoneNumberDetails": "+963988136449",
+    "emailTitle": "E-Mail",
+    "emailDetails": "ArchiLink@gmail.com",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "E-mail",
+    "phonePlaceholder": "Phone",
+    "subjectPlaceholder": "Subject",
+    "yourMessageLabel": "Your Message",
+    "sendButton": "Send"
+  },
+  "userProfile": {
+    "myProfile": "My Profile",
+    "userName": "Johe smith",
+    "email": "Email",
+    "phone": "Phone",
+    "area": "Area",
+    "balance": "Balance",
+    "changePasswordBtn": "Change Password",
+    "changePasswordPopupTitle": "Change Your Password",
+    "yourEmail": "Your Email",
+    "oldPassword": "Old Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "updatePasswordBtn": "Update Password"
+  },
+  "shopHero": {
+    "interior": "Interior Design",
+    "exterior": "Exterior Design"
+  },
+  "models": {
+    "title": "Our Products"
+  },
+  "reviewShop": {
+    "highQuality": "High Quality",
+    "highQualityDesc": "crafted from top materials",
+    "warrantyProtection": "Warrany Protection",
+    "warrantyProtectionDesc": "Over 2 years",
+    "freeShipping": "Free Shipping",
+    "freeShippingDesc": "Order over 150 $",
+    "support": "24 / 7 Support",
+    "supportDesc": "Dedicated support"
+  },
+  "product": {
+    "addedToCart": "“Ceiling Light” has been added to your cart",
+    "viewCart": "View Cart",
+    "share": "share : ",
+    "sale": " sale",
+    "reviews": "reviews",
+    "colors": "Colors",
+    "addToCart": "Add to Cart",
+    "forArchitecture": "For Architecture Download",
+    "downloadBlocks": "Download Blocks",
+    "dailyCredits": "Daily Credits - 3/3",
+    "fileType": "File Type",
+    "descriptionTitle": "Description & Other Information",
+    "category": "Category",
+    "material": "Material",
+    "style": "Style",
+    "length": "Length",
+    "width": "Width",
+    "height": "Height",
+    "commentTitle": "Comment: ",
+    "commentName": "shahed aldroubi",
+    "commentTime": "5/9/2025",
+    "commentText": "\"Such a well-written piece! Insightful and inspiring — keep up the amazing work!\"",
+    "postComment": "Post a comment",
+    "phonePlaceholder": "Phone",
+    "emailPlaceholder": "E-mail",
+    "yourMessage": "Your Message",
+    "saveInfo": "Save my name, email, and website in this browser for the next time I comment.",
+    "send": "Send"
 
+  }
 }

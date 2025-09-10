@@ -1,14 +1,17 @@
+import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import config from "../../Constants/enviroment";
+import { useTranslation } from "react-i18next"; 
 import "./index.css";
 import Card from "../Card/Card";
 import Filter from "../Filter/Filter";
-import { useNavigate } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
-import axios from "axios";
-import config from "../../Constants/enviroment";
 import PagenationControllers from "../PagenationControllers/PagenationControllers";
 import usePagenation from "../../custom hooks/usePagenation";
 import SkeletonCard from "../Skeleton/SkeletonCard";
+
 export default function Models() {
+  const { t } = useTranslation(); 
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -16,6 +19,7 @@ export default function Models() {
   const handleClick = (id) => {
     navigate(`/shop/${id}`);
   };
+
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -29,6 +33,7 @@ export default function Models() {
         console.log(err);
       });
   }, []);
+
   const {
     goToPage,
     nextPage,
@@ -41,11 +46,6 @@ export default function Models() {
   const scrollEl = useRef(null);
 
   useEffect(() => {
-    /* window.scrollTo({
-      top: scrollEl.offse,
-      left: 0,
-      behavior: "smooth",
-    }); */
     if (scrollEl.current) {
       scrollEl.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -53,7 +53,8 @@ export default function Models() {
 
   return (
     <div className="models">
-      <h3 ref={scrollEl}>Our Products</h3>
+   
+      <h3 ref={scrollEl}>{t('models.title')}</h3>
       {/* <div className="topBar">
         <div className="search">
           <input placeholder="Search products..."></input>
