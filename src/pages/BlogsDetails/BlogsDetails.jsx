@@ -11,16 +11,17 @@ import config from "../../Constants/enviroment";
 import { toast } from "react-toastify";
 import Loader from "../../components/Loader/Loader";
 import { useTranslation } from "react-i18next";
+import { IoIosArrowForward } from "react-icons/io";
 const BlogsDetails = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const [searchedKey, setSearchedKey] = useState("");
   const [recentBlogs, setRecentBlogs] = useState([]);
   const [filteredBlogs, setFilteredBlogs] = useState(recentBlogs);
   const [postsDetails, setPostsDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-
+  const [rerender, setRerender] = useState(false);
   const [comments, setComments] = useState([]);
-  const [phone, setPhone] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const params = useParams();
@@ -48,7 +49,7 @@ const BlogsDetails = () => {
         setFilteredBlogs(res.data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [rerender]);
 
   useEffect(() => {
     const res = recentBlogs.filter((blog) =>
@@ -74,40 +75,39 @@ const BlogsDetails = () => {
       .then((res) => {
         setIsLoading(false);
         setPostsDetails(res.data);
+        setComments(res.data.comments);
         console.log(res.data);
-        console.log(postsDetails[id]);
       })
       .catch((err) => {
         console.log(err);
+        console.log(`${config.baseUrl}/${config.blogs}/${params.id}`);
         setIsLoading(false);
       });
   }, [params.id]);
-  useEffect(() => {
-    axios
-      .get(`${config.baseUrl}/comments?blogId=${params.id}`)
-      .then((res) => setComments(res.data))
-      .catch((err) => console.log(err));
-  }, [params.id]);
   const handleSendComment = () => {
-    if (!phone || !email || !message) {
+    if (!name || !email || !message) {
       toast.error("All fields are required!");
       return;
     }
 
     const newComment = {
       blogId: params.id,
-      phone,
+      name,
       email,
       message,
       date: new Date(),
     };
+    const data = { ...postsDetails, newComment };
 
     axios
-      .post(`${config.baseUrl}/comments`, newComment)
+      .post(`${config.baseUrl}/${config.blogs}/${params.id}`, data, {
+        headers: { method: "_PUT" },
+      })
       .then((res) => {
         toast.success("Comment posted successfully!");
-        setComments([...comments, res.data]);
-        setPhone("");
+        // setComments([...comments, res.data]);
+        setRerender((prev) => !prev);
+        setName("");
         setEmail("");
         setMessage("");
       })
@@ -200,14 +200,19 @@ const BlogsDetails = () => {
               </div>
 
               <div className="comment-bar">
-                <h1>
-                  Comment: <span>{comments.length}</span>
-                </h1>
-                {comments.map((c, index) => (
+                <div className="title">
+                  <p>
+                    Comment: <span>{comments.length}</span>
+                  </p>
+                  <Link to={`/blogs/${params.id}/comments`}>
+                    <span>View All</span>
+                    <IoIosArrowForward />
+                  </Link>
+                </div>
+                {comments.slice(0, 6).map((c, index) => (
                   <div className="name-and-comment" key={index}>
-                    <h4> {c.name}</h4>
                     <div className="name-and-time">
-                      <p className="name">{c.email}</p>
+                      <h4> {c.name}</h4>
                       <p className="time">
                         {new Date(c.date).toLocaleString()}
                       </p>
@@ -224,12 +229,12 @@ const BlogsDetails = () => {
                   <div className="phone-email-info">
                     <input
                       type="text"
-                      placeholder="Phone"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
+                      placeholder="Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                     <input
-                      type="text"
+                      type="email"
                       placeholder="E-mail"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -259,7 +264,9 @@ const BlogsDetails = () => {
                 <CiSearch className="search-icon" />
               </div>
               <div className="recent-posts">
-                <h2 className="recent-blogs-text">{t(`BlogsDetails.Recent Posts`)}</h2>
+                <h2 className="recent-blogs-text">
+                  {t(`BlogsDetails.Recent Posts`)}
+                </h2>
                 <div className="recent-blogs">
                   {filteredBlogs.map((recent) => (
                     <RecentBlog

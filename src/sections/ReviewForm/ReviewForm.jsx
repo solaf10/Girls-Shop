@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./ReviewForm.css";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
+import usePrivateRoute from "../../custom hooks/usePrivateRoute";
 
 const ReviewForm = () => {
   const { t } = useTranslation();
@@ -14,6 +15,10 @@ const ReviewForm = () => {
       .then((res) => setReview(res))
       .catch((err) => console.log(err));
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+  const handlePrivateRoute = usePrivateRoute(handleSubmit);
   return (
     <div className="review-form">
       <div className="container">
@@ -24,7 +29,7 @@ const ReviewForm = () => {
           <div className="home-main-title">
             <h2>{t("reviewForm.title")}</h2>
           </div>
-          <form>
+          <form onSubmit={handlePrivateRoute}>
             <textarea
               className="review-input"
               onChange={(event) => setReview(event.target.value)}

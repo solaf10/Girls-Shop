@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
-export default function MaterialStyle() {
+export default function MaterialStyle({
+  styleChecked,
+  setStyleChecked,
+  materialChecked,
+  setMaterialChecked,
+}) {
   const materials = [
     "Plastic",
     "Rattan",
@@ -21,9 +26,6 @@ export default function MaterialStyle() {
 
   const styles = ["Classic", "Ethnic", "Modern"];
 
-  const [materialChecked, setMaterialChecked] = useState({});
-  const [styleChecked, setStyleChecked] = useState({});
-
   const toggleMaterial = (name) => {
     setMaterialChecked((prev) => ({
       ...prev,
@@ -38,14 +40,6 @@ export default function MaterialStyle() {
     }));
   };
 
-  // for filter post req
-  const selectedMaterials = Object.keys(materialChecked).filter(
-    (key) => materialChecked[key]
-  );
-
-  const selectedStyles = Object.keys(styleChecked).filter(
-    (key) => styleChecked[key]
-  );
   return (
     <>
       <hr />

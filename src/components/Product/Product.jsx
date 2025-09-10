@@ -21,15 +21,14 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import RelatedProducts from "../../sections/Product/RelatedProducts/RelatedProducts";
 import usePrivateRoute from "../../custom hooks/usePrivateRoute";
 import UserAutherization from "../UserAutherization/UserAutherization";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 import "./Product.css";
 
 export default function Product() {
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
   const [productsDetails, setProductsDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
-  const [chosencolor, setchosencolor] = useState("");
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(0);
 
@@ -42,10 +41,12 @@ export default function Product() {
     images,
     desc,
     rate,
+    designType,
     category,
+    type,
     style,
     material,
-    colors,
+    color,
     width,
     height,
     lengthInfo,
@@ -83,11 +84,11 @@ export default function Product() {
   const handleClickAddToCart = () => {
     axios
       .post("http://localhost:8000/cartProducts", {
-        id: id,
-        name: name,
-        image: image,
-        price: price,
-        color: chosencolor,
+        id,
+        name,
+        image,
+        price,
+        color,
         amount: count,
       })
       .then((res) => setAddToCart(res.data))
@@ -118,11 +119,7 @@ export default function Product() {
       });
   }, [params.id]);
 
-  useEffect(() => {
-    console.log(chosencolor);
-  }, [chosencolor]);
-
-  const colorsEls = colors?.map((color, i) => (
+  /* const colorsEls = colors?.map((color, i) => (
     <div key={i} className="holder">
       <label
         className={
@@ -138,7 +135,7 @@ export default function Product() {
         onChange={() => setchosencolor(color)}
       />
     </div>
-  ));
+  )); */
 
   // rating
   const stars = [...new Array(5)].map((el, i) =>
@@ -184,8 +181,8 @@ export default function Product() {
           <div className="product container">
             {addToCart && (
               <div className="view-cart">
-                <p>{t('product.addedToCart')}</p>
-                <a>{t('product.viewCart')}</a>
+                <p>{t("product.addedToCart")}</p>
+                <a>{t("product.viewCart")}</a>
               </div>
             )}
             <div className="product-content">
@@ -200,11 +197,11 @@ export default function Product() {
                   <div className="rating">
                     {stars}
                     <p className="rev">
-                      ({t('product.reviews')} {percentage}%)
+                      ({t("product.reviews")} {percentage}%)
                     </p>
                   </div>
                   <div className="share">
-                    <p>{t('product.share')}</p>
+                    <p>{t("product.share")}</p>
                     <button onClick={handleCopyURL} className="icon">
                       <FaCopy />
                     </button>
@@ -228,7 +225,7 @@ export default function Product() {
                         handleShare(
                           `https://twitter.com/intent/tweet?url=${encodeURIComponent(
                             currentUrl
-                          )}&text=${encodeURIComponent(t('product.shareText'))}`
+                          )}&text=${encodeURIComponent(t("product.shareText"))}`
                         )
                       }
                       className="icon"
@@ -246,17 +243,13 @@ export default function Product() {
                       <>
                         <span className="real-price">{price}</span>
                         <span className="sale">
-                          {sale} {t('product.sale')}
+                          {sale} {t("product.sale")}
                         </span>
                       </>
                     )}
                   </div>
                 </div>
                 <form>
-                  <div className="colors-holder">
-                    <p>{t('product.colors')}</p>
-                    <div className="colors">{colorsEls}</div>
-                  </div>
                   <div className="cart">
                     <div className="product-number">
                       <button
@@ -287,7 +280,7 @@ export default function Product() {
                       type="submit"
                       onClick={handlePrivateRoute}
                     >
-                      <span>{t('product.addToCart')}</span>
+                      <span>{t("product.addToCart")}</span>
                       <MdArrowOutward className="arrow-icon" />
                     </button>
                   </div>
@@ -295,11 +288,11 @@ export default function Product() {
                 <UserAutherization>
                   <hr />
                   <div className="architecture">
-                    <p>{t('product.forArchitecture')}</p>
+                    <p>{t("product.forArchitecture")}</p>
                     <div className="download-button">
                       <a href={file?.[0]?.["3d"]} download="3DBlock.3d">
                         <FiDownload />
-                        {t('product.downloadBlocks')}
+                        {t("product.downloadBlocks")}
                       </a>
                       <button onClick={handleClickDownloadBlocks}>
                         {!downloadBlocksIsOpen ? (
@@ -311,7 +304,7 @@ export default function Product() {
                     </div>
                     {downloadBlocksIsOpen && (
                       <div className="popup">
-                        <div className="title">{t('product.fileType')}</div>
+                        <div className="title">{t("product.fileType")}</div>
                         <ul>
                           {file?.map((f, index) => {
                             const [key, value] = Object.entries(f)[0];
@@ -331,73 +324,95 @@ export default function Product() {
                         </ul>
                       </div>
                     )}
-                    <p>{t('product.dailyCredits')}</p>
+                    <p>{t("product.dailyCredits")}</p>
                   </div>
                 </UserAutherization>
               </div>
             </div>
             <hr />
             <div className="description">
-              <h2>{t('product.descriptionTitle')}</h2>
+              <h2>{t("product.descriptionTitle")}</h2>
               <div className="des">
                 <div className="info">
-                  <p className="title">{t('product.category')}</p>
+                  <p className="title">{t("product.designType")}</p>
+                  <p className="desc">{designType}</p>
+                </div>
+                <div className="info">
+                  <p className="title">{t("product.category")}</p>
                   <p className="desc">{category}</p>
                 </div>
                 <div className="info">
-                  <p className="title">{t('product.material')}</p>
+                  <p className="title">{t("product.type")}</p>
+                  <p className="desc">{type}</p>
+                </div>
+                <div className="info">
+                  <p className="title">{t("product.material")}</p>
                   <p className="desc">{material}</p>
                 </div>
                 <div className="info">
-                  <p className="title">{t('product.style')}</p>
+                  <p className="title">{t("product.style")}</p>
                   <p className="desc">{style}</p>
                 </div>
                 <div className="info">
-                  <p className="title">{t('product.length')}</p>
+                  <p className="title">{t("product.length")}</p>
                   <p className="desc">{lengthInfo}</p>
                 </div>
                 <div className="info">
-                  <p className="title">{t('product.width')}</p>
+                  <p className="title">{t("product.width")}</p>
                   <p className="desc">{width}</p>
                 </div>
                 <div className="info">
-                  <p className="title">{t('product.height')}</p>
+                  <p className="title">{t("product.height")}</p>
                   <p className="desc">{height}</p>
+                </div>
+                <div className="info colors-holder">
+                  <p className="title">{t("product.colors")}</p>
+                  <div className="desc colors">
+                    <div
+                      style={{ backgroundColor: color }}
+                      className="choose-color"
+                    ></div>
+                  </div>
                 </div>
               </div>
             </div>
             <hr />
             <div className="comment-bar">
               <h2>
-                {t('product.commentTitle')}<span>1</span>
+                {t("product.commentTitle")}
+                <span>1</span>
               </h2>
               <div className="name-and-comment">
                 <div className="name-and-time">
-                  <p className="name">{t('product.commentName')}</p>
-                  <div className="rating">
-                    {stars}
-                  </div>
-                  <p className="time">{t('product.commentTime')}</p>
+                  <p className="name">{t("product.commentName")}</p>
+                  <div className="rating">{stars}</div>
+                  <p className="time">{t("product.commentTime")}</p>
                 </div>
-                <p className="comment">{t('product.commentText')}</p>
+                <p className="comment">{t("product.commentText")}</p>
               </div>
             </div>
             <div className="write-comment-sec">
-              <h2>{t('product.postComment')}</h2>
+              <h2>{t("product.postComment")}</h2>
               <div className="write-comment-form">
                 <div className="phone-email-info">
-                  <input type="text" placeholder={t('product.phonePlaceholder')}></input>
-                  <input type="text" placeholder={t('product.emailPlaceholder')}></input>
+                  <input
+                    type="text"
+                    placeholder={t("product.phonePlaceholder")}
+                  ></input>
+                  <input
+                    type="text"
+                    placeholder={t("product.emailPlaceholder")}
+                  ></input>
                 </div>
                 <div className="textarea-to-write-comment">
-                  <label>{t('product.yourMessage')}</label>
+                  <label>{t("product.yourMessage")}</label>
                   <textarea />
                 </div>
                 <div className="agree-yo-save-your-info">
                   <input className="check" type="checkbox" />
-                  <label>{t('product.saveInfo')}</label>
+                  <label>{t("product.saveInfo")}</label>
                 </div>
-                <button className="send-comment">{t('product.send')}</button>
+                <button className="send-comment">{t("product.send")}</button>
               </div>
             </div>
             <RelatedProducts category={category} id={id} />

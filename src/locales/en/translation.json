@@ -311,6 +311,8 @@
     "fileType": "File Type",
     "descriptionTitle": "Description & Other Information",
     "category": "Category",
+    "type": "type",
+    "designType": "Design Type",
     "material": "Material",
     "style": "Style",
     "length": "Length",
@@ -326,6 +328,5 @@
     "yourMessage": "Your Message",
     "saveInfo": "Save my name, email, and website in this browser for the next time I comment.",
     "send": "Send"
-
   }
 }

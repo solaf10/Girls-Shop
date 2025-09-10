@@ -1,15 +1,14 @@
 import React from "react";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 import "./FollowUs.css";
 
 const FollowUs = () => {
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
   return (
     <section className="followus">
       <div className="container">
         <div className="title">
-         
-          <h2>{t('followUs.title')}</h2>
+          <h2>{t("followUs.title")}</h2>
         </div>
         <div className="slider">
           <img src="/assets/Images/Img.png" alt="" />
