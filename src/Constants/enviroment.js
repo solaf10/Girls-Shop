@@ -6,5 +6,6 @@ const config = {
   reviews: "reviews",
   cartProducts: "cartProducts",
   blogs: "postsDetails",
+  comments: "comments",
 };
 export default config;

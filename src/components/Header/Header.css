@@ -6,8 +6,7 @@ header {
   background-color: #4a5957;
 }
 header .container,
-header .container .holder,
-.language {
+header .container .holder {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,8 +17,7 @@ header .container {
 header .container .customize {
   text-transform: uppercase;
 }
-header .container .holder,
-.language {
+header .container .holder {
   gap: 0.6vw;
 }
 header .container .holder .language {

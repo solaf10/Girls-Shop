@@ -19,6 +19,10 @@ const BlogsDetails = () => {
   const [postsDetails, setPostsDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
+  const [comments, setComments] = useState([]);
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const params = useParams();
 
   const location = useLocation();
@@ -66,7 +70,6 @@ const BlogsDetails = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      //   .get(config.baseUrl + "/" + config.blogs + "/" + params.id)
       .get(`${config.baseUrl}/${config.blogs}/${params.id}`)
       .then((res) => {
         setIsLoading(false);
@@ -79,6 +82,40 @@ const BlogsDetails = () => {
         setIsLoading(false);
       });
   }, [params.id]);
+  useEffect(() => {
+    axios
+      .get(`${config.baseUrl}/comments?blogId=${params.id}`)
+      .then((res) => setComments(res.data))
+      .catch((err) => console.log(err));
+  }, [params.id]);
+  const handleSendComment = () => {
+    if (!phone || !email || !message) {
+      toast.error("All fields are required!");
+      return;
+    }
+
+    const newComment = {
+      blogId: params.id,
+      phone,
+      email,
+      message,
+      date: new Date(),
+    };
+
+    axios
+      .post(`${config.baseUrl}/comments`, newComment)
+      .then((res) => {
+        toast.success("Comment posted successfully!");
+        setComments([...comments, res.data]);
+        setPhone("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error("Failed to post comment.");
+      });
+  };
 
   const handleShare = (url) => {
     window.open(url, "_blank", "width=600,height=400");
@@ -161,41 +198,53 @@ const BlogsDetails = () => {
                   <GrFormNextLink className="next-icon" />
                 </div>
               </div>
+
               <div className="comment-bar">
                 <h1>
-                  {t(`BlogsDetails.comment:`)} <span>1</span>
+                  Comment: <span>{comments.length}</span>
                 </h1>
-                <div className="name-and-comment">
-                  <div className="name-and-time">
-                    <p className="name">{t(`BlogsDetails.Batoul abdulHadi`)} </p>
-                    <p className="time"> {t(`BlogsDetails.5 Days ago`)}</p>
-                  </div>
+                {comments.map((c, index) => (
+                  <div className="name-and-comment" key={index}>
+                    <h4> {c.name}</h4>
+                    <div className="name-and-time">
+                      <p className="name">{c.email}</p>
+                      <p className="time">
+                        {new Date(c.date).toLocaleString()}
+                      </p>
+                    </div>
 
-                  <p className="comment">
-                    {t(`"BlogsDetails.Such a well-written piece! Insightful and inspiring — keep
-                                        up the amazing work!"`)}
-                  </p>
-                </div>
+                    <p className="comment">{c.message}</p>
+                  </div>
+                ))}
               </div>
+
               <div className="write-comment-sec">
                 <h1>{t(`BlogsDetails.Post a comment`)}</h1>
                 <div className="write-comment-form">
                   <div className="phone-email-info">
-                    <input type="text" placeholder="Phone"></input>
-                    <input type="text" placeholder="E-mail"></input>
+                    <input
+                      type="text"
+                      placeholder="Phone"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                    />
+                    <input
+                      type="text"
+                      placeholder="E-mail"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
                   </div>
                   <div className="textarea-to-write-comment">
-                    <label>{t(`BlogsDetails.Your Message`)}</label>
-                    <textarea />
+                    <label>Your Message</label>
+                    <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                    />
                   </div>
-                  <div className="agree-yo-save-your-info">
-                    <input className="check" type="checkbox" />
-                    <label>
-                      {t(`BlogsDetails.Save my name, email, and website in this browser for the
-                      next time I comment.`)}
-                    </label>
-                  </div>
-                  <button className="send-comment">{t(`BlogsDetails.Send`)}</button>
+                  <button className="send-comment" onClick={handleSendComment}>
+                    Send
+                  </button>
                 </div>
               </div>
             </div>
