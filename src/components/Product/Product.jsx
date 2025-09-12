@@ -31,6 +31,7 @@ export default function Product() {
   const [currentImage, setCurrentImage] = useState(0);
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(0);
+  const [chosenColor, setChosenColor] = useState("#c0c0c0");
 
   const {
     id,
@@ -46,7 +47,7 @@ export default function Product() {
     type,
     style,
     material,
-    color,
+    colors,
     width,
     height,
     lengthInfo,
@@ -88,7 +89,7 @@ export default function Product() {
         name,
         image,
         price,
-        color,
+        chosenColor,
         amount: count,
       })
       .then((res) => setAddToCart(res.data))
@@ -96,6 +97,13 @@ export default function Product() {
     navigate(`/cart`);
   };
   const handlePrivateRoute = usePrivateRoute(handleClickAddToCart);
+
+  // setDefaultColor
+  useEffect(() => {
+    if (colors?.length > 0) {
+      setChosenColor(colors[0]);
+    }
+  }, [productsDetails]);
 
   useEffect(() => {
     window.scrollTo({
@@ -119,23 +127,11 @@ export default function Product() {
       });
   }, [params.id]);
 
-  /* const colorsEls = colors?.map((color, i) => (
+  const colorsEls = colors?.map((color, i) => (
     <div key={i} className="holder">
-      <label
-        className={
-          color == chosencolor ? "active choose-color" : "choose-color"
-        }
-        style={{ backgroundColor: color }}
-        htmlFor={`color-${i + 1}`}
-      ></label>
-      <input
-        type="radio"
-        name="color"
-        id={`color-${i + 1}`}
-        onChange={() => setchosencolor(color)}
-      />
+      <div className="choose-color" style={{ backgroundColor: color }}></div>
     </div>
-  )); */
+  ));
 
   // rating
   const stars = [...new Array(5)].map((el, i) =>
@@ -250,6 +246,12 @@ export default function Product() {
                   </div>
                 </div>
                 <form>
+                  <input
+                    type="color"
+                    name="color"
+                    value={chosenColor}
+                    onChange={(e) => setChosenColor(e.target.value)}
+                  />
                   <div className="cart">
                     <div className="product-number">
                       <button
@@ -367,12 +369,7 @@ export default function Product() {
                 </div>
                 <div className="info colors-holder">
                   <p className="title">{t("product.colors")}</p>
-                  <div className="desc colors">
-                    <div
-                      style={{ backgroundColor: color }}
-                      className="choose-color"
-                    ></div>
-                  </div>
+                  <div className="desc colors">{colorsEls}</div>
                 </div>
               </div>
             </div>

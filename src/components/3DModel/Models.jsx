@@ -88,13 +88,15 @@ export default function Models() {
             ) : (
               <>
                 <div className="cards">{cards}</div>
-                <PagenationControllers
-                  goToPage={goToPage}
-                  nextPage={nextPage}
-                  currentPage={currentPage}
-                  totalPages={totalPages}
-                  isBtnDisabled={isBtnDisabled}
-                />
+                {totalPages > 1 && (
+                  <PagenationControllers
+                    goToPage={goToPage}
+                    nextPage={nextPage}
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    isBtnDisabled={isBtnDisabled}
+                  />
+                )}
               </>
             )}
           </div>
