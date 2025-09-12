@@ -4,18 +4,11 @@ import { FaCheckCircle } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import CustomizeOrder from "../../../components/CustomizeOrder/CustomizeOrder";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const CustomOrder = () => {
   const { t } = useTranslation();
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const openPopup = () => {
-    setIsPopupOpen(true);
-  };
-
-  const closePopup = () => {
-    setIsPopupOpen(false);
-  };
+  
 
   return (
     <section className="custom-order">
@@ -58,11 +51,14 @@ const CustomOrder = () => {
               </div>
             </div>
           </div>
-          <button className="make-your-own-design-btn" onClick={openPopup}>
-            <span>{t("customOrder.button")}</span>
+           <Link to="/customizeOrder">
+             <button className="make-your-own-design-btn" >
+                  <span>{t("customOrder.button")}</span>
             <MdArrowOutward className="arrow-icon" />
-          </button>
-          {isPopupOpen && <CustomizeOrder closePopup={closePopup} />}
+              </button>
+            </Link>
+         
+       
         </div>
       </div>
     </section>

@@ -175,7 +175,9 @@
       "name": "XORA corner desk",
       "price": "$560.00",
       "sale": "%20",
-      "images": ["/assets/Images/top-sellers6.png"],
+      "images": [
+        "/assets/Images/top-sellers6.png"
+      ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 4,
       "category": "furniture",
@@ -1612,8 +1614,9 @@
       "name": "XORA corner desk",
       "image": "/assets/Images/top-sellers1.png",
       "price": "$560.00",
-      "colors": ["#888", "#f95"],
-      "amount": 1
+      "color": "#f95",
+      "amount": 0
+
     }
   ]
 }

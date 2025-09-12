@@ -6,17 +6,10 @@ import { useTranslation } from "react-i18next";
 import UserAutherization from "../../../components/UserAutherization/UserAutherization";
 
 const HomeHero = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   const { t } = useTranslation();
 
-  const openPopup = () => {
-    setIsPopupOpen(true);
-  };
-
-  const closePopup = () => {
-    setIsPopupOpen(false);
-  };
-
+ 
   return (
     <div className="home-hero">
       <div className="container">
@@ -29,10 +22,13 @@ const HomeHero = () => {
 
           
           <UserAutherization>
-            <button className="customize-btn btn" onClick={openPopup}>
-             {t("homeHero.customizeOrder")}
-            </button>
-            {isPopupOpen && <CustomizeOrder closePopup={closePopup} />}
+            <Link to="/customizeOrder">
+             <button className="customize-btn btn" >
+                 {t("homeHero.customizeOrder")}
+              </button>
+            </Link>
+            
+          
           </UserAutherization>
 
         </div>
