@@ -85,11 +85,11 @@ const Designer = () => {
                 filteredDesigners.map((designer) => (
                   <DesignerCard
                     key={designer.id}
+                    id={designer.id}
                     designerName={designer.designerName}
                     designerImage={designer.image}
                     designerLocation={designer.designerCity}
                     designerNumber={designer.designerPhone}
-                    designerWork={designer.designerWork}
                   />
                 ))
               ) : (

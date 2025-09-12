@@ -31,9 +31,10 @@ function PriceColorFilter({ chosenColor, setChosenColor, price, setPrice }) {
         <div className="range-slider">
           <input
             type="range"
-            min="0"
-            max="1000"
-            value={price}
+            min="100"
+            step="50"
+            max="10000"
+            value={price || 100}
             onChange={(e) => setPrice(parseInt(e.target.value))}
           />
         </div>

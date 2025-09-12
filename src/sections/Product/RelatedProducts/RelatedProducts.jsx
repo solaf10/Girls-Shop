@@ -47,10 +47,10 @@ const RelatedProducts = ({ category, id }) => {
       <div className="cards">
         {isLoading ? <SkeletonCard count={4} /> : cards}
       </div>
-      {limit <= products.length && (
+      {limit < products.length && (
         <button
           onClick={() =>
-            setLimit((prev) => prev + productsNum, products.length)
+            setLimit((prev) => Math.min(prev + productsNum, products.length))
           }
           className="all-btn"
         >
