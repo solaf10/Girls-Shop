@@ -25,6 +25,7 @@ import { ToastContainer } from "react-toastify";
 import UserProfile from "./components/UserProfile/UserProfile";
 import { createContext } from "react";
 import { IsCustomerProvider } from "./context/IsCustomerContext";
+import AllComments from "./pages/AllComments/AllComments";
 
 const isCustomerContext = createContext(null);
 
@@ -53,6 +54,7 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/cart/complate-cart" element={<ComplateCart />} />
           <Route path="/blogs/:id" element={<BlogsDetails />} />
+          <Route path="/blogs/:id/comments" element={<AllComments />} />
           <Route path="/designer" element={<Designer />} />
           <Route path="/profile" element={<UserProfile />} />
           <Route path="/updatePassword" element={<UpdatePassword />}>

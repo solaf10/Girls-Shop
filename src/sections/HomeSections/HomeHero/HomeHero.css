@@ -29,8 +29,7 @@
   letter-spacing: 0.2px;
   line-height: 30px;
   text-align: center;
-
-  color: var(--text-color);
+  color: #cecece;
 }
 .home-hero .container .btns {
   display: flex;

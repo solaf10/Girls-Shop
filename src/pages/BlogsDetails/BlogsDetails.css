@@ -69,33 +69,31 @@
   padding: 64px 0;
   border-bottom: 0.5px solid #c0c0c0;
 
-  h1 {
+  .title {
     font-weight: 600;
     font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     span {
+      color: var(--third-color);
+    }
+    a {
+      color: black;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      transition: 0.5s;
+      span {
+        color: inherit;
+      }
+    }
+    a:hover {
       color: var(--third-color);
     }
   }
   .name-and-comment {
     padding-top: 64px;
-    .name-and-time {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      .name {
-        font-weight: 600;
-        font-size: 21px;
-      }
-      .time {
-        font-weight: 300;
-        font-size: 16px;
-      }
-    }
-    .comment {
-      font-weight: 300;
-      font-size: 16px;
-      padding-top: 16px;
-    }
   }
 }
 .write-comment-sec {

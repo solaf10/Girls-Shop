@@ -11,14 +11,19 @@ import config from "../../Constants/enviroment";
 import { toast } from "react-toastify";
 import Loader from "../../components/Loader/Loader";
 import { useTranslation } from "react-i18next";
+import { IoIosArrowForward } from "react-icons/io";
 const BlogsDetails = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const [searchedKey, setSearchedKey] = useState("");
   const [recentBlogs, setRecentBlogs] = useState([]);
   const [filteredBlogs, setFilteredBlogs] = useState(recentBlogs);
   const [postsDetails, setPostsDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-
+  const [rerender, setRerender] = useState(false);
+  const [comments, setComments] = useState([]);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const params = useParams();
 
   const location = useLocation();
@@ -44,7 +49,7 @@ const BlogsDetails = () => {
         setFilteredBlogs(res.data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [rerender]);
 
   useEffect(() => {
     const res = recentBlogs.filter((blog) =>
@@ -66,19 +71,51 @@ const BlogsDetails = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      //   .get(config.baseUrl + "/" + config.blogs + "/" + params.id)
       .get(`${config.baseUrl}/${config.blogs}/${params.id}`)
       .then((res) => {
         setIsLoading(false);
         setPostsDetails(res.data);
+        setComments(res.data.comments);
         console.log(res.data);
-        console.log(postsDetails[id]);
       })
       .catch((err) => {
         console.log(err);
+        console.log(`${config.baseUrl}/${config.blogs}/${params.id}`);
         setIsLoading(false);
       });
   }, [params.id]);
+  const handleSendComment = () => {
+    if (!name || !email || !message) {
+      toast.error("All fields are required!");
+      return;
+    }
+
+    const newComment = {
+      blogId: params.id,
+      name,
+      email,
+      message,
+      date: new Date(),
+    };
+    const data = { ...postsDetails, newComment };
+
+    axios
+      .post(`${config.baseUrl}/${config.blogs}/${params.id}`, data, {
+        headers: { method: "_PUT" },
+      })
+      .then((res) => {
+        toast.success("Comment posted successfully!");
+        // setComments([...comments, res.data]);
+        setRerender((prev) => !prev);
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error("Failed to post comment.");
+      });
+  };
 
   const handleShare = (url) => {
     window.open(url, "_blank", "width=600,height=400");
@@ -161,41 +198,58 @@ const BlogsDetails = () => {
                   <GrFormNextLink className="next-icon" />
                 </div>
               </div>
-              <div className="comment-bar">
-                <h1>
-                  {t(`BlogsDetails.comment:`)} <span>1</span>
-                </h1>
-                <div className="name-and-comment">
-                  <div className="name-and-time">
-                    <p className="name">{t(`BlogsDetails.Batoul abdulHadi`)} </p>
-                    <p className="time"> {t(`BlogsDetails.5 Days ago`)}</p>
-                  </div>
 
-                  <p className="comment">
-                    {t(`"BlogsDetails.Such a well-written piece! Insightful and inspiring — keep
-                                        up the amazing work!"`)}
+              <div className="comment-bar">
+                <div className="title">
+                  <p>
+                    Comment: <span>{comments.length}</span>
                   </p>
+                  <Link to={`/blogs/${params.id}/comments`}>
+                    <span>View All</span>
+                    <IoIosArrowForward />
+                  </Link>
                 </div>
+                {comments.slice(0, 6).map((c, index) => (
+                  <div className="name-and-comment" key={index}>
+                    <div className="name-and-time">
+                      <h4> {c.name}</h4>
+                      <p className="time">
+                        {new Date(c.date).toLocaleString()}
+                      </p>
+                    </div>
+
+                    <p className="comment">{c.message}</p>
+                  </div>
+                ))}
               </div>
+
               <div className="write-comment-sec">
                 <h1>{t(`BlogsDetails.Post a comment`)}</h1>
                 <div className="write-comment-form">
                   <div className="phone-email-info">
-                    <input type="text" placeholder="Phone"></input>
-                    <input type="text" placeholder="E-mail"></input>
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                    <input
+                      type="email"
+                      placeholder="E-mail"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
                   </div>
                   <div className="textarea-to-write-comment">
-                    <label>{t(`BlogsDetails.Your Message`)}</label>
-                    <textarea />
+                    <label>Your Message</label>
+                    <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                    />
                   </div>
-                  <div className="agree-yo-save-your-info">
-                    <input className="check" type="checkbox" />
-                    <label>
-                      {t(`BlogsDetails.Save my name, email, and website in this browser for the
-                      next time I comment.`)}
-                    </label>
-                  </div>
-                  <button className="send-comment">{t(`BlogsDetails.Send`)}</button>
+                  <button className="send-comment" onClick={handleSendComment}>
+                    Send
+                  </button>
                 </div>
               </div>
             </div>
@@ -210,7 +264,9 @@ const BlogsDetails = () => {
                 <CiSearch className="search-icon" />
               </div>
               <div className="recent-posts">
-                <h2 className="recent-blogs-text">{t(`BlogsDetails.Recent Posts`)}</h2>
+                <h2 className="recent-blogs-text">
+                  {t(`BlogsDetails.Recent Posts`)}
+                </h2>
                 <div className="recent-blogs">
                   {filteredBlogs.map((recent) => (
                     <RecentBlog

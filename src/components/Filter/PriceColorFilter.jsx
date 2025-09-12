@@ -1,10 +1,6 @@
-import { useState } from "react";
 import "./Filter.css";
 
-function PriceColorFilter() {
-  const [price, setPrice] = useState(500); // قيمة وحدة بدل مصفوفة
-  const [chosenColor, setChosenColor] = useState(null);
-
+function PriceColorFilter({ chosenColor, setChosenColor, price, setPrice }) {
   const colors = [
     "#ddd",
     "#a00",

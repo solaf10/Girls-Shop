@@ -2,18 +2,20 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import config from "../../Constants/enviroment";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 import "./index.css";
 import Card from "../Card/Card";
 import Filter from "../Filter/Filter";
 import PagenationControllers from "../PagenationControllers/PagenationControllers";
 import usePagenation from "../../custom hooks/usePagenation";
 import SkeletonCard from "../Skeleton/SkeletonCard";
+import EmptyHandler from "../EmptyHandler/EmptyHandler";
 
 export default function Models() {
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = (id) => {
@@ -26,6 +28,7 @@ export default function Models() {
       .get(config.baseUrl + "/" + config.products)
       .then((res) => {
         setProducts(res.data);
+        setFilteredProducts(res.data);
         setIsLoading(false);
       })
       .catch((err) => {
@@ -41,7 +44,7 @@ export default function Models() {
     currentCards,
     totalPages,
     isBtnDisabled,
-  } = usePagenation(products);
+  } = usePagenation(filteredProducts);
 
   const scrollEl = useRef(null);
 
@@ -50,27 +53,29 @@ export default function Models() {
       scrollEl.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [currentPage]);
-
+  const cards = currentCards.map((product) => (
+    <Card
+      onClick={() => {
+        handleClick(product.id);
+      }}
+      key={product.id}
+      id={product.id}
+      image={product.image}
+      name={product.name}
+      price={product.price}
+      sale={product.sale}
+      realPrice={product.realPrice}
+    />
+  ));
   return (
     <div className="models">
-   
-      <h3 ref={scrollEl}>{t('models.title')}</h3>
-      {/* <div className="topBar">
-        <div className="search">
-          <input placeholder="Search products..."></input>
-          <img src={search} />I
-        </div>
-         <div className="results">Showing 1-12 of 18 results</div>
-        <div className="sorting">
-          <span>Default sorting</span>
-          <span>
-            <FaAngleDown />
-          </span>
-        </div>
-      </div> */}
+      <h3 ref={scrollEl}>{t("models.title")}</h3>
       <div className="products">
         <div className="filters">
-          <Filter />
+          <Filter
+            setFilteredProducts={setFilteredProducts}
+            products={products}
+          />
         </div>
         {isLoading ? (
           <div className="cards">
@@ -78,29 +83,20 @@ export default function Models() {
           </div>
         ) : (
           <div className="products-holder" style={{ width: "100%" }}>
-            <div className="cards">
-              {currentCards.map((product) => (
-                <Card
-                  onClick={() => {
-                    handleClick(product.id);
-                  }}
-                  key={product.id}
-                  id={product.id}
-                  image={product.image}
-                  name={product.name}
-                  price={product.price}
-                  sale={product.sale}
-                  realPrice={product.realPrice}
+            {filteredProducts.length == 0 ? (
+              <EmptyHandler message="There Is No Products!!" />
+            ) : (
+              <>
+                <div className="cards">{cards}</div>
+                <PagenationControllers
+                  goToPage={goToPage}
+                  nextPage={nextPage}
+                  currentPage={currentPage}
+                  totalPages={totalPages}
+                  isBtnDisabled={isBtnDisabled}
                 />
-              ))}
-            </div>
-            <PagenationControllers
-              goToPage={goToPage}
-              nextPage={nextPage}
-              currentPage={currentPage}
-              totalPages={totalPages}
-              isBtnDisabled={isBtnDisabled}
-            />
+              </>
+            )}
           </div>
         )}
       </div>
