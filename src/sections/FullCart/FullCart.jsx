@@ -28,6 +28,20 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
       });
   };
 
+ const handleAmountChange = (id, newAmount) => {
+  setCartProduct((prev) =>
+    prev.map((pro) =>
+      pro.id === id ? { ...pro, amount: newAmount >= 0 ? newAmount : 0 } : pro
+    )
+  );
+};
+
+const grandTotal = cartProduct.reduce((acc, pro) => {
+  const numPrice = parseFloat(pro.price.replace("$", "")) || 0;
+  return acc + numPrice * (pro.amount || 0);
+}, 0);
+
+
   return (
     <div className="fullcart">
       <div className="container">
@@ -64,7 +78,7 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
                     price={pro.price}
                     name={pro.name}
                     amount={pro.amount}
-                    onDelete={handleDelete}
+                    onAmountChange={handleAmountChange}
                   />
                 ))}
               </div>
@@ -81,7 +95,7 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
               </div>
               <div className="total">
                 <p>{t("FullCart.total")}</p>
-                <p>476 AED</p>
+                <p>{grandTotal} AED</p>
               </div>
             </div>
             <button className="check-out" onClick={privateRouteHandler}>

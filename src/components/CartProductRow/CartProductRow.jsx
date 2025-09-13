@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
-const CartProductRow = ({id, image, color, name, price, amount , onDelete}) => {
+const CartProductRow = ({id, image, color, name, price, amount , onDelete ,onAmountChange}) => {
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(amount);
   const handleCount1 = () => {
@@ -12,7 +12,7 @@ const CartProductRow = ({id, image, color, name, price, amount , onDelete}) => {
     setCount((c) => c + step);
   };
   const numPrice = parseFloat(price.replace("$", ""));
-  const total = numPrice * count;
+  const total = numPrice * amount;
 
   return (
     <div>
@@ -46,7 +46,7 @@ const CartProductRow = ({id, image, color, name, price, amount , onDelete}) => {
               color: count == 0 ? "#ccc" : "var(--primary-color)",
               background: "white",
             }}
-            onClick={handleCount1}
+            onClick={() => onAmountChange(id, amount - 1)}
           >
             {" "}
             -
@@ -58,12 +58,12 @@ const CartProductRow = ({id, image, color, name, price, amount , onDelete}) => {
               textAlign: "center",
             }}
             type="text"
-            value={count}
-            onChange={(e) => setCount(Number(e.target.value))}
+            value={amount}
+            onChange={(e) => onAmountChange(id, Number(e.target.value))}
           />
           <button
             type="button"
-            onClick={handleCount2}
+            onClick={() => onAmountChange(id, amount + 1)}
             style={{ background: "white" }}
           >
             +
