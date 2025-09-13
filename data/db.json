@@ -14,10 +14,15 @@
       ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 4,
-      "category": "chairs",
-      "style": "modern",
-      "material": "wood",
-      "colors": ["#eee", "#888"],
+      "type": "beds",
+      "designType": "external",
+      "category": "furniture",
+      "style": "classic",
+      "material": "stone",
+      "colors": [
+        "#888888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -36,7 +41,7 @@
     {
       "id": "34",
       "image": "/assets/Images/top-sellers2.png",
-      "name": "XORA corner desk",
+      "name": "XORA corner desk2",
       "price": "$560.00",
       "sale": "%0",
       "images": [
@@ -46,10 +51,15 @@
       ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 4,
-      "category": "chairs",
+      "type": "chairs",
+      "designType": "internal",
+      "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#888",
+        "#faa"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -68,7 +78,7 @@
     {
       "id": "45",
       "image": "/assets/Images/top-sellers3.png",
-      "name": "XORA corner desk",
+      "name": "XORA corner desk3",
       "price": "$560.00",
       "sale": "%20",
       "images": [
@@ -78,10 +88,15 @@
       ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 5,
-      "category": "chairs",
+      "type": "chairs",
+      "designType": "internal",
+      "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#888",
+        "#660"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -109,10 +124,15 @@
       ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 3,
-      "category": "chairs",
+      "type": "chairs",
+      "designType": "internal",
+      "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -140,10 +160,15 @@
       ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 2,
-      "category": "chairs",
+      "type": "chairs",
+      "designType": "internal",
+      "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -165,13 +190,20 @@
       "name": "XORA corner desk",
       "price": "$560.00",
       "sale": "%20",
-      "images": ["/assets/Images/top-sellers6.png"],
+      "images": [
+        "/assets/Images/top-sellers6.png"
+      ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 4,
-      "category": "chairs",
+      "category": "furniture",
+      "type": "chairs",
+      "designType": "internal",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -199,10 +231,15 @@
       ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 5,
-      "category": "chairs",
+      "type": "beds",
+      "designType": "internal",
+      "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -221,7 +258,7 @@
     {
       "id": "84",
       "image": "/assets/Images/top-sellers8.png",
-      "name": "XORA corner desk",
+      "name": "XORA corner desk2",
       "price": "$560.00",
       "sale": "%20",
       "images": [
@@ -232,10 +269,14 @@
       ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 3,
-      "category": "chairs",
+      "type": "beds",
+      "designType": "internal",
+      "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -260,10 +301,14 @@
       "images": [],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 1,
-      "category": "chairs",
+      "type": "chairs",
+      "designType": "internal",
+      "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -288,10 +333,14 @@
       "images": [],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 1,
-      "category": "chairs",
+      "type": "chairs",
+      "designType": "internal",
+      "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -316,10 +365,15 @@
       "images": [],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 1,
-      "category": "chairs",
+      "type": "chairs",
+      "designType": "internal",
+      "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -344,10 +398,15 @@
       "images": [],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 1,
-      "category": "chairs",
+      "type": "chairs",
+      "designType": "internal",
+      "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -372,10 +431,14 @@
       "images": [],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 1,
-      "category": "chairs",
+      "type": "chairs",
+      "designType": "internal",
+      "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -400,10 +463,14 @@
       "images": [],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 1,
-      "category": "chairs",
+      "type": "chairs",
+      "designType": "internal",
+      "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -428,10 +495,15 @@
       "images": [],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 1,
-      "category": "chairs",
+      "type": "chairs",
+      "designType": "internal",
+      "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -797,7 +869,58 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        },
+        {
+          "id": "a98",
+          "name": "solaf",
+          "email": "soos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     },
     {
       "id": "2",
@@ -807,7 +930,52 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     },
     {
       "id": "3",
@@ -817,7 +985,52 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     },
     {
       "id": "4",
@@ -827,7 +1040,52 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     },
     {
       "id": "5",
@@ -837,7 +1095,52 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     },
     {
       "id": "6",
@@ -847,7 +1150,52 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     },
     {
       "id": "7",
@@ -857,7 +1205,52 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     },
     {
       "id": "8",
@@ -867,7 +1260,52 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     },
     {
       "id": "9",
@@ -887,7 +1325,52 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     },
     {
       "id": "11",
@@ -897,7 +1380,52 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     },
     {
       "id": "12",
@@ -907,7 +1435,52 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     },
     {
       "id": "13",
@@ -917,7 +1490,52 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     },
     {
       "id": "14",
@@ -927,7 +1545,52 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     },
     {
       "id": "15",
@@ -937,7 +1600,52 @@
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "date": "Feb 8th, 2025",
+      "comments": [
+        {
+          "id": "1",
+          "name": "shahed",
+          "e-mail": "shahed@gmail.com",
+          "date": "4/5/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "2",
+          "name": "batoul",
+          "e-mail": "batoul@gmail.com",
+          "date": "3/2/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "3",
+          "name": "solaf",
+          "e-mail": "solaf@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "4",
+          "name": "sedra",
+          "e-mail": "sedra@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "5",
+          "name": "amina",
+          "e-mail": "amina@gmail.com",
+          "date": "8/9/2025",
+          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+        },
+        {
+          "id": "ac98",
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sosos@gamil.com",
+          "message": "ejjd",
+          "date": "2025-09-10T07:09:22.745Z"
+        }
+      ]
     }
   ],
   "cartProducts": [

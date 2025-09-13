@@ -8,5 +8,6 @@ const config = {
   blogs: "postsDetails",
   comments: "comments",
   area: "area",
+  designer: "designers",
 };
 export default config;

@@ -4,19 +4,16 @@ import { FaCheckCircle } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import CustomizeOrder from "../../../components/CustomizeOrder/CustomizeOrder";
 import { useTranslation } from "react-i18next";
+import { Link, useNavigate } from "react-router-dom";
+import usePrivateRoute from "../../../custom hooks/usePrivateRoute";
 
 const CustomOrder = () => {
   const { t } = useTranslation();
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const openPopup = () => {
-    setIsPopupOpen(true);
+  const navigate = useNavigate();
+  const handleNavigation = () => {
+    navigate("/customizeOrder");
   };
-
-  const closePopup = () => {
-    setIsPopupOpen(false);
-  };
-
+  const handlePrivateRoute = usePrivateRoute(handleNavigation);
   return (
     <section className="custom-order">
       <div className="container">
@@ -58,11 +55,13 @@ const CustomOrder = () => {
               </div>
             </div>
           </div>
-          <button className="make-your-own-design-btn" onClick={openPopup}>
+          <button
+            className="make-your-own-design-btn"
+            onClick={handlePrivateRoute}
+          >
             <span>{t("customOrder.button")}</span>
             <MdArrowOutward className="arrow-icon" />
           </button>
-          {isPopupOpen && <CustomizeOrder closePopup={closePopup} />}
         </div>
       </div>
     </section>

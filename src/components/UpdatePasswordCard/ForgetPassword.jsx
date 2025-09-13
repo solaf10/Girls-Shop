@@ -2,8 +2,10 @@ import { Link, useNavigate } from "react-router";
 import { MdArrowOutward } from "react-icons/md";
 import "./UpdatePasswordCard.css";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ForgetPassword = () => {
+  const {t} = useTranslation();
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
   function handleSubmit(e) {
@@ -14,7 +16,7 @@ const ForgetPassword = () => {
     <>
       <form onSubmit={email ? handleSubmit : () => {}}>
         <div className="email-holder">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">{t(`ForgetPassword.Email`)}</label>
           <input
             type="email"
             id="email"
@@ -30,7 +32,7 @@ const ForgetPassword = () => {
         />
       </form>
       <Link className="special-link" to="/login">
-        <span>Back To LogIn</span>
+        <span>{t(`ForgetPassword.Back To LogIn`)}</span>
         <MdArrowOutward className="arrow-icon" />
       </Link>
     </>

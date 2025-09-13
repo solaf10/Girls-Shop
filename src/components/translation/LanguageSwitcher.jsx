@@ -1,15 +1,8 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MdLanguage } from "react-icons/md";
-import { IoIosArrowDown } from "react-icons/io";
-// import "./LanguageSwitchercss";
-// .dropdown-btn .arrow.open {
-//   transform: rotate(180deg);
-// }
-// .dropdown-menu li:hover {
-//   background: var(--third-color);
-//   color: white;
-// }
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
@@ -37,9 +30,9 @@ const LanguageSwitcher = () => {
       <button
         style={{
           cursor: " pointer",
-          backgroundColor: "#385854b5",
+          backgroundColor: "transparent",
           color: "white",
-          fontSize: "18px",
+          fontSize: "16px",
           fontWeight: "normal",
           display: "flex",
           justifyContent: "space-between",
@@ -50,7 +43,12 @@ const LanguageSwitcher = () => {
       >
         <MdLanguage style={{ fontSize: "20px" }} />
         {i18n.language === "ar" ? "عربي" : "English"}
-        <IoIosArrowDown style={{ fontSize: "16px" }} />
+        {/* <IoIosArrowDown style={{ fontSize: "16px" }} /> */}
+        {!isOpen ? (
+          <IoIosArrowDown style={{ fontSize: "16px" }} />
+        ) : (
+          <IoIosArrowUp style={{ fontSize: "16px" }} />
+        )}
       </button>
       {isOpen && (
         <ul

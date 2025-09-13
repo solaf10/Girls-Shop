@@ -6,9 +6,10 @@ import config from "../../Constants/enviroment";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 const FullCart = ({ cartProduct, setCartProduct }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
-
   const handleSendData = () => {
     navigate("/cart/complate-cart");
   };
@@ -33,24 +34,24 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
         <div className="info">
           <div className="pro">
             <div className="title">
-              <h2> Cart </h2>
+              <h2> {t("FullCart.cart")} </h2>
             </div>
             <div className="table">
               <div className="header">
                 <div className="td">
-                  <p>Product</p>
+                  <p>{t("FullCart.product")}</p>
                 </div>
                 <div>
-                  <p>Price</p>
+                  <p>{t("FullCart.price")}</p>
                 </div>
                 <div>
-                  <p>color</p>
+                  <p>{t("FullCart.color")}</p>
                 </div>
                 <div>
-                  <p>Amount</p>
+                  <p>{t("FullCart.amount")}</p>
                 </div>
                 <div>
-                  <p>Total Price</p>
+                  <p>{t("FullCart.total_price")}</p>
                 </div>
               </div>
               <div className="body">
@@ -69,34 +70,34 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
               </div>
             </div>
             <div className="ret">
-              <Link to="/shop">Return Shopping</Link>
+              <Link to="/shop">{t("FullCart.return_shopping")}</Link>
             </div>
           </div>
           <div className="price">
             <div className="title">
-              <p>Over All</p>
+              <p>{t("FullCart.over_all")}</p>
             </div>
             <div className="desc">
               <div className="box">
-                <p>Sub Total</p>
+                <p>{t("FullCart.sub_total")}</p>
                 <span>300$</span>
               </div>
               <div className="box">
-                <p>Shipping</p>
-                <span>Next step</span>
+                <p>{t("FullCart.shipping")}</p>
+                <span>{t("FullCart.next_step")}</span>
               </div>
               <div className="box">
-                <p>Discount</p>
+                <p>{t("FullCart.discount")}</p>
                 <span>10$</span>
               </div>
               <hr />
               <div className="total">
-                <p>Total</p>
+                <p>{t("FullCart.total")}</p>
                 <p>476 AED</p>
               </div>
             </div>
             <button className="check-out" onClick={privateRouteHandler}>
-              Continue to check out
+              {t("FullCart.continue_checkout")}
             </button>
           </div>
         </div>

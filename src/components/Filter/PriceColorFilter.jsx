@@ -1,10 +1,6 @@
-import { useState } from "react";
 import "./Filter.css";
 
-function PriceColorFilter() {
-  const [price, setPrice] = useState(500); // قيمة وحدة بدل مصفوفة
-  const [chosenColor, setChosenColor] = useState(null);
-
+function PriceColorFilter({ chosenColor, setChosenColor, price, setPrice }) {
   const colors = [
     "#ddd",
     "#a00",
@@ -35,9 +31,10 @@ function PriceColorFilter() {
         <div className="range-slider">
           <input
             type="range"
-            min="0"
-            max="1000"
-            value={price}
+            min="100"
+            step="50"
+            max="10000"
+            value={price || 100}
             onChange={(e) => setPrice(parseInt(e.target.value))}
           />
         </div>

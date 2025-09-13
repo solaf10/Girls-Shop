@@ -1,0 +1,58 @@
+.gallery {
+  margin-top: 130px;
+  .loader-holder {
+    height: 100vh;
+  }
+  .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .header {
+      padding-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #c0c0c0;
+      .icon {
+        font-size: 30px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    .cards {
+      padding-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 20px;
+      .card {
+        overflow: hidden;
+        border: 15px solid #d4d4d4;
+        img {
+          width: 100%;
+          max-height: 450px;
+          object-fit: fill;
+          height: 100%;
+          transition: 0.5s;
+          cursor: pointer;
+        }
+      }
+      .card:hover img {
+        transform: scale(1.1);
+      }
+    }
+    .all-btn {
+      display: block;
+      width: fit-content;
+      padding: 16px 24px;
+      font-weight: 600;
+      font-size: 20px;
+      text-align: center;
+      color: white;
+      border: 1px solid var(--primary-color);
+      background-color: var(--primary-color);
+      transition: 0.5s;
+      cursor: pointer;
+      margin: 50px auto 0px;
+    }
+  }
+}

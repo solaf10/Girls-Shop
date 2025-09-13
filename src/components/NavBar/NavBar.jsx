@@ -10,6 +10,7 @@ import { FaUser } from "react-icons/fa6";
 import { TbCube } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 import { IoMenu } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 const NavBar = () => {
   const { t } = useTranslation();
@@ -38,6 +39,10 @@ const NavBar = () => {
     location.pathname.includes("/updatePassword");
   const isCartPage = location.pathname == "/cart";
   const isShopPage = location.pathname == "/shop";
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    toast.success("You LoggedOut Successfully!!");
+  };
 
   return (
     <nav className="blurry">
@@ -108,7 +113,7 @@ const NavBar = () => {
                   <Link to="/">{t("navbar.settings")}</Link>
                 </li>
               </ul>
-              <p className="log-out">
+              <p className="log-out" onClick={handleLogout}>
                 <span>{t("navbar.logout")}</span>
                 <IoIosArrowForward />
               </p>

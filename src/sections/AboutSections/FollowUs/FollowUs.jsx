@@ -1,12 +1,14 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./FollowUs.css";
-//import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
 const FollowUs = () => {
+  const { t } = useTranslation();
   return (
     <section className="followus">
       <div className="container">
         <div className="title">
-          <h2>Follow Us on Instagram</h2>
+          <h2>{t("followUs.title")}</h2>
         </div>
         <div className="slider">
           <img src="/assets/Images/Img.png" alt="" />
