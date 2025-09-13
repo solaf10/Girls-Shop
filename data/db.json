@@ -942,12 +942,12 @@
   ],
   "cartProducts": [
     {
-      "id": "34",
+      "id": "73",
       "name": "XORA corner desk",
-      "image": "/assets/Images/top-sellers2.png",
+      "image": "/assets/Images/top-sellers1.png",
       "price": "$560.00",
-      "color": "#888",
-      "amount": 0
+      "color": "",
+      "amount": 1
     }
   ],
   "comments": [
@@ -990,6 +990,32 @@
       "phone": "0934343434",
       "date": "8/9/2025",
       "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+    },
+    {
+      "id": "bea7",
+      "blogId": "2",
+      "phone": "shahed",
+      "email": "shahed@gmail.com",
+      "message": "message",
+      "date": "2025-09-13T02:44:00.987Z"
+    }
+  ],
+  "area": [
+    {
+      "id": "1",
+      "street": "Homs"
+    },
+    {
+      "id": "2",
+      "street": "Hama"
+    },
+    {
+      "id": "3",
+      "street": "Damascus"
+    },
+    {
+      "id": "4",
+      "street": "Idlib"
     }
   ]
 }

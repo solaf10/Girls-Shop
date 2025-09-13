@@ -7,5 +7,6 @@ const config = {
   cartProducts: "cartProducts",
   blogs: "postsDetails",
   comments: "comments",
+  area: "area",
 };
 export default config;

@@ -21,6 +21,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import RelatedProducts from "../../sections/Product/RelatedProducts/RelatedProducts";
 import usePrivateRoute from "../../custom hooks/usePrivateRoute";
 import UserAutherization from "../UserAutherization/UserAutherization";
+import StarRating from "../StarRating/StarRating";
 export default function Product() {
   const [productsDetails, setProductsDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -174,7 +175,6 @@ export default function Product() {
             {addToCart && (
               <div className="view-cart">
                 <p>“Ceiling Light” has been added to your cart</p>
-                {/* <a onClick={handleClickToCart}>View Cart</a> */}
                 <a>View Cart</a>
               </div>
             )}
@@ -288,10 +288,6 @@ export default function Product() {
                         Download Blocks
                       </a>
                       <button onClick={handleClickDownloadBlocks}>
-                        {/* <AiOutlineDown
-                        className="file-type"
-                        onClick={() => setDownloadBlocks(true)}
-                      /> */}
                         {!downloadBlocksIsOpen ? (
                           <IoIosArrowDown className="file-type" />
                         ) : (
@@ -382,8 +378,7 @@ export default function Product() {
               <h2>Post a comment</h2>
               <div className="write-comment-form">
                 <div className="phone-email-info">
-                  <input type="text" placeholder="Phone"></input>
-                  <input type="text" placeholder="E-mail"></input>
+                  <StarRating />
                 </div>
                 <div className="textarea-to-write-comment">
                   <label>Your Message</label>
