@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { useEffect, useState } from "react";
 import {
   FaCopy,
@@ -89,14 +89,13 @@ export default function Product() {
         name,
         image,
         price,
-        chosenColor,
+        color: chosenColor,
         amount: count,
       })
       .then((res) => setAddToCart(res.data))
       .catch((err) => console.log(err));
     navigate(`/cart`);
   };
-  const handlePrivateRoute = usePrivateRoute(handleClickAddToCart);
 
   // setDefaultColor
   useEffect(() => {
@@ -164,6 +163,8 @@ export default function Product() {
   const handleShare = (url) => {
     window.open(url, "_blank", "width=600,height=400");
   };
+
+  const handleDownloadPrivateRoute = usePrivateRoute(() => {});
 
   return (
     <div className="single-product">
@@ -280,7 +281,7 @@ export default function Product() {
                     <button
                       className="cart-btn"
                       type="submit"
-                      onClick={handlePrivateRoute}
+                      onClick={handleClickAddToCart}
                     >
                       <span>{t("product.addToCart")}</span>
                       <MdArrowOutward className="arrow-icon" />
@@ -291,11 +292,21 @@ export default function Product() {
                   <hr />
                   <div className="architecture">
                     <p>{t("product.forArchitecture")}</p>
-                    <div className="download-button">
-                      <a href={file?.[0]?.["3d"]} download="3DBlock.3d">
-                        <FiDownload />
-                        {t("product.downloadBlocks")}
-                      </a>
+                    <div
+                      className="download-button"
+                      onClick={handleDownloadPrivateRoute}
+                    >
+                      {localStorage.getItem("token") != null ? (
+                        <a href={file?.[0]?.["3d"]} download="3DBlock.3d">
+                          <FiDownload />
+                          {t("product.downloadBlocks")}
+                        </a>
+                      ) : (
+                        <p>
+                          <FiDownload />
+                          {t("product.downloadBlocks")}
+                        </p>
+                      )}
                       <button onClick={handleClickDownloadBlocks}>
                         {!downloadBlocksIsOpen ? (
                           <IoIosArrowDown className="file-type" />

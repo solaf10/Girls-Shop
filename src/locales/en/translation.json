@@ -330,18 +330,19 @@
     "send": "Send"
   },
   "customizeOrder": {
-"bringIdeaTitle": "Bring Your Ideas to Life",
-"bringIdeaDesc": "Create a custom design form tailored to your needs. Easily personalize fields, layout, and style to match your requirements.",
-"width": "Width",
-"height": "Height",
-"length": "Length",
-"location": "Location",
-"locationPlaceholder": "Syria, Homs, Al-Hamra",
-"wrappingColor": "Wrapping Color",
-"uploadImage": "Upload Image",
-"send": "Send",
-"popupText": "If your submission is accepted, you will receive a <b>$1000 reward</b> and your design will be adopted as one of the company’s products.",
-"cancel": "Cancel",
-"accept": "Accept"
-}
+    "bringIdeaTitle": "Bring Your Ideas to Life",
+    "bringIdeaDesc": "Create a custom design form tailored to your needs. Easily personalize fields, layout, and style to match your requirements.",
+    "width": "Width",
+    "height": "Height",
+    "length": "Length",
+    "location": "Location",
+    "locationPlaceholder": "Syria, Homs, Al-Hamra",
+    "wrappingColor": "Wrapping Color",
+    "uploadImage": "Upload Image",
+    "imageUploaded": "Image Uploaded",
+    "send": "Send",
+    "popupText": "If your submission is accepted, you will receive a <b>$1000 reward</b> and your design will be adopted as one of the company’s products.",
+    "cancel": "Cancel",
+    "accept": "Accept"
+  }
 }

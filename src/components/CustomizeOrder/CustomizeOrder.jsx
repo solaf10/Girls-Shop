@@ -68,52 +68,101 @@ const CustomizeOrder = () => {
     <div className="customize-page">
       <div className="bring-idea-container">
         <div className="Bring-idea-tolife-sec">
-          <img src="/assets/Images/design-thinking 1.png" alt="design-thinking" />
-          <h1 className="bring-your-idea-title">{t("customizeOrder.bringIdeaTitle")}</h1>
-          <p className="bring-your-idea-paragraph">{t("customizeOrder.bringIdeaDesc")}</p>
+          <img
+            src="/assets/Images/design-thinking 1.png"
+            alt="design-thinking"
+          />
+          <h1 className="bring-your-idea-title">
+            {t("customizeOrder.bringIdeaTitle")}
+          </h1>
+          <p className="bring-your-idea-paragraph">
+            {t("customizeOrder.bringIdeaDesc")}
+          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="customize-form">
           <div className="dimenision-inputs">
             <div className="dimenision-label">
               <label>{t("customizeOrder.width")}:</label>
-              <input type="text" name="width" value={formValues.width} onChange={handleInputChange} required />
+              <input
+                type="text"
+                name="width"
+                value={formValues.width}
+                onChange={handleInputChange}
+                required
+              />
             </div>
             <div className="dimenision-label">
               <label>{t("customizeOrder.height")}:</label>
-              <input type="text" name="height" value={formValues.height} onChange={handleInputChange} required />
+              <input
+                type="text"
+                name="height"
+                value={formValues.height}
+                onChange={handleInputChange}
+                required
+              />
             </div>
             <div className="dimenision-label">
               <label>{t("customizeOrder.length")}:</label>
-              <input type="text" name="length" value={formValues.length} onChange={handleInputChange} required />
+              <input
+                type="text"
+                name="length"
+                value={formValues.length}
+                onChange={handleInputChange}
+                required
+              />
             </div>
           </div>
 
           <div className="location-box">
             <label>{t("customizeOrder.location")}:</label>
-            <input type="text" name="location" value={formValues.location} onChange={handleInputChange} placeholder={t("customizeOrder.locationPlaceholder")} />
+            <input
+              type="text"
+              name="location"
+              value={formValues.location}
+              onChange={handleInputChange}
+              placeholder={t("customizeOrder.locationPlaceholder")}
+            />
           </div>
 
           <div className="color-counter-box">
             <div className="count">
-              <button type="button" onClick={decrement}>-</button>
+              <button type="button" onClick={decrement}>
+                -
+              </button>
               <div className="count-number">{count}</div>
-              <button type="button" onClick={increment}>+</button>
+              <button type="button" onClick={increment}>
+                +
+              </button>
             </div>
 
             <div className="choose-color">
-              <label className="label-choose-color">{t("customizeOrder.wrappingColor")}:</label>
-              <input type="color" name="color" value={formValues.color} onChange={handleInputChange} />
+              <label className="label-choose-color">
+                {t("customizeOrder.wrappingColor")}:
+              </label>
+              <input
+                type="color"
+                name="color"
+                value={formValues.color}
+                onChange={handleInputChange}
+              />
             </div>
 
             <div className="chose-product-img">
-              <label>{t("customizeOrder.uploadImage")}
+              <label>
+                {file == null
+                  ? t("customizeOrder.uploadImage")
+                  : t("customizeOrder.imageUploaded")}
                 <input type="file" accept="image/*" onChange={handleChange} />
               </label>
             </div>
           </div>
 
-          <input type="submit" value={t("customizeOrder.send")} className="submit-send" />
+          <input
+            type="submit"
+            value={t("customizeOrder.send")}
+            className="submit-send"
+          />
         </form>
       </div>
 
@@ -121,10 +170,22 @@ const CustomizeOrder = () => {
         <div className="popup-overlay">
           <div className="popup-box warning">
             <AiOutlineWarning className="popup-warning-icon" />
-            <p className="popup-text" dangerouslySetInnerHTML={{__html: t("customizeOrder.popupText")}} />
+            <p
+              className="popup-text"
+              dangerouslySetInnerHTML={{
+                __html: t("customizeOrder.popupText"),
+              }}
+            />
             <div className="popup-actions">
-              <button onClick={() => setShowPopup(false)} className="cancel-btn">{t("customizeOrder.cancel")}</button>
-              <button onClick={confirmSubmission} className="accept-btn">{t("customizeOrder.accept")}</button>
+              <button
+                onClick={() => setShowPopup(false)}
+                className="cancel-btn"
+              >
+                {t("customizeOrder.cancel")}
+              </button>
+              <button onClick={confirmSubmission} className="accept-btn">
+                {t("customizeOrder.accept")}
+              </button>
             </div>
           </div>
         </div>

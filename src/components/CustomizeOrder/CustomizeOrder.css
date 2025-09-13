@@ -1,5 +1,5 @@
 .customize-page {
-  margin-top: 80px;
+  margin-top: 130px;
   min-height: 60vh;
   width: 100%;
   padding: 40px 20px;
@@ -104,6 +104,8 @@
   border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
+  color: var(--primary-color);
+  background-color: #d4d4d4;
 }
 
 .chose-product-img input {
@@ -146,10 +148,14 @@
   color: #fff;
   font-size: 20px;
   cursor: pointer;
+  color: var(--primary-color);
+  background-color: #d4d4d4;
+  transition: 0.5s;
 }
 
 .count button:hover {
   background: #2d4741;
+  background: #c0c0c0;
 }
 
 .choose-color label {

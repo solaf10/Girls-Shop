@@ -19,7 +19,10 @@
       "category": "furniture",
       "style": "classic",
       "material": "stone",
-      "colors": ["#888888", "#f95"],
+      "colors": [
+        "#888888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -53,7 +56,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#888", "#faa"],
+      "colors": [
+        "#888",
+        "#faa"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -87,7 +93,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#888", "#660"],
+      "colors": [
+        "#888",
+        "#660"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -120,7 +129,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#888", "#f95"],
+      "colors": [
+        "#888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -153,7 +165,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#f95"],
+      "colors": [
+        "#eee",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -185,7 +200,10 @@
       "designType": "internal",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#f95"],
+      "colors": [
+        "#eee",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -218,7 +236,10 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -253,7 +274,9 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -283,7 +306,9 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -313,7 +338,9 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -343,7 +370,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#888", "#f95"],
+      "colors": [
+        "#888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -373,7 +403,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#888", "#f95"],
+      "colors": [
+        "#888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -403,7 +436,9 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -433,7 +468,9 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -463,7 +500,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#888", "#f95"],
+      "colors": [
+        "#888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -1614,9 +1654,8 @@
       "name": "XORA corner desk",
       "image": "/assets/Images/top-sellers1.png",
       "price": "$560.00",
-      "color": "#f95",
-      "amount": 0
-
+      "color": "#a47474",
+      "amount": 2
     }
   ]
 }
