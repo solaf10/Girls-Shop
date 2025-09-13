@@ -1,7 +1,5 @@
 import { Link, useNavigate } from "react-router";
 import "./HomeHero.css";
-import { useState } from "react";
-import CustomizeOrder from "../../../components/CustomizeOrder/CustomizeOrder";
 import { useTranslation } from "react-i18next";
 import UserAutherization from "../../../components/UserAutherization/UserAutherization";
 import usePrivateRoute from "../../../custom hooks/usePrivateRoute";
@@ -9,8 +7,7 @@ import usePrivateRoute from "../../../custom hooks/usePrivateRoute";
 const HomeHero = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const handleNavigation = (e) => {
-    e.preventDefault();
+  const handleNavigation = () => {
     navigate("/customizeOrder");
   };
   const handlePrivateRoute = usePrivateRoute(handleNavigation);

@@ -410,10 +410,6 @@ export default function Product() {
                   <label>{t("product.yourMessage")}</label>
                   <textarea />
                 </div>
-                <div className="agree-yo-save-your-info">
-                  <input className="check" type="checkbox" />
-                  <label>{t("product.saveInfo")}</label>
-                </div>
                 <button className="send-comment">{t("product.send")}</button>
               </div>
             </div>

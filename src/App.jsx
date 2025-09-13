@@ -62,8 +62,6 @@ const App = () => {
           <Route path="/designer/:id" element={<Gallery />} />
           <Route path="/profile" element={<UserProfile />} />
           <Route path="/updatePassword" element={<UpdatePassword />}>
-         
-
             <Route
               index
               element={
