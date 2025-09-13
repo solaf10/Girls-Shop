@@ -21,6 +21,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import RelatedProducts from "../../sections/Product/RelatedProducts/RelatedProducts";
 import usePrivateRoute from "../../custom hooks/usePrivateRoute";
 import UserAutherization from "../UserAutherization/UserAutherization";
+import StarRating from "../StarRating/StarRating";
 import { useTranslation } from "react-i18next";
 import "./Product.css";
 
@@ -403,14 +404,7 @@ export default function Product() {
               <h2>{t("product.postComment")}</h2>
               <div className="write-comment-form">
                 <div className="phone-email-info">
-                  <input
-                    type="text"
-                    placeholder={t("product.phonePlaceholder")}
-                  ></input>
-                  <input
-                    type="text"
-                    placeholder={t("product.emailPlaceholder")}
-                  ></input>
+                  <StarRating />
                 </div>
                 <div className="textarea-to-write-comment">
                   <label>{t("product.yourMessage")}</label>

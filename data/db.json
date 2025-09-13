@@ -1654,8 +1654,76 @@
       "name": "XORA corner desk",
       "image": "/assets/Images/top-sellers1.png",
       "price": "$560.00",
-      "color": "#a47474",
-      "amount": 2
+      "color": "",
+      "amount": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "name": "shahed",
+      "e-mail": "shahed@gmail.com",
+      "phone": "0934343434",
+      "date": "4/5/2025",
+      "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+    },
+    {
+      "id": "2",
+      "name": "batoul",
+      "e-mail": "batoul@gmail.com",
+      "phone": "0934343434",
+      "date": "3/2/2025",
+      "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+    },
+    {
+      "id": "3",
+      "name": "solaf",
+      "e-mail": "solaf@gmail.com",
+      "phone": "0934343434",
+      "date": "8/9/2025",
+      "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+    },
+    {
+      "id": "4",
+      "name": "sedra",
+      "e-mail": "sedra@gmail.com",
+      "phone": "0934343434",
+      "date": "8/9/2025",
+      "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+    },
+    {
+      "id": "5",
+      "name": "amina",
+      "e-mail": "amina@gmail.com",
+      "phone": "0934343434",
+      "date": "8/9/2025",
+      "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
+    },
+    {
+      "id": "bea7",
+      "blogId": "2",
+      "phone": "shahed",
+      "email": "shahed@gmail.com",
+      "message": "message",
+      "date": "2025-09-13T02:44:00.987Z"
+    }
+  ],
+  "area": [
+    {
+      "id": "1",
+      "street": "Homs"
+    },
+    {
+      "id": "2",
+      "street": "Hama"
+    },
+    {
+      "id": "3",
+      "street": "Damascus"
+    },
+    {
+      "id": "4",
+      "street": "Idlib"
     }
   ]
 }
