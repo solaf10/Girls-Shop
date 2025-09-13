@@ -74,30 +74,18 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
             </div>
           </div>
           <div className="price">
-            <div className="title">
-              <p>{t("FullCart.over_all")}</p>
-            </div>
             <div className="desc">
-              <div className="box">
-                <p>{t("FullCart.sub_total")}</p>
-                <span>300$</span>
+              <div className="location-order">
+                <label htmlFor="">{t(`FullCart.Location`)}</label>
+                <input type="text" placeholder="location for delivery"></input>
               </div>
-              <div className="box">
-                <p>{t("FullCart.shipping")}</p>
-                <span>{t("FullCart.next_step")}</span>
-              </div>
-              <div className="box">
-                <p>{t("FullCart.discount")}</p>
-                <span>10$</span>
-              </div>
-              <hr />
               <div className="total">
                 <p>{t("FullCart.total")}</p>
                 <p>476 AED</p>
               </div>
             </div>
             <button className="check-out" onClick={privateRouteHandler}>
-              {t("FullCart.continue_checkout")}
+              {t("FullCart.checkout")}
             </button>
           </div>
         </div>
