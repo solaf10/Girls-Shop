@@ -70,6 +70,9 @@ const NavBar = () => {
           <li>
             <NavLink to="/designer">{t("navbar.designers")}</NavLink>
           </li>
+          <li>
+            <NavLink to="/order">{t("navbar.orders")}</NavLink>
+          </li>
         </ul>
         <div className="icons">
           {/* زر الأيقونة */}

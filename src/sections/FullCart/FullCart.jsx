@@ -11,7 +11,8 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const handleSendData = () => {
-    navigate("/cart/complate-cart");
+    toast.success("Your order is complete!");
+    navigate("/order");
   };
   const privateRouteHandler = usePrivateRoute(handleSendData);
 
@@ -28,19 +29,18 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
       });
   };
 
- const handleAmountChange = (id, newAmount) => {
-  setCartProduct((prev) =>
-    prev.map((pro) =>
-      pro.id === id ? { ...pro, amount: newAmount >= 0 ? newAmount : 0 } : pro
-    )
-  );
-};
+  const handleAmountChange = (id, newAmount) => {
+    setCartProduct((prev) =>
+      prev.map((pro) =>
+        pro.id === id ? { ...pro, amount: newAmount >= 0 ? newAmount : 0 } : pro
+      )
+    );
+  };
 
-const grandTotal = cartProduct.reduce((acc, pro) => {
-  const numPrice = parseFloat(pro.price.replace("$", "")) || 0;
-  return acc + numPrice * (pro.amount || 0);
-}, 0);
-
+  const grandTotal = cartProduct.reduce((acc, pro) => {
+    const numPrice = parseFloat(pro.price.replace("$", "")) || 0;
+    return acc + numPrice * (pro.amount || 0);
+  }, 0);
 
   return (
     <div className="fullcart">
@@ -95,7 +95,7 @@ const grandTotal = cartProduct.reduce((acc, pro) => {
               </div>
               <div className="total">
                 <p>{t("FullCart.total")}</p>
-                <p>{grandTotal} AED</p>
+                <p>{grandTotal} $</p>
               </div>
             </div>
             <button className="check-out" onClick={privateRouteHandler}>

@@ -50,7 +50,8 @@ export default function Models() {
 
   useEffect(() => {
     if (scrollEl.current) {
-      scrollEl.current.scrollIntoView({ behavior: "smooth" });
+      // scrollEl.current.scrollIntoView({ behavior: "smooth" });
+      window.scrollTo(0, { behavior: "smooth" });
     }
   }, [currentPage]);
   const cards = currentCards.map((product) => (

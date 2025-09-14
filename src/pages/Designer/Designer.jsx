@@ -93,7 +93,7 @@ const Designer = () => {
 
             <div className="designer-list">
               {filteredDesigners.length > 0 ? (
-                filteredDesigners.map((designer) => (
+                currentCards.map((designer) => (
                   <DesignerCard
                     key={designer.id}
                     id={designer.id}

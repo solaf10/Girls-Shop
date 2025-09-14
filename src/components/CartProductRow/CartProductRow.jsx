@@ -48,7 +48,7 @@ const CartProductRow = ({id, image, color, name, price, amount , onDelete ,onAmo
             }}
             onClick={() => onAmountChange(id, amount - 1)}
           >
-            {" "}
+           
             -
           </button>
           <input
