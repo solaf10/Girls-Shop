@@ -28,6 +28,20 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
       });
   };
 
+ const handleAmountChange = (id, newAmount) => {
+  setCartProduct((prev) =>
+    prev.map((pro) =>
+      pro.id === id ? { ...pro, amount: newAmount >= 0 ? newAmount : 0 } : pro
+    )
+  );
+};
+
+const grandTotal = cartProduct.reduce((acc, pro) => {
+  const numPrice = parseFloat(pro.price.replace("$", "")) || 0;
+  return acc + numPrice * (pro.amount || 0);
+}, 0);
+
+
   return (
     <div className="fullcart">
       <div className="container">
@@ -64,7 +78,7 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
                     price={pro.price}
                     name={pro.name}
                     amount={pro.amount}
-                    onDelete={handleDelete}
+                    onAmountChange={handleAmountChange}
                   />
                 ))}
               </div>
@@ -74,30 +88,18 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
             </div>
           </div>
           <div className="price">
-            <div className="title">
-              <p>{t("FullCart.over_all")}</p>
-            </div>
             <div className="desc">
-              <div className="box">
-                <p>{t("FullCart.sub_total")}</p>
-                <span>300$</span>
+              <div className="location-order">
+                <label htmlFor="">{t(`FullCart.Location`)}</label>
+                <input type="text" placeholder="location for delivery"></input>
               </div>
-              <div className="box">
-                <p>{t("FullCart.shipping")}</p>
-                <span>{t("FullCart.next_step")}</span>
-              </div>
-              <div className="box">
-                <p>{t("FullCart.discount")}</p>
-                <span>10$</span>
-              </div>
-              <hr />
               <div className="total">
                 <p>{t("FullCart.total")}</p>
-                <p>476 AED</p>
+                <p>{grandTotal} AED</p>
               </div>
             </div>
             <button className="check-out" onClick={privateRouteHandler}>
-              {t("FullCart.continue_checkout")}
+              {t("FullCart.checkout")}
             </button>
           </div>
         </div>

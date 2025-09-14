@@ -26,8 +26,10 @@ import UserProfile from "./components/UserProfile/UserProfile";
 import { createContext } from "react";
 import { IsCustomerProvider } from "./context/IsCustomerContext";
 import AllComments from "./pages/AllComments/AllComments";
+import Order from "./pages/Order/Order";
 import CustomizeOrder from "./components/CustomizeOrder/CustomizeOrder";
 import Gallery from "./pages/Gallery/Gallery";
+
 
 const isCustomerContext = createContext(null);
 
@@ -115,6 +117,7 @@ const App = () => {
               }
             />
           </Route>
+          <Route path="/order" element={<Order/>}/>
         </Routes>
       </IsCustomerProvider>
       {!isAuthPage && <Footer />}

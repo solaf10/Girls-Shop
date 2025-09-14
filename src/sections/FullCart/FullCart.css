@@ -6,7 +6,6 @@
   gap: 23px;
 }
 .fullcart .info .pro,
-.fullcart .info .price,
 hr,
 .fullcart .pro .table .product-number {
   border: solid 1px #e4e7e9;
@@ -104,17 +103,22 @@ hr,
   padding-bottom: 24px;
   gap: 16px;
 }
-.fullcart .price .desc .box,
-.fullcart .price .desc .total {
+.fullcart .price .desc .total{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border: solid 1px #e4e7e9;
+  padding: 20px 10px;
 }
-.fullcart .price .desc .box {
-  gap: 12px;
-  p {
-    font-weight: 400;
-    font-size: 14px;
+.fullcart .price .desc .location-order{
+  border: solid 1px #e4e7e9;
+  padding: 20px 10px;
+  font-weight: 600;
+  font-size: 16px;
+  input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
   }
 }
 .fullcart .price .desc .total p {
@@ -134,4 +138,18 @@ hr,
 .fullcart .price button:hover {
   color: white;
   background-color: var(--secondary-color);
+}
+@media (max-width: 991px){
+
+  .fullcart .container .info{
+    display: flex;
+    flex-direction: column;
+  }
+  .fullcart .info .pro{
+    overflow-x: scroll;
+    width: 100%;
+  }
+  .fullcart .info .price{
+    width: 100%;
+  }
 }
