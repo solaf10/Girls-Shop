@@ -36,7 +36,6 @@ export default function Product() {
 
   const {
     id,
-    image,
     name,
     price,
     sale,
@@ -88,7 +87,7 @@ export default function Product() {
       .post("http://localhost:8000/cartProducts", {
         id,
         name,
-        image,
+        image: images[0],
         price,
         color: chosenColor,
         amount: count,

@@ -75,6 +75,7 @@
       }
     }
     .product-details {
+      width: 60%;
       position: relative;
       .top-product {
         margin: 15px 0;

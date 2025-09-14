@@ -2,30 +2,25 @@
   "products": [
     {
       "id": "73",
-      "image": "/assets/Images/top-sellers1.png",
-      "name": "XORA corner desk",
-      "price": "$560.00",
+      "name": "Armchair ALBA",
+      "price": "$320",
       "sale": "%20",
       "images": [
-        "/assets/Images/top-sellers1.png",
-        "/assets/Images/top-sellers1.png",
-        "/assets/Images/top-sellers1.png",
-        "/assets/Images/top-sellers1.png"
+        "/assets/Images/products/Armchair ALBA main.png",
+        "/assets/Images/products/Armchair ALBA view.jpg",
+        "/assets/Images/products/Armchair ALBA.png"
       ],
-      "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
+      "desc": "ALBA Armchair – A classic design with a solid wooden frame and soft fabric upholstery. Compact yet comfortable (74×71×65 cm), perfect for living rooms, reading nooks, or offices.",
       "rate": 4,
-      "type": "beds",
-      "designType": "external",
+      "type": "chairs",
+      "designType": "internal",
       "category": "furniture",
       "style": "classic",
-      "material": "stone",
-      "colors": [
-        "#888888",
-        "#f95"
-      ],
-      "width": "127cm",
-      "height": "75cm",
-      "lengthInfo": "140cm",
+      "material": "wood",
+      "colors": ["#783c0a", "#808080"],
+      "width": "71cm",
+      "height": "74cm",
+      "lengthInfo": "65cm",
       "file": [
         {
           "3d": "/assets/3dBlocks/block.3d.rar"
@@ -40,29 +35,25 @@
     },
     {
       "id": "34",
-      "image": "/assets/Images/top-sellers2.png",
-      "name": "XORA corner desk2",
-      "price": "$560.00",
+      "name": "Armchair Imola",
+      "price": "$450",
       "sale": "%0",
       "images": [
-        "/assets/Images/top-sellers2.png",
-        "/assets/Images/top-sellers3.png",
-        "/assets/Images/top-sellers1.png"
+        "/assets/Images/products/Armchair Imola main.png",
+        "/assets/Images/products/Armchair Imola view.jpg",
+        "/assets/Images/products/Armchair Imola another.png"
       ],
-      "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
-      "rate": 4,
+      "desc": "Modern leather armchair with a sleek metal base, designed for comfort and style",
+      "rate": 5,
       "type": "chairs",
       "designType": "internal",
       "category": "furniture",
       "style": "modern",
-      "material": "wood",
-      "colors": [
-        "#888",
-        "#faa"
-      ],
-      "width": "127cm",
-      "height": "75cm",
-      "lengthInfo": "140cm",
+      "material": "Leather",
+      "colors": ["#000000"],
+      "width": "95cm",
+      "height": "110cm",
+      "lengthInfo": "99cm",
       "file": [
         {
           "3d": "/assets/3dBlocks/block.3d.rar"
@@ -77,29 +68,24 @@
     },
     {
       "id": "45",
-      "image": "/assets/Images/top-sellers3.png",
-      "name": "XORA corner desk3",
-      "price": "$560.00",
-      "sale": "%20",
+      "name": "Lounge chair Elle",
+      "price": "$560",
+      "sale": "%15",
       "images": [
-        "/assets/Images/top-sellers3.png",
-        "/assets/Images/top-sellers3.png",
-        "/assets/Images/top-sellers3.png"
+        "/assets/Images/products/Lounge chair Elle main.png",
+        "/assets/Images/products/Lounge chair Elle view.jpg"
       ],
-      "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
-      "rate": 5,
+      "desc": "Modern fabric lounge chair with a tall backrest, combining comfort with a sleek design",
+      "rate": 4,
       "type": "chairs",
       "designType": "internal",
       "category": "furniture",
       "style": "modern",
-      "material": "wood",
-      "colors": [
-        "#888",
-        "#660"
-      ],
-      "width": "127cm",
-      "height": "75cm",
-      "lengthInfo": "140cm",
+      "material": "Fabric",
+      "colors": ["#64befa", "#2850dc"],
+      "width": "76cm",
+      "height": "105cm",
+      "lengthInfo": "87cm",
       "file": [
         {
           "3d": "/assets/3dBlocks/block.3d.rar"
@@ -129,10 +115,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#888",
-        "#f95"
-      ],
+      "colors": ["#888", "#f95"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -165,10 +148,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#f95"
-      ],
+      "colors": ["#eee", "#f95"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -190,9 +170,7 @@
       "name": "XORA corner desk",
       "price": "$560.00",
       "sale": "%20",
-      "images": [
-        "/assets/Images/top-sellers6.png"
-      ],
+      "images": ["/assets/Images/top-sellers6.png"],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 4,
       "category": "furniture",
@@ -200,10 +178,7 @@
       "designType": "internal",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#f95"
-      ],
+      "colors": ["#eee", "#f95"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -236,10 +211,7 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -274,9 +246,7 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee"
-      ],
+      "colors": ["#eee"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -306,9 +276,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee"
-      ],
+      "colors": ["#eee"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -338,9 +306,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee"
-      ],
+      "colors": ["#eee"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -370,10 +336,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#888",
-        "#f95"
-      ],
+      "colors": ["#888", "#f95"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -403,10 +366,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#888",
-        "#f95"
-      ],
+      "colors": ["#888", "#f95"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -436,9 +396,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee"
-      ],
+      "colors": ["#eee"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -468,9 +426,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee"
-      ],
+      "colors": ["#eee"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -500,10 +456,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#888",
-        "#f95"
-      ],
+      "colors": ["#888", "#f95"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
