@@ -17,7 +17,7 @@ const SpecificProducts = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get(config.baseUrl + "/" + config.topsellers)
+      .get(config.baseUrl + "/" + config.products)
       .then((res) => {
         setProducts(res.data);
         setIsLoading(false);
@@ -28,13 +28,13 @@ const SpecificProducts = () => {
       });
   }, []);
 
-  const productCards = products.map((card) => (
+  const productCards = products.slice(0, 8).map((card) => (
     <Card
       onClick={() => {
         navigate(`/shop/${card.id}`);
       }}
       key={card.id}
-      image={card.image}
+      images={card.images}
       name={card.name}
       price={card.price}
       realPrice={card.realPrice}
