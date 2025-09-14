@@ -28,7 +28,7 @@ const CartProductRow = ({id, image, color, name, price, amount , onDelete ,onAmo
         <div>
           <p>{price}</p>
         </div>
-        <div>
+        <div style={{display:"flex", justifyContent:"center" , alignItems:"center"}}>
           <p
             style={{
               width: "20px",
