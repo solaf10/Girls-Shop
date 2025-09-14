@@ -56,9 +56,11 @@ const CustomizeOrder = () => {
 
       console.log("Response:Done", res.data);
       alert("Form submitted successfully!");
+      // toast.success("✅ تم قبول طلبك بنجاح!");
     } catch (err) {
       console.error("Error:Err", err);
       alert("Something went wrong!");
+      // toast.error("❌ حدث خطأ ما، حاول مرة أخرى!");
     }
   };
 
@@ -165,6 +167,7 @@ const CustomizeOrder = () => {
           />
         </form>
       </div>
+      
 
       {showPopup && (
         <div className="popup-overlay">
