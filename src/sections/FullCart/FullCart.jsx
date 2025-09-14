@@ -78,6 +78,7 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
                     price={pro.price}
                     name={pro.name}
                     amount={pro.amount}
+                    onDelete={handleDelete}
                     onAmountChange={handleAmountChange}
                   />
                 ))}

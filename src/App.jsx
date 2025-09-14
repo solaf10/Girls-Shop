@@ -29,7 +29,7 @@ import AllComments from "./pages/AllComments/AllComments";
 import Order from "./pages/Order/Order";
 import CustomizeOrder from "./components/CustomizeOrder/CustomizeOrder";
 import Gallery from "./pages/Gallery/Gallery";
-
+import PrivateRoute from "./utils/PrivateRoute";
 
 const isCustomerContext = createContext(null);
 
@@ -56,13 +56,27 @@ const App = () => {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/customizeOrder" element={<CustomizeOrder />}></Route>
+          <Route
+            path="/customizeOrder"
+            element={
+              <PrivateRoute>
+                <CustomizeOrder />
+              </PrivateRoute>
+            }
+          ></Route>
           <Route path="/cart/complate-cart" element={<ComplateCart />} />
           <Route path="/blogs/:id" element={<BlogsDetails />} />
           <Route path="/blogs/:id/comments" element={<AllComments />} />
           <Route path="/designer" element={<Designer />} />
           <Route path="/designer/:id" element={<Gallery />} />
-          <Route path="/profile" element={<UserProfile />} />
+          <Route
+            path="/profile"
+            element={
+              <PrivateRoute>
+                <UserProfile />
+              </PrivateRoute>
+            }
+          />
           <Route path="/updatePassword" element={<UpdatePassword />}>
             <Route
               index
@@ -117,7 +131,14 @@ const App = () => {
               }
             />
           </Route>
-          <Route path="/order" element={<Order/>}/>
+          <Route
+            path="/order"
+            element={
+              <PrivateRoute>
+                <Order />
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </IsCustomerProvider>
       {!isAuthPage && <Footer />}

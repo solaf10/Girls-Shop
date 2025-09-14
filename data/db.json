@@ -17,7 +17,10 @@
       "category": "furniture",
       "style": "classic",
       "material": "wood",
-      "colors": ["#783c0a", "#808080"],
+      "colors": [
+        "#783c0a",
+        "#808080"
+      ],
       "width": "71cm",
       "height": "74cm",
       "lengthInfo": "65cm",
@@ -50,7 +53,9 @@
       "category": "furniture",
       "style": "modern",
       "material": "Leather",
-      "colors": ["#000000"],
+      "colors": [
+        "#000000"
+      ],
       "width": "95cm",
       "height": "110cm",
       "lengthInfo": "99cm",
@@ -82,7 +87,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "Fabric",
-      "colors": ["#64befa", "#2850dc"],
+      "colors": [
+        "#64befa",
+        "#2850dc"
+      ],
       "width": "76cm",
       "height": "105cm",
       "lengthInfo": "87cm",
@@ -115,7 +123,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#888", "#f95"],
+      "colors": [
+        "#888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -148,7 +159,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#f95"],
+      "colors": [
+        "#eee",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -170,7 +184,9 @@
       "name": "XORA corner desk",
       "price": "$560.00",
       "sale": "%20",
-      "images": ["/assets/Images/top-sellers6.png"],
+      "images": [
+        "/assets/Images/top-sellers6.png"
+      ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 4,
       "category": "furniture",
@@ -178,7 +194,10 @@
       "designType": "internal",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#f95"],
+      "colors": [
+        "#eee",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -211,7 +230,10 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee", "#888"],
+      "colors": [
+        "#eee",
+        "#888"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -246,7 +268,9 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -276,7 +300,9 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -306,7 +332,9 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -336,7 +364,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#888", "#f95"],
+      "colors": [
+        "#888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -366,7 +397,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#888", "#f95"],
+      "colors": [
+        "#888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -396,7 +430,9 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -426,7 +462,9 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#eee"],
+      "colors": [
+        "#eee"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -456,7 +494,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#888", "#f95"],
+      "colors": [
+        "#888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -1662,35 +1703,19 @@
   "cartProducts": [
     {
       "id": "73",
-      "name": "XORA corner desk",
-      "image": "/assets/Images/top-sellers1.png",
-      "price": "$560.00",
-      "color": "#888",
-      "amount": 0
-    },
-    {
-      "id": "74",
-      "name": "XORA corner desk",
-      "image": "/assets/Images/top-sellers1.png",
-      "price": "$560.00",
-      "color": "#f95",
-      "amount": 3
+      "name": "Armchair ALBA",
+      "image": "/assets/Images/products/Armchair ALBA main.png",
+      "price": "$320",
+      "color": "#7d5b3f",
+      "amount": 1
     },
     {
       "id": "73",
-      "name": "XORA corner desk",
-      "image": "/assets/Images/top-sellers1.png",
-      "price": "$560.00",
-      "color": "#888888",
-      "amount": 0
-    },
-    {
-      "id": "73",
-      "name": "XORA corner desk",
-      "image": "/assets/Images/top-sellers1.png",
-      "price": "$560.00",
-      "color": "#888888",
-      "amount": 0
+      "name": "Armchair ALBA",
+      "image": "/assets/Images/products/Armchair ALBA main.png",
+      "price": "$320",
+      "color": "#927863",
+      "amount": 1
     }
   ],
   "oldOrder": [
@@ -2010,6 +2035,15 @@
       "city": "Damascus",
       "type": "Designer",
       "password": "soso",
+      "orders": []
+    },
+    {
+      "id": "ebe0",
+      "email": "solaf@gmail.com",
+      "phone": "993811280",
+      "city": "Homs",
+      "type": "Designer",
+      "password": "1234",
       "orders": []
     }
   ]
