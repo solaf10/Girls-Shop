@@ -4,7 +4,7 @@ import SyrianFlag from "../../../public/assets/Images/SyrianFlag.svg";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import config from "../../Constants/enviroment";
@@ -23,12 +23,14 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [orders, setOrders] = useState([]);
   const [error, setError] = useState(false);
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [selectedArea, setSelectedArea] = useState("");
   const [selectUserType, setSelectUserType] = useState("");
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
@@ -274,16 +276,16 @@ function SignUp() {
 
               <p>{t("signup.confirmPassword")}</p>
               <input
-                type={showPassword ? "text" : "password"}
+                type={showConfirmPassword ? "text" : "password"}
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 className={error ? "input-error" : ""}
               />
               <span
                 className="toggle-password"
-                onClick={() => setShowPassword(!showPassword)}
+                onClick={() => setShowConfirmPassword(!showPassword)}
               >
-                {showPassword ? (
+                {showConfirmPassword ? (
                   <>
                     <span>{t("signup.hide")}</span> <BsEyeSlash />
                   </>

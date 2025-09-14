@@ -2,6 +2,26 @@
   /* letter-spacing: 1px; */
   /* margin: 150px 60px 0 60px; */
   margin: 50px 0px;
+  form {
+    .colors {
+      margin-top: 42px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      .choose-color {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+      input {
+        display: none;
+      }
+      .choose-color.active {
+        border: 2px solid var(--primary-color);
+      }
+    }
+  }
   h2 {
     font-size: 25px;
     font-weight: 600;
@@ -75,6 +95,7 @@
       }
     }
     .product-details {
+      width: 60%;
       position: relative;
       .top-product {
         margin: 15px 0;
@@ -148,7 +169,7 @@
         outline: none;
         border: none;
         font-weight: normal;
-        margin-top: 42px;
+        margin-top: 20px;
         font-weight: 600;
         font-size: 18px;
         display: flex;

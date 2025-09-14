@@ -4,7 +4,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { FaLink } from "react-icons/fa6";
 import { useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
-export default function Card({ id, image, name, sale, price, onClick }) {
+export default function Card({ id, images, name, sale, price, onClick }) {
   // price
   const rawPrice = price || "$0";
   const rawSale = sale || "0%";
@@ -23,7 +23,7 @@ export default function Card({ id, image, name, sale, price, onClick }) {
   return (
     <div className="card">
       <div>
-        <img src={image} />
+        <img src={images?.[0]} />
         <div className="icons">
           <button className="icon view" onClick={onClick}>
             <p>Quick View</p>
