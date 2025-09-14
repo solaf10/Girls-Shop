@@ -603,257 +603,145 @@
     }
   ],
   "designers": [
-    {
-      "image": "/assets/Images/designer-image.png",
-      "designerName": "Arch.Layla abdulHadi",
-      "designerCity": "Syria",
-      "designerPhone": "+123 123 123 1234",
-      "id": "1",
-      "designerWork": [
-        "/assets/Images/3d-models-2.png",
-        "/assets/Images/3d-models.png",
-        "/assets/Images/3d-scenes.jpg",
-        "/assets/Images/3d-scenes1.jpg",
-        "/assets/Images/3d-scenes2.jpg",
-        "/assets/Images/Img2.png",
-        "/assets/Images/Img4.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png"
-      ]
-    },
-    {
-      "image": "/assets/Images/designer-image.png",
-      "designerName": "John",
-      "designerCity": "Syria",
-      "designerPhone": "+123 123 123 1234",
-      "id": "2",
-      "designerWork": [
-        "/assets/Images/3d-models-2.png",
-        "/assets/Images/3d-models.png",
-        "/assets/Images/3d-scenes.jpg",
-        "/assets/Images/3d-scenes1.jpg",
-        "/assets/Images/3d-scenes2.jpg",
-        "/assets/Images/Img2.png",
-        "/assets/Images/Img4.png",
-        "/assets/Images/Img3.png"
-      ]
-    },
-    {
-      "image": "/assets/Images/designer-image.png",
-      "designerName": "Alice Johnson",
-      "designerCity": "Syria",
-      "designerPhone": "+123 123 123 1234",
-      "id": "3",
-      "designerWork": [
-        "/assets/Images/3d-models-2.png",
-        "/assets/Images/3d-models.png",
-        "/assets/Images/3d-scenes.jpg",
-        "/assets/Images/3d-scenes1.jpg",
-        "/assets/Images/3d-scenes2.jpg",
-        "/assets/Images/Img2.png",
-        "/assets/Images/Img4.png",
-        "/assets/Images/Img3.png"
-      ]
-    },
-    {
-      "image": "/assets/Images/designer-image.png",
-      "designerName": "Michael Smith",
-      "designerCity": "Syria",
-      "designerPhone": "+123 123 123 1234",
-      "id": "4",
-      "designerWork": [
-        "/assets/Images/3d-models-2.png",
-        "/assets/Images/3d-models.png",
-        "/assets/Images/3d-scenes.jpg",
-        "/assets/Images/3d-scenes1.jpg",
-        "/assets/Images/3d-scenes2.jpg",
-        "/assets/Images/Img2.png",
-        "/assets/Images/Img4.png",
-        "/assets/Images/Img3.png"
-      ]
-    },
-    {
-      "image": "/assets/Images/designer-image.png",
-      "designerName": "David Martinez",
-      "designerCity": "Syria",
-      "designerPhone": "+123 123 123 1234",
-      "id": "5",
-      "designerWork": [
-        "/assets/Images/3d-models-2.png",
-        "/assets/Images/3d-models.png",
-        "/assets/Images/3d-scenes.jpg",
-        "/assets/Images/3d-scenes1.jpg",
-        "/assets/Images/3d-scenes2.jpg",
-        "/assets/Images/Img2.png",
-        "/assets/Images/Img4.png",
-        "/assets/Images/Img3.png"
-      ]
-    },
-    {
-      "image": "/assets/Images/designer-image.png",
-      "designerName": "David Martinez",
-      "designerCity": "Syria",
-      "designerPhone": "+123 123 123 1234",
-      "id": "6",
-      "designerWork": [
-        "/assets/Images/3d-models-2.png",
-        "/assets/Images/3d-models.png",
-        "/assets/Images/3d-scenes.jpg",
-        "/assets/Images/3d-scenes1.jpg",
-        "/assets/Images/3d-scenes2.jpg",
-        "/assets/Images/Img2.png",
-        "/assets/Images/Img4.png",
-        "/assets/Images/Img3.png"
-      ]
-    },
-    {
-      "image": "/assets/Images/designer-image.png",
-      "designerName": "Arch.Layla abdulHadi",
-      "designerCity": "Syria",
-      "designerPhone": "+123 123 123 1234",
-      "id": "7",
-      "designerWork": [
-        "/assets/Images/3d-models-2.png",
-        "/assets/Images/3d-models.png",
-        "/assets/Images/3d-scenes.jpg",
-        "/assets/Images/3d-scenes1.jpg",
-        "/assets/Images/3d-scenes2.jpg",
-        "/assets/Images/Img2.png",
-        "/assets/Images/Img4.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png",
-        "/assets/Images/Img3.png"
-      ]
-    },
-    {
-      "image": "/assets/Images/designer-image.png",
-      "designerName": "John",
-      "designerCity": "Syria",
-      "designerPhone": "+123 123 123 1234",
-      "id": "8",
-      "designerWork": [
-        "/assets/Images/3d-models-2.png",
-        "/assets/Images/3d-models.png",
-        "/assets/Images/3d-scenes.jpg",
-        "/assets/Images/3d-scenes1.jpg",
-        "/assets/Images/3d-scenes2.jpg",
-        "/assets/Images/Img2.png",
-        "/assets/Images/Img4.png",
-        "/assets/Images/Img3.png"
-      ]
-    }
-  ],
-  "blogs": [
-    {
-      "id": "1",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    },
-    {
-      "id": "2",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    },
-    {
-      "id": "3",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    },
-    {
-      "id": "4",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    },
-    {
-      "id": "5",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    },
-    {
-      "id": "6",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    },
-    {
-      "id": "7",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    },
-    {
-      "id": "8",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    },
-    {
-      "id": "9",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    },
-    {
-      "id": "10",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    },
-    {
-      "id": "11",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    },
-    {
-      "id": "12",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    },
-    {
-      "id": "13",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    },
-    {
-      "id": "14",
-      "image": "/assets/Images/post-1.png",
-      "title": "First Time Home Owner Ideas",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
-    }
-  ],
+  {
+    "image": "/assets/Images/designer-image.png",
+    "designerName": "Layla AbdulHadi",
+    "designerCity": "Damascus, Syria",
+    "designerPhone": "+963 944 123 456",
+    "id": "1",
+    "designerWork": [
+      "/assets/Images/3d-models-2.png",
+      "/assets/Images/3d-models.png",
+      "/assets/Images/3d-scenes.jpg",
+      "/assets/Images/3d-scenes1.jpg",
+      "/assets/Images/3d-scenes2.jpg",
+      "/assets/Images/Img2.png",
+      "/assets/Images/Img4.png",
+      "/assets/Images/Img3.png"
+    ]
+  },
+  {
+    "image": "/assets/Images/designer-image.png",
+    "designerName": "John Karim",
+    "designerCity": "Aleppo, Syria",
+    "designerPhone": "+963 944 234 567",
+    "id": "2",
+    "designerWork": [
+      "/assets/Images/3d-models-2.png",
+      "/assets/Images/3d-models.png",
+      "/assets/Images/3d-scenes.jpg",
+      "/assets/Images/3d-scenes1.jpg",
+      "/assets/Images/3d-scenes2.jpg",
+      "/assets/Images/Img2.png",
+      "/assets/Images/Img4.png",
+      "/assets/Images/Img3.png"
+    ]
+  },
+  {
+    "image": "/assets/Images/designer-image.png",
+    "designerName": "Alice Johnson",
+    "designerCity": "Homs, Syria",
+    "designerPhone": "+963 944 345 678",
+    "id": "3",
+    "designerWork": [
+      "/assets/Images/3d-models-2.png",
+      "/assets/Images/3d-models.png",
+      "/assets/Images/3d-scenes.jpg",
+      "/assets/Images/3d-scenes1.jpg",
+      "/assets/Images/3d-scenes2.jpg",
+      "/assets/Images/Img2.png",
+      "/assets/Images/Img4.png",
+      "/assets/Images/Img3.png"
+    ]
+  },
+  {
+    "image": "/assets/Images/designer-image.png",
+    "designerName": "Michael Smith",
+    "designerCity": "Latakia, Syria",
+    "designerPhone": "+963 944 456 789",
+    "id": "4",
+    "designerWork": [
+      "/assets/Images/3d-models-2.png",
+      "/assets/Images/3d-models.png",
+      "/assets/Images/3d-scenes.jpg",
+      "/assets/Images/3d-scenes1.jpg",
+      "/assets/Images/3d-scenes2.jpg",
+      "/assets/Images/Img2.png",
+      "/assets/Images/Img4.png",
+      "/assets/Images/Img3.png"
+    ]
+  },
+  {
+    "image": "/assets/Images/designer-image.png",
+    "designerName": "David Martinez",
+    "designerCity": "Hama, Syria",
+    "designerPhone": "+963 944 567 890",
+    "id": "5",
+    "designerWork": [
+      "/assets/Images/3d-models-2.png",
+      "/assets/Images/3d-models.png",
+      "/assets/Images/3d-scenes.jpg",
+      "/assets/Images/3d-scenes1.jpg",
+      "/assets/Images/3d-scenes2.jpg",
+      "/assets/Images/Img2.png",
+      "/assets/Images/Img4.png",
+      "/assets/Images/Img3.png"
+    ]
+  },
+  {
+    "image": "/assets/Images/designer-image.png",
+    "designerName": "Sara Khoury",
+    "designerCity": "Deir ez-Zor, Syria",
+    "designerPhone": "+963 944 678 901",
+    "id": "6",
+    "designerWork": [
+      "/assets/Images/3d-models-2.png",
+      "/assets/Images/3d-models.png",
+      "/assets/Images/3d-scenes.jpg",
+      "/assets/Images/3d-scenes1.jpg",
+      "/assets/Images/3d-scenes2.jpg",
+      "/assets/Images/Img2.png",
+      "/assets/Images/Img4.png",
+      "/assets/Images/Img3.png"
+    ]
+  },
+  {
+    "image": "/assets/Images/designer-image.png",
+    "designerName": "Layla AbdulHadi",
+    "designerCity": "Damascus, Syria",
+    "designerPhone": "+963 944 789 012",
+    "id": "7",
+    "designerWork": [
+      "/assets/Images/3d-models-2.png",
+      "/assets/Images/3d-models.png",
+      "/assets/Images/3d-scenes.jpg",
+      "/assets/Images/3d-scenes1.jpg",
+      "/assets/Images/3d-scenes2.jpg",
+      "/assets/Images/Img2.png",
+      "/assets/Images/Img4.png",
+      "/assets/Images/Img3.png"
+    ]
+  },
+  {
+    "image": "/assets/Images/designer-image.png",
+    "designerName": "John Karim",
+    "designerCity": "Aleppo, Syria",
+    "designerPhone": "+963 944 890 123",
+    "id": "8",
+    "designerWork": [
+      "/assets/Images/3d-models-2.png",
+      "/assets/Images/3d-models.png",
+      "/assets/Images/3d-scenes.jpg",
+      "/assets/Images/3d-scenes1.jpg",
+      "/assets/Images/3d-scenes2.jpg",
+      "/assets/Images/Img2.png",
+      "/assets/Images/Img4.png",
+      "/assets/Images/Img3.png"
+    ]
+  }
+]
+,
+
   "reviews": [
     {
       "id": "1",
@@ -915,13 +803,13 @@
   "postsDetails": [
     {
       "id": "1",
-      "image": "/assets/Images/post-1.png",
+      "image": "/assets/Images/blog1.jpg",
       "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
-      "date": "Feb 8th, 2025",
+      "title": "nnovative Interior Design Trends for 2024",
+        "bigTitle": "nnovative Interior Design Trends for 2024",
+        "articleText": "3ds Max has long been a cornerstone software for interior designers who aim to produce high-quality visualizations. From photorealistic renders to virtual walkthroughs, the tool provides endless possibilities. To maximize its potential, designers must combine technical skills with creative intuition.One of the most powerful features of 3ds Max is 3D modeling with pre-built blocks and assets. Designers can import furniture, appliances, and décor items into a scene, allowing them to experiment with layouts without starting from scratch. This speeds up project timelines and ensures accuracy in measurements and proportions.Lighting and materials are equally crucial. Realistic lighting simulations, reflections, and shadows can dramatically change how a space is perceived. 3ds Max offers advanced material editors, enabling designers to replicate wood grains, fabrics, and metals with incredible precision.Moreover, animation and virtual tours are becoming essential for client presentations. Walkthroughs allow clients to experience the flow of a space before it’s built. Combining these with 3D blocks provides a comprehensive preview, making design decisions easier and more confident.For beginners, starting with modular libraries is recommended. Saving favorite furniture, textures, and accessories into custom libraries allows designers to reuse assets across projects, maintaining consistency and efficiency. Advanced users can explore photorealistic rendering engines like V-Ray or Corona to produce visuals that rival professional photography.Ultimately, mastering 3ds Max is about balancing technical skill and creativity. The software empowers designers to transform conceptual ideas into tangible, immersive experiences that impress clients and elevate the interior design industry.",
+      "publisher": "Olivia Smith",
+      "date": "8 Feb 2024 ",
       "comments": [
         {
           "id": "1",
@@ -976,13 +864,13 @@
     },
     {
       "id": "2",
-      "image": "/assets/Images/post-1.png",
-      "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
+      "image": "/assets/Images/blog2.jpg",
+      "PublishDate": "12 Nov 2025",
+      "title": "Mastering 3ds Max for Interior Design: Tips and Techniques",
+      "bigTitle": "Mastering 3ds Max for Interior Design: Tips and Techniques",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
-      "date": "Feb 8th, 2025",
+      "publisher": "Michael Brown",
+      "date": "12 Nov 2025",
       "comments": [
         {
           "id": "1",
@@ -1031,13 +919,13 @@
     },
     {
       "id": "3",
-      "image": "/assets/Images/post-1.png",
-      "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
-      "date": "Feb 8th, 2025",
+      "image": "/assets/Images/blog3.jpg",
+      "PublishDate": "5 Feb 2024 ",
+      "title": "F Creative Furniture Solutions for Modern Homes",
+      "bigTitle": " Creative Furniture Solutions for Modern Homes",
+      "articleText": "Furniture is at the heart of interior design, shaping not only the look but also the functionality of living spaces. Modern homeowners demand furniture that is stylish, comfortable, and adaptable to their lifestyle.Multi-functional furniture is a game-changer, especially in urban apartments. Pieces such as extendable dining tables, sofa beds, and storage ottomans allow spaces to serve multiple purposes. For example, a small living room can host both a cozy lounge area and a temporary workspace without feeling cluttered.Smart furniture is another innovative trend. Items integrated with technology—like charging stations, adjustable lighting, and built-in speakers—enhance convenience while maintaining sleek aesthetics. Designers are increasingly blending these elements seamlessly so that technology complements the décor rather than dominating it.Sustainable and natural materials are highly sought after. Wooden tables, bamboo shelving, and organic textiles bring warmth and texture into homes. Combining these with bold accent colors, metallic finishes, or geometric patterns adds a contemporary twist.Finally, furniture is being used to define zones within open-plan spaces. Rugs, shelving units, and strategically placed sofas can create distinct areas without the need for walls, allowing for both privacy and connectivity. Creative furniture solutions are no longer optional—they are essential to making modern homes functional, efficient, and visually appealing.",
+      "publisher": "Emma Johnson",
+      "date": "5 Feb 2024",
       "comments": [
         {
           "id": "1",
@@ -1086,13 +974,13 @@
     },
     {
       "id": "4",
-      "image": "/assets/Images/post-1.png",
-      "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
-      "date": "Feb 8th, 2025",
+      "image":"/assets/Images/blog4.jpg",
+      "PublishDate": "18 Sep 2025",
+      "title": "The Power of 3D Blocks in Interior Visualization",
+      "bigTitle": "The Power of 3D Blocks in Interior Visualization",
+      "articleText": "In interior design, 3D blocks—pre-made models of furniture, décor, and architectural elements—have revolutionized the workflow. Designers can now quickly populate spaces, experiment with layouts, and present realistic renders to clients with unprecedented speed.The main advantage of 3D blocks is efficiency. Instead of spending hours modeling every object, designers can focus on creativity and client experience. High-quality blocks from libraries or marketplaces allow for precision and realism, including textures, lighting compatibility, and scale accuracy.Another benefit is consistency. By maintaining a library of favorite brands, furniture styles, and materials, designers ensure that all projects adhere to a high standard. This is especially valuable in large-scale projects or design studios where multiple designers work on similar concepts3D blocks also facilitate experimentation. Designers can try various furniture layouts, color schemes, and decorative elements without committing to costly changes. Clients can see different options and make informed decisions, reducing misunderstandings and revisions.Furthermore, 3D blocks enhance virtual staging for real estate and interior marketing. Empty spaces can be transformed digitally into fully furnished environments, attracting buyers or clients even before the physical implementation.In short, 3D blocks are not just a convenience—they are a strategic tool that boosts creativity, efficiency, and client satisfaction in modern interior design.",
+      "publisher": "James Carter",
+      "date": "18 Sep 2025",
       "comments": [
         {
           "id": "1",
@@ -1141,12 +1029,12 @@
     },
     {
       "id": "5",
-      "image": "/assets/Images/post-1.png",
-      "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
+      "image": "/assets/Images/blog5.jpg",
+      "PublishDate": "Feb 8th, 2025 ",
+      "title": "Interior Design Inspiration: Blending Style, Comfort, and ",
+      "bigTitle": "Interior Design Inspiration: Blending Style, Comfort, and ",
+      "articleText": "The most successful interior designs strike a balance between style, comfort, and functionality. Each element, from furniture to lighting to accessories, contributes to the overall experience of a space.Color palettes set the tone. Neutral shades such as beige, grey, and soft pastels provide a calming backdrop, while bold accents create visual interest. Combining textures, like velvet cushions with wooden surfaces, adds depth and character.Lighting is both functional and atmospheric. Layered lighting—ambient, task, and accent—ensures spaces are well-lit while highlighting key design features. Natural light remains invaluable, as it enhances mood, emphasizes textures, and creates a connection with the outdoors.Furniture placement should prioritize flow and usability. Multi-purpose pieces, modular sofas, and hidden storage allow for a clean, organized, and adaptable home. Accessories like rugs, artwork, and indoor plants complete the design, reflecting the personality of the homeowner.Lastly, embracing technology—through 3D visualization, smart furniture, and automated systems—allows designers to anticipate challenges and create optimized solutions. Clients can experience their space virtually, making choices with confidence.By integrating aesthetics, comfort, and functionality, interior design becomes more than decoration—it becomes an experience. Each space tells a story, supports daily life, and inspires those who inhabit it",
+      "publisher": "Olivia Smith",
       "date": "Feb 8th, 2025",
       "comments": [
         {
@@ -1196,13 +1084,13 @@
     },
     {
       "id": "6",
-      "image": "/assets/Images/post-1.png",
-      "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
+      "image": "/assets/Images/blog6.jpg",
+      "PublishDate": "21 JUl 2022",
+      "title": "The Future of Interior Design: Blending Creativity with Technology",
       "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
-      "date": "Feb 8th, 2025",
+      "articleText": "Interior design has always been about more than just arranging furniture. It is a reflection of personality, lifestyle, and the connection between people and the spaces they inhabit. In the past, designers relied on sketches and mood boards to communicate their vision. Today, however, technology has redefined the entire process.One of the biggest changes comes from 3D visualization tools, which allow clients to see realistic representations of their homes before a single wall is painted or a chair is purchased. This reduces mistakes, speeds up decision-making, and creates a more collaborative experience between designers and clients.Another major trend is the use of sustainable furniture and materials. Homeowners are increasingly aware of environmental impact and are looking for eco-friendly solutions without sacrificing style. Designers are blending reclaimed wood, recycled fabrics, and energy-efficient lighting with modern aesthetics.Finally, the personalization of design is becoming more important than ever. With modular furniture, smart home technology, and customizable décor, each project is unique. The future of interior design is not just beautiful—it is efficient, sustainable, and deeply personal.",
+      "publisher": "Sarah Mitchell",
+      "date": "1 JUl 2022",
       "comments": [
         {
           "id": "1",
@@ -1251,13 +1139,13 @@
     },
     {
       "id": "7",
-      "image": "/assets/Images/post-1.png",
-      "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
-      "date": "Feb 8th, 2025",
+      "image": "/assets/Images/blog7.jpg",
+      "PublishDate": "15 Dec 2019",
+      "title": "How 3ds Max and 3D Blocks Transform Interior Design ",
+      "bigTitle": "How 3ds Max and 3D Blocks Transform Interior Design ",
+      "articleText": "For decades, 3ds Max has been the go-to software for architects and interior designers who want to bring their visions to life. Its power lies in its ability to create realistic, high-quality renders that make projects come alive long before construction begins.One of the most practical tools within 3ds Max is the use of 3D blocks (models). Instead of designing every single piece of furniture or décor from scratch, designers can download and insert ready-made 3D models into their projects. This not only saves time but also ensures accuracy and professionalism.Imagine presenting a client with a complete living room, where every sofa, table, and lamp is represented exactly as it will look in reality. With 3D blocks, designers can test different layouts, colors, and textures instantly. Clients no longer have to “imagine” what the space might look like—they can see it.Moreover, 3D blocks create consistency across projects. Designers can build their own libraries of favorite furniture brands, accessories, and materials, making future projects even faster. In today’s competitive design world, speed and realism are what set successful studios apart, and 3ds Max provides both.",
+      "publisher": "James Carter",
+      "date": "F15 Dec 2019",
       "comments": [
         {
           "id": "1",
@@ -1306,13 +1194,13 @@
     },
     {
       "id": "8",
-      "image": "/assets/Images/post-1.png",
-      "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
-      "date": "Feb 8th, 2025",
+      "image": "/assets/Images/blog8.jpg",
+      "PublishDate": " 22 Oct 2018",
+      "title": "Smart Furniture Ideas to Transform Your Home",
+      "bigTitle": "Smart Furniture Ideas to Transform Your Home",
+      "articleText": "Furniture is not just functional—it defines how we live, work, and relax. In recent years, there has been a growing demand for multi-functional and space-saving furniture, especially in urban apartments where every square meter counts.For example, sofa beds and extendable dining tables have become essentials for modern households. These pieces provide comfort and convenience without cluttering the home.Another growing trend is smart furniture. Imagine a coffee table with built-in wireless charging, or a bed with hidden storage and LED lighting. Technology is not only making our homes smarter but also more stylish.When it comes to materials, natural textures are making a comeback. Wooden finishes, linen fabrics, and neutral tones create a warm, inviting atmosphere. Pairing these with bold accent colors or statement lighting can instantly elevate a space.At the end of the day, choosing the right furniture is about balance—combining beauty with function. Whether you are furnishing a studio apartment or a large family home, smart choices can completely transform your lifestyle.",
+      "publisher": "Emma Johnson",
+      "date": " 22 Oct 2018",
       "comments": [
         {
           "id": "1",
@@ -1361,23 +1249,23 @@
     },
     {
       "id": "9",
-      "image": "/assets/Images/post-1.png",
-      "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "image": "/assets/Images/blog9.jpg",
+      "PublishDate": "1 Mar 2024 ",
+      "title": "Lighting Interiors in 3ds Max: Natural, Artificial, and IES ",
+      "bigTitle": "Lighting Interiors in 3ds Max: Natural, Artificial, and IES ",
+      "articleText": "Great interiors are lit, not just modeled. Start with physical sun and sky for daytime scenes; aim for soft window light angled 35–55° to create depth. Add portal lights to guide photons and reduce noise. For evening scenes, place practical fixtures where they would exist in reality—pendants over islands, wall sconces near artwork, floor lamps beside reading chairs—and load manufacturer IES files for authentic distribution patterns.Balance color temperature: 5000–6500K for cool daylight, 2700–3000K for warm ambiance. Use exposure controls rather than brute‑force intensity tweaks. Render test passes with a gray override material to evaluate light alone, then re‑enable materials.Small touches matter: prevent over‑bright lampshades by limiting light visibility, add subtle volumetrics for atmosphere, and use surface imperfections to catch highlights. Lighting is the difference between a flat render and a persuasive, emotionally resonant interior.",
+      "publisher": "HomeDesign Studio",
+      "date": "1 Mar 2024"
     },
     {
       "id": "10",
-      "image": "/assets/Images/post-1.png",
-      "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
-      "date": "Feb 8th, 2025",
+      "image": "/assets/Images/blog10.jpg",
+      "PublishDate": "1 Mar 2024 ",
+      "title": "Lighting Interiors in 3ds Max: Natural, Artificial, and IES ",
+      "bigTitle": "Lighting Interiors in 3ds Max: Natural, Artificial, and IES ",
+      "articleText": "Every great render starts with a clear brief. Define style (e.g., Japandi), palette, and functional constraints (seating for 6, TV viewing angles, storage). Build a mood board and annotate what each image contributes—tone, texture, lighting, or layout.Translate intent into a scaled plan. Block out walls and main furniture as primitives to nail circulation before adding detail. Import accurate 3D blocks for key pieces from your catalog, then refine with secondary décor to create focal points and rhythm.Lighting is your storytelling engine. Use a single dominant light (daylight or a hero pendant) and layer fill lights to soften contrast. Realistic materials depend on measured values: keep albedos in physical ranges, use roughness maps, and add subtle edge wearIterate with clay renders to judge composition and light without material distractions. Move to color drafts, gather feedback, and lock the camera early to preserve continuity. Final touches—DOF, bloom, and minor grading—should be restrained. Deliver a set: wide hero shots, medium details, and 1–2 material close‑ups. This process reduces revisions and builds client confidence.",
+      "publisher": "HomeDesign Studio",
+      "date": "1 Mar 2024 ",
       "comments": [
         {
           "id": "1",
@@ -1426,12 +1314,12 @@
     },
     {
       "id": "11",
-      "image": "/assets/Images/post-1.png",
-      "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
+      "image": "/assets/Images/blog11.jpg",
+      "PublishDate": " Feb 8th, 2025",
+      "title": "The Future of Interior Design with 3D Visualization",
+      "bigTitle": "The Future of Interior Design with 3D Visualization",
+      "articleText": "3D visualization has reshaped interior design from a guesswork-driven process into a proof‑first workflow. Instead of static sketches, clients experience spaces as lifelike visuals that clarify proportions, materials, and lighting before a single purchase or installation. Designers can rapidly test alternative layouts—switching a sectional for two sofas, swapping walnut for oak, or rotating a dining table 90 degrees—to evaluate circulation and balance.Beyond aesthetics, 3D drives measurable savings. Early detection of clashes (like pendant heights over a kitchen island or door swing conflicts with cabinetry) prevents rework. Costing is smarter too: a render tied to a bill of quantities helps the team forecast budget impacts when materials changeThe next wave is immersive. AR lets clients stand in their empty living room and preview modular sofas at true scale. VR sells the mood—warm sunset lighting on textured plaster or crisp daylight for a Scandinavian look—while real‑time engines deliver instant feedback. When tied to your online catalog, a client can jump from render to cart, purchasing the exact sofa configuration, fabric, and rug size they saw.Best practice: build a reusable asset library (fabrics, finishes, trims, lighting IES files), enforce real‑world units, and render with physically based materials to ensure scenes match reality. The result is fewer surprises, faster approvals, and happier clients.",
+      "publisher": " HomeDesign Studio",
       "date": "Feb 8th, 2025",
       "comments": [
         {
@@ -1481,13 +1369,13 @@
     },
     {
       "id": "12",
-      "image": "/assets/Images/post-1.png",
-      "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
-      "date": "Feb 8th, 2025",
+      "image": "/assets/Images/blog12.jpg",
+      "PublishDate": "2 Sep 2024 ",
+      "title": " The Art of Space: How Furniture and 3ds Max Can Transform Any Room",
+      "bigTitle": " The Art of Space: How Furniture and 3ds Max Can Transform Any Room",
+      "articleText": "In the competitive and ever-evolving world of interior design, visualizing a space before it’s created is no longer just a luxury; it’s a crucial necessity. This is precisely where the powerful and transformative combination of strategic furniture selection and the advanced capabilities of 3ds Max comes into play. 3ds Max, a leading industry standard for 3D modeling, animation, and rendering, provides designers with an unparalleled ability to create photorealistic virtual environments that feel tangible and real.By utilizing this sophisticated software, design professionals can meticulously plan every detail of a room. They can import precise digital models of real-world furniture, from a plush velvet sofa to a minimalist oak dining table, and place them within the virtual space. This allows them to experiment endlessly with different layouts, test various design concepts, and instantly see how different pieces interact with each other. More importantly, 3ds Max allows for a realistic simulation of lighting conditions, from the soft glow of a table lamp to the sharp angle of afternoon sunlight streaming through a window. This level of detail helps in understanding how textures, colors, and materials will appear in the final, physical space. The ability to \"walk through\" a high-fidelity virtual model of a room, complete with chosen decor and lighting effects, not only streamlines the design process significantly but also provides clients with an immersive and comprehensive preview. This ensures that the final result is a perfect match for the vision, eliminating costly and time-consuming changes later on. The synergy between imaginative furniture arrangement and the technical prowess of 3ds Max truly elevates a design from a simple concept to a fully realized, breathtaking reality.",
+      "publisher": "Architectural Insights",
+      "date": "2 Sep 2024",
       "comments": [
         {
           "id": "1",
@@ -1536,13 +1424,13 @@
     },
     {
       "id": "13",
-      "image": "/assets/Images/post-1.png",
-      "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
-      "date": "Feb 8th, 2025",
+      "image": "/assets/Images/blog13.jpg",
+      "PublishDate": " 25 Jul 2024",
+      "title": " Beyond the Basics: Using Blocks in Interior Design",
+      "bigTitle": " Beyond the Basics: Using Blocks in Interior Design",
+      "articleText": "For architects and interior designers, time is a valuable commodity, and efficiency is the ultimate goal. This is why blocks are not just a convenient feature but an absolutely essential component of a modern design workflow. In software like AutoCAD and especially within the complex scene management of 3ds Max, a block is a collection of objects—lines, shapes, and 3D models—that are grouped and treated as a single, named object. Think of it as a pre-fabricated, digital component that can be used repeatedly.For example, a designer might spend time creating a detailed 3D model of a specific designer chair or a complex kitchen cabinet unit. Instead of painstakingly recreating this same object every time it is needed in a project, they can save it as a block. This method offers several profound advantages. First and foremost, it drastically reduces drafting and modeling time, freeing up designers to focus on more creative and complex tasks. Secondly, it ensures perfect consistency across a project. When you insert the same block multiple times, you guarantee that every instance of that object is identical in scale, detail, and geometry. Most importantly, blocks make updating designs incredibly simple. If a client decides to change all the dining chairs in a restaurant layout, the designer only needs to modify the single chair block. The software will then automatically update every instance of that block throughout the entire design file, saving hours, if not days, of manual work. This intelligent use of blocks not only makes the design process more fluid but also enhances the overall quality and maintainability of the project.",
+      "publisher": "Design & Build Magazine",
+      "date": " 25 Jul 2024",
       "comments": [
         {
           "id": "1",
@@ -1591,13 +1479,13 @@
     },
     {
       "id": "14",
-      "image": "/assets/Images/post-1.png",
-      "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
-      "publisher": "john",
-      "date": "Feb 8th, 2025",
+      "image": "/public/assets/Images/blog14.jpg",
+      "PublishDate": "08 Aug 2024",
+      "title": "The Art of Outdoor Living: An Introduction to Landscape Design",
+      "bigTitle": "The Art of Outdoor Living: An Introduction to Landscape Design",
+      "articleText": "shift is occurring within the design community towards more sustainable and ethical practices. This trend, which focuses on creating beautiful and healthy living spaces, is profoundly influencing the choices we make, from building materials to the furniture we select. The new ethos is centered on minimizing environmental impact, reducing waste, and promoting long-term durability.Today, there is an increasing demand for furniture crafted from eco-friendly and recycled materials. Pieces made from reclaimed wood, bamboo, cork, or even recycled plastics are no longer niche products; they are becoming mainstream. These materials not only have a lower carbon footprint but often bring a unique character and history to a space. Beyond just the raw materials, sustainable design also considers the longevity and functionality of a piece. A high-quality, timeless sofa that is built to last for decades is far more sustainable than a mass-produced, low-quality item that will need to be replaced every few years. When working in 3ds Max, designers can actively incorporate models of these sustainable furniture pieces and materials into their virtual renderings. This allows them to demonstrate to clients how an environmentally conscious space can look and feel. By integrating these design principles with the visualization power of 3ds Max, designers can help clients make greener, more responsible choices without sacrificing style or aesthetic appeal",
+      "publisher": "EcoLiving Today",
+      "date": "08 Aug 2024",
       "comments": [
         {
           "id": "1",
@@ -1646,10 +1534,10 @@
     },
     {
       "id": "15",
-      "image": "/assets/Images/post-1.png",
+      "image": "/public/assets/Images/blog15.jpg",
       "PublishDate": "8 Feb 2024 ",
-      "title": "First Time Home Owner Ideas",
-      "bigTitle": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
+      "title": "Why High-Quality Furniture Blocks Matter",
+      "bigTitle": "Why High-Quality Furniture Blocks Matter",
       "articleText": "If you are looking for an exquisite retreat in Armenia, Seven Visions Resort & Places, The Dvin, is the epitome of luxury and style. This stunning Art Deco hotel in Yerevan seamlessly blends timeless elegance with modern sophistication, offering travelers an unparalleled experience. Every aspect of the hotel's design, from its lavish rooms to its custom-made décor, has been meticulously crafted to ensure an unforgettable stay. A Modern Take on Art Deco Luxury Located in the heart of Yerevan, Armenia, The Dvin is a masterpiece of Art Deco luxury. Completed in 2023, this five-star hotel offers 153 magnificent rooms, each designed to embody comfort, tranquility, and grandeur. The architecture and interiors reflect the spirit of the Art Deco era, incorporating geometric patterns, mirrored surfaces, and intricate moldings, creating an atmosphere of opulence and refinement.Every room perfectly blends timeless design with modern amenities. Large mirrors enhance the sense of space, reflecting soft lighting and creating a cozy ambiance. Bed frames are adorned with subtle geometric patterns, characteristic of the Art Deco style, while contemporary furnishings ensure maximum comfort for guests. The interiors of The Dvin are a work of art. Every detail has been carefully curated to showcase the Art Deco style with a modern twist. 3D wall panels and ceiling moldings, designed by Wall Deco, serve as key decorative elements, adding depth and character to every space.One of the most striking features is the striped 3D panels, which give the walls a bold and sophisticated appearance. The interplay of light and shadow on these surfaces creates a mesmerizing visual effect, further enhanced by LED lighting, highlighting the intricate details of the décor. In addition to striped panels, some rooms also feature unique geometric 3D panels, custom-designed exclusively for the hotel. These bespoke decorative elements add a distinct character to the hotel's interior. As guests step into The Dvin’s hallways, they are immersed in an atmosphere of refined luxury. Deep black tones dominate the corridors, creating a bold yet sophisticated aesthetic that enhances the sense of grandeur.One of the hallways' standout features is the high ceiling, which contributes to a feeling of spaciousness and elegance. Ceiling moldings add a touch of classic Art Deco charm, serving as a subtle yet significant design element. The dark and light tones balance creates a visually captivating yet harmonious ambiance. One of the most original decorative elements in the hotel is the rose-pink bas-relief behind a wine bottle in the hallway. This unique installation immediately captures guests' attention, inviting them to admire the artistry behind it. Designed by Wall Deco, this wavy bas-relief creates the illusion of movement, adding depth and intrigue to the space.This attion to detail is evident throughout the hotel, creating a visually stunning and immersive design. Every decorative choice, from custom-designed wall features to exclusive furniture pieces, has been thoughtfully integrated to form a luxurious and inviting space.",
       "publisher": "john",
       "date": "Feb 8th, 2025",
