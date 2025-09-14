@@ -22,7 +22,7 @@ const Blogs = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:8000/blogs")
+      .get("http://localhost:8000/postsDetails")
       .then((res) => {
         setBlogs(res.data);
         setLoading(false);
