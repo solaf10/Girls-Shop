@@ -7,6 +7,8 @@ const config = {
   cartProducts: "cartProducts",
   blogs: "postsDetails",
   comments: "comments",
-  oldOrder:"oldOrder"
+  oldOrder: "oldOrder",
+  area: "area",
+  designer: "designers",
 };
 export default config;

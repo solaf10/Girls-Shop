@@ -11,6 +11,7 @@
     "blogs": "Blogs",
     "contact": "Contact Us",
     "designers": "Designers",
+    "orders": "Orders",
     "userName": "User Name",
     "userProfile": "User Profile",
     "settings": "Settings",
@@ -101,7 +102,7 @@
     "button": "Send"
   },
   "footer": {
-    "title": "Girl’Shop",
+    "title": "ArchiLink",
     "pages": "Pages",
     "others": "Others",
     "contactInfo": "Contact Info",
@@ -112,7 +113,7 @@
     "terms": "Terms and Conditions",
     "privacy": "Privacy Policy",
     "contact": "Contact Us",
-    "rights": "© Girls'Shop 2025 - All Rights Reserved"
+    "rights": "© ArchiLink 2025 - All Rights Reserved"
   },
   "designer": {
     "title": "Designers",
@@ -203,7 +204,7 @@
     "amount": "Amount",
     "total_price": "Total Price",
     "return_shopping": "Return Shopping",
-    "Location":"Location",
+    "Location": "Location",
     "total": "Total",
     "checkout": "Check out",
     "product_deleted_success": "Product was deleted from the cart successfully!!",
@@ -243,7 +244,7 @@
   },
   "contactForm": {
     "weLoveToHear": "We Love To Hear From You",
-    "weLoveToHearDesc": "Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringi",
+    "weLoveToHearDesc": "We’re here to help! If you have any questions, feedback, or requests, please don’t hesitate to reach out. Our team will get back to you as soon as possible.",
     "leaveMessage": "Leave A Message",
     "leaveMessageDesc": "Use the form below to get in touch with the sales team",
     "addressTitle": "Address",
@@ -324,5 +325,21 @@
     "yourMessage": "Your Message",
     "saveInfo": "Save my name, email, and website in this browser for the next time I comment.",
     "send": "Send"
+  },
+  "customizeOrder": {
+    "bringIdeaTitle": "Bring Your Ideas to Life",
+    "bringIdeaDesc": "Create a custom design form tailored to your needs. Easily personalize fields, layout, and style to match your requirements.",
+    "width": "Width",
+    "height": "Height",
+    "length": "Length",
+    "location": "Location",
+    "locationPlaceholder": "Syria, Homs, Al-Hamra",
+    "wrappingColor": "Wrapping Color",
+    "uploadImage": "Upload Image",
+    "imageUploaded": "Image Uploaded",
+    "send": "Send",
+    "popupText": "If your submission is accepted, you will receive a <b>$1000 reward</b> and your design will be adopted as one of the company’s products.",
+    "cancel": "Cancel",
+    "accept": "Accept"
   }
 }

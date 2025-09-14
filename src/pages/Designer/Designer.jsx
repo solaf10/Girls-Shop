@@ -6,6 +6,8 @@ import DesignerCard from "../../components/DesignerCard/DesignerCard";
 import TopGreenBar from "../../components/TopGreenBar/TopGreenBar";
 import Loader from "../../components/Loader/Loader";
 import { useTranslation } from "react-i18next";
+import PagenationControllers from "../../components/PagenationControllers/PagenationControllers";
+import usePagenation from "../../custom hooks/usePagenation";
 
 const Designer = () => {
   const { t } = useTranslation();
@@ -39,6 +41,15 @@ const Designer = () => {
     );
     setFilteredDesigners(arr);
   };
+
+  const {
+    goToPage,
+    nextPage,
+    currentPage,
+    currentCards,
+    totalPages,
+    isBtnDisabled,
+  } = usePagenation(filteredDesigners, 6);
 
   return (
     <div className="designers-holder">
@@ -82,20 +93,29 @@ const Designer = () => {
 
             <div className="designer-list">
               {filteredDesigners.length > 0 ? (
-                filteredDesigners.map((designer) => (
+                currentCards.map((designer) => (
                   <DesignerCard
                     key={designer.id}
+                    id={designer.id}
                     designerName={designer.designerName}
                     designerImage={designer.image}
                     designerLocation={designer.designerCity}
                     designerNumber={designer.designerPhone}
-                    designerWork={designer.designerWork}
                   />
                 ))
               ) : (
                 <p className="no-designer-matches">{t("designer.noMatches")}</p>
               )}
             </div>
+            {totalPages > 1 && (
+              <PagenationControllers
+                goToPage={goToPage}
+                nextPage={nextPage}
+                currentPage={currentPage}
+                totalPages={totalPages}
+                isBtnDisabled={isBtnDisabled}
+              />
+            )}
           </div>
         </>
       )}

@@ -14,23 +14,28 @@
   background-repeat: no-repeat;
   transition: 0.5s;
   color: white;
+  background-size: cover;
 }
 
 .shop .container .holder .card.interior {
-  background-image: url("../../../../public/assets/Images/InteriorDesign-2.png");
   background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
-    url("../../../../public/assets/Images/InteriorDesign-2.png");
+    url("/assets/Images/InteriorDesign.png");
 }
-.shop .container .holder .card.interior:hover {
-  background-image: url("../../../../public/assets/Images/InteriorDesign-2.png");
+.shop .container .holder .card.interior:hover,
+.shop .container .holder .card.interior.active {
+  background-image: url("/assets/Images/InteriorDesign.png");
 }
 .shop .container .holder .card.exterior {
-  background-image: url("../../../../public/assets/Images/ExteriorDesign.jpg");
   background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
-    url("../../../../public/assets/Images/ExteriorDesign.jpg");
+    url("/assets/Images/ExteriorDesign.jpg");
 }
-.shop .container .holder .card.exterior:hover {
-  background-image: url("../../../../public/assets/Images/ExteriorDesign.jpg");
+.shop .container .holder .card.exterior:hover,
+.shop .container .holder .card.exterior.active {
+  background-image: url("/assets/Images/ExteriorDesign.jpg");
+}
+.shop .container .holder .card.active {
+  transform: scale(0.95);
+  border: 5px solid var(--primary-color);
 }
 .shop .container .holder .card p {
   position: absolute;

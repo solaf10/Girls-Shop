@@ -12,7 +12,7 @@ import SkeletonCard from "../../components/Skeleton/SkeletonCard";
 import { useTranslation } from "react-i18next";
 
 const Blogs = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
@@ -53,7 +53,9 @@ const Blogs = () => {
             <SkeletonCard count={12} />
           </div>
         ) : blogs.length === 0 ? (
-          <p className="no-blogs">{t(`Blogs.There Are No Blogs Right Now !`)}</p>
+          <p className="no-blogs">
+            {t(`Blogs.There Are No Blogs Right Now !`)}
+          </p>
         ) : (
           <>
             <div className="search-holder-blog">
@@ -82,16 +84,20 @@ const Blogs = () => {
                   />
                 ))
               ) : (
-                <p className="no-blogs">{t(`Blogs.No blog found matching your input.`)}</p>
+                <p className="no-blogs">
+                  {t(`Blogs.No blog found matching your input.`)}
+                </p>
               )}
             </div>
-            <PagenationControllers
-              goToPage={goToPage}
-              nextPage={nextPage}
-              currentPage={currentPage}
-              totalPages={totalPages}
-              isBtnDisabled={isBtnDisabled}
-            />
+            {totalPages > 1 && (
+              <PagenationControllers
+                goToPage={goToPage}
+                nextPage={nextPage}
+                currentPage={currentPage}
+                totalPages={totalPages}
+                isBtnDisabled={isBtnDisabled}
+              />
+            )}
             {/* <div className="slider-blogs">
               <p className="first-num">1</p>
               <p className="second-num">2</p>

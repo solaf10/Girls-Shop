@@ -50,7 +50,8 @@ export default function Models() {
 
   useEffect(() => {
     if (scrollEl.current) {
-      scrollEl.current.scrollIntoView({ behavior: "smooth" });
+      // scrollEl.current.scrollIntoView({ behavior: "smooth" });
+      window.scrollTo(0, { behavior: "smooth" });
     }
   }, [currentPage]);
   const cards = currentCards.map((product) => (
@@ -88,13 +89,15 @@ export default function Models() {
             ) : (
               <>
                 <div className="cards">{cards}</div>
-                <PagenationControllers
-                  goToPage={goToPage}
-                  nextPage={nextPage}
-                  currentPage={currentPage}
-                  totalPages={totalPages}
-                  isBtnDisabled={isBtnDisabled}
-                />
+                {totalPages > 1 && (
+                  <PagenationControllers
+                    goToPage={goToPage}
+                    nextPage={nextPage}
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    isBtnDisabled={isBtnDisabled}
+                  />
+                )}
               </>
             )}
           </div>
