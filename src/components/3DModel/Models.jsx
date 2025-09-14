@@ -61,7 +61,7 @@ export default function Models() {
       }}
       key={product.id}
       id={product.id}
-      image={product.image}
+      images={product.images}
       name={product.name}
       price={product.price}
       sale={product.sale}

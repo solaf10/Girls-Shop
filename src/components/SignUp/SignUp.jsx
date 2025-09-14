@@ -4,11 +4,12 @@ import SyrianFlag from "../../../public/assets/Images/SyrianFlag.svg";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import config from "../../Constants/enviroment";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 function SignUp() {
   const { t } = useTranslation();
@@ -22,20 +23,29 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [orders, setOrders] = useState([]);
   const [error, setError] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
   const [selectedArea, setSelectedArea] = useState("");
+  const [selectUserType, setSelectUserType] = useState("");
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email !== "test@example.com" || password !== "password123") {
+    if (
+      !email ||
+      !password ||
+      !selectedArea ||
+      !selectUserType ||
+      password !== confirmPassword
+    ) {
       setError(true);
     } else {
       setError(false);
-      alert(t("signup.success"));
     }
   };
 
-  // if (password != confirmPassword) setError(true);
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -50,11 +60,37 @@ function SignUp() {
         setIsLoading(false);
       });
   }, []);
-  // const handleSendComment = () => {
-  //   if (!phone || !email || !message) {
-  //     toast.error("All fields are required!");
-  //     return;
-  //   }
+
+  const handleClickSignUp = () => {
+    const data = {
+      email,
+      phone,
+      city: selectedArea,
+      type: selectUserType,
+      password,
+      orders: [],
+    };
+    axios
+      .post(`${config.baseUrl}/${config.users}`, data)
+      .then((res) => {
+        toast.success("You Created An Account Successfully!!");
+        setEmail("");
+        setPhone("");
+        setPassword("");
+        setConfirmPassword("");
+        setSelectedArea("");
+        setSelectUserType("");
+        // setOrders([]);
+        setError(false);
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error("Failed to register user.");
+        setError(true);
+      });
+  };
+
   return (
     <div className="signup-page">
       <div className="left-section">
@@ -107,18 +143,18 @@ function SignUp() {
             <div className="area">
               <div
                 className="select-area"
-                onClick={() => setIsOpen((prev) => !prev)}
+                onClick={() => setIsOpen1((prev) => !prev)}
               >
                 <p>{selectedArea || "Select Area"}</p>
                 <button type="button">
-                  {!isOpen ? (
+                  {!isOpen1 ? (
                     <IoIosArrowDown className="file-type" />
                   ) : (
                     <IoIosArrowUp className="file-type" />
                   )}
                 </button>
               </div>
-              {isOpen && (
+              {isOpen1 && (
                 <div className="popup">
                   <ul>
                     {areas.map((e) => (
@@ -126,7 +162,7 @@ function SignUp() {
                         key={e.id}
                         onClick={() => {
                           setSelectedArea(e.street);
-                          setIsOpen((prev) => !prev);
+                          setIsOpen1((prev) => !prev);
                         }}
                       >
                         <a>
@@ -134,6 +170,47 @@ function SignUp() {
                         </a>
                       </li>
                     ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+            <div className="user-type">
+              <div
+                className="select-user-type"
+                onClick={() => setIsOpen2((prev) => !prev)}
+              >
+                <p>{selectUserType || "Select User Type"}</p>
+                <button type="button">
+                  {!isOpen2 ? (
+                    <IoIosArrowDown className="file-type" />
+                  ) : (
+                    <IoIosArrowUp className="file-type" />
+                  )}
+                </button>
+              </div>
+              {isOpen2 && (
+                <div className="popup">
+                  <ul>
+                    <li
+                      onClick={() => {
+                        setSelectUserType("Customer");
+                        setIsOpen2((prev) => !prev);
+                      }}
+                    >
+                      <a>
+                        <span>Customer</span>
+                      </a>
+                    </li>
+                    <li
+                      onClick={() => {
+                        setSelectUserType("Designer");
+                        setIsOpen2((prev) => !prev);
+                      }}
+                    >
+                      <a>
+                        <span>Designer</span>
+                      </a>
+                    </li>
                   </ul>
                 </div>
               )}
@@ -163,16 +240,16 @@ function SignUp() {
 
               <p>{t("signup.confirmPassword")}</p>
               <input
-                type={showPassword ? "text" : "password"}
+                type={showConfirmPassword ? "text" : "password"}
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                // className={error ? "input-error" : ""}
+                className={error ? "input-error" : ""}
               />
               <span
                 className="toggle-password"
-                onClick={() => setShowPassword(!showPassword)}
+                onClick={() => setShowConfirmPassword(!showPassword)}
               >
-                {showPassword ? (
+                {showConfirmPassword ? (
                   <>
                     <span>{t("signup.hide")}</span> <BsEyeSlash />
                   </>
@@ -188,7 +265,11 @@ function SignUp() {
               <Link to="/updatePassword">{t("signup.forgot")}</Link>
             </div>
 
-            <button className="sign-up-btn" type="submit">
+            <button
+              className="sign-up-btn"
+              type="submit"
+              onClick={handleClickSignUp}
+            >
               {t("signup.submit")}
             </button>
           </form>

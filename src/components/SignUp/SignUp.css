@@ -273,6 +273,79 @@
             }
           }
         }
+        .user-type {
+          margin: 15px 0 0 0;
+          .select-user-type {
+            background-color: white;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid var(--nutral-color);
+            border-radius: 4px;
+            p {
+              margin: 10px 0;
+              font-size: 18px;
+              color: var(--secondary-color);
+            }
+
+            button {
+              background-color: white;
+              color: var(--secondary-color);
+              font-size: 20px;
+              text-align: center;
+              gap: 20px;
+              display: flex;
+              cursor: pointer;
+            }
+            a {
+              color: white;
+              display: flex;
+              gap: 5px;
+              align-items: center;
+            }
+            .file-type {
+              font-size: 18px;
+              margin-bottom: 2px;
+            }
+            button.file-type::before {
+              content: "";
+              position: relative;
+              width: 555px;
+              height: 2px;
+              background-color: white;
+            }
+          }
+          .popup {
+            width: 264px;
+            background-color: white;
+            box-shadow: 3px 3px 10px var(--nutral-color);
+            right: 40px;
+            position: absolute;
+            ul {
+              font-size: 18px;
+              background-color: white;
+              z-index: 100;
+              position: relative;
+              li {
+                margin: 8px 0;
+                padding: 10px 20px 0 20px;
+                a {
+                  display: flex;
+                  justify-content: space-between;
+                  color: black;
+                  span {
+                    font-weight: 500;
+                  }
+                }
+              }
+              li:hover {
+                background-color: var(--nutral-color);
+                cursor: pointer;
+              }
+            }
+          }
+        }
         .sign-up-btn:hover {
           background-color: var(--primary-color);
         }
