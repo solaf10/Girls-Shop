@@ -83,7 +83,6 @@ function SignUp() {
         // setOrders([]);
         setError(false);
         navigate("/");
-        localStorage.setItem("token", res.id);
       })
       .catch((err) => {
         console.log(err);

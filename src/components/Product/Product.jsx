@@ -82,27 +82,25 @@ export default function Product() {
     setDownloadBlocksIsOpen((prev) => !prev);
   };
   const [addToCart, setAddToCart] = useState(false);
-  const handleClickAddToCart = () => {
-    axios
-      .post("http://localhost:8000/cartProducts", {
-        id,
-        name,
-        image: images[0],
-        price,
-        color: chosenColor,
-        amount: count,
-      })
-      .then((res) => setAddToCart(res.data))
-      .catch((err) => console.log(err));
-    navigate(`/cart`);
-  };
-
-  // setDefaultColor
-  useEffect(() => {
-    if (colors?.length > 0) {
-      setChosenColor(colors[0]);
+  const handleClickAddToCart = (e) => {
+    e.preventDefault();
+    if (chosenColor != "" && count != 0) {
+      axios
+        .post("http://localhost:8000/cartProducts", {
+          id,
+          name,
+          image: images[0],
+          price,
+          color: chosenColor,
+          amount: count,
+        })
+        .then((res) => setAddToCart(res.data))
+        .catch((err) => console.log(err));
+      navigate(`/cart`);
+    } else {
+      toast.error("Choose a Color and an Amount");
     }
-  }, [productsDetails]);
+  };
 
   useEffect(() => {
     window.scrollTo({
@@ -130,6 +128,22 @@ export default function Product() {
     <div key={i} className="holder">
       <div className="choose-color" style={{ backgroundColor: color }}></div>
     </div>
+  ));
+  const colorsCheckInputs = colors?.map((color, i) => (
+    <label
+      key={i}
+      htmlFor={color}
+      style={{ backgroundColor: color }}
+      className={chosenColor == color ? "active choose-color" : "choose-color"}
+    >
+      <input
+        id={color}
+        type="radio"
+        name="color"
+        checked={chosenColor === color}
+        onChange={() => setChosenColor(color)}
+      />
+    </label>
   ));
 
   // rating
@@ -247,12 +261,10 @@ export default function Product() {
                   </div>
                 </div>
                 <form>
-                  <input
-                    type="color"
-                    name="color"
-                    value={chosenColor}
-                    onChange={(e) => setChosenColor(e.target.value)}
-                  />
+                  <div className="colors">
+                    <h3>Choose color:</h3>
+                    {colorsCheckInputs}
+                  </div>
                   <div className="cart">
                     <div className="product-number">
                       <button
@@ -265,6 +277,7 @@ export default function Product() {
                         -
                       </button>
                       <input
+                        required
                         style={{
                           border: "none",
                           width: "20px",

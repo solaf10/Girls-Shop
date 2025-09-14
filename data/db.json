@@ -1706,15 +1706,7 @@
       "name": "Armchair ALBA",
       "image": "/assets/Images/products/Armchair ALBA main.png",
       "price": "$320",
-      "color": "#7d5b3f",
-      "amount": 1
-    },
-    {
-      "id": "73",
-      "name": "Armchair ALBA",
-      "image": "/assets/Images/products/Armchair ALBA main.png",
-      "price": "$320",
-      "color": "#927863",
+      "color": "#783c0a",
       "amount": 1
     }
   ],
