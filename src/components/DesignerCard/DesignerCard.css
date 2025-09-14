@@ -3,6 +3,28 @@
   border: 1px solid #c0c0c0;
   margin-top: 40px;
 }
+.heading {
+  display: flex;
+  justify-content: space-between;
+  a {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #385854;
+    .icon {
+      transition: 0.5s;
+    }
+  }
+  a:hover .icon {
+    transform: translateX(3px);
+  }
+}
+a {
+  color: black;
+}
 .designer-card .designer-info {
   display: flex;
   align-items: center;

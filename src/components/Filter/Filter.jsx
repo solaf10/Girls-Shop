@@ -46,11 +46,11 @@ export default function Accordion({ setFilteredProducts, products }) {
   const [styleChecked, setStyleChecked] = useState({});
   // filtersUsedInfo
   const [searchedKey, setSearchedKey] = useState("");
-  const [price, setPrice] = useState(500);
-  const [chosenColor, setChosenColor] = useState(null);
+  const [price, setPrice] = useState(null);
+  const [chosenColor, setChosenColor] = useState("");
   const [selectedType, setselectedType] = useState("");
   const [selectedCategory, setselectedCategory] = useState("");
-  const { designType } = useDesignType();
+  const { designType, setDesignType } = useDesignType();
   // selectedMaterial(filter)
   const selectedMaterials = Object.keys(materialChecked).filter(
     (key) => materialChecked[key]
@@ -59,28 +59,68 @@ export default function Accordion({ setFilteredProducts, products }) {
   const selectedStyles = Object.keys(styleChecked).filter(
     (key) => styleChecked[key]
   );
+  const handleReset = () => {
+    setChosenColor("");
+    setMaterialChecked({});
+    setStyleChecked({});
+    setSearchedKey("");
+    setPrice(null);
+    setselectedType("");
+    setselectedCategory("");
+    setDesignType("");
+  };
   // filters
   useEffect(() => {
-    if (searchedKey == "" && selectedType == "") {
+    let res = products;
+    if (
+      searchedKey == "" &&
+      selectedType == "" &&
+      price == null &&
+      chosenColor == "" &&
+      selectedMaterials.length == 0 &&
+      selectedStyles.length == 0 &&
+      designType == ""
+    ) {
       setFilteredProducts(products);
     }
     if (searchedKey != "") {
-      console.log(12);
-      setFilteredProducts((prev) =>
-        prev.filter((product) =>
-          product.name.toLowerCase().includes(searchedKey.toLowerCase())
-        )
+      res = res.filter((product) =>
+        product.name.toLowerCase().includes(searchedKey.toLowerCase())
       );
     }
     if (selectedType != "") {
-      setFilteredProducts((prev) =>
-        prev.filter(
-          (product) =>
-            product.type.toLowerCase() === selectedType.toLowerCase() &&
-            product.category.toLowerCase() === selectedCategory.toLowerCase()
-        )
+      res = res.filter(
+        (product) =>
+          product.type.toLowerCase() === selectedType.toLowerCase() &&
+          product.category.toLowerCase() === selectedCategory.toLowerCase()
       );
     }
+    if (price != null) {
+      res = res.filter(
+        (product) => parseFloat(product.price.replace("$", "")) <= price
+      );
+    }
+    if (chosenColor != "") {
+      res = res.filter((product) => product.colors.includes(chosenColor));
+    }
+    if (selectedMaterials.length > 0) {
+      console.log(selectedMaterials, res);
+      res = res.filter((product) =>
+        selectedMaterials.includes(product.material.toLowerCase())
+      );
+    }
+    if (selectedStyles.length > 0) {
+      res = res.filter((product) =>
+        selectedStyles.includes(product.style.toLowerCase())
+      );
+    }
+    if (designType != "") {
+      res = res.filter(
+        (product) =>
+          product.designType.toLowerCase() == designType.toLowerCase()
+      );
+    }
+    setFilteredProducts(res);
   }, [
     selectedType,
     selectedCategory,
@@ -89,11 +129,14 @@ export default function Accordion({ setFilteredProducts, products }) {
     materialChecked,
     price,
     searchedKey,
+    designType,
   ]);
   const handleAccordionFilter = (e) => {
     if (e.target.checked) {
-      setselectedType(e.target.id.toLowerCase());
-      setselectedCategory(e.target.name.toLowerCase());
+      const category = e.target.dataset.category.toLowerCase();
+      const type = e.target.dataset.type.toLowerCase();
+      setselectedType(type);
+      setselectedCategory(category);
     }
   };
   return (
@@ -128,17 +171,22 @@ export default function Accordion({ setFilteredProducts, products }) {
                         ? "active"
                         : ""
                     }
-                    htmlFor={option}
+                    htmlFor={`${option}${i}`}
                   >
                     <input
                       type="radio"
                       name={el.category}
-                      id={option}
+                      data-category={el.category}
+                      data-type={option}
+                      id={`${option}${i}`}
                       checked={
-                        selectedType.toLowerCase() == option.toLowerCase()
+                        selectedType.toLowerCase() === option.toLowerCase() &&
+                        selectedCategory.toLowerCase() ===
+                          el.category.toLowerCase()
                       }
                       onChange={handleAccordionFilter}
                     />
+
                     {option}
                   </label>
                 </li>
@@ -159,7 +207,7 @@ export default function Accordion({ setFilteredProducts, products }) {
         styleChecked={styleChecked}
         setStyleChecked={setStyleChecked}
       />
-      <ResetFilters />
+      <ResetFilters handleReset={handleReset} />
     </form>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { useEffect, useState } from "react";
 import {
   FaCopy,
@@ -21,6 +21,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import RelatedProducts from "../../sections/Product/RelatedProducts/RelatedProducts";
 import usePrivateRoute from "../../custom hooks/usePrivateRoute";
 import UserAutherization from "../UserAutherization/UserAutherization";
+import StarRating from "../StarRating/StarRating";
 import { useTranslation } from "react-i18next";
 import "./Product.css";
 
@@ -31,6 +32,7 @@ export default function Product() {
   const [currentImage, setCurrentImage] = useState(0);
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(0);
+  const [chosenColor, setChosenColor] = useState("#c0c0c0");
 
   const {
     id,
@@ -46,7 +48,7 @@ export default function Product() {
     type,
     style,
     material,
-    color,
+    colors,
     width,
     height,
     lengthInfo,
@@ -88,14 +90,20 @@ export default function Product() {
         name,
         image,
         price,
-        color,
+        color: chosenColor,
         amount: count,
       })
       .then((res) => setAddToCart(res.data))
       .catch((err) => console.log(err));
     navigate(`/cart`);
   };
-  const handlePrivateRoute = usePrivateRoute(handleClickAddToCart);
+
+  // setDefaultColor
+  useEffect(() => {
+    if (colors?.length > 0) {
+      setChosenColor(colors[0]);
+    }
+  }, [productsDetails]);
 
   useEffect(() => {
     window.scrollTo({
@@ -119,23 +127,11 @@ export default function Product() {
       });
   }, [params.id]);
 
-  /* const colorsEls = colors?.map((color, i) => (
+  const colorsEls = colors?.map((color, i) => (
     <div key={i} className="holder">
-      <label
-        className={
-          color == chosencolor ? "active choose-color" : "choose-color"
-        }
-        style={{ backgroundColor: color }}
-        htmlFor={`color-${i + 1}`}
-      ></label>
-      <input
-        type="radio"
-        name="color"
-        id={`color-${i + 1}`}
-        onChange={() => setchosencolor(color)}
-      />
+      <div className="choose-color" style={{ backgroundColor: color }}></div>
     </div>
-  )); */
+  ));
 
   // rating
   const stars = [...new Array(5)].map((el, i) =>
@@ -168,6 +164,8 @@ export default function Product() {
   const handleShare = (url) => {
     window.open(url, "_blank", "width=600,height=400");
   };
+
+  const handleDownloadPrivateRoute = usePrivateRoute(() => {});
 
   return (
     <div className="single-product">
@@ -250,6 +248,12 @@ export default function Product() {
                   </div>
                 </div>
                 <form>
+                  <input
+                    type="color"
+                    name="color"
+                    value={chosenColor}
+                    onChange={(e) => setChosenColor(e.target.value)}
+                  />
                   <div className="cart">
                     <div className="product-number">
                       <button
@@ -278,7 +282,7 @@ export default function Product() {
                     <button
                       className="cart-btn"
                       type="submit"
-                      onClick={handlePrivateRoute}
+                      onClick={handleClickAddToCart}
                     >
                       <span>{t("product.addToCart")}</span>
                       <MdArrowOutward className="arrow-icon" />
@@ -289,11 +293,21 @@ export default function Product() {
                   <hr />
                   <div className="architecture">
                     <p>{t("product.forArchitecture")}</p>
-                    <div className="download-button">
-                      <a href={file?.[0]?.["3d"]} download="3DBlock.3d">
-                        <FiDownload />
-                        {t("product.downloadBlocks")}
-                      </a>
+                    <div
+                      className="download-button"
+                      onClick={handleDownloadPrivateRoute}
+                    >
+                      {localStorage.getItem("token") != null ? (
+                        <a href={file?.[0]?.["3d"]} download="3DBlock.3d">
+                          <FiDownload />
+                          {t("product.downloadBlocks")}
+                        </a>
+                      ) : (
+                        <p>
+                          <FiDownload />
+                          {t("product.downloadBlocks")}
+                        </p>
+                      )}
                       <button onClick={handleClickDownloadBlocks}>
                         {!downloadBlocksIsOpen ? (
                           <IoIosArrowDown className="file-type" />
@@ -367,12 +381,7 @@ export default function Product() {
                 </div>
                 <div className="info colors-holder">
                   <p className="title">{t("product.colors")}</p>
-                  <div className="desc colors">
-                    <div
-                      style={{ backgroundColor: color }}
-                      className="choose-color"
-                    ></div>
-                  </div>
+                  <div className="desc colors">{colorsEls}</div>
                 </div>
               </div>
             </div>
@@ -395,22 +404,11 @@ export default function Product() {
               <h2>{t("product.postComment")}</h2>
               <div className="write-comment-form">
                 <div className="phone-email-info">
-                  <input
-                    type="text"
-                    placeholder={t("product.phonePlaceholder")}
-                  ></input>
-                  <input
-                    type="text"
-                    placeholder={t("product.emailPlaceholder")}
-                  ></input>
+                  <StarRating />
                 </div>
                 <div className="textarea-to-write-comment">
                   <label>{t("product.yourMessage")}</label>
                   <textarea />
-                </div>
-                <div className="agree-yo-save-your-info">
-                  <input className="check" type="checkbox" />
-                  <label>{t("product.saveInfo")}</label>
                 </div>
                 <button className="send-comment">{t("product.send")}</button>
               </div>

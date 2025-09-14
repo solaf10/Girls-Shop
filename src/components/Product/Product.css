@@ -226,7 +226,9 @@
             display: flex;
             cursor: pointer;
           }
-          a {
+          a,
+          p {
+            margin: 0px;
             color: white;
             display: flex;
             gap: 5px;

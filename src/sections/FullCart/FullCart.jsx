@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 const FullCart = ({ cartProduct, setCartProduct }) => {
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const handleSendData = () => {
     navigate("/cart/complate-cart");

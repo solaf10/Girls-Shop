@@ -72,7 +72,7 @@ const Footer = () => {
               </div>
               <div className="contact-info">
                 <LiaEnvelopeOpenTextSolid className="contact-icon" />
-                <p>girlshop@gmail.com</p>
+                <p>ArchiLink@gmail.com</p>
               </div>
               <div className="contact-info">
                 <CiLocationOn className="contact-icon" />

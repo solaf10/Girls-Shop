@@ -1,21 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./SignUp.css";
 import SyrianFlag from "../../../public/assets/Images/SyrianFlag.svg";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import config from "../../Constants/enviroment";
+import axios from "axios";
 
 function SignUp() {
   const { t } = useTranslation();
 
+  const params = useParams();
+  const [areas, setAreas] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedArea, setSelectedArea] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email !== "test@example.com" || password !== "password123") {
@@ -26,6 +35,26 @@ function SignUp() {
     }
   };
 
+  // if (password != confirmPassword) setError(true);
+  useEffect(() => {
+    setIsLoading(true);
+    axios
+      .get(`${config.baseUrl}/${config.area}`)
+      .then((res) => {
+        setIsLoading(false);
+        setAreas(res.data);
+      })
+
+      .catch((err) => {
+        console.log(err);
+        setIsLoading(false);
+      });
+  }, []);
+  // const handleSendComment = () => {
+  //   if (!phone || !email || !message) {
+  //     toast.error("All fields are required!");
+  //     return;
+  //   }
   return (
     <div className="signup-page">
       <div className="left-section">
@@ -75,7 +104,40 @@ function SignUp() {
                 className={error ? "input-error" : ""}
               />
             </div>
-
+            <div className="area">
+              <div
+                className="select-area"
+                onClick={() => setIsOpen((prev) => !prev)}
+              >
+                <p>{selectedArea || "Select Area"}</p>
+                <button type="button">
+                  {!isOpen ? (
+                    <IoIosArrowDown className="file-type" />
+                  ) : (
+                    <IoIosArrowUp className="file-type" />
+                  )}
+                </button>
+              </div>
+              {isOpen && (
+                <div className="popup">
+                  <ul>
+                    {areas.map((e) => (
+                      <li
+                        key={e.id}
+                        onClick={() => {
+                          setSelectedArea(e.street);
+                          setIsOpen((prev) => !prev);
+                        }}
+                      >
+                        <a>
+                          <span>{e.street}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
             <div className="password-field">
               <p>{t("signup.password")}</p>
               <input
@@ -102,9 +164,9 @@ function SignUp() {
               <p>{t("signup.confirmPassword")}</p>
               <input
                 type={showPassword ? "text" : "password"}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className={error ? "input-error" : ""}
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                // className={error ? "input-error" : ""}
               />
               <span
                 className="toggle-password"
@@ -140,5 +202,5 @@ function SignUp() {
     </div>
   );
 }
-
+// }
 export default SignUp;

@@ -8,5 +8,7 @@ const config = {
   blogs: "postsDetails",
   comments: "comments",
   oldOrder:"oldOrder"
+  area: "area",
+  designer: "designers",
 };
 export default config;
