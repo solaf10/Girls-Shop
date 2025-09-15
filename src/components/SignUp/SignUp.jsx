@@ -14,10 +14,10 @@ import { toast } from "react-toastify";
 function SignUp() {
   const { t } = useTranslation();
 
+  const params = useParams();
   const [areas, setAreas] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
@@ -34,7 +34,6 @@ function SignUp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
-      !name ||
       !email ||
       !password ||
       !selectedArea ||
@@ -63,60 +62,33 @@ function SignUp() {
   }, []);
 
   const handleClickSignUp = () => {
+    const data = {
+      email,
+      phone,
+      city: selectedArea,
+      type: selectUserType,
+      password,
+      orders: [],
+    };
     axios
-      .get(`${config.baseUrl}/${config.users}`)
+      .post(`${config.baseUrl}/${config.users}`, data)
       .then((res) => {
-        const users = res.data;
-
-        const emailExists = users.some((user) => user.email === email);
-        if (emailExists) {
-          toast.error("Email already exists! please login");
-          return;
-        }
-
-        if (password !== confirmPassword) {
-          toast.error("Password and confirm password do not match!");
-          return;
-        }
-
-        let newId;
-        do {
-          newId = Math.floor(Math.random() * 1000000); // أي نطاق تحبيه
-        } while (users.some((user) => user.id === newId.toString()));
-
-        const data = {
-          id: newId.toString(),
-          name,
-          email,
-          phone,
-          city: selectedArea,
-          type: selectUserType,
-          password,
-          orders: [],
-        };
-        axios
-          .post(`${config.baseUrl}/${config.users}`, data)
-          .then((res) => {
-            toast.success(res.data);
-            localStorage.setItem("token", newId);
-            setName("");
-            setEmail("");
-            setPhone("");
-            setPassword("");
-            setConfirmPassword("");
-            setSelectedArea("");
-            setSelectUserType("");
-            setError(false);
-          })
-          .catch((err) => {
-            console.log(err);
-            toast.error("Failed to register user.");
-            setError(true);
-          });
+        toast.success("You Created An Account Successfully!!");
+        setEmail("");
+        setPhone("");
+        setPassword("");
+        setConfirmPassword("");
+        setSelectedArea("");
+        setSelectUserType("");
+        // setOrders([]);
+        setError(false);
+        navigate("/");
+        localStorage.setItem("token", res.id);
       })
       .catch((err) => {
         console.log(err);
-        toast.error("Failed to fetch users.");
+        toast.error("Failed to register user.");
+        setError(true);
       });
   };
 
@@ -156,13 +128,6 @@ function SignUp() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className={error ? "input-error" : ""}
-            />
-            <p>name</p>
-            <input
-              type="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
               className={error ? "input-error" : ""}
             />
             <p>{t("signup.phone")}</p>

@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next'; 
-import './UserProfile.css'
+import axios from "axios";
+import config from "../../Constants/enviroment";
+import './UserProfile.css';
 import { AiOutlineMail, AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { LuPhone } from "react-icons/lu";
 import { GrLocation } from "react-icons/gr";
@@ -15,6 +17,25 @@ const UserProfile = () => {
   const [showNewPass, setShowNewPass] = useState(false);
   const [showConfirmPass, setShowConfirmPass] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [userData, setUserData] = useState(null);
+
+  
+  useEffect(() => {
+    const token = localStorage.getItem("token"); 
+    if (!token) {
+      console.log(" No token found in localStorage");
+      return;
+    }
+
+    axios.get(`${config.baseUrl}/${config.users}/${token}`)
+      .then(res => {
+        console.log(" User fetched:", res.data);
+        setUserData(res.data);
+      })
+      .catch(err => {
+        console.error("Error fetching user:", err);
+      });
+  }, []);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -26,7 +47,6 @@ const UserProfile = () => {
   return (
     <div className='profile-holder'>
       <div className='profile-container'>
-      
         <h3>{t('userProfile.myProfile')}</h3>
         <div className='profile-img-container'>
           <div className="image-wrapper">
@@ -46,7 +66,7 @@ const UserProfile = () => {
               onChange={handleImageChange} 
             />
           </div>
-          <p>{t('userProfile.userName')}</p>
+          <p>{userData?.name || t('userProfile.userName')}</p>
         </div>
 
         <div className="user-profile-info">
@@ -55,7 +75,7 @@ const UserProfile = () => {
               <AiOutlineMail />
               <p>{t('userProfile.email')}</p>
             </div>
-            <p>Johesmith@gmail.com</p>
+            <p>{userData?.email || 'Loading...'}</p>
           </div>
 
           <div className='phone-profile profile-sps-info '>
@@ -63,7 +83,7 @@ const UserProfile = () => {
               <LuPhone />
               <p>{t('userProfile.phone')}</p>
             </div>
-            <p>+963988136449</p>
+            <p>{userData?.phone || 'Loading...'}</p>
           </div>
 
           <div className='area-profile profile-sps-info'>
@@ -71,7 +91,7 @@ const UserProfile = () => {
               <GrLocation />
               <p>{t('userProfile.area')}</p>
             </div>
-            <p>New York, USA</p>
+            <p>{userData?.city || 'Loading...'}</p>
           </div>
 
           <div className='balancy-profile profile-sps-info'>
@@ -79,8 +99,9 @@ const UserProfile = () => {
               <BsWallet2 />
               <p>{t('userProfile.balance')}</p>
             </div>
-            <p>0 $</p>
+            <p>{userData?.balance ? `${userData.balance} $` : '0 $'}</p>
           </div>
+
           <div className='update-pass-btn'>
             <button className="change-pass-btn-profile" onClick={() => setIsOpen(true)}>
               {t('userProfile.changePasswordBtn')}
@@ -99,15 +120,13 @@ const UserProfile = () => {
 
                 <div>
                   <label>{t('userProfile.yourEmail')}</label>
-                  <input type='email' />
+                  <input type='email' value={userData?.email || ''} readOnly />
                 </div>
 
                 <div className="password-input">
                   <label>{t('userProfile.oldPassword')}</label>
                   <div className="input-wrapper">
-                    <input 
-                      type={showOldPass ? "text" : "password"} 
-                    />
+                    <input type={showOldPass ? "text" : "password"} />
                     <span 
                       className="eye-icon" 
                       onClick={() => setShowOldPass(!showOldPass)}
@@ -120,9 +139,7 @@ const UserProfile = () => {
                 <div className="password-input">
                   <label>{t('userProfile.newPassword')}</label>
                   <div className="input-wrapper">
-                    <input 
-                      type={showNewPass ? "text" : "password"} 
-                    />
+                    <input type={showNewPass ? "text" : "password"} />
                     <span 
                       className="eye-icon" 
                       onClick={() => setShowNewPass(!showNewPass)}
@@ -135,9 +152,7 @@ const UserProfile = () => {
                 <div className="password-input">
                   <label>{t('userProfile.confirmPassword')}</label>
                   <div className="input-wrapper">
-                    <input 
-                      type={showConfirmPass ? "text" : "password"} 
-                    />
+                    <input type={showConfirmPass ? "text" : "password"} />
                     <span 
                       className="eye-icon" 
                       onClick={() => setShowConfirmPass(!showConfirmPass)}
@@ -148,9 +163,7 @@ const UserProfile = () => {
                 </div>
 
                 <div className='update-pass-btn'>
-                  <button>
-                    {t('userProfile.updatePasswordBtn')}
-                  </button>
+                  <button>{t('userProfile.updatePasswordBtn')}</button>
                 </div>
               </div>
             </div>
