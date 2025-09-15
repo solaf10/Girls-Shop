@@ -10,5 +10,6 @@ const config = {
   oldOrder: "oldOrder",
   area: "area",
   designer: "designers",
+  users: "users",
 };
 export default config;

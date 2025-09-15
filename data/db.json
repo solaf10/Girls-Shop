@@ -1941,5 +1941,95 @@
       "id": "4",
       "street": "Idlib"
     }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "ahmad.khaled@example.com",
+      "phone": "+963944123456",
+      "city": "Damascus",
+      "type": "customer",
+      "password": "Ahmad@123"
+    },
+    {
+      "id": "2",
+      "email": "rana.hassan@example.com",
+      "phone": "+963933987654",
+      "city": "Aleppo",
+      "type": "designer",
+      "password": "Rana@123"
+    },
+    {
+      "id": "3",
+      "email": "sara.ali@example.com",
+      "phone": "+963991456789",
+      "city": "Homs",
+      "type": "customer",
+      "password": "Sara@123"
+    },
+    {
+      "id": "4",
+      "email": "mohammad.fares@example.com",
+      "phone": "+963988321654",
+      "city": "Latakia",
+      "type": "designer",
+      "password": "Fares@123"
+    },
+    {
+      "id": "5",
+      "email": "lina.salem@example.com",
+      "phone": "+963945789123",
+      "city": "Tartous",
+      "type": "customer",
+      "password": "Lina@123"
+    },
+    {
+      "id": "6",
+      "email": "omar.abdullah@example.com",
+      "phone": "+963934654987",
+      "city": "Hama",
+      "type": "designer",
+      "password": "Omar@123"
+    },
+    {
+      "id": "7",
+      "email": "noor.ismail@example.com",
+      "phone": "+963993852741",
+      "city": "Daraa",
+      "type": "customer",
+      "password": "Noor@123"
+    },
+    {
+      "id": "8",
+      "email": "khaled.nasser@example.com",
+      "phone": "+963992147853",
+      "city": "As-Suwayda",
+      "type": "designer",
+      "password": "Khaled@123"
+    },
+    {
+      "id": "9",
+      "email": "fatima.rahman@example.com",
+      "phone": "+963935369258",
+      "city": "Deir ez-Zor",
+      "type": "customer",
+      "password": "Fatima@123"
+    },
+    {
+      "id": "10",
+      "email": "yousef.habib@example.com",
+      "phone": "+963990741852",
+      "city": "Raqqa",
+      "type": "designer",
+      "password": "Yousef@123"
+    },
+    {
+      "id": "b846",
+      "email": "shahed@gmail.com",
+      "phone": "949828958",
+      "city": "Homs",
+      "type": "Designer",
+      "password": "shahed11"
+    }
   ]
 }
