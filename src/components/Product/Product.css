@@ -29,8 +29,14 @@
   }
   /* reset other pagesStyles */
   .comment-bar {
+    .title {
+      margin-bottom: 40px;
+    }
     .name-and-comment {
       padding-top: 0px;
+    }
+    h2 {
+      margin: 0px;
     }
   }
   .write-comment-sec .write-comment-form {

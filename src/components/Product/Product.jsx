@@ -11,13 +11,17 @@ import {
 } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import TopGreenBar from "../TopGreenBar/TopGreenBar";
 import axios from "axios";
 import Loader from "../Loader/Loader";
 import config from "../../Constants/enviroment";
 import { toast } from "react-toastify";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import {
+  IoIosArrowDown,
+  IoIosArrowForward,
+  IoIosArrowUp,
+} from "react-icons/io";
 import RelatedProducts from "../../sections/Product/RelatedProducts/RelatedProducts";
 import usePrivateRoute from "../../custom hooks/usePrivateRoute";
 import UserAutherization from "../UserAutherization/UserAutherization";
@@ -32,7 +36,10 @@ export default function Product() {
   const [currentImage, setCurrentImage] = useState(0);
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(0);
-  const [chosenColor, setChosenColor] = useState("#c0c0c0");
+  const [chosenColor, setChosenColor] = useState("");
+  const [rating, setRating] = useState(0);
+  const [message, setMessage] = useState("");
+  const [rerendered, setRerendered] = useState(false);
 
   const {
     id,
@@ -52,8 +59,9 @@ export default function Product() {
     height,
     lengthInfo,
     file,
+    comments,
   } = productsDetails;
-
+  console.log();
   // price
   const rawPrice = price || "$0";
   const rawSale = sale || "0%";
@@ -61,6 +69,7 @@ export default function Product() {
   const numPrice = parseFloat(rawPrice.replace("$", ""));
   const numSale = parseFloat(rawSale.replace("%", "")) / 100;
 
+  // const salesPrice = (numPrice * (1 - numSale)).toFixed(2);
   const salesPrice = numPrice * (1 - numSale);
 
   // reviewsPrecentage
@@ -101,7 +110,34 @@ export default function Product() {
       toast.error("Choose a Color and an Amount");
     }
   };
-
+  const [currentUser, setCurrentUser] = useState({});
+  const userID = JSON.parse(localStorage.getItem("token"));
+  useEffect(() => {
+    axios
+      .get(`${config.baseUrl}/${config.users}/${userID}`)
+      .then((res) => setCurrentUser(res.data))
+      .catch((err) => console.log(err));
+  }, []);
+  const today = new Date();
+  const date = `${today.getDate()}/${
+    today.getMonth() + 1
+  }/${today.getFullYear()}`;
+  const newComment = { name: currentUser.name, date, rate: rating, message };
+  const handleAddComment = () => {
+    axios
+      .patch(config.baseUrl + "/" + config.products + "/" + id, {
+        comments: [...comments, newComment],
+      })
+      .then((res) => {
+        console.log(res.data);
+        setRerendered((prev) => !prev);
+        setMessage("");
+        setRating(0);
+        toast.success("Your comment is added Successfully!!");
+      })
+      .catch((err) => console.log(err));
+  };
+  const handlePrivateRoute = usePrivateRoute(handleAddComment);
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -122,7 +158,7 @@ export default function Product() {
         console.log(err);
         setIsLoading(false);
       });
-  }, [params.id]);
+  }, [params.id, rerendered]);
 
   const colorsEls = colors?.map((color, i) => (
     <div key={i} className="holder">
@@ -147,13 +183,16 @@ export default function Product() {
   ));
 
   // rating
-  const stars = [...new Array(5)].map((el, i) =>
-    i + 1 <= rate ? (
-      <FaStar className="icon" key={i} />
-    ) : (
-      <FaRegStar className="icon" key={i} />
-    )
-  );
+
+  const handleDrawStars = (cnt) => {
+    return [...new Array(5)].map((el, i) =>
+      i + 1 <= cnt ? (
+        <FaStar className="icon" key={i} />
+      ) : (
+        <FaRegStar className="icon" key={i} />
+      )
+    );
+  };
 
   // imgs
   const imgsEls = images?.map((img, i) => (
@@ -206,7 +245,7 @@ export default function Product() {
               <div className="product-details">
                 <div className="top-product">
                   <div className="rating">
-                    {stars}
+                    {handleDrawStars(rate)}
                     <p className="rev">
                       ({t("product.reviews")} {percentage}%)
                     </p>
@@ -249,7 +288,7 @@ export default function Product() {
                   <h1>{name}</h1>
                   <p>{desc}</p>
                   <div className="price-box">
-                    <span className="price">${salesPrice}</span>
+                    <span className="price">${salesPrice.toFixed(2)}</span>
                     {numSale != 0 && (
                       <>
                         <span className="real-price">{price}</span>
@@ -399,30 +438,52 @@ export default function Product() {
             </div>
             <hr />
             <div className="comment-bar">
-              <h2>
-                {t("product.commentTitle")}
-                <span>1</span>
-              </h2>
-              <div className="name-and-comment">
-                <div className="name-and-time">
-                  <p className="name">{t("product.commentName")}</p>
-                  <div className="rating">{stars}</div>
-                  <p className="time">{t("product.commentTime")}</p>
-                </div>
-                <p className="comment">{t("product.commentText")}</p>
+              <div className="title">
+                <h2>
+                  {t("product.commentTitle")}
+                  <span>{comments?.length}</span>
+                </h2>
+                <Link to={`/shop/${params.id}/comments`}>
+                  <span>View All</span>
+                  <IoIosArrowForward />
+                </Link>
+              </div>
+              <div className="hold">
+                {comments?.slice(0, 6)?.map((comment) => (
+                  <div className="name-and-comment" key={comment.id}>
+                    <div className="name-and-time">
+                      <p className="name">{comment.name}</p>
+                      <div className="rating">
+                        {handleDrawStars(comment.rate)}
+                      </div>
+                      <p className="time">{comment.date}</p>
+                    </div>
+                    <p className="comment">{comment.message}</p>
+                  </div>
+                ))}
               </div>
             </div>
             <div className="write-comment-sec">
               <h2>{t("product.postComment")}</h2>
               <div className="write-comment-form">
                 <div className="phone-email-info">
-                  <StarRating />
+                  <StarRating rating={rating} setRating={setRating} />
                 </div>
-                <div className="textarea-to-write-comment">
+                <div
+                  className="textarea-to-write-comment"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                >
                   <label>{t("product.yourMessage")}</label>
                   <textarea />
                 </div>
-                <button className="send-comment">{t("product.send")}</button>
+                <button
+                  type="submit"
+                  onClick={handlePrivateRoute}
+                  className="send-comment"
+                >
+                  {t("product.send")}
+                </button>
               </div>
             </div>
             <RelatedProducts category={category} id={id} />

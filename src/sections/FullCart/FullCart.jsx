@@ -8,26 +8,74 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 const FullCart = ({ cartProduct, setCartProduct }) => {
+  const [currentUser, setCurrentUser] = useState({});
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const handleSendData = () => {
-    toast.success("Your order is complete!");
-    navigate("/order");
-  };
-  const privateRouteHandler = usePrivateRoute(handleSendData);
-
-  const handleDelete = (id) => {
+  const today = new Date();
+  const date = `${today.getDate()}/${
+    today.getMonth() + 1
+  }/${today.getFullYear()}`;
+  const [address, setAddress] = useState("");
+  const orders = cartProduct.map((product) => ({
+    ...product,
+    date,
+    address,
+    status: "pending",
+  }));
+  const handleDelete = (id, isShow = true) => {
     axios
       .delete(`${config.baseUrl}/${config.cartProducts}/${id}`)
       .then(() => {
         setCartProduct((prev) => prev.filter((pro) => pro.id !== id));
-        toast.success("Product was deleted from the cart successfully!!");
+        isShow &&
+          toast.success("Product was deleted from the cart successfully!!");
       })
       .catch((err) => {
         console.log(err);
         toast.error("process failed!!");
       });
   };
+
+  const userID = JSON.parse(localStorage.getItem("token"));
+  useEffect(() => {
+    axios
+      .get(`${config.baseUrl}/${config.users}/${userID}`)
+      .then((res) => setCurrentUser(res.data))
+      .catch((err) => console.log(err));
+  }, []);
+
+  const grandTotal = cartProduct.reduce((acc, pro) => {
+    const numPrice = parseFloat(pro.price.replace("$", "")) || 0;
+    return acc + numPrice * (pro.amount || 0);
+  }, 0);
+  const handleSendData = () => {
+    console.log(currentUser.balance);
+    if (currentUser.balance > 1000 && grandTotal <= currentUser.balance) {
+      axios
+        .get(`${config.baseUrl}/${config.users}/${userID}`)
+        .then((res) => {
+          const oldOrders = res.data.orders || [];
+          const allOrders = [...oldOrders, ...orders];
+
+          return axios.patch(`${config.baseUrl}/${config.users}/${userID}`, {
+            orders: allOrders,
+            balance: currentUser.balance - grandTotal,
+          });
+        })
+        .then((res) => {
+          console.log(res.data);
+          cartProduct.forEach((cartProd) => handleDelete(cartProd.id, false));
+          setCartProduct([]);
+          toast.success("Your order is complete!");
+          navigate("/order");
+        })
+        .catch((err) => console.log(err));
+    } else {
+      toast.error("Your balance isn't enough");
+    }
+  };
+
+  const privateRouteHandler = usePrivateRoute(handleSendData);
 
   const handleAmountChange = (id, newAmount) => {
     setCartProduct((prev) =>
@@ -36,11 +84,6 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
       )
     );
   };
-
-  const grandTotal = cartProduct.reduce((acc, pro) => {
-    const numPrice = parseFloat(pro.price.replace("$", "")) || 0;
-    return acc + numPrice * (pro.amount || 0);
-  }, 0);
 
   return (
     <div className="fullcart">
@@ -92,7 +135,13 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
             <div className="desc">
               <div className="location-order">
                 <label htmlFor="">{t(`FullCart.Location`)}</label>
-                <input type="text" placeholder="location for delivery"></input>
+                <input
+                  type="text"
+                  placeholder="location for delivery"
+                  value={address}
+                  required
+                  onChange={(e) => setAddress(e.target.value)}
+                />
               </div>
               <div className="total">
                 <p>{t("FullCart.total")}</p>

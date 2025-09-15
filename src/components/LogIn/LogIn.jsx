@@ -3,7 +3,7 @@ import "./LogIn.css";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -16,9 +16,9 @@ function LogIn() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(false);
 
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-
     axios
       .get(`${config.baseUrl}/${config.users}`)
       .then((res) => {
@@ -29,12 +29,13 @@ function LogIn() {
           toast.error("Email not found, please sign up!");
           return;
         }
-        if (user.password !== password) {
+        if (user.password != password) {
           toast.error("Password is incorrect!");
           return;
         }
         toast.success("Login successful!");
         localStorage.setItem("token", JSON.stringify(user.id));
+        navigate("/");
       })
       .catch((err) => console.log(err));
   };

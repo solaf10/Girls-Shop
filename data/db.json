@@ -5,6 +5,7 @@
       "name": "Armchair ALBA",
       "price": "$320",
       "sale": "%20",
+      "comments": [],
       "images": [
         "/assets/Images/products/Armchair ALBA main.png",
         "/assets/Images/products/Armchair ALBA view.jpg",
@@ -41,6 +42,7 @@
       "name": "Armchair Imola",
       "price": "$450",
       "sale": "%0",
+      "comments": [],
       "images": [
         "/assets/Images/products/Armchair Imola main.png",
         "/assets/Images/products/Armchair Imola view.jpg",
@@ -76,6 +78,14 @@
       "name": "Lounge chair Elle",
       "price": "$560",
       "sale": "%15",
+      "comments": [
+        {
+          "date": "15/9/2025",
+          "name": "solaf",
+          "rate": 4,
+          "message": "hii"
+        }
+      ],
       "images": [
         "/assets/Images/products/Lounge chair Elle main.png",
         "/assets/Images/products/Lounge chair Elle view.jpg"
@@ -112,6 +122,7 @@
       "name": "Baby bed",
       "price": "$760.00",
       "sale": "%20",
+      "comments": [],
       "images": [
         "/assets/Images/1505743178_2.jpg",
         "/assets/Images/1505743192_1.jpg",
@@ -150,6 +161,7 @@
       "name": "Baby bed",
       "price": "$760.00",
       "sale": "%20",
+      "comments": [],
       "images": [
         "/assets/Images/1528875272_2.jpg",
         "/assets/Images/1528875283_1.jpg",
@@ -188,6 +200,7 @@
       "name": "Cot",
       "price": "$225.00",
       "sale": "%20",
+      "comments": [],
       "images": [
         "/assets/Images/1570533082_2.jpg",
         "/assets/Images/1570533077_1.jpg",
@@ -226,6 +239,7 @@
       "name": "Baby bed",
       "price": "$209.00",
       "sale": "%10",
+      "comments": [],
       "images": [
         "/assets/Images/1604314646_1-3.jpg",
         "/assets/Images/1604314656_2.jpg"
@@ -261,6 +275,7 @@
       "name": "Bed-house",
       "price": "$850.00",
       "sale": "%30",
+      "comments": [],
       "images": [
         "/assets/Images/1570533082_2.jpg",
         "/assets/Images/1570533077_1.jpg",
@@ -298,6 +313,9 @@
       "name": "Bed",
       "price": "$850.00",
       "sale": "%30",
+
+      "comments": [],
+
       "images": [
         "/assets/Images/1656569585_bed-1.png"
       ],
@@ -332,6 +350,7 @@
       "name": "Bed",
       "price": "$350.00",
       "sale": "%30",
+      "comments": [],
       "images": [
         "/assets/Images/1682669949_lilja-1.png",
         "/assets/Images/1682669960_lilja-2.png",
@@ -368,6 +387,9 @@
       "name": "Hellay chair",
       "price": "$350.00",
       "sale": "%0",
+
+      "comments": [],
+
       "images": [
         "/assets/Images/1530891370_1.jpg"
       ],
@@ -402,6 +424,9 @@
       "name": "chair",
       "price": "$350.00",
       "sale": "%0",
+
+      "comments": [],
+
       "images": [
         "/assets/Images/1613201941_4.jpg"
       ],
@@ -437,6 +462,7 @@
       "name": "children chair",
       "price": "$310.00",
       "sale": "%0",
+      "comments": [],
       "images": [
         "/assets/Images/7635665.681272a032838.png",
         "/public/assets/Images/7635650.681271cecaff2.png"
@@ -473,6 +499,7 @@
       "name": "children chair",
       "price": "$410.00",
       "sale": "%10",
+      "comments": [],
       "images": [
         "/assets/Images/7101097.671387bd2af3d.jpeg",
         "/assets/Images/7101098.671387bd2fde3.jpeg",
@@ -512,6 +539,7 @@
       "name": "XORA corner desk",
       "price": "$560.00",
       "sale": "%20",
+      "comments": [],
       "images": [
         "/assets/Images/top-sellers4.png",
         "/assets/Images/top-sellers4.png"
@@ -548,6 +576,9 @@
       "image": "/assets/Images/120881.540caa7fe18f7.jpeg",
       "price": "$30.00",
       "sale": "%0",
+
+      "comments": [],
+
       "images": [
         "/assets/Images/120881.540caa7fe18f7.jpeg"
       ],
@@ -584,6 +615,7 @@
       "image": "/assets/Images/7960982.68a42af7ca75b.jpeg",
       "price": "$120.00",
       "sale": "%20",
+      "comments": [],
       "images": [
         "/assets/Images/7960982.68a42af7ca75b.jpeg",
         "/assets/Images/7960981.68a42af7c9783.jpeg",
@@ -621,6 +653,8 @@
       "image": "/assets/Images/7833235.68691b96a4e14.jpeg",
       "price": "$120.00",
       "sale": "%20",
+      "comments": [],
+
       "images": [
         "/assets/Images/7833235.68691b96a4e14.jpeg"
       ],
@@ -657,6 +691,7 @@
       "image": "/assets/Images/7814067.6860489418cff.jpeg",
       "price": "$138.00",
       "sale": "%0",
+      "comments": [],
       "images": [
         "/assets/Images/7814067.6860489418cff.jpeg",
         "/assets/Images/7814070.686048941ac97.jpeg"
@@ -750,28 +785,28 @@
   "recentblogs": [
     {
       "id": "1",
-      "image": "/assets/Images/post-1.png",
-      "title": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia",
-      "publisher": "john",
+      "image": "/assets/Images/blog1.jpg",
+      "title": "itle: Innovative Interior Design Trends for 2024",
+      "publisher": "Olivia Smith",
       "date": "March 10th, 2025"
     },
     {
       "id": "2",
-      "image": "/assets/Images/post-1.png",
-      "title": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia2",
-      "publisher": "john",
-      "date": "Feb 28th, 2025"
+      "image": "/assets/Images/blog2.jpg",
+      "title": " Mastering 3ds Max for Interior Design: Tips and Techniques",
+      "publisher": "Michael Brown",
+      "date": "12 Nov 2025"
     },
     {
       "id": "3",
-      "image": "/assets/Images/post-1.png",
-      "title": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia3",
-      "publisher": "john",
-      "date": "Feb 8th, 2025"
+      "image": "/assets/Images/blog3.jpg",
+      "title": "reative Furniture Solutions for Modern Homes",
+      "publisher": "Emma Johnson",
+      "date": "sep 15th, 2025"
     },
     {
       "id": "4",
-      "image": "/assets/Images/post-1.png",
+      "image": "/public/assets/Images/blog4.jpg",
       "title": "The Dvin, Seven Visions: A Luxurious Art Deco Hotel in Yerevan, Armenia4",
       "date": " 5 Sep 2024",
       "publisher": "Auther name"
@@ -983,57 +1018,7 @@
       "articleText": "3ds Max has long been a cornerstone software for interior designers who aim to produce high-quality visualizations. From photorealistic renders to virtual walkthroughs, the tool provides endless possibilities. To maximize its potential, designers must combine technical skills with creative intuition.One of the most powerful features of 3ds Max is 3D modeling with pre-built blocks and assets. Designers can import furniture, appliances, and décor items into a scene, allowing them to experiment with layouts without starting from scratch. This speeds up project timelines and ensures accuracy in measurements and proportions.Lighting and materials are equally crucial. Realistic lighting simulations, reflections, and shadows can dramatically change how a space is perceived. 3ds Max offers advanced material editors, enabling designers to replicate wood grains, fabrics, and metals with incredible precision.Moreover, animation and virtual tours are becoming essential for client presentations. Walkthroughs allow clients to experience the flow of a space before it’s built. Combining these with 3D blocks provides a comprehensive preview, making design decisions easier and more confident.For beginners, starting with modular libraries is recommended. Saving favorite furniture, textures, and accessories into custom libraries allows designers to reuse assets across projects, maintaining consistency and efficiency. Advanced users can explore photorealistic rendering engines like V-Ray or Corona to produce visuals that rival professional photography.Ultimately, mastering 3ds Max is about balancing technical skill and creativity. The software empowers designers to transform conceptual ideas into tangible, immersive experiences that impress clients and elevate the interior design industry.",
       "publisher": "Olivia Smith",
       "date": "8 Feb 2024 ",
-      "comments": [
-        {
-          "id": "1",
-          "name": "shahed",
-          "e-mail": "shahed@gmail.com",
-          "date": "4/5/2025",
-          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
-        },
-        {
-          "id": "2",
-          "name": "batoul",
-          "e-mail": "batoul@gmail.com",
-          "date": "3/2/2025",
-          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
-        },
-        {
-          "id": "3",
-          "name": "solaf",
-          "e-mail": "solaf@gmail.com",
-          "date": "8/9/2025",
-          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
-        },
-        {
-          "id": "4",
-          "name": "sedra",
-          "e-mail": "sedra@gmail.com",
-          "date": "8/9/2025",
-          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
-        },
-        {
-          "id": "5",
-          "name": "amina",
-          "e-mail": "amina@gmail.com",
-          "date": "8/9/2025",
-          "message": "Such a well-written piece! Insightful and inspiring — keep up the amazing work!"
-        },
-        {
-          "id": "ac98",
-          "name": "solaf",
-          "email": "sosos@gamil.com",
-          "message": "ejjd",
-          "date": "2025-09-10T07:09:22.745Z"
-        },
-        {
-          "id": "a98",
-          "name": "solaf",
-          "email": "soos@gamil.com",
-          "message": "ejjd",
-          "date": "2025-09-10T07:09:22.745Z"
-        }
-      ]
+      "comments": []
     },
     {
       "id": "2",
@@ -1082,11 +1067,24 @@
         },
         {
           "id": "ac98",
-          "blogId": "2",
           "name": "solaf",
           "email": "sosos@gamil.com",
           "message": "ejjd",
           "date": "2025-09-10T07:09:22.745Z"
+        },
+        {
+          "blogId": "2",
+          "name": "solaf",
+          "email": "sol@gmail.com",
+          "message": "hello",
+          "date": "2025-09-15T01:05:43.758Z"
+        },
+        {
+          "blogId": "2",
+          "name": "maria",
+          "email": "ma@gmial.com",
+          "message": "hello",
+          "date": "2025-09-15T01:06:55.738Z"
         }
       ]
     },
@@ -1137,7 +1135,6 @@
         },
         {
           "id": "ac98",
-          "blogId": "2",
           "name": "solaf",
           "email": "sosos@gamil.com",
           "message": "ejjd",
@@ -1192,7 +1189,6 @@
         },
         {
           "id": "ac98",
-          "blogId": "2",
           "name": "solaf",
           "email": "sosos@gamil.com",
           "message": "ejjd",
@@ -1247,7 +1243,6 @@
         },
         {
           "id": "ac98",
-          "blogId": "2",
           "name": "solaf",
           "email": "sosos@gamil.com",
           "message": "ejjd",
@@ -1302,7 +1297,6 @@
         },
         {
           "id": "ac98",
-          "blogId": "2",
           "name": "solaf",
           "email": "sosos@gamil.com",
           "message": "ejjd",
@@ -1357,7 +1351,6 @@
         },
         {
           "id": "ac98",
-          "blogId": "2",
           "name": "solaf",
           "email": "sosos@gamil.com",
           "message": "ejjd",
@@ -1412,7 +1405,6 @@
         },
         {
           "id": "ac98",
-          "blogId": "2",
           "name": "solaf",
           "email": "sosos@gamil.com",
           "message": "ejjd",
@@ -1477,7 +1469,6 @@
         },
         {
           "id": "ac98",
-          "blogId": "2",
           "name": "solaf",
           "email": "sosos@gamil.com",
           "message": "ejjd",
@@ -1532,7 +1523,6 @@
         },
         {
           "id": "ac98",
-          "blogId": "2",
           "name": "solaf",
           "email": "sosos@gamil.com",
           "message": "ejjd",
@@ -1587,7 +1577,6 @@
         },
         {
           "id": "ac98",
-          "blogId": "2",
           "name": "solaf",
           "email": "sosos@gamil.com",
           "message": "ejjd",
@@ -1642,7 +1631,6 @@
         },
         {
           "id": "ac98",
-          "blogId": "2",
           "name": "solaf",
           "email": "sosos@gamil.com",
           "message": "ejjd",
@@ -1697,7 +1685,6 @@
         },
         {
           "id": "ac98",
-          "blogId": "2",
           "name": "solaf",
           "email": "sosos@gamil.com",
           "message": "ejjd",
@@ -1752,7 +1739,6 @@
         },
         {
           "id": "ac98",
-          "blogId": "2",
           "name": "solaf",
           "email": "sosos@gamil.com",
           "message": "ejjd",
@@ -1763,12 +1749,12 @@
   ],
   "cartProducts": [
     {
-      "id": "73",
-      "name": "Armchair ALBA",
-      "image": "/assets/Images/products/Armchair ALBA main.png",
-      "price": "$320",
-      "color": "#783c0a",
-      "amount": 1
+      "id": "45",
+      "name": "Lounge chair Elle",
+      "image": "/assets/Images/products/Lounge chair Elle main.png",
+      "price": "$560",
+      "color": "#64befa",
+      "amount": 3
     }
   ],
   "oldOrder": [
@@ -1948,7 +1934,6 @@
     },
     {
       "id": "bea7",
-      "blogId": "2",
       "phone": "shahed",
       "email": "shahed@gmail.com",
       "message": "message",
@@ -1978,6 +1963,7 @@
       "id": "1",
       "email": "ahmad.khaled@example.com",
       "phone": "+963944123456",
+      "name": "ahmed",
       "city": "Damascus",
       "type": "customer",
       "order": [],
@@ -1985,6 +1971,7 @@
     },
     {
       "id": "2",
+      "name": "rana",
       "email": "rana.hassan@example.com",
       "phone": "+963933987654",
       "city": "Aleppo",
@@ -1994,6 +1981,7 @@
     },
     {
       "id": "3",
+      "name": "sara",
       "email": "sara.ali@example.com",
       "phone": "+963991456789",
       "city": "Homs",
@@ -2003,6 +1991,7 @@
     },
     {
       "id": "4",
+      "name": "mohammad",
       "email": "mohammad.fares@example.com",
       "phone": "+963988321654",
       "city": "Latakia",
@@ -2012,6 +2001,7 @@
     },
     {
       "id": "5",
+      "name": "lina",
       "email": "lina.salem@example.com",
       "phone": "+963945789123",
       "city": "Tartous",
@@ -2021,6 +2011,7 @@
     },
     {
       "id": "6",
+      "name": "omar",
       "email": "omar.abdullah@example.com",
       "phone": "+963934654987",
       "city": "Hama",
@@ -2030,6 +2021,7 @@
     },
     {
       "id": "7",
+      "name": "noor",
       "email": "noor.ismail@example.com",
       "phone": "+963993852741",
       "city": "Daraa",
@@ -2039,6 +2031,7 @@
     },
     {
       "id": "8",
+      "name": "khaled",
       "email": "khaled.nasser@example.com",
       "phone": "+963992147853",
       "city": "As-Suwayda",
@@ -2048,6 +2041,7 @@
     },
     {
       "id": "9",
+      "name": "fatima",
       "email": "fatima.rahman@example.com",
       "phone": "+963935369258",
       "city": "Deir ez-Zor",
@@ -2057,6 +2051,7 @@
     },
     {
       "id": "10",
+      "name": "yousef",
       "email": "yousef.habib@example.com",
       "phone": "+963990741852",
       "city": "Raqqa",
@@ -2066,6 +2061,7 @@
     },
     {
       "id": "b846",
+      "name": "shahed",
       "email": "shahed@gmail.com",
       "phone": "949828958",
       "city": "Homs",
@@ -2075,6 +2071,7 @@
     },
     {
       "id": "97ac",
+      "name": "batoul",
       "email": "batoul@gmail.com",
       "phone": "23456789",
       "city": "Homs",
@@ -2082,21 +2079,14 @@
       "password": "12345"
     },
     {
-      "id": "25ae",
-      "email": "solaf@gmail.com",
-      "phone": "234567890",
-      "city": "Damascus",
-      "type": "Designer",
-      "password": "soso",
-      "orders": []
-    },
-    {
       "id": "ebe0",
+      "name": "solaf",
       "email": "solaf@gmail.com",
       "phone": "993811280",
       "city": "Homs",
       "type": "Designer",
       "password": "1234",
+
       "orders": []
     },
     {
@@ -2138,6 +2128,45 @@
       "type": "Customer",
       "password": "1234",
       "orders": []
+      ,
+      "orders": [
+        {
+          "id": "73",
+          "name": "Armchair ALBA",
+          "image": "/assets/Images/products/Armchair ALBA main.png",
+          "price": "$320",
+          "color": "#783c0a",
+          "amount": 1,
+          "date": "15/9/2025",
+          "address": "homs",
+          "status": "pending"
+        },
+        {
+          "id": "34",
+          "name": "Armchair Imola",
+          "image": "/assets/Images/products/Armchair Imola main.png",
+          "price": "$450",
+          "color": "#000000",
+          "amount": 1,
+          "date": "15/9/2025",
+          "address": "homs",
+          "status": "pending"
+        },
+        {
+          "id": "34",
+          "name": "Armchair Imola",
+          "image": "/assets/Images/products/Armchair Imola main.png",
+          "price": "$450",
+          "color": "#000000",
+          "amount": 2,
+          "date": "15/9/2025",
+          "address": "homs",
+          "status": "pending"
+        }
+      ],
+      "image": "/assets/Images/avatarUser.jpg",
+      "balance": 600
+
     }
   ]
 }
