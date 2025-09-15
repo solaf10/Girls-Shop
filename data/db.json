@@ -19,10 +19,7 @@
       "category": "furniture",
       "style": "classic",
       "material": "stone",
-      "colors": [
-        "#888888",
-        "#f95"
-      ],
+      "colors": ["#888888", "#f95"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -56,10 +53,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#888",
-        "#faa"
-      ],
+      "colors": ["#888", "#faa"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -93,10 +87,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#888",
-        "#660"
-      ],
+      "colors": ["#888", "#660"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -129,10 +120,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#888",
-        "#f95"
-      ],
+      "colors": ["#888", "#f95"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -165,10 +153,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#f95"
-      ],
+      "colors": ["#eee", "#f95"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -190,9 +175,7 @@
       "name": "XORA corner desk",
       "price": "$560.00",
       "sale": "%20",
-      "images": [
-        "/assets/Images/top-sellers6.png"
-      ],
+      "images": ["/assets/Images/top-sellers6.png"],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 4,
       "category": "furniture",
@@ -200,10 +183,7 @@
       "designType": "internal",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#f95"
-      ],
+      "colors": ["#eee", "#f95"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -236,10 +216,7 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee",
-        "#888"
-      ],
+      "colors": ["#eee", "#888"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -274,9 +251,7 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee"
-      ],
+      "colors": ["#eee"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -306,9 +281,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee"
-      ],
+      "colors": ["#eee"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -338,9 +311,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee"
-      ],
+      "colors": ["#eee"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -370,10 +341,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#888",
-        "#f95"
-      ],
+      "colors": ["#888", "#f95"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -403,10 +371,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#888",
-        "#f95"
-      ],
+      "colors": ["#888", "#f95"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -436,9 +401,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee"
-      ],
+      "colors": ["#eee"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -468,9 +431,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#eee"
-      ],
+      "colors": ["#eee"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -500,10 +461,7 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": [
-        "#888",
-        "#f95"
-      ],
+      "colors": ["#888", "#f95"],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -1925,26 +1883,25 @@
     }
   ],
   "area": [
-    {
-      "id": "1",
-      "street": "Homs"
-    },
-    {
-      "id": "2",
-      "street": "Hama"
-    },
-    {
-      "id": "3",
-      "street": "Damascus"
-    },
-    {
-      "id": "4",
-      "street": "Idlib"
-    }
+    { "id": "4", "street": "Homs" },
+    { "id": "1", "street": "Damascus" },
+    { "id": "14", "street": "Idlib" },
+    { "id": "5", "street": "Hama" },
+    { "id": "3", "street": "Aleppo" },
+    { "id": "11", "street": "Daraa" },
+    { "id": "6", "street": "Latakia" },
+    { "id": "7", "street": "Tartous" },
+    { "id": "2", "street": "Rif Dimashq" },
+    { "id": "8", "street": "Deir ez-Zor" },
+    { "id": "9", "street": "Raqqa" },
+    { "id": "10", "street": "Al-Hasakah" },
+    { "id": "12", "street": "Quneitra" },
+    { "id": "13", "street": "As-Suwayda" }
   ],
   "users": [
     {
       "id": "1",
+      "name": "shahed",
       "email": "ahmad.khaled@example.com",
       "phone": "+963944123456",
       "city": "Damascus",
@@ -1954,6 +1911,7 @@
     },
     {
       "id": "2",
+      "name": "shahed",
       "email": "rana.hassan@example.com",
       "phone": "+963933987654",
       "city": "Aleppo",
@@ -1963,6 +1921,7 @@
     },
     {
       "id": "3",
+      "name": "shahed",
       "email": "sara.ali@example.com",
       "phone": "+963991456789",
       "city": "Homs",
@@ -1972,6 +1931,7 @@
     },
     {
       "id": "4",
+      "name": "shahed",
       "email": "mohammad.fares@example.com",
       "phone": "+963988321654",
       "city": "Latakia",
@@ -1981,83 +1941,13 @@
     },
     {
       "id": "5",
+      "name": "shahed",
       "email": "lina.salem@example.com",
       "phone": "+963945789123",
       "city": "Tartous",
       "type": "customer",
       "order": [],
       "password": "Lina@123"
-    },
-    {
-      "id": "6",
-      "email": "omar.abdullah@example.com",
-      "phone": "+963934654987",
-      "city": "Hama",
-      "type": "designer",
-      "order": [],
-      "password": "Omar@123"
-    },
-    {
-      "id": "7",
-      "email": "noor.ismail@example.com",
-      "phone": "+963993852741",
-      "city": "Daraa",
-      "type": "customer",
-      "order": [],
-      "password": "Noor@123"
-    },
-    {
-      "id": "8",
-      "email": "khaled.nasser@example.com",
-      "phone": "+963992147853",
-      "city": "As-Suwayda",
-      "type": "designer",
-      "order": [],
-      "password": "Khaled@123"
-    },
-    {
-      "id": "9",
-      "email": "fatima.rahman@example.com",
-      "phone": "+963935369258",
-      "city": "Deir ez-Zor",
-      "type": "customer",
-      "order": [],
-      "password": "Fatima@123"
-    },
-    {
-      "id": "10",
-      "email": "yousef.habib@example.com",
-      "phone": "+963990741852",
-      "city": "Raqqa",
-      "type": "designer",
-      "order": [],
-      "password": "Yousef@123"
-    },
-    {
-      "id": "b846",
-      "email": "shahed@gmail.com",
-      "phone": "949828958",
-      "city": "Homs",
-      "type": "Designer",
-      "order": [],
-      "password": "shahed11"
-    },
-    {
-      "id": "97ac",
-      "email": "batoul@gmail.com",
-      "phone": "23456789",
-      "city": "Homs",
-      "type": "Customer",
-      "password": "12345"
-    },
-    {
-      "id": "25ae",
-      "email": "solaf@gmail.com",
-      "phone": "234567890",
-      "city": "Damascus",
-      "type": "Designer",
-      "password": "soso",
-      "orders": []
     }
   ]
 }

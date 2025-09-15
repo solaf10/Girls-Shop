@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./LogIn.css";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+import axios from "axios";
+import { toast } from "react-toastify";
+import config from "../../Constants/enviroment";
 function LogIn() {
   const { t } = useTranslation();
 
@@ -16,12 +18,25 @@ function LogIn() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email !== "test@example.com" || password !== "password123") {
-      setError(true);
-    } else {
-      setError(false);
-      alert(t("login.success"));
-    }
+
+    axios
+      .get(`${config.baseUrl}/${config.users}`)
+      .then((res) => {
+        const user = res.data.find(
+          (u) => u.email.toLowerCase().trim() === email.toLowerCase().trim()
+        );
+        if (!user) {
+          toast.error("Email not found, please sign up!");
+          return;
+        }
+        if (user.password !== password) {
+          toast.error("Password is incorrect!");
+          return;
+        }
+        toast.success("Login successful!");
+        localStorage.setItem("token", JSON.stringify(user.id));
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
