@@ -29,8 +29,6 @@ function SignUp() {
   const [isOpen2, setIsOpen2] = useState(false);
   const [selectedArea, setSelectedArea] = useState("");
   const [selectUserType, setSelectUserType] = useState("");
-  const [newUser, setNewUser] = useState({});
-  // const { email, phone, city: selectedArea, type, password } = newUser;
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
@@ -45,9 +43,7 @@ function SignUp() {
       setError(false);
     }
   };
-  // useEffect(() => {
-  //   if (password != confirmPassword) setError(true);
-  // });
+
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -70,6 +66,7 @@ function SignUp() {
       city: selectedArea,
       type: selectUserType,
       password,
+      orders: [],
     };
     axios
       .post(`${config.baseUrl}/${config.users}`, data)
@@ -81,6 +78,7 @@ function SignUp() {
         setConfirmPassword("");
         setSelectedArea("");
         setSelectUserType("");
+        // setOrders([]);
         setError(false);
       })
       .catch((err) => {
@@ -89,35 +87,6 @@ function SignUp() {
         setError(true);
       });
   };
-  // const handleClickSignUp = () => {
-  //   axios
-  //     .post(`${config.baseUrl}/${users}`, newUser)
-  //     setEmail("");
-  //   setPhone("");
-  //   setPassword("");
-  //   setConfirmPassword("");
-  //   setSelectedArea("");
-  //   setType("customer");
-  //   setError(false);
-  //     }
-  //     .then((res) => setNewUser(res.data))
-  //     .catch((err) => console.log(err));
-  //   navigate(`/cart`);
-  // };
-  // try {
-  //   axios.post(`${config.baseUrl}/${config.users}`, newUser);
-  //   setEmail("");
-  //   setPhone("");
-  //   setPassword("");
-  //   setConfirmPassword("");
-  //   setSelectedArea("");
-  //   // setType(selectUserType);
-  //   setOrders([]);
-  //   setError(false);
-  // } catch (err) {
-  //   console.log(err);
-  //   setError(true);
-  // }
 
   return (
     <div className="signup-page">
@@ -271,7 +240,7 @@ function SignUp() {
                 type={showPassword ? "text" : "password"}
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                // className={error ? "input-error" : ""}
+                className={error ? "input-error" : ""}
               />
               <span
                 className="toggle-password"

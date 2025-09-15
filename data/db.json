@@ -1949,6 +1949,7 @@
       "phone": "+963944123456",
       "city": "Damascus",
       "type": "customer",
+      "order": [],
       "password": "Ahmad@123"
     },
     {
@@ -1957,6 +1958,7 @@
       "phone": "+963933987654",
       "city": "Aleppo",
       "type": "designer",
+      "order": [],
       "password": "Rana@123"
     },
     {
@@ -1965,6 +1967,7 @@
       "phone": "+963991456789",
       "city": "Homs",
       "type": "customer",
+      "order": [],
       "password": "Sara@123"
     },
     {
@@ -1973,6 +1976,7 @@
       "phone": "+963988321654",
       "city": "Latakia",
       "type": "designer",
+      "order": [],
       "password": "Fares@123"
     },
     {
@@ -1981,6 +1985,7 @@
       "phone": "+963945789123",
       "city": "Tartous",
       "type": "customer",
+      "order": [],
       "password": "Lina@123"
     },
     {
@@ -1989,6 +1994,7 @@
       "phone": "+963934654987",
       "city": "Hama",
       "type": "designer",
+      "order": [],
       "password": "Omar@123"
     },
     {
@@ -1997,6 +2003,7 @@
       "phone": "+963993852741",
       "city": "Daraa",
       "type": "customer",
+      "order": [],
       "password": "Noor@123"
     },
     {
@@ -2005,6 +2012,7 @@
       "phone": "+963992147853",
       "city": "As-Suwayda",
       "type": "designer",
+      "order": [],
       "password": "Khaled@123"
     },
     {
@@ -2013,6 +2021,7 @@
       "phone": "+963935369258",
       "city": "Deir ez-Zor",
       "type": "customer",
+      "order": [],
       "password": "Fatima@123"
     },
     {
@@ -2021,6 +2030,7 @@
       "phone": "+963990741852",
       "city": "Raqqa",
       "type": "designer",
+      "order": [],
       "password": "Yousef@123"
     },
     {
@@ -2029,7 +2039,25 @@
       "phone": "949828958",
       "city": "Homs",
       "type": "Designer",
+      "order": [],
       "password": "shahed11"
+    },
+    {
+      "id": "97ac",
+      "email": "batoul@gmail.com",
+      "phone": "23456789",
+      "city": "Homs",
+      "type": "Customer",
+      "password": "12345"
+    },
+    {
+      "id": "25ae",
+      "email": "solaf@gmail.com",
+      "phone": "234567890",
+      "city": "Damascus",
+      "type": "Designer",
+      "password": "soso",
+      "orders": []
     }
   ]
 }
