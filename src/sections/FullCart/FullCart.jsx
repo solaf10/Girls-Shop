@@ -36,26 +36,43 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
       });
   };
 
-  const handleSendData = () => {
-    const id = localStorage.getItem("token");
+  const userID = JSON.parse(localStorage.getItem("token"));
+  useEffect(() => {
     axios
-      .get(`${config.baseUrl}/${config.users}/${id}`)
-      .then((res) => {
-        const oldOrders = res.data.orders || [];
-        const allOrders = [...oldOrders, ...orders];
-
-        return axios.patch(`${config.baseUrl}/${config.users}/${id}`, {
-          orders: allOrders,
-        });
-      })
-      .then((res) => {
-        console.log(res.data);
-        cartProduct.forEach((cartProd) => handleDelete(cartProd.id, false));
-        setCartProduct([]);
-        toast.success("Your order is complete!");
-        navigate("/order");
-      })
+      .get(`${config.baseUrl}/${config.users}/${userID}`)
+      .then((res) => setCurrentUser(res.data))
       .catch((err) => console.log(err));
+  }, []);
+
+  const grandTotal = cartProduct.reduce((acc, pro) => {
+    const numPrice = parseFloat(pro.price.replace("$", "")) || 0;
+    return acc + numPrice * (pro.amount || 0);
+  }, 0);
+  const handleSendData = () => {
+    console.log(currentUser.balance);
+    if (currentUser.balance > 1000 && grandTotal <= currentUser.balance) {
+      axios
+        .get(`${config.baseUrl}/${config.users}/${userID}`)
+        .then((res) => {
+          const oldOrders = res.data.orders || [];
+          const allOrders = [...oldOrders, ...orders];
+
+          return axios.patch(`${config.baseUrl}/${config.users}/${userID}`, {
+            orders: allOrders,
+            balance: currentUser.balance - grandTotal,
+          });
+        })
+        .then((res) => {
+          console.log(res.data);
+          cartProduct.forEach((cartProd) => handleDelete(cartProd.id, false));
+          setCartProduct([]);
+          toast.success("Your order is complete!");
+          navigate("/order");
+        })
+        .catch((err) => console.log(err));
+    } else {
+      toast.error("Your balance isn't enough");
+    }
   };
 
   const privateRouteHandler = usePrivateRoute(handleSendData);
@@ -67,11 +84,6 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
       )
     );
   };
-
-  const grandTotal = cartProduct.reduce((acc, pro) => {
-    const numPrice = parseFloat(pro.price.replace("$", "")) || 0;
-    return acc + numPrice * (pro.amount || 0);
-  }, 0);
 
   return (
     <div className="fullcart">

@@ -18,7 +18,10 @@
       "category": "furniture",
       "style": "classic",
       "material": "wood",
-      "colors": ["#783c0a", "#808080"],
+      "colors": [
+        "#783c0a",
+        "#808080"
+      ],
       "width": "71cm",
       "height": "74cm",
       "lengthInfo": "65cm",
@@ -52,7 +55,9 @@
       "category": "furniture",
       "style": "modern",
       "material": "Leather",
-      "colors": ["#000000"],
+      "colors": [
+        "#000000"
+      ],
       "width": "95cm",
       "height": "110cm",
       "lengthInfo": "99cm",
@@ -92,7 +97,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "Fabric",
-      "colors": ["#64befa", "#2850dc"],
+      "colors": [
+        "#64befa",
+        "#2850dc"
+      ],
       "width": "76cm",
       "height": "105cm",
       "lengthInfo": "87cm",
@@ -127,7 +135,11 @@
       "category": "childroom",
       "style": "modern",
       "material": "fabric",
-      "colors": ["#FFFFFF", "#FFD700", "#ADD8E6"],
+      "colors": [
+        "#FFFFFF",
+        "#FFD700",
+        "#ADD8E6"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -162,7 +174,11 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": ["#FFFFFF", "#FFD700", "#ADD8E6"],
+      "colors": [
+        "#FFFFFF",
+        "#FFD700",
+        "#ADD8E6"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -197,7 +213,11 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": ["#FFFFFF", "#F5DEB3", "#A9A9A9"],
+      "colors": [
+        "#FFFFFF",
+        "#F5DEB3",
+        "#A9A9A9"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -231,7 +251,9 @@
       "category": "childroom",
       "style": "classic",
       "material": "wood",
-      "colors": ["#FFFFFF"],
+      "colors": [
+        "#FFFFFF"
+      ],
       "width": "188cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -266,7 +288,10 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": ["#FFFFFF", "#F5DEB3"],
+      "colors": [
+        "#FFFFFF",
+        "#F5DEB3"
+      ],
       "width": "1.5m",
       "height": "1m",
       "lengthInfo": "140cm",
@@ -289,7 +314,9 @@
       "price": "$850.00",
       "sale": "%30",
       "comments": [],
-      "images": ["/assets/Images/1656569585_bed-1.png"],
+      "images": [
+        "/assets/Images/1656569585_bed-1.png"
+      ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 3,
       "type": "beds",
@@ -297,7 +324,9 @@
       "category": "childroom",
       "style": "modern",
       "material": "fabric",
-      "colors": ["#A9A9A9"],
+      "colors": [
+        "#A9A9A9"
+      ],
       "width": "200cm",
       "height": "110cm",
       "lengthInfo": "170cm",
@@ -332,7 +361,9 @@
       "category": "childroom",
       "style": "modern",
       "material": "fabric",
-      "colors": ["#000000"],
+      "colors": [
+        "#000000"
+      ],
       "width": "105cm",
       "height": "160cm",
       "lengthInfo": "180cm",
@@ -355,7 +386,9 @@
       "price": "$350.00",
       "sale": "%0",
       "comments": [],
-      "images": ["/assets/Images/1530891370_1.jpg"],
+      "images": [
+        "/assets/Images/1530891370_1.jpg"
+      ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 4,
       "type": "chairs",
@@ -363,7 +396,9 @@
       "category": "childroom",
       "style": "classic",
       "material": "wood",
-      "colors": ["#000000"],
+      "colors": [
+        "#000000"
+      ],
       "width": "105cm",
       "height": "160cm",
       "lengthInfo": "180cm",
@@ -386,7 +421,9 @@
       "price": "$350.00",
       "sale": "%0",
       "comments": [],
-      "images": ["/assets/Images/1613201941_4.jpg"],
+      "images": [
+        "/assets/Images/1613201941_4.jpg"
+      ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 4,
       "type": "chairs",
@@ -394,7 +431,10 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": ["#FFFFFF", "#ADD8E6"],
+      "colors": [
+        "#FFFFFF",
+        "#ADD8E6"
+      ],
       "width": "38cm",
       "height": "54cm",
       "lengthInfo": "180cm",
@@ -428,7 +468,10 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": ["#B0B0B0", "#F5DEB3"],
+      "colors": [
+        "#B0B0B0",
+        "#F5DEB3"
+      ],
       "width": "30cm",
       "height": "33cm",
       "lengthInfo": "180cm",
@@ -465,7 +508,10 @@
       "category": "childroom",
       "style": "modern",
       "material": "wood",
-      "colors": ["#FFFFFF", "#F5DEB3"],
+      "colors": [
+        "#FFFFFF",
+        "#F5DEB3"
+      ],
       "width": "38cm",
       "height": "68cm",
       "lengthInfo": "40cm",
@@ -499,7 +545,10 @@
       "category": "furniture",
       "style": "modern",
       "material": "wood",
-      "colors": ["#888", "#f95"],
+      "colors": [
+        "#888",
+        "#f95"
+      ],
       "width": "127cm",
       "height": "75cm",
       "lengthInfo": "140cm",
@@ -522,7 +571,9 @@
       "price": "$30.00",
       "sale": "%0",
       "comments": [],
-      "images": ["/assets/Images/120881.540caa7fe18f7.jpeg"],
+      "images": [
+        "/assets/Images/120881.540caa7fe18f7.jpeg"
+      ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 5,
       "type": "toys",
@@ -530,7 +581,11 @@
       "category": "childroom",
       "style": "modern",
       "material": "plastic",
-      "colors": ["#FF0000", "#0000FF", "#FFFF00"],
+      "colors": [
+        "#FF0000",
+        "#0000FF",
+        "#FFFF00"
+      ],
       "width": "10cm",
       "height": "10cm",
       "lengthInfo": "11cm",
@@ -565,7 +620,10 @@
       "category": "childroom",
       "style": "modern",
       "material": "fabric",
-      "colors": ["#4B0082", "#ADD8E6"],
+      "colors": [
+        "#4B0082",
+        "#ADD8E6"
+      ],
       "width": "25cm",
       "height": "30cm",
       "lengthInfo": "11cm",
@@ -588,7 +646,9 @@
       "price": "$120.00",
       "sale": "%20",
       "comments": [],
-      "images": ["/assets/Images/7833235.68691b96a4e14.jpeg"],
+      "images": [
+        "/assets/Images/7833235.68691b96a4e14.jpeg"
+      ],
       "desc": "Ceiling Light Ceiling LightCeiling LightCeiling LightCeiling LightCeiling LightCeiling ",
       "rate": 5,
       "type": "toys",
@@ -596,7 +656,11 @@
       "category": "childroom",
       "style": "classic",
       "material": "wood",
-      "colors": ["#FFFFFF", "000000", "#F5DEB3"],
+      "colors": [
+        "#FFFFFF",
+        "000000",
+        "#F5DEB3"
+      ],
       "width": "35cm",
       "height": "6cm",
       "lengthInfo": "34cm",
@@ -630,7 +694,11 @@
       "category": "childroom",
       "style": "classic",
       "material": "wood",
-      "colors": ["#FFD700", "#000000", "#F5DEB3"],
+      "colors": [
+        "#FFD700",
+        "#000000",
+        "#F5DEB3"
+      ],
       "width": "19cm",
       "height": "24cm",
       "lengthInfo": "30cm",
@@ -1672,12 +1740,12 @@
   ],
   "cartProducts": [
     {
-      "id": "73",
-      "name": "Armchair ALBA",
-      "image": "/assets/Images/products/Armchair ALBA main.png",
-      "price": "$320",
-      "color": "#783c0a",
-      "amount": 1
+      "id": "45",
+      "name": "Lounge chair Elle",
+      "image": "/assets/Images/products/Lounge chair Elle main.png",
+      "price": "$560",
+      "color": "#64befa",
+      "amount": 3
     }
   ],
   "oldOrder": [
@@ -2009,9 +2077,43 @@
       "city": "Homs",
       "type": "Designer",
       "password": "1234",
-      "orders": [],
+      "orders": [
+        {
+          "id": "73",
+          "name": "Armchair ALBA",
+          "image": "/assets/Images/products/Armchair ALBA main.png",
+          "price": "$320",
+          "color": "#783c0a",
+          "amount": 1,
+          "date": "15/9/2025",
+          "address": "homs",
+          "status": "pending"
+        },
+        {
+          "id": "34",
+          "name": "Armchair Imola",
+          "image": "/assets/Images/products/Armchair Imola main.png",
+          "price": "$450",
+          "color": "#000000",
+          "amount": 1,
+          "date": "15/9/2025",
+          "address": "homs",
+          "status": "pending"
+        },
+        {
+          "id": "34",
+          "name": "Armchair Imola",
+          "image": "/assets/Images/products/Armchair Imola main.png",
+          "price": "$450",
+          "color": "#000000",
+          "amount": 2,
+          "date": "15/9/2025",
+          "address": "homs",
+          "status": "pending"
+        }
+      ],
       "image": "/assets/Images/avatarUser.jpg",
-      "balance": 1500
+      "balance": 600
     }
   ]
 }

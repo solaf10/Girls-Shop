@@ -84,6 +84,10 @@ function SignUp() {
           newId = Math.floor(Math.random() * 1000000);
         } while (users.some((user) => user.id === newId.toString()));
 
+        function getRandomNumber(min = 900, max = 15000) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
         const data = {
           id: newId.toString(),
           name,
@@ -94,6 +98,7 @@ function SignUp() {
           password,
           orders: [],
           image: "/assets/Images/avatarUser.jpg",
+          balance: getRandomNumber(),
         };
         axios
           .post(`${config.baseUrl}/${config.users}`, data)

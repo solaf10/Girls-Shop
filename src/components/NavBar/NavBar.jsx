@@ -41,6 +41,8 @@ const NavBar = () => {
   const isShopPage = location.pathname == "/shop";
   const handleLogout = () => {
     localStorage.removeItem("token");
+    setIsUserShow(false);
+    navigate("/");
     toast.success("You LoggedOut Successfully!!");
   };
 
