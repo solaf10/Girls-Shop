@@ -33,7 +33,7 @@ const RelatedProducts = ({ category, id }) => {
     <Card
       key={card.id}
       // image={card.image}
-      image={card.images[0]}
+      images={card.images}
       name={card.name}
       price={card.price}
       onClick={() => {

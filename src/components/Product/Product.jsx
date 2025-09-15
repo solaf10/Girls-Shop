@@ -69,6 +69,7 @@ export default function Product() {
   const numPrice = parseFloat(rawPrice.replace("$", ""));
   const numSale = parseFloat(rawSale.replace("%", "")) / 100;
 
+  // const salesPrice = (numPrice * (1 - numSale)).toFixed(2);
   const salesPrice = numPrice * (1 - numSale);
 
   // reviewsPrecentage
@@ -287,7 +288,7 @@ export default function Product() {
                   <h1>{name}</h1>
                   <p>{desc}</p>
                   <div className="price-box">
-                    <span className="price">${salesPrice}</span>
+                    <span className="price">${salesPrice.toFixed(2)}</span>
                     {numSale != 0 && (
                       <>
                         <span className="real-price">{price}</span>
@@ -448,7 +449,7 @@ export default function Product() {
                 </Link>
               </div>
               <div className="hold">
-                {comments?.map((comment) => (
+                {comments?.slice(0, 6)?.map((comment) => (
                   <div className="name-and-comment" key={comment.id}>
                     <div className="name-and-time">
                       <p className="name">{comment.name}</p>
