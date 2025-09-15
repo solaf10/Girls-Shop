@@ -49,7 +49,7 @@ const BlogsDetails = () => {
         setFilteredBlogs(res.data);
       })
       .catch((err) => console.log(err));
-  }, [rerender]);
+  }, []);
 
   useEffect(() => {
     const res = recentBlogs.filter((blog) =>
@@ -83,7 +83,7 @@ const BlogsDetails = () => {
         console.log(`${config.baseUrl}/${config.blogs}/${params.id}`);
         setIsLoading(false);
       });
-  }, [params.id]);
+  }, [params.id, rerender]);
   const handleSendComment = () => {
     if (!name || !email || !message) {
       toast.error("All fields are required!");
@@ -97,15 +97,13 @@ const BlogsDetails = () => {
       message,
       date: new Date(),
     };
-    const data = { ...postsDetails, newComment };
 
     axios
-      .post(`${config.baseUrl}/${config.blogs}/${params.id}`, data, {
-        headers: { method: "_PUT" },
+      .patch(`${config.baseUrl}/${config.blogs}/${params.id}`, {
+        comments: [...postsDetails.comments, newComment],
       })
       .then((res) => {
         toast.success("Comment posted successfully!");
-        // setComments([...comments, res.data]);
         setRerender((prev) => !prev);
         setName("");
         setEmail("");
@@ -209,7 +207,7 @@ const BlogsDetails = () => {
                     <IoIosArrowForward />
                   </Link>
                 </div>
-                {comments.slice(0, 6).map((c, index) => (
+                {comments?.slice(0, 6).map((c, index) => (
                   <div className="name-and-comment" key={index}>
                     <div className="name-and-time">
                       <h4> {c.name}</h4>

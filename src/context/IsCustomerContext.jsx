@@ -13,7 +13,7 @@ function IsCustomerProvider({ children }) {
     const handleStorageChange = () => {
       setIsCustomer(
         localStorage.getItem("role") != null &&
-          localStorage.getItem("role")?.includes("customer")
+          localStorage.getItem("role")?.toLowerCase()?.includes("customer")
       );
     };
 

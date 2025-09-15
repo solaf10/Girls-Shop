@@ -8,26 +8,57 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 const FullCart = ({ cartProduct, setCartProduct }) => {
+  const [currentUser, setCurrentUser] = useState({});
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const handleSendData = () => {
-    toast.success("Your order is complete!");
-    navigate("/order");
-  };
-  const privateRouteHandler = usePrivateRoute(handleSendData);
-
-  const handleDelete = (id) => {
+  const today = new Date();
+  const date = `${today.getDate()}/${
+    today.getMonth() + 1
+  }/${today.getFullYear()}`;
+  const [address, setAddress] = useState("");
+  const orders = cartProduct.map((product) => ({
+    ...product,
+    date,
+    address,
+    status: "pending",
+  }));
+  const handleDelete = (id, isShow = true) => {
     axios
       .delete(`${config.baseUrl}/${config.cartProducts}/${id}`)
       .then(() => {
         setCartProduct((prev) => prev.filter((pro) => pro.id !== id));
-        toast.success("Product was deleted from the cart successfully!!");
+        isShow &&
+          toast.success("Product was deleted from the cart successfully!!");
       })
       .catch((err) => {
         console.log(err);
         toast.error("process failed!!");
       });
   };
+
+  const handleSendData = () => {
+    const id = localStorage.getItem("token");
+    axios
+      .get(`${config.baseUrl}/${config.users}/${id}`)
+      .then((res) => {
+        const oldOrders = res.data.orders || [];
+        const allOrders = [...oldOrders, ...orders];
+
+        return axios.patch(`${config.baseUrl}/${config.users}/${id}`, {
+          orders: allOrders,
+        });
+      })
+      .then((res) => {
+        console.log(res.data);
+        cartProduct.forEach((cartProd) => handleDelete(cartProd.id, false));
+        setCartProduct([]);
+        toast.success("Your order is complete!");
+        navigate("/order");
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const privateRouteHandler = usePrivateRoute(handleSendData);
 
   const handleAmountChange = (id, newAmount) => {
     setCartProduct((prev) =>
@@ -92,7 +123,13 @@ const FullCart = ({ cartProduct, setCartProduct }) => {
             <div className="desc">
               <div className="location-order">
                 <label htmlFor="">{t(`FullCart.Location`)}</label>
-                <input type="text" placeholder="location for delivery"></input>
+                <input
+                  type="text"
+                  placeholder="location for delivery"
+                  value={address}
+                  required
+                  onChange={(e) => setAddress(e.target.value)}
+                />
               </div>
               <div className="total">
                 <p>{t("FullCart.total")}</p>

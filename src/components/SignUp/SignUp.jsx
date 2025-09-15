@@ -81,7 +81,7 @@ function SignUp() {
 
         let newId;
         do {
-          newId = Math.floor(Math.random() * 1000000); // أي نطاق تحبيه
+          newId = Math.floor(Math.random() * 1000000);
         } while (users.some((user) => user.id === newId.toString()));
 
         const data = {
@@ -93,6 +93,7 @@ function SignUp() {
           type: selectUserType,
           password,
           orders: [],
+          image: "/assets/Images/avatarUser.jpg",
         };
         axios
           .post(`${config.baseUrl}/${config.users}`, data)

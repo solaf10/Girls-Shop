@@ -124,9 +124,13 @@
       gap: 16px;
       padding-top: 48px;
       textarea {
+        padding: 10px;
         height: 25vh;
         resize: none;
         border: 1px solid #000e0c;
+      }
+      textarea:focus {
+        outline: none;
       }
       label {
         font-weight: 400;

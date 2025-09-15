@@ -52,31 +52,22 @@ const App = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop/:id" element={<Product />} />
+          <Route path="/shop/:id/comments" element={<AllComments />} />
           <Route path="/about" element={<About />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
-          <Route
-            path="/customizeOrder"
-            element={
-              <PrivateRoute>
-                <CustomizeOrder />
-              </PrivateRoute>
-            }
-          ></Route>
+          <Route element={<PrivateRoute />}>
+            <Route path="/customizeOrder" element={<CustomizeOrder />} />
+          </Route>
           <Route path="/cart/complate-cart" element={<ComplateCart />} />
           <Route path="/blogs/:id" element={<BlogsDetails />} />
           <Route path="/blogs/:id/comments" element={<AllComments />} />
           <Route path="/designer" element={<Designer />} />
           <Route path="/designer/:id" element={<Gallery />} />
-          <Route
-            path="/profile"
-            element={
-              <PrivateRoute>
-                <UserProfile />
-              </PrivateRoute>
-            }
-          />
+          <Route element={<PrivateRoute />}>
+            <Route path="/profile" element={<UserProfile />} />
+          </Route>
           <Route path="/updatePassword" element={<UpdatePassword />}>
             <Route
               index
@@ -131,14 +122,9 @@ const App = () => {
               }
             />
           </Route>
-          <Route
-            path="/order"
-            element={
-              <PrivateRoute>
-                <Order />
-              </PrivateRoute>
-            }
-          />
+          <Route element={<PrivateRoute />}>
+            <Route path="/order" element={<Order />} />
+          </Route>
         </Routes>
       </IsCustomerProvider>
       {!isAuthPage && <Footer />}

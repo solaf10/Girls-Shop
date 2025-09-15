@@ -29,12 +29,13 @@ function LogIn() {
           toast.error("Email not found, please sign up!");
           return;
         }
-        if (user.password !== password) {
+        if (user.password != password) {
           toast.error("Password is incorrect!");
           return;
         }
         toast.success("Login successful!");
         localStorage.setItem("token", JSON.stringify(user.id));
+        navigate("/");
       })
       .catch((err) => console.log(err));
   };

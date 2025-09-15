@@ -109,7 +109,6 @@ const NavBar = () => {
               className="user-popup"
               style={isUserShow ? { top: "147px" } : { top: "-100%" }}
             >
-              <p className="user-name">{t("navbar.userName")}</p>
               <ul>
                 <li>
                   <Link to="/profile">{t("navbar.userProfile")}</Link>
