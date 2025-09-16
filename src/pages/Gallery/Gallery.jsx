@@ -31,9 +31,9 @@ const Gallery = () => {
       });
   }, []);
   const cards = designerWork.slice(0, limit).map((work, i) => (
-    <Link to="/shop/73" className="card" key={i}>
+    <div className="card" key={i}>
       <img src={work} alt={`work${i + 1}`} />
-    </Link>
+    </div>
   ));
   return (
     <div className="gallery">

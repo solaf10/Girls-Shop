@@ -1,7 +1,7 @@
 .reviews {
   position: relative;
   padding: 100px 0px 160px;
-  background-image: url("/public/assets/Images/reviews-bg.png");
+  background-image: url("/assets/Images/reviews-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }

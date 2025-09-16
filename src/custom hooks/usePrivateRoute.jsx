@@ -9,12 +9,12 @@ const usePrivateRoute = (eventHandler) => {
     const handleStorageChange = () => {
       setToken(localStorage.getItem("token"));
     };
-
     window.addEventListener("storage", handleStorageChange);
     return () => window.removeEventListener("storage", handleStorageChange);
   }, []);
 
-  const handlePrivateRoute = () => {
+  const handlePrivateRoute = (e) => {
+    e.preventDefault();
     if (!token) navigate("/login");
     else eventHandler();
   };

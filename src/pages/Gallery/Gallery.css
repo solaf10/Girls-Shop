@@ -26,7 +26,7 @@
     .cards {
       padding-top: 40px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 20px;
       .card {
         overflow: hidden;
@@ -37,7 +37,6 @@
           object-fit: fill;
           height: 100%;
           transition: 0.5s;
-          cursor: pointer;
         }
       }
       .card:hover img {

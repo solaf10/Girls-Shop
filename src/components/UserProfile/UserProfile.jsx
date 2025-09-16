@@ -13,6 +13,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { TbEdit } from "react-icons/tb";
 import axios from "axios";
 import config from "../../Constants/enviroment";
+import { toast } from "react-toastify";
 
 const UserProfile = () => {
   const { t } = useTranslation();
@@ -25,7 +26,11 @@ const UserProfile = () => {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setSelectedImage(URL.createObjectURL(file));
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setSelectedImage(reader.result); // هون بيصير Data URL مثل: "data:image/png;base64,...."
+      };
+      reader.readAsDataURL(file);
     }
   };
   const [currentUser, setCurrentUser] = useState({});
@@ -38,6 +43,17 @@ const UserProfile = () => {
   }, []);
   const { id, image, email, name, orders, city, phone, type, balance } =
     currentUser;
+  const handleSubmit = (e) => {
+    // setIsOpen(true);
+    axios
+      .patch(`${config.baseUrl}/${config.users}/${id}`, {
+        image: selectedImage,
+      })
+      .then((res) =>
+        toast.success("Your Image has been Changed Successfully!!")
+      )
+      .catch((err) => toast.error("Something went wrong!!"));
+  };
   return (
     <div className="profile-holder">
       <div className="profile-container">
@@ -99,10 +115,7 @@ const UserProfile = () => {
             <p>{balance} $</p>
           </div>
           <div className="update-pass-btn">
-            <button
-              className="change-pass-btn-profile"
-              onClick={() => setIsOpen(true)}
-            >
+            <button className="change-pass-btn-profile" onClick={handleSubmit}>
               {t("userProfile.changePasswordBtn")}
             </button>
           </div>

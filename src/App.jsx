@@ -45,88 +45,86 @@ const App = () => {
         <ToastContainer position="top-right" />
       </div>
 
-      <IsCustomerProvider>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/shop/:id" element={<Product />} />
-          <Route path="/shop/:id/comments" element={<AllComments />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route element={<PrivateRoute />}>
-            <Route path="/customizeOrder" element={<CustomizeOrder />} />
-          </Route>
-          <Route path="/cart/complate-cart" element={<ComplateCart />} />
-          <Route path="/blogs/:id" element={<BlogsDetails />} />
-          <Route path="/blogs/:id/comments" element={<AllComments />} />
-          <Route path="/designer" element={<Designer />} />
-          <Route path="/designer/:id" element={<Gallery />} />
-          <Route element={<PrivateRoute />}>
-            <Route path="/profile" element={<UserProfile />} />
-          </Route>
-          <Route path="/updatePassword" element={<UpdatePassword />}>
-            <Route
-              index
-              element={
-                <UpdatePasswordCard
-                  title="Forget Password"
-                  desc="Please enter your email to resend code on it"
-                >
-                  <ForgetPassword />
-                </UpdatePasswordCard>
-              }
-            />
-            <Route
-              path="sendOTP"
-              element={
-                <UpdatePasswordCard
-                  title="OTP Sent"
-                  desc={
-                    <>
-                      <span>
-                        Please enter OTP that send to your email address
-                        johnDoe@gmail.com
-                      </span>
-                      <Link to="/updatePassword"> change?</Link>
-                    </>
-                  }
-                >
-                  <OTPSend />
-                </UpdatePasswordCard>
-              }
-            />
-            <Route
-              path="change"
-              element={
-                <UpdatePasswordCard
-                  title="Change Password"
-                  desc="Please enter new password"
-                >
-                  <ChangePassword />
-                </UpdatePasswordCard>
-              }
-            />
-            <Route
-              path="changed"
-              element={
-                <UpdatePasswordCard
-                  title="Great!!!"
-                  desc="Password Changed Successfully"
-                >
-                  <ChangedPassword />
-                </UpdatePasswordCard>
-              }
-            />
-          </Route>
-          <Route element={<PrivateRoute />}>
-            <Route path="/order" element={<Order />} />
-          </Route>
-        </Routes>
-      </IsCustomerProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/shop/:id" element={<Product />} />
+        <Route path="/shop/:id/comments" element={<AllComments />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/customizeOrder" element={<CustomizeOrder />} />
+        </Route>
+        <Route path="/cart/complate-cart" element={<ComplateCart />} />
+        <Route path="/blogs/:id" element={<BlogsDetails />} />
+        <Route path="/blogs/:id/comments" element={<AllComments />} />
+        <Route path="/designer" element={<Designer />} />
+        <Route path="/designer/:id" element={<Gallery />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/profile" element={<UserProfile />} />
+        </Route>
+        <Route path="/updatePassword" element={<UpdatePassword />}>
+          <Route
+            index
+            element={
+              <UpdatePasswordCard
+                title="Forget Password"
+                desc="Please enter your email to resend code on it"
+              >
+                <ForgetPassword />
+              </UpdatePasswordCard>
+            }
+          />
+          <Route
+            path="sendOTP"
+            element={
+              <UpdatePasswordCard
+                title="OTP Sent"
+                desc={
+                  <>
+                    <span>
+                      Please enter OTP that send to your email address
+                      johnDoe@gmail.com
+                    </span>
+                    <Link to="/updatePassword"> change?</Link>
+                  </>
+                }
+              >
+                <OTPSend />
+              </UpdatePasswordCard>
+            }
+          />
+          <Route
+            path="change"
+            element={
+              <UpdatePasswordCard
+                title="Change Password"
+                desc="Please enter new password"
+              >
+                <ChangePassword />
+              </UpdatePasswordCard>
+            }
+          />
+          <Route
+            path="changed"
+            element={
+              <UpdatePasswordCard
+                title="Great!!!"
+                desc="Password Changed Successfully"
+              >
+                <ChangedPassword />
+              </UpdatePasswordCard>
+            }
+          />
+        </Route>
+        <Route element={<PrivateRoute />}>
+          <Route path="/order" element={<Order />} />
+        </Route>
+      </Routes>
       {!isAuthPage && <Footer />}
     </>
   );

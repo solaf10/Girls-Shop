@@ -11,8 +11,10 @@ import Reviews from "../../sections/HomeSections/Reviews/Reviews";
 import ReviewForm from "../../sections/ReviewForm/ReviewForm";
 import SpecificProducts from "../../sections/HomeSections/SpecificProducts/SpecificProducts";
 import UserAutherization from "../../components/UserAutherization/UserAutherization";
+import { useState } from "react";
 
 const Home = () => {
+  const [rerendered, setRerendered] = useState(false);
   return (
     <div className="home">
       <HomeHero />
@@ -26,8 +28,8 @@ const Home = () => {
         <CustomOrder />
       </UserAutherization>
       <RecentBlogs />
-      <Reviews />
-      <ReviewForm />
+      <Reviews rerendered={rerendered} />
+      <ReviewForm setRerendered={setRerendered} />
     </div>
   );
 };

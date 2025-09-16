@@ -10,6 +10,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import config from "../../Constants/enviroment";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useIsCustomer } from "../../context/IsCustomerContext";
 
 function SignUp() {
   const { t } = useTranslation();
@@ -44,6 +45,68 @@ function SignUp() {
       setError(true);
     } else {
       setError(false);
+      axios
+        .get(`${config.baseUrl}/${config.users}`)
+        .then((res) => {
+          const users = res.data;
+
+          const emailExists = users.some((user) => user.email === email);
+          if (emailExists) {
+            toast.error("Email already exists! please login");
+            return;
+          }
+
+          if (password !== confirmPassword) {
+            toast.error("Password and confirm password do not match!");
+            return;
+          }
+
+          let newId;
+          do {
+            newId = Math.floor(Math.random() * 1000000);
+          } while (users.some((user) => user.id === newId.toString()));
+
+          function getRandomNumber(min = 900, max = 15000) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+          }
+          const data = {
+            id: newId.toString(),
+            name,
+            email,
+            phone,
+            city: selectedArea,
+            type: selectUserType,
+            password,
+            orders: [],
+            image: "/assets/Images/avatarUser.jpg",
+            balance: getRandomNumber(),
+          };
+          axios
+            .post(`${config.baseUrl}/${config.users}`, data)
+            .then((res) => {
+              toast.success("You created an Account Successfully!!");
+              localStorage.setItem("token", newId);
+              updateRole(selectUserType.toLowerCase());
+              navigate("/");
+              setName("");
+              setEmail("");
+              setPhone("");
+              setPassword("");
+              setConfirmPassword("");
+              setSelectedArea("");
+              setSelectUserType("");
+              setError(false);
+            })
+            .catch((err) => {
+              console.log(err);
+              toast.error("Failed to register user.");
+              setError(true);
+            });
+        })
+        .catch((err) => {
+          console.log(err);
+          toast.error("Failed to fetch users.");
+        });
     }
   };
 
@@ -61,70 +124,6 @@ function SignUp() {
         setIsLoading(false);
       });
   }, []);
-
-  const handleClickSignUp = () => {
-    axios
-      .get(`${config.baseUrl}/${config.users}`)
-      .then((res) => {
-        const users = res.data;
-
-        const emailExists = users.some((user) => user.email === email);
-        if (emailExists) {
-          toast.error("Email already exists! please login");
-          return;
-        }
-
-        if (password !== confirmPassword) {
-          toast.error("Password and confirm password do not match!");
-          return;
-        }
-
-        let newId;
-        do {
-          newId = Math.floor(Math.random() * 1000000);
-        } while (users.some((user) => user.id === newId.toString()));
-
-        function getRandomNumber(min = 900, max = 15000) {
-          return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-
-        const data = {
-          id: newId.toString(),
-          name,
-          email,
-          phone,
-          city: selectedArea,
-          type: selectUserType,
-          password,
-          orders: [],
-          image: "/assets/Images/avatarUser.jpg",
-          balance: getRandomNumber(),
-        };
-        axios
-          .post(`${config.baseUrl}/${config.users}`, data)
-          .then((res) => {
-            toast.success(res.data);
-            localStorage.setItem("token", newId);
-            setName("");
-            setEmail("");
-            setPhone("");
-            setPassword("");
-            setConfirmPassword("");
-            setSelectedArea("");
-            setSelectUserType("");
-            setError(false);
-          })
-          .catch((err) => {
-            console.log(err);
-            toast.error("Failed to register user.");
-            setError(true);
-          });
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.error("Failed to fetch users.");
-      });
-  };
 
   return (
     <div className="signup-page">
@@ -307,11 +306,7 @@ function SignUp() {
               <Link to="/updatePassword">{t("signup.forgot")}</Link>
             </div>
 
-            <button
-              className="sign-up-btn"
-              type="submit"
-              onClick={handleClickSignUp}
-            >
+            <button className="sign-up-btn" type="submit">
               {t("signup.submit")}
             </button>
           </form>

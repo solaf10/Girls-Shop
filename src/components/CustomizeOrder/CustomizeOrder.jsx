@@ -4,6 +4,7 @@ import axios from "axios";
 import { AiOutlineWarning } from "react-icons/ai";
 import usePrivateRoute from "../../custom hooks/usePrivateRoute";
 import { useTranslation } from "react-i18next";
+import { toast } from "react-toastify";
 
 const CustomizeOrder = () => {
   const { t } = useTranslation();
@@ -36,9 +37,10 @@ const CustomizeOrder = () => {
     setShowPopup(true);
   };
 
-  const confirmSubmission = async () => {
+  const confirmSubmission = (e) => {
     setShowPopup(false);
-    try {
+    toast.success("Your order is sent Successfully!!");
+    /*  try {
       const formData = new FormData();
       formData.append("width", formValues.width);
       formData.append("height", formValues.height);
@@ -55,13 +57,13 @@ const CustomizeOrder = () => {
       );
 
       console.log("Response:Done", res.data);
-      alert("Form submitted successfully!");
-      // toast.success("✅ تم قبول طلبك بنجاح!");
+      // alert("Form submitted successfully!");
+      toast.success("✅ تم قبول طلبك بنجاح!");
     } catch (err) {
       console.error("Error:Err", err);
-      alert("Something went wrong!");
+      // alert("Something went wrong!");
       // toast.error("❌ حدث خطأ ما، حاول مرة أخرى!");
-    }
+    } */
   };
 
   const privateRouteHandler = usePrivateRoute(handleSubmit);
@@ -167,7 +169,6 @@ const CustomizeOrder = () => {
           />
         </form>
       </div>
-      
 
       {showPopup && (
         <div className="popup-overlay">

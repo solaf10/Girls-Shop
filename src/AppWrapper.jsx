@@ -1,11 +1,14 @@
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import { IsCustomerProvider } from "./context/IsCustomerContext";
 
 const AppWrapper = () => {
   return (
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <IsCustomerProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </IsCustomerProvider>
   );
 };
 

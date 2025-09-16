@@ -389,7 +389,6 @@ export default function Product() {
                         </ul>
                       </div>
                     )}
-                    <p>{t("product.dailyCredits")}</p>
                   </div>
                 </UserAutherization>
               </div>

@@ -11,6 +11,7 @@ import { TbCube } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 import { IoMenu } from "react-icons/io5";
 import { toast } from "react-toastify";
+import { useIsCustomer } from "../../context/IsCustomerContext";
 
 const NavBar = () => {
   const { t } = useTranslation();
@@ -18,6 +19,7 @@ const NavBar = () => {
   const [isUserShow, setIsUserShow] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const { updateRole } = useIsCustomer();
 
   const isToken = localStorage.getItem("token") != null;
 
@@ -42,6 +44,7 @@ const NavBar = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setIsUserShow(false);
+    updateRole();
     navigate("/");
     toast.success("You LoggedOut Successfully!!");
   };

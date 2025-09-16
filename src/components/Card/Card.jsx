@@ -42,7 +42,7 @@ export default function Card({ id, images, name, sale, price, onClick }) {
       <div className="info">
         <p>{name}</p>
         <div className="price">
-          <span>{salesPrice.toFixed(2)} </span>
+          <span>${salesPrice.toFixed(2)} </span>
           {numSale !== 0 && <span className="real-price">{price} </span>}
         </div>
       </div>

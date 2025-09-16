@@ -10,16 +10,19 @@ import axios from "axios";
 import { useTranslation } from "react-i18next";
 import config from "../../../Constants/enviroment";
 
-const Reviews = () => {
+const Reviews = ({ rerendered }) => {
   const { t } = useTranslation();
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     axios
       .get(config.baseUrl + "/" + config.reviews)
-      .then((res) => setReviews(res.data))
+      .then((res) => {
+        console.log(res.data);
+        setReviews(res.data);
+      })
       .catch((err) => console.log(err));
-  }, []);
+  }, [rerendered]);
 
   return (
     <section className="reviews">

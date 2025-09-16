@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import axios from "axios";
 import { toast } from "react-toastify";
 import config from "../../Constants/enviroment";
+import { useIsCustomer } from "../../context/IsCustomerContext";
 function LogIn() {
   const { t } = useTranslation();
 
@@ -17,6 +18,7 @@ function LogIn() {
   const [error, setError] = useState(false);
 
   const navigate = useNavigate();
+  const { updateRole } = useIsCustomer();
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
@@ -35,6 +37,7 @@ function LogIn() {
         }
         toast.success("Login successful!");
         localStorage.setItem("token", JSON.stringify(user.id));
+        updateRole(user.type.toLowerCase());
         navigate("/");
       })
       .catch((err) => console.log(err));

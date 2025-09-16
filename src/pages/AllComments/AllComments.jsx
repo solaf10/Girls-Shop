@@ -39,16 +39,16 @@ const AllComments = () => {
     );
   };
   const commentsEls = comments.map((comment) => (
-    <div className="name-and-comment" key={comment.id}>
+    <div className="name-and-comment" key={comment?.id}>
       <div className="name-and-time">
-        <h4> {comment.name}</h4>
+        <h4> {comment?.name}</h4>
         {isShop && (
-          <div className="rating">{handleDrawStars(comment.rate)}</div>
+          <div className="rating">{handleDrawStars(comment?.rate)}</div>
         )}
-        <p className="time">{comment.date}</p>
+        <p className="time">{comment?.date}</p>
       </div>
 
-      <p className="comment">{comment.message}</p>
+      <p className="comment">{comment?.message}</p>
     </div>
   ));
   return (
@@ -57,7 +57,7 @@ const AllComments = () => {
         {comments.length == 0 ? (
           <EmptyHandler message="There isn't any comments yet!!" />
         ) : (
-          { commentsEls }
+          commentsEls
         )}
       </div>
     </div>
