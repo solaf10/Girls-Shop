@@ -1,18 +1,25 @@
-.recent-one-blog{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.recent-one-blog {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
 }
- .recent-one-blog .blog-name{
-    font-weight: 600;
-    font-size: 20px;
-    color: #0E1A2B;
+.recent-one-blog:hover .blog-name {
+  /* color: var(--secondary-color); */
+  /* text-decoration: underline; */
+  font-weight: 700;
 }
-.recent-one-blog .publisher-name-and-date{
-    display: flex;
-    gap: 32px;
-    p{
-         font-weight: 300;
+.recent-one-blog .blog-name {
+  font-weight: 600;
+  font-size: 20px;
+  color: #0e1a2b;
+  transition: 0.5s;
+}
+.recent-one-blog .publisher-name-and-date {
+  display: flex;
+  gap: 32px;
+  p {
+    font-weight: 300;
     font-size: 14px;
-    }
+  }
 }
