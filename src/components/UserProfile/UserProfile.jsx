@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import "./UserProfile.css";
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import './UserProfile.css';
 import {
   AiOutlineMail,
   AiOutlineEye,
   AiOutlineEyeInvisible,
-} from "react-icons/ai";
-import { LuPhone } from "react-icons/lu";
-import { GrLocation } from "react-icons/gr";
-import { BsWallet2 } from "react-icons/bs";
-import { IoCloseOutline } from "react-icons/io5";
-import { TbEdit } from "react-icons/tb";
-import axios from "axios";
-import config from "../../Constants/enviroment";
-import { toast } from "react-toastify";
+} from 'react-icons/ai';
+import { LuPhone } from 'react-icons/lu';
+import { GrLocation } from 'react-icons/gr';
+import { BsWallet2 } from 'react-icons/bs';
+import { IoCloseOutline } from 'react-icons/io5';
+import { TbEdit } from 'react-icons/tb';
+import axios from 'axios';
+import config from '../../Constants/enviroment';
+import { toast } from 'react-toastify';
 
 const UserProfile = () => {
   const { t } = useTranslation();
@@ -34,7 +34,7 @@ const UserProfile = () => {
     }
   };
   const [currentUser, setCurrentUser] = useState({});
-  const userID = JSON.parse(localStorage.getItem("token"));
+  const userID = localStorage.getItem('token');
   useEffect(() => {
     axios
       .get(`${config.baseUrl}/${config.users}/${userID}`)
@@ -46,101 +46,101 @@ const UserProfile = () => {
   const handleSubmit = (e) => {
     // setIsOpen(true);
     axios
-      .patch(`${config.baseUrl}/${config.users}/${id}`, {
+      .patch(`${config.baseUrl}/${config.users}/${userID}`, {
         image: selectedImage,
       })
       .then((res) =>
-        toast.success("Your Image has been Changed Successfully!!")
+        toast.success('Your Image has been Changed Successfully!!'),
       )
-      .catch((err) => toast.error("Something went wrong!!"));
+      .catch((err) => toast.error('Something went wrong!!'));
   };
   return (
-    <div className="profile-holder">
-      <div className="profile-container">
-        <h3>{t("userProfile.myProfile")}</h3>
-        <div className="profile-img-container">
-          <div className="image-wrapper">
+    <div className='profile-holder'>
+      <div className='profile-container'>
+        <h3>{t('userProfile.myProfile')}</h3>
+        <div className='profile-img-container'>
+          <div className='image-wrapper'>
             <img
-              className="user-image"
+              className='user-image'
               src={selectedImage || image}
-              alt="user avatar"
+              alt='user avatar'
             />
-            <label htmlFor="fileInput" className="edit-icon">
+            <label htmlFor='fileInput' className='edit-icon'>
               <TbEdit />
             </label>
             <input
-              id="fileInput"
-              type="file"
-              accept="image/*"
-              style={{ display: "none" }}
+              id='fileInput'
+              type='file'
+              accept='image/*'
+              style={{ display: 'none' }}
               onChange={handleImageChange}
             />
           </div>
-          <div className="name-info">
-            <p className="name">{name}</p>
-            <p className="type">{type}</p>
+          <div className='name-info'>
+            <p className='name'>{name}</p>
+            <p className='type'>{type}</p>
           </div>
         </div>
 
-        <div className="user-profile-info">
-          <div className="email-profile profile-sps-info">
-            <div className="icon-title">
+        <div className='user-profile-info'>
+          <div className='email-profile profile-sps-info'>
+            <div className='icon-title'>
               <AiOutlineMail />
-              <p>{t("userProfile.email")}</p>
+              <p>{t('userProfile.email')}</p>
             </div>
             <p>{email}</p>
           </div>
 
-          <div className="phone-profile profile-sps-info ">
-            <div className="icon-title">
+          <div className='phone-profile profile-sps-info '>
+            <div className='icon-title'>
               <LuPhone />
-              <p>{t("userProfile.phone")}</p>
+              <p>{t('userProfile.phone')}</p>
             </div>
             <p>+963{phone}</p>
           </div>
 
-          <div className="area-profile profile-sps-info">
-            <div className="icon-title">
+          <div className='area-profile profile-sps-info'>
+            <div className='icon-title'>
               <GrLocation />
-              <p>{t("userProfile.area")}</p>
+              <p>{t('userProfile.area')}</p>
             </div>
             <p>{city}</p>
           </div>
 
-          <div className="balancy-profile profile-sps-info">
-            <div className="icon-title">
+          <div className='balancy-profile profile-sps-info'>
+            <div className='icon-title'>
               <BsWallet2 />
-              <p>{t("userProfile.balance")}</p>
+              <p>{t('userProfile.balance')}</p>
             </div>
             <p>{balance} $</p>
           </div>
-          <div className="update-pass-btn">
-            <button className="change-pass-btn-profile" onClick={handleSubmit}>
-              {t("userProfile.changePasswordBtn")}
+          <div className='update-pass-btn'>
+            <button className='change-pass-btn-profile' onClick={handleSubmit}>
+              {t('userProfile.changePasswordBtn')}
             </button>
           </div>
 
           {isOpen && (
-            <div className="popup-overlay">
-              <div className="popup-box-profile">
+            <div className='popup-overlay'>
+              <div className='popup-box-profile'>
                 <button onClick={() => setIsOpen(false)}>
                   <IoCloseOutline />
                 </button>
-                <div className="password-header">
-                  <h4>{t("userProfile.changePasswordPopupTitle")}</h4>
+                <div className='password-header'>
+                  <h4>{t('userProfile.changePasswordPopupTitle')}</h4>
                 </div>
 
                 <div>
-                  <label>{t("userProfile.yourEmail")}</label>
-                  <input type="email" />
+                  <label>{t('userProfile.yourEmail')}</label>
+                  <input type='email' />
                 </div>
 
-                <div className="password-input">
-                  <label>{t("userProfile.oldPassword")}</label>
-                  <div className="input-wrapper">
-                    <input type={showOldPass ? "text" : "password"} />
+                <div className='password-input'>
+                  <label>{t('userProfile.oldPassword')}</label>
+                  <div className='input-wrapper'>
+                    <input type={showOldPass ? 'text' : 'password'} />
                     <span
-                      className="eye-icon"
+                      className='eye-icon'
                       onClick={() => setShowOldPass(!showOldPass)}
                     >
                       {showOldPass ? (
@@ -152,12 +152,12 @@ const UserProfile = () => {
                   </div>
                 </div>
 
-                <div className="password-input">
-                  <label>{t("userProfile.newPassword")}</label>
-                  <div className="input-wrapper">
-                    <input type={showNewPass ? "text" : "password"} />
+                <div className='password-input'>
+                  <label>{t('userProfile.newPassword')}</label>
+                  <div className='input-wrapper'>
+                    <input type={showNewPass ? 'text' : 'password'} />
                     <span
-                      className="eye-icon"
+                      className='eye-icon'
                       onClick={() => setShowNewPass(!showNewPass)}
                     >
                       {showNewPass ? (
@@ -169,12 +169,12 @@ const UserProfile = () => {
                   </div>
                 </div>
 
-                <div className="password-input">
-                  <label>{t("userProfile.confirmPassword")}</label>
-                  <div className="input-wrapper">
-                    <input type={showConfirmPass ? "text" : "password"} />
+                <div className='password-input'>
+                  <label>{t('userProfile.confirmPassword')}</label>
+                  <div className='input-wrapper'>
+                    <input type={showConfirmPass ? 'text' : 'password'} />
                     <span
-                      className="eye-icon"
+                      className='eye-icon'
                       onClick={() => setShowConfirmPass(!showConfirmPass)}
                     >
                       {showConfirmPass ? (
@@ -186,8 +186,8 @@ const UserProfile = () => {
                   </div>
                 </div>
 
-                <div className="update-pass-btn">
-                  <button>{t("userProfile.updatePasswordBtn")}</button>
+                <div className='update-pass-btn'>
+                  <button>{t('userProfile.updatePasswordBtn')}</button>
                 </div>
               </div>
             </div>

@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
-import "./Order.css";
-import OldOrderRow from "../../components/oldOrderRow/OldOrderRow";
-import axios from "axios";
-import config from "../../Constants/enviroment";
-import usePagenation from "../../custom hooks/usePagenation";
-import PagenationControllers from "../../components/PagenationControllers/PagenationControllers";
-import EmptyHandler from "../../components/EmptyHandler/EmptyHandler";
+import { useEffect, useState } from 'react';
+import './Order.css';
+import OldOrderRow from '../../components/oldOrderRow/OldOrderRow';
+import axios from 'axios';
+import config from '../../Constants/enviroment';
+import usePagenation from '../../custom hooks/usePagenation';
+import PagenationControllers from '../../components/PagenationControllers/PagenationControllers';
+import EmptyHandler from '../../components/EmptyHandler/EmptyHandler';
 
 const Order = () => {
   const [orderProudact, setOrderProudact] = useState([]);
-  const id = JSON.parse(localStorage.getItem("token"));
+  const id = localStorage.getItem('token');
   useEffect(() => {
     axios
-      .get(config.baseUrl + "/" + config.users + "/" + id)
+      .get(config.baseUrl + '/' + config.users + '/' + id)
       .then((res) => {
         console.log(12);
         console.log(res.data);
@@ -29,14 +29,14 @@ const Order = () => {
     isBtnDisabled,
   } = usePagenation(orderProudact, 10);
   return (
-    <div className="order">
-      <div className="container">
+    <div className='order'>
+      <div className='container'>
         {orderProudact.length != 0 ? (
           <>
-            <div className="title">
+            <div className='title'>
               <h2>Your Orders</h2>
             </div>
-            <div className="count-of-all-order">
+            <div className='count-of-all-order'>
               <p>
                 Total Orders: <span>{orderProudact.length}</span>
               </p>
